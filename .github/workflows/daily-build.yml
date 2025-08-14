@@ -30,8 +30,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # 推荐使用一个稳定的长期支持版本 (LTS)
-          cache: 'npm'       # 缓存 npm 包以加快构建速度
+          node-version: '22.18' # 推荐使用一个稳定的长期支持版本 (LTS)
 
       # 第 3 步：安装依赖（即使没有，这也是一个标准步骤）
       - name: Install Dependencies
