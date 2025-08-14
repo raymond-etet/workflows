@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: "0 6 * * *"         # 06:00 UTC
   workflow_dispatch:             # 手点按钮
-  repository_dispatch:           # 也可以被 API 触发
+  repository_dispatch:           # 可以被 API 触发
 
 jobs:
   build:
@@ -25,6 +25,8 @@ jobs:
           pip install --upgrade pip pyyaml requests
 
       - name: debug raw
+        env:
+          SUB_URL: ${{ secrets.SUB_URL }}
         run: |
           echo "SUB_URL=$SUB_URL"
           echo ">>> raw content head <<<"
@@ -33,6 +35,8 @@ jobs:
           echo ">>> end of head <<<"
 
       - name: fetch & filter
+        env:
+          SUB_URL: ${{ secrets.SUB_URL }}
         run: |
           python filter.py
 
