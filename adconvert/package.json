@@ -1,0 +1,16 @@
+{
+  "name": "adblock-list-generator",
+  "version": "1.0.0",
+  "description": "一个从多个源获取、合并和去重广告拦截规则的脚本。",
+  "main": "convertRules.js",
+  "scripts": {
+    "start": "node convertRules.js",
+    "generate": "node convertRules.js"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {}
+}
