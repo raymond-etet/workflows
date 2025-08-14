@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import base64, os, re, requests, yaml, datetime
 
-SUB_URL = os.environ.get("SUB_URL",  "http://www.a.com/a")
+SUB_URL = os.environ.get("SUB_URL",  "https://47.238.198.94/iv/verify_mode.htm?token=e017cb1dc789505b3add5f3299fd9ea8")
 SUFFIX   = os.environ.get("SUFFIX",  "HK|SG")     # 需要保留的关键字
 BAN      = os.environ.get("BAN",     "USG")       # 需要排除的关键字
 
