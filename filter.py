@@ -1,39 +1,70 @@
 #!/usr/bin/env python3
 import base64, os, re, requests, yaml, json, datetime, sys
 
-SUB_URL = os.environ.get("SUB_URL",  "https://url.v1.mk/sub?target=clash&url=https%3A%2F%2F47.238.198.94%2Fiv%2Fverify_mode.htm%3Ftoken%3De017cb1dc789505b3add5f3299fd9ea8&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true")
-SUFFIX  = "HK|SG"
-BAN     = "USG"
+SUB_URL = os.environ.get(
+    "SUB_URL",
+    "https://47.238.198.94/iv/verify_mode.htm?token=e017cb1dc789505b3add5f3299fd9ea8"
+)
+SUFFIX = "HK|SG"
+BAN = "USG"
 
-# ---------- 0. 取远端内容 ----------
-raw = requests.get(SUB_URL, timeout=15).text.strip()
+def is_base64(s: str) -> bool:
+    # 判断是否是标准 Base64 字符串
+    try:
+        # 字符过滤
+        if not re.fullmatch(r'[A-Za-z0-9+/=\r\n]+', s):
+            return False
+        # 长度必须是4的倍数
+        if len(s.strip()) % 4 != 0:
+            return False
+        base64.b64decode(s, validate=True)
+        return True
+    except Exception:
+        return False
 
-# ---------- 1. Base64 → YAML ----------
+# ---------- 0. 获取远端内容 ----------
 try:
-    decoded = base64.b64decode(raw).decode('utf-8')
-except Exception:
-    decoded = raw   # 本来就不是 base64
+    resp = requests.get(SUB_URL, timeout=15)
+    resp.raise_for_status()
+    raw = resp.text.strip()
+except Exception as e:
+    print(f"❌ 请求失败: {e}", file=sys.stderr)
+    sys.exit(1)
 
-# ---------- 2. 兼容三种常见格式 ----------
+# ---------- 1. Base64 → 文本 ----------
+if is_base64(raw):
+    try:
+        decoded = base64.b64decode(raw).decode('utf-8', errors='replace').strip()
+    except Exception as e:
+        print(f"❌ Base64 解码失败: {e}", file=sys.stderr)
+        sys.exit(1)
+else:
+    decoded = raw
+
+# ---------- 2. 尝试多种解析 ----------
 nodes = []
-# 2-a YAML 已经是 dict
-if decoded.startswith('proxies:'):
-    parsed = yaml.safe_load(decoded)
-    nodes = parsed['proxies']
-# 2-b 直接是一个 proxy 列表
-elif decoded.startswith('- '):
-    nodes = yaml.safe_load(decoded)
-# 2-c JSON 列表
-elif decoded.startswith('[{'):
-    nodes = json.loads(decoded)
+try:
+    # YAML 格式
+    if decoded.startswith('proxies:'):
+        parsed = yaml.safe_load(decoded)
+        nodes = parsed.get('proxies', [])
+    elif decoded.startswith('- '):
+        nodes = yaml.safe_load(decoded)
+    # JSON 格式
+    elif decoded.startswith('[{'):
+        nodes = json.loads(decoded)
+except Exception as e:
+    print(f"❌ 解析失败: {e}", file=sys.stderr)
 
 if not nodes:
     print("❌ 无法解析节点", file=sys.stderr)
-    exit(1)
+    print("原始数据前200字符：")
+    print(decoded[:200])
+    sys.exit(1)
 
 # ---------- 3. 过滤 ----------
 expr_keep = re.compile(fr'{SUFFIX}', re.I)
-expr_ban  = re.compile(fr'{BAN}',   re.I)
+expr_ban = re.compile(fr'{BAN}', re.I)
 
 filtered = [
     n for n in nodes
@@ -42,7 +73,12 @@ filtered = [
 print(f'[{datetime.datetime.utcnow()}] 原始节点：{len(nodes)}，过滤后：{len(filtered)}')
 
 # ---------- 4. 写入模板 ----------
-template = yaml.safe_load(open('order-clash/clash.yaml', encoding='utf-8'))
+try:
+    template = yaml.safe_load(open('order-clash/clash.yaml', encoding='utf-8'))
+except FileNotFoundError:
+    print("❌ 找不到模板文件 order-clash/clash.yaml", file=sys.stderr)
+    sys.exit(1)
+
 template['proxies'] = filtered
 
 # proxy-groups 替换
@@ -51,8 +87,10 @@ for grp in template.setdefault('proxy-groups', []):
         grp['proxies'] = []
     grp['proxies'] = [f['name'] for f in filtered]
 
-yaml.dump(template,
-          open('a.yaml', 'w', encoding='utf-8'),
-          default_flow_style=False,
-          sort_keys=False,
-          allow_unicode=True)
+yaml.dump(
+    template,
+    open('a.yaml', 'w', encoding='utf-8'),
+    default_flow_style=False,
+    sort_keys=False,
+    allow_unicode=True
+)
