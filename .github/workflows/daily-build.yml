@@ -30,15 +30,17 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22.18' # 推荐使用一个稳定的长期支持版本 (LTS)
+          # <-- 修改点 1：使用标准的主版本号
+          node-version: '22' # 推荐使用稳定的长期支持版本 (LTS)，例如 20 或 22
 
-      # 第 3 步：安装依赖（即使没有，这也是一个标准步骤）
+      # 第 3 步：安装依赖（读取 package.json，即使为空也是必须步骤）
       - name: Install Dependencies
         run: npm install
 
       # 第 4 步：运行你的主脚本
       - name: Run Script to Generate Rules
-        run: node convertRules.js # <-- 这里执行你的脚本文件
+        # <-- 修改点 2：使用 npm script 来运行，而不是直接调用 node
+        run: npm run generate 
 
       # 第 5 步：将生成的新文件提交回仓库
       # 这个 Action 会自动检查工作目录中的文件变动（新增/修改），并创建一个新的 commit 推送回仓库
@@ -46,11 +48,11 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           # 定义自动提交的 commit message
-          commit_message: "chore: Generate new rules"
+          commit_message: "chore(build): Generate new rules" # 使用 chore(...) 格式更专业
           
-          # 指定要提交的文件。这里使用通配符来匹配脚本生成的新文件
-          # 例如 `rules_*.txt`, `duplicates_*.txt` 和 `sources/` 目录下的所有文件
-          file_pattern: "rules_*.txt duplicates_*.txt sources/*"
+          # 指定要提交的文件。您原来的设置是正确的！
+          # 它会匹配 rules.txt, duplicates_YYYYMMDD.txt 和 sources/ 目录下的所有文件
+          file_pattern: "rules.txt duplicates_*.txt sources/*"
           
           # 定义提交者信息，使其看起来像是机器人操作的
           commit_user_name: "github-actions[bot]"
