@@ -4,7 +4,7 @@ name: Daily build
 
 on:
   schedule:
-    - cron: "0 0 * * *" # 每天 0 点执行
+    - cron: "0 17 * * *" # 每天 UTC 17点执行，对应北京时间凌晨1点
   workflow_dispatch: # 允许手动触发
 
 jobs:
