@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import base64, os, re, requests, yaml, json, datetime, sys
 
-SUB_URL = os.environ.get("SUB_URL",  "https://47.238.198.94/iv/verify_mode.htm?token=e017cb1dc789505b3add5f3299fd9ea8")
+SUB_URL = os.environ.get("SUB_URL",  "https://url.v1.mk/sub?target=clash&url=https%3A%2F%2F47.238.198.94%2Fiv%2Fverify_mode.htm%3Ftoken%3De017cb1dc789505b3add5f3299fd9ea8&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true")
 SUFFIX  = "HK|SG"
 BAN     = "USG"
 
