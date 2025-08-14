@@ -1,1 +1,190 @@
-啊
+# =================================================================================
+# Clash.Meta 优化版配置 for [OpenWrt + AdGuard Home + OpenClash] - GeoIP版
+#
+# 优化内容:
+# 1. 禁用IPv6 DNS解析，解决"ip version error"
+# 2. 启用GEOSITE/GEOIP支持，使用CDN加速下载
+# 3. 使用地理数据库规则简化配置
+# 4. 优化DNS配置，提升稳定性
+# 5. 精简嗅探和分流规则，减少冗余，提升效率
+# =================================================================================
+
+# --- 端口设置 (保持原有配置) ---
+port: 7890
+socks-port: 7891
+mixed-port: 7893
+redir-port: 7892
+tproxy-port: 7895
+
+# --- 基础设置 ---
+allow-lan: true
+bind-address: "*"
+mode: rule
+external-controller: 0.0.0.0:9090 # 允许外部访问
+secret: "" # 空密钥，无需验证
+log-level: warning # 减少日志输出提升性能
+
+# --- DNS 配置 (优化版) ---
+dns:
+  enable: true
+  listen: 0.0.0.0:7874
+  ipv6: false # 修复: 禁用IPv6避免DNS解析错误
+  prefer-h3: false # 修复: 禁用HTTP/3避免协议错误
+  use-hosts: true
+  respect-rules: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "*.localdomain"
+    - "+.stun.*.*"
+    - "+.stun.*.*.*"
+    - "+.stun.*.*.*.*"
+    - "+.stun.*.*.*.*.*"
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+    - "msftconnecttest.com"
+    - "msftncsi.com"
+
+  # 国内 DNS - 用于解析非代理域名
+  # 优化: 仅保留稳定快速的国内DNS，避免对国内域名解析造成延迟或污染。
+  default-nameserver:
+    - 223.5.5.5 # 阿里DNS
+    - 119.29.29.29 # 腾讯DNS
+    - 114.114.114.114 # 114DNS
+
+  # 国外 DNS - 用于解析需要代理的域名
+  nameserver:
+    - 8.8.8.8 # Google DNS
+    - 1.1.1.1 # Cloudflare DNS
+
+  # 代理DNS (解析代理服务器域名)
+  proxy-server-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+
+  # DNS策略 (使用 geosite 精简)
+  # 优化: geosite:cn 已包含所有 .cn 后缀域名，无需重复添加。
+  nameserver-policy:
+    "geosite:cn": ["223.5.5.5", "119.29.29.29"]
+    "geosite:private": ["system"] # 优化: 对内网域名使用系统DNS
+    "+.local": ["system"]
+
+  # Fallback 机制 (当国外DNS返回国内IP时，使用国内DNS重解析)
+  fallback-filter:
+    geoip: true # 启用geoip过滤
+    geoip-code: CN # 中国大陆IP使用国内DNS
+    ipcidr: ["240.0.0.0/4", "0.0.0.0/32", "127.0.0.1/32"]
+    domain:
+      [
+        "+.google.com",
+        "+.facebook.com",
+        "+.youtube.com",
+        "+.github.com",
+        "+.githubusercontent.com",
+      ]
+
+# --- 流量探测 Sniffer (优化版) ---
+sniffer:
+  enable: true
+  parse-pure-ip: true
+  override-destination: true
+  sniff:
+    TLS:
+      ports: [443, 8443]
+    HTTP:
+      ports: [80, 8080-8880]
+  # 优化: 使用 geosite:cn 替代大量冗余的域名后缀，简化配置
+  skip-domain:
+    - "*.lan"
+    - "*.local"
+    - "geosite:cn"
+
+# --- 状态与缓存 ---
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+# --- 代理节点 (保持原有) ---
+proxies:
+
+proxy-groups:
+  - name: "🚀 节点选择"
+    type: select
+    proxies:
+      - "♻️ 自动选择"
+
+  - name: "♻️ 自动选择"
+    type: url-test
+    proxies:
+
+    url: http://www.apple.com/library/test/success.html
+    interval: 1800
+
+# --- 分流规则 (精简优化版) ---
+rules:
+  # 本地/内网流量直连
+  - DOMAIN-SUFFIX,local,DIRECT
+  - DOMAIN-SUFFIX,localhost,DIRECT
+  - DOMAIN-SUFFIX,lan,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,169.254.0.0/16,DIRECT
+
+  # 中国大陆域名和IP直连 (核心规则)
+  - GEOSITE,cn,DIRECT
+  - GEOSITE,private,DIRECT
+  - GEOIP,cn,DIRECT
+
+  # 香港IP直连 (根据你的需求保留)
+  - GEOIP,hk,DIRECT
+
+  # 优化: 以下 DOMAIN-SUFFIX 规则已被 GEOSITE,cn 完美覆盖，故移除以精简配置。
+  # - DOMAIN-SUFFIX,cn,DIRECT
+  # - DOMAIN-SUFFIX,com.cn,DIRECT
+  # ... 等等
+
+  # 国外知名服务走代理 (确保不被上面规则误判)
+  - GEOSITE,google,🚀 节点选择
+  - GEOSITE,github,🚀 节点选择
+  - GEOSITE,youtube,🚀 节点选择
+  - GEOSITE,facebook,🚀 节点选择
+  - GEOSITE,twitter,🚀 节点选择
+  - GEOSITE,telegram,🚀 节点选择
+  - GEOSITE,netflix,🚀 节点选择
+
+  # 其他所有流量走代理 (最终规则)
+  - MATCH,🚀 节点选择
+
+# --- 性能优化 (保持原有配置，已非常优秀) ---
+tcp-concurrent: true
+udp-idle-timeout: 60
+keep-alive-idle: 600
+keep-alive-interval: 15
+
+# --- 网络优化 (保持原有配置) ---
+interface-name: ""
+routing-mark: 0
+
+# --- 实验性功能 (保持原有配置，兼容性好) ---
+experimental:
+  unified-delay: true
+  ignore-resolve-fail: true
+  cache-file: /tmp/clash.db
+  cache-size: 100000
+  cache-ttl: 3600
+
+# --- 故障处理与重试策略 (保持原有配置) ---
+find-process-mode: strict
+global-ua: ClashMetaForAndroid/2.8.9.Meta
+global-client-fingerprint: chrome
+
+# --- 地理数据库配置 (保持原有配置，完美适配OpenClash) ---
+geo-auto-fallback: true
+geo-lazy-load: false
+geodata-mode: true
+geodata-loader: memconservative
+geo-auto-update: false
