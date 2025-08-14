@@ -24,6 +24,14 @@ jobs:
         run: |
           pip install --upgrade pip pyyaml requests
 
+      - name: debug raw
+        run: |
+          echo "SUB_URL=$SUB_URL"
+          echo ">>> raw content head <<<"
+          curl -sSL "$SUB_URL" | head -100
+          echo ""
+          echo ">>> end of head <<<"
+
       - name: fetch & filter
         run: |
           python filter.py
