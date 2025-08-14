@@ -26,9 +26,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "18"
-          cache: "npm"
-          # 注意：缓存路径依然需要正确设置
-          cache-dependency-path: "adblock-list-generator/package-lock.json"
+          # 由于项目没有外部依赖，不需要缓存 npm 包
 
       # 步骤 3: 安装依赖
       # 仍然需要指定工作目录，因为 package.json 在子文件夹里
