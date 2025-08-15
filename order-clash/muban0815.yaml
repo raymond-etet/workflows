@@ -31,12 +31,10 @@ global-ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 # ----------------- DNS 核心配置 (关键优化区) -----------------
 dns:
-  enable: true # 启用内置 DNS 服务器
   listen: 0.0.0.0:7874 # DNS 监听地址，AdGuardHome 应将此设为上游
   ipv6: false # 禁用 IPv6 解析。国内环境 IPv6 支持不佳，关闭可避免解析错误和网络延迟
   use-hosts: true # 使用系统 hosts 文件
   respect-rules: true # DNS 解析结果将遵循分流规则
-  enhanced-mode: fake-ip # 增强模式 Fake-IP，这是核心功能，绝不修改
   fake-ip-range: 198.18.0.1/16 # Fake-IP 使用的 IP 段，采用私有地址段，避免冲突
   # [上游 DNS 服务器]
   # 用于解析【直连域名】(如国内网站) 的 DNS，追求速度与无污染
@@ -70,6 +68,14 @@ dns:
     - +.githubapp.com
     - +.ghcr.io
 
+      # 增加以下规则解决 DNS 解析问题
+    - "+.router.asus.com"
+    - "+.local.adguard.org"
+    - "+.adguardhome.local"
+    - "localhost.ptlogin2.qq.com"
+    - "+.srv.nintendo.net"
+    - "+.stun.playstation.net"
+
   # ------------- 普通公共 DNS 列表 -------------
   default-nameserver: # 国内兜底，仅用 IP
     - 139.9.23.90 # 国内最快 114DNS
@@ -87,8 +93,8 @@ dns:
   nameserver-policy:
     # 规则一：大陆（含香港）所有等业务域名 → 用国内最快的两组
     "geosite:cn,apple-cn,microsoft@cn,category-games@cn,private":
-      - 139.9.23.90
-      - 119.29.29.29
+      - 139.9.23.90 # 国内最快 114DNS
+      - 119.29.29.29 # DNSPod，备用
 
     # 规则二：iCloud 及其子服务 → 交回系统 DNS，兼容苹果设备
     "geosite:icloud": dhcp
@@ -119,54 +125,6 @@ sniffer:
 
 # --- 代理节点 (Proxies) ---
 
-  - name: "🚀 节点选择"
-    type: select
-    proxies:
-      - "♻️ 自动选择"
-      - "\U0001F1ED\U0001F1F0白羊座-HK(推荐)"
-      - "\U0001F1ED\U0001F1F0白羊座-HK(备用)"
-      - "\U0001F1ED\U0001F1F0白羊座-HKA(BGP)"
-      - "\U0001F1ED\U0001F1F0白羊座-HKB(BGP)"
-      - "\U0001F1ED\U0001F1F0白羊座-HK(流量)"
-      - "\U0001F1ED\U0001F1F0白羊座-HK(电报)"
-      - "\U0001F1F8\U0001F1EC白羊座-SG(流量)"
-      - "\U0001F1F8\U0001F1EC白羊座-SG(推荐)"
-      - "\U0001F1F8\U0001F1EC白羊座-SG(备用)"
-      - "\U0001F1ED\U0001F1F0白羊座-HKA"
-      - "\U0001F1ED\U0001F1F0白羊座-HKB"
-      - "\U0001F1F8\U0001F1EC白羊座-SGA"
-      - "\U0001F1F8\U0001F1EC白羊座-SGB"
-      - "\U0001F1ED\U0001F1F0HK-移动联通A"
-      - "\U0001F1ED\U0001F1F0HK-移动联通B"
-      - "\U0001F1ED\U0001F1F0HK-移动联通C"
-      - "\U0001F1ED\U0001F1F0HK-移动联通D"
-      - "\U0001F1ED\U0001F1F0HK-移动联通E"
-      - "\U0001F1ED\U0001F1F0HK-移动联通F"
-  - name: "♻️ 自动选择"
-    type: url-test
-    proxies:
-      - "\U0001F1ED\U0001F1F0白羊座-HK(推荐)"
-      - "\U0001F1ED\U0001F1F0白羊座-HK(备用)"
-      - "\U0001F1ED\U0001F1F0白羊座-HKA(BGP)"
-      - "\U0001F1ED\U0001F1F0白羊座-HKB(BGP)"
-      - "\U0001F1ED\U0001F1F0白羊座-HK(流量)"
-      - "\U0001F1ED\U0001F1F0白羊座-HK(电报)"
-      - "\U0001F1F8\U0001F1EC白羊座-SG(流量)"
-      - "\U0001F1F8\U0001F1EC白羊座-SG(推荐)"
-      - "\U0001F1F8\U0001F1EC白羊座-SG(备用)"
-      - "\U0001F1ED\U0001F1F0白羊座-HKA"
-      - "\U0001F1ED\U0001F1F0白羊座-HKB"
-      - "\U0001F1F8\U0001F1EC白羊座-SGA"
-      - "\U0001F1F8\U0001F1EC白羊座-SGB"
-      - "\U0001F1ED\U0001F1F0HK-移动联通A"
-      - "\U0001F1ED\U0001F1F0HK-移动联通B"
-      - "\U0001F1ED\U0001F1F0HK-移动联通C"
-      - "\U0001F1ED\U0001F1F0HK-移动联通D"
-      - "\U0001F1ED\U0001F1F0HK-移动联通E"
-      - "\U0001F1ED\U0001F1F0HK-移动联通F"
-    url: http://www.apple.com/library/test/success.html
-    interval: 1800
-
 # ----------------- 路由规则 (Rules) -----------------
 # 规则从上到下依次匹配，一旦匹配成功，则不再继续匹配
 # AdGuardHome 已处理广告，此处规则可作为补充
@@ -174,6 +132,7 @@ rules:
   # -- 直连规则 --
   - GEOIP,PRIVATE,DIRECT # [最佳实践] 私有/保留地址直连，最高优先级
   - GEOSITE,private,DIRECT # GeoSite 私有地址规则
+  - GEOIP,HK,DIRECT # 中国大陆 IP 直连
   - GEOIP,CN,DIRECT # 中国大陆 IP 直连
   - GEOSITE,cn,DIRECT # 中国大陆域名直连
   - GEOSITE,apple-cn,DIRECT # 苹果中国服务直连
