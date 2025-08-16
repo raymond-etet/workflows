@@ -132,7 +132,8 @@ rules:
   # -- 直连规则 --
   - GEOIP,PRIVATE,DIRECT # [最佳实践] 私有/保留地址直连，最高优先级
   - GEOSITE,private,DIRECT # GeoSite 私有地址规则
-  - GEOIP,HK,DIRECT # 中国大陆 IP 直连
+  - DOMAIN-SUFFIX,pc528.net,🚀 节点选择
+  - DOMAIN-SUFFIX,pc521.net,🚀 节点选择
   - GEOIP,CN,DIRECT # 中国大陆 IP 直连
   - GEOSITE,cn,DIRECT # 中国大陆域名直连
   - GEOSITE,apple-cn,DIRECT # 苹果中国服务直连
@@ -167,7 +168,7 @@ experimental:
 
 # ----------------- Geo-Database (地理数据库) -----------------
 geodata-mode: true # 启用 GeoIP 和 GeoSite
-geodata-loader: memconservative # [内存优化] 使用内存保守型加载器，适合内存较小的设备
+geodata-loader: standard # 推荐 8GB 内存以上设备，性能更好
 geo-auto-update: true # 自动更新 Geo 数据库文件
-geo-update-interval: 24 # 更新周期 (小时)，例如每 24 小时更新一次
-geo-auto-fallback: true # 当从指定 URL 更新失败时，尝试从其他镜像源下载
+geo-update-interval: 24 # 每 24 小时更新一次
+geo-auto-fallback: true # 更新失败后自动切换到其他镜像源
