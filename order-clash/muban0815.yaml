@@ -132,8 +132,8 @@ rules:
   # -- 直连规则 --
   - GEOIP,PRIVATE,DIRECT # [最佳实践] 私有/保留地址直连，最高优先级
   - GEOSITE,private,DIRECT # GeoSite 私有地址规则
-  - DOMAIN-SUFFIX,pc528.net,🚀 节点选择
-  - DOMAIN-SUFFIX,pc521.net,🚀 节点选择
+  - DOMAIN-SUFFIX,pc528.net,DIRECT
+  - DOMAIN-SUFFIX,pc521.net,DIRECT
   - GEOIP,CN,DIRECT # 中国大陆 IP 直连
   - GEOSITE,cn,DIRECT # 中国大陆域名直连
   - GEOSITE,apple-cn,DIRECT # 苹果中国服务直连
