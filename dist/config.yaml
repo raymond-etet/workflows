@@ -1,0 +1,1323 @@
+mode: rule
+proxy-providers:
+  all:
+    type: file
+    path: providers/all.yaml
+    health-check: null
+proxies:
+- name: 🇺🇸 美国F1|电信联通|1.1倍|V1
+  server: usf.node.cross666.top
+  port: 65535
+  sni: www.yahoo.com
+  up: 500
+  down: 500
+  skip-cert-verify: true
+  type: hysteria2
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+- name: 🇺🇸 美国B2|联通|0.7倍|V2
+  type: anytls
+  server: usb1.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国A1|联通|1.1倍|V2
+  type: anytls
+  server: usa1.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国A2|联通|1.1倍|V2
+  type: anytls
+  server: usa2.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国C2|0.8倍|V1
+  type: anytls
+  server: usc2.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国E2|0.7倍|V1
+  type: anytls
+  server: use2.cdn.121557.xyz
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.com
+  skip-cert-verify: true
+- name: 🇭🇰 香港A1|电信联通|2倍|V2
+  server: hka.node.cross666.top
+  port: 65535
+  sni: mirrors.xtom.hk
+  up: 100
+  down: 100
+  skip-cert-verify: true
+  type: hysteria2
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+- name: 🇭🇰 香港C1|三网|3.5倍|V2|家宽
+  server: hkc1.node.cross666.top
+  port: 65535
+  sni: mirrors.xtom.hk
+  up: 100
+  down: 100
+  skip-cert-verify: true
+  type: hysteria2
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+- name: 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  server: hkc3.node.cross666.top
+  port: 65535
+  sni: mirrors.xtom.hk
+  up: 100
+  down: 100
+  skip-cert-verify: true
+  type: hysteria2
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+- name: 🇭🇰 香港E1|电信联通|2倍|V2
+  server: hke1.node.cross666.top
+  port: 65535
+  sni: mirrors.xtom.hk
+  up: 150
+  down: 150
+  skip-cert-verify: true
+  type: hysteria2
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+- name: 🇯🇵 日本A1|三网|3.5倍|V2
+  type: anytls
+  server: jpfa1.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.co.jp
+  skip-cert-verify: true
+- name: 🇯🇵 日本A2|三网|3.5倍|V2
+  type: anytls
+  server: jpfa2.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.co.jp
+  skip-cert-verify: true
+- name: 🇯🇵 日本B1|移动|2倍|V2
+  type: anytls
+  server: jpb1.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.co.jp
+  skip-cert-verify: true
+- name: 🇯🇵 日本C1|移动|2倍|V2
+  type: anytls
+  server: jpc1.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.co.jp
+  skip-cert-verify: true
+- name: 🇯🇵 日本C2|移动|2倍|V2
+  type: anytls
+  server: jpc2.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.co.jp
+  skip-cert-verify: true
+- name: 🇯🇵 日本C3|移动|2倍|V2
+  type: anytls
+  server: jpc3.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.co.jp
+  skip-cert-verify: true
+- name: 🇸🇬 新加坡A1|1.4倍|V2
+  server: sga.node.cross666.top
+  port: 65535
+  sni: www.yahoo.co.jp
+  up: 100
+  down: 100
+  skip-cert-verify: true
+  type: hysteria2
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+- name: 🇸🇬 新加坡B1|1.8倍|V2
+  type: anytls
+  server: sgb1.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: mirror.sg.gs
+  skip-cert-verify: true
+- name: 🇨🇦 加拿大A1|0.7倍|V1
+  type: anytls
+  server: caa1.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: debian.linux.n0c.ca
+  skip-cert-verify: true
+- name: 🇩🇪 德国A1|联通|0.7倍|V1
+  type: anytls
+  server: dea1.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: mirror.dogado.de
+  skip-cert-verify: true
+- name: 🇩🇪 德国B1|移动|0.8倍|V1
+  type: anytls
+  server: deb1.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: mirror.dogado.de
+  skip-cert-verify: true
+- name: 🇬🇧 英国A2|联通移动|0.7倍|V1
+  type: anytls
+  server: uka2.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: mirror.freethought-internet.co.uk
+  skip-cert-verify: true
+- name: 🇫🇷 法国A1|联通|0.7倍|V1
+  type: anytls
+  server: fr1.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: ubuntu.mirrors.ovh.net
+  skip-cert-verify: true
+- name: 🇫🇷 法国A2|联通|0.7倍|V1
+  type: anytls
+  server: fra2.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: ubuntu.mirrors.ovh.net
+  skip-cert-verify: true
+- name: 🇳🇱 荷兰A1|联通|0.8倍|V1
+  type: anytls
+  server: nla.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: mirror.serverion.com
+  skip-cert-verify: true
+- name: 🇳🇱 荷兰B1|联通|0.7倍|V1
+  type: anytls
+  server: nlb.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: mirror.serverion.com
+  skip-cert-verify: true
+- name: 🇹🇭 泰国A1|移动|0.9倍|V2
+  server: tha1.node.cross666.top
+  port: 65535
+  sni: mirror1.ku.ac.th
+  up: 100
+  down: 100
+  skip-cert-verify: true
+  type: hysteria2
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+- name: 🇻🇳 越南A1|电信移动|1.1倍|V2
+  server: vna1.node.cross666.top
+  port: 65535
+  sni: mirror.sg.gs
+  up: 100
+  down: 100
+  skip-cert-verify: true
+  type: hysteria2
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+- name: 🇷🇺 俄罗斯A1|联通|1倍|V1
+  type: anytls
+  server: rua1.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: mirror.hyperdedic.ru
+  skip-cert-verify: true
+- name: 🇷🇺 俄罗斯B1|联通|1倍|V1
+  type: anytls
+  server: rub.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: mirror.hyperdedic.ru
+  skip-cert-verify: true
+- name: 🇹🇷 土耳其A1|三网|1.1倍|V2
+  server: tra1.node.cross666.top
+  port: 65535
+  sni: mirror.dogado.de
+  up: 100
+  down: 100
+  skip-cert-verify: true
+  type: hysteria2
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+- name: ❇️白羊座-AGP(通用)
+  type: tuic
+  server: hkv6a.de180997-0810-4174-8f14-eb8d79d47a0c.a5e6e977.demo-chat-airport.com
+  port: 52892
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alpn:
+  - h3
+  disable-sni: false
+  reduce-rtt: false
+  udp-relay-mode: native
+  congestion-controller: bbr
+  skip-cert-verify: true
+  sni: www.bing.com
+- name: ❇️白羊座-BGP(通用)
+  type: tuic
+  server: hkv6b.de180997-0810-4174-8f14-eb8d79d47a0c.7cc0aa7a.demo-chat-airport.com
+  port: 52892
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alpn:
+  - h3
+  disable-sni: false
+  reduce-rtt: false
+  udp-relay-mode: native
+  congestion-controller: bbr
+  skip-cert-verify: true
+  sni: www.bing.com
+- name: ❇️白羊座-CGP(通用)
+  type: tuic
+  server: alv6b.de180997-0810-4174-8f14-eb8d79d47a0c.7cc0aa7a.demo-chat-airport.com
+  port: 52892
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alpn:
+  - h3
+  disable-sni: true
+  reduce-rtt: false
+  udp-relay-mode: native
+  congestion-controller: bbr
+  skip-cert-verify: true
+  sni: www.bing.com
+- name: ❇️白羊座-IGP(通用)
+  type: tuic
+  server: jpa.539bb8de-73bb-4398-8c9b-d145a8901e8f.b01401d1.demo-chat-airport.com
+  port: 52892
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alpn:
+  - h3
+  disable-sni: false
+  reduce-rtt: false
+  udp-relay-mode: native
+  congestion-controller: bbr
+  skip-cert-verify: true
+  sni: www.bing.com
+- name: ❇️白羊座-JGP(流量)
+  type: tuic
+  server: jpb.539bb8de-73bb-4398-8c9b-d145a8901e8f.693242dc.demo-chat-airport.com
+  port: 52892
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alpn:
+  - h3
+  disable-sni: false
+  reduce-rtt: false
+  udp-relay-mode: native
+  congestion-controller: bbr
+  skip-cert-verify: true
+  sni: www.bing.com
+- name: 🇭🇰香江-E(流量)
+  type: vless
+  server: cos-cdn-d.alicdn.win
+  port: 443
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: mms-static-rende-e.coscdn.men
+  client-fingerprint: safari
+  network: ws
+  ws-opts:
+    path: /newlogin/login.do
+    headers:
+      Host: mms-static-rende-e.coscdn.men
+  ws-path: /newlogin/login.do
+  ws-headers:
+    Host: mms-static-rende-e.coscdn.men
+- name: 🇭🇰香江-F(流量)
+  type: vless
+  server: cos-cdn-e.alicdn.win
+  port: 443
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: mms-static-rende-f.coscdn.men
+  client-fingerprint: qq
+  network: ws
+  ws-opts:
+    path: /newlogin/login.do
+    headers:
+      Host: mms-static-rende-f.coscdn.men
+  ws-path: /newlogin/login.do
+  ws-headers:
+    Host: mms-static-rende-f.coscdn.men
+- name: 🇭🇰香江-G(流量)
+  type: vless
+  server: cos-cdn-f.alicdn.win
+  port: 443
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: mms-static-rende-g.aliapp.men
+  client-fingerprint: ios
+  network: ws
+  ws-opts:
+    path: /newlogin/login.do
+    headers:
+      Host: mms-static-rende-g.aliapp.men
+  ws-path: /newlogin/login.do
+  ws-headers:
+    Host: mms-static-rende-g.aliapp.men
+- name: 🇭🇰香江-H(流量)
+  type: vless
+  server: cos-cdn-z.alicdn.win
+  port: 443
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: mms-static-rende-h.aliapp.men
+  client-fingerprint: edge
+  network: ws
+  ws-opts:
+    path: /newlogin/login.do
+    headers:
+      Host: mms-static-rende-h.aliapp.men
+  ws-path: /newlogin/login.do
+  ws-headers:
+    Host: mms-static-rende-h.aliapp.men
+- name: 🇭🇰香港-A(通用)
+  type: tuic
+  server: hk.de180997-0810-4174-8f14-eb8d79d47a0c.4c8f0b93.demo-chat-airport.com
+  port: 52892
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alpn:
+  - h3
+  disable-sni: false
+  reduce-rtt: false
+  udp-relay-mode: native
+  congestion-controller: bbr
+  skip-cert-verify: true
+  sni: www.bing.com
+- name: 🇭🇰香港-B(流量)
+  type: tuic
+  server: hkv6.de180997-0810-4174-8f14-eb8d79d47a0c.4612afe1.demo-chat-airport.com
+  port: 52892
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alpn:
+  - h3
+  disable-sni: false
+  reduce-rtt: false
+  udp-relay-mode: native
+  congestion-controller: bbr
+  skip-cert-verify: true
+  sni: www.bing.com
+- name: 🇯🇵日本-A(通用)
+  type: tuic
+  server: jp.539bb8de-73bb-4398-8c9b-d145a8901e8f.5201a354.demo-chat-airport.com
+  port: 52892
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alpn:
+  - h3
+  disable-sni: false
+  reduce-rtt: false
+  udp-relay-mode: native
+  congestion-controller: bbr
+  skip-cert-verify: true
+  sni: www.bing.com
+- name: 🇯🇵日本-B(流量)
+  type: tuic
+  server: jpv6.539bb8de-73bb-4398-8c9b-d145a8901e8f.5e63934c.demo-chat-airport.com
+  port: 52892
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alpn:
+  - h3
+  disable-sni: false
+  reduce-rtt: false
+  udp-relay-mode: native
+  congestion-controller: bbr
+  skip-cert-verify: true
+  sni: www.bing.com
+- name: 🇰🇷韩国-A(通用)
+  type: tuic
+  server: kr.91b30040-0142-4050-a005-142dc68a5ba8.e0fb388f.demo-chat-airport.com
+  port: 52892
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alpn:
+  - h3
+  disable-sni: false
+  reduce-rtt: false
+  udp-relay-mode: native
+  congestion-controller: bbr
+  skip-cert-verify: true
+  sni: www.bing.com
+- name: 🇰🇷韩国-B(流量)
+  type: tuic
+  server: krv6.91b30040-0142-4050-a005-142dc68a5ba8.e7a04f93.demo-chat-airport.com
+  port: 52892
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alpn:
+  - h3
+  disable-sni: false
+  reduce-rtt: false
+  udp-relay-mode: native
+  congestion-controller: bbr
+  skip-cert-verify: true
+  sni: www.bing.com
+- name: 🇸🇬新加坡-A(通用)
+  type: tuic
+  server: sg.173a00e1-f7e7-4018-9d07-3850d2ca48ad.ba93f54e.demo-chat-airport.com
+  port: 52892
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alpn:
+  - h3
+  disable-sni: false
+  reduce-rtt: false
+  udp-relay-mode: native
+  congestion-controller: bbr
+  skip-cert-verify: true
+  sni: www.bing.com
+- name: 🇸🇬新加坡-B(流量)
+  type: tuic
+  server: sgv6.173a00e1-f7e7-4018-9d07-3850d2ca48ad.a5c38186.demo-chat-airport.com
+  port: 52892
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alpn:
+  - h3
+  disable-sni: false
+  reduce-rtt: false
+  udp-relay-mode: native
+  congestion-controller: bbr
+  skip-cert-verify: true
+  sni: www.bing.com
+- name: 🇲🇾马来-A(通用)
+  type: tuic
+  server: hkv6c.de180997-0810-4174-8f14-eb8d79d47a0c.cbdd6b7e.demo-chat-airport.com
+  port: 52892
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alpn:
+  - h3
+  disable-sni: false
+  reduce-rtt: false
+  udp-relay-mode: native
+  congestion-controller: bbr
+  skip-cert-verify: true
+  sni: www.bing.com
+- name: 🇲🇾马来-B(流量)
+  type: tuic
+  server: hkv6d.de180997-0810-4174-8f14-eb8d79d47a0c.ce8d2c60.demo-chat-airport.com
+  port: 52892
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alpn:
+  - h3
+  disable-sni: false
+  reduce-rtt: false
+  udp-relay-mode: native
+  congestion-controller: bbr
+  skip-cert-verify: true
+  sni: www.bing.com
+- name: 🇹🇼台湾-A(通用)
+  type: tuic
+  server: twa.8b437e21-4951-49e6-9587-3a4be48e9e30.902d52f1.demo-chat-airport.com
+  port: 52892
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alpn:
+  - h3
+  disable-sni: false
+  reduce-rtt: false
+  udp-relay-mode: native
+  congestion-controller: bbr
+  skip-cert-verify: true
+  sni: www.bing.com
+- name: 🇹🇼台湾-B(流量)
+  type: tuic
+  server: twb.8b437e21-4951-49e6-9587-3a4be48e9e30.490b11fc.demo-chat-airport.com
+  port: 52892
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alpn:
+  - h3
+  disable-sni: false
+  reduce-rtt: false
+  udp-relay-mode: native
+  congestion-controller: bbr
+  skip-cert-verify: true
+  sni: www.bing.com
+- name: 🇸🇬狮城-E(流量)
+  type: vless
+  server: cos-cdn-d.alicdn.win
+  port: 443
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: mms-static-gecko-e.coscdn.men
+  client-fingerprint: ios
+  network: ws
+  ws-opts:
+    path: /newlogin/login.do
+    headers:
+      Host: mms-static-gecko-e.coscdn.men
+  ws-path: /newlogin/login.do
+  ws-headers:
+    Host: mms-static-gecko-e.coscdn.men
+- name: 🇸🇬狮城-F(流量)
+  type: vless
+  server: cos-cdn-e.alicdn.win
+  port: 443
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: mms-static-gecko-f.coscdn.men
+  client-fingerprint: edge
+  network: ws
+  ws-opts:
+    path: /newlogin/login.do
+    headers:
+      Host: mms-static-gecko-f.coscdn.men
+  ws-path: /newlogin/login.do
+  ws-headers:
+    Host: mms-static-gecko-f.coscdn.men
+- name: 🇸🇬狮城-G(流量)
+  type: vless
+  server: cos-cdn-f.alicdn.win
+  port: 443
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: mms-static-gecko-g.aliapp.men
+  client-fingerprint: qq
+  network: ws
+  ws-opts:
+    path: /newlogin/login.do
+    headers:
+      Host: mms-static-gecko-g.aliapp.men
+  ws-path: /newlogin/login.do
+  ws-headers:
+    Host: mms-static-gecko-g.aliapp.men
+- name: 🇸🇬狮城-H(流量)
+  type: vless
+  server: cos-cdn-z.alicdn.win
+  port: 443
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: mms-static-gecko-h.aliapp.men
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /newlogin/login.do
+    headers:
+      Host: mms-static-gecko-h.aliapp.men
+  ws-path: /newlogin/login.do
+  ws-headers:
+    Host: mms-static-gecko-h.aliapp.men
+- name: 🇺🇸西美-E(流量)
+  type: vless
+  server: cos-cdn-h.alicdn.win
+  port: 443
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: mms-static-bottom-e.coscdn.men
+  client-fingerprint: ios
+  network: ws
+  ws-opts:
+    path: /newlogin/login.do
+    headers:
+      Host: mms-static-bottom-e.coscdn.men
+  ws-path: /newlogin/login.do
+  ws-headers:
+    Host: mms-static-bottom-e.coscdn.men
+- name: 🇺🇸西美-F(流量)
+  type: vless
+  server: cos-cdn-j.alicdn.win
+  port: 443
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: mms-static-bottom-f.coscdn.men
+  client-fingerprint: qq
+  network: ws
+  ws-opts:
+    path: /newlogin/login.do
+    headers:
+      Host: mms-static-bottom-f.coscdn.men
+  ws-path: /newlogin/login.do
+  ws-headers:
+    Host: mms-static-bottom-f.coscdn.men
+- name: 🇺🇸西美-G(流量)
+  type: vless
+  server: cos-cdn-l.alicdn.win
+  port: 443
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: mms-static-bottom-g.aliapp.men
+  client-fingerprint: edge
+  network: ws
+  ws-opts:
+    path: /newlogin/login.do
+    headers:
+      Host: mms-static-bottom-g.aliapp.men
+  ws-path: /newlogin/login.do
+  ws-headers:
+    Host: mms-static-bottom-g.aliapp.men
+- name: 🇺🇸西美-H(流量)
+  type: vless
+  server: cos-cdn-n.alicdn.win
+  port: 443
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: mms-static-bottom-h.aliapp.men
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /newlogin/login.do
+    headers:
+      Host: mms-static-bottom-h.aliapp.men
+  ws-path: /newlogin/login.do
+  ws-headers:
+    Host: mms-static-bottom-h.aliapp.men
+proxy-groups:
+- name: Proxy
+  type: select
+  proxies:
+  - 香港
+  - 东南亚
+  - 欧美
+  - 全节点
+  - 其他
+  filter: 3\.5倍
+- name: 全节点
+  type: url-test
+  proxies:
+  - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国B2|联通|0.7倍|V2
+  - 🇺🇸 美国A1|联通|1.1倍|V2
+  - 🇺🇸 美国A2|联通|1.1倍|V2
+  - 🇺🇸 美国C2|0.8倍|V1
+  - 🇺🇸 美国E2|0.7倍|V1
+  - 🇭🇰 香港A1|电信联通|2倍|V2
+  - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港E1|电信联通|2倍|V2
+  - 🇯🇵 日本A1|三网|3.5倍|V2
+  - 🇯🇵 日本A2|三网|3.5倍|V2
+  - 🇯🇵 日本B1|移动|2倍|V2
+  - 🇯🇵 日本C1|移动|2倍|V2
+  - 🇯🇵 日本C2|移动|2倍|V2
+  - 🇯🇵 日本C3|移动|2倍|V2
+  - 🇸🇬 新加坡A1|1.4倍|V2
+  - 🇸🇬 新加坡B1|1.8倍|V2
+  - 🇨🇦 加拿大A1|0.7倍|V1
+  - 🇩🇪 德国A1|联通|0.7倍|V1
+  - 🇩🇪 德国B1|移动|0.8倍|V1
+  - 🇬🇧 英国A2|联通移动|0.7倍|V1
+  - 🇫🇷 法国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A2|联通|0.7倍|V1
+  - 🇳🇱 荷兰A1|联通|0.8倍|V1
+  - 🇳🇱 荷兰B1|联通|0.7倍|V1
+  - 🇹🇭 泰国A1|移动|0.9倍|V2
+  - 🇻🇳 越南A1|电信移动|1.1倍|V2
+  - 🇷🇺 俄罗斯A1|联通|1倍|V1
+  - 🇷🇺 俄罗斯B1|联通|1倍|V1
+  - 🇹🇷 土耳其A1|三网|1.1倍|V2
+  - ❇️白羊座-AGP(通用)
+  - ❇️白羊座-BGP(通用)
+  - ❇️白羊座-CGP(通用)
+  - ❇️白羊座-IGP(通用)
+  - ❇️白羊座-JGP(流量)
+  - 🇭🇰香江-E(流量)
+  - 🇭🇰香江-F(流量)
+  - 🇭🇰香江-G(流量)
+  - 🇭🇰香江-H(流量)
+  - 🇭🇰香港-A(通用)
+  - 🇭🇰香港-B(流量)
+  - 🇯🇵日本-A(通用)
+  - 🇯🇵日本-B(流量)
+  - 🇰🇷韩国-A(通用)
+  - 🇰🇷韩国-B(流量)
+  - 🇸🇬新加坡-A(通用)
+  - 🇸🇬新加坡-B(流量)
+  - 🇲🇾马来-A(通用)
+  - 🇲🇾马来-B(流量)
+  - 🇹🇼台湾-A(通用)
+  - 🇹🇼台湾-B(流量)
+  - 🇸🇬狮城-E(流量)
+  - 🇸🇬狮城-F(流量)
+  - 🇸🇬狮城-G(流量)
+  - 🇸🇬狮城-H(流量)
+  - 🇺🇸西美-E(流量)
+  - 🇺🇸西美-F(流量)
+  - 🇺🇸西美-G(流量)
+  - 🇺🇸西美-H(流量)
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: 香港
+  type: url-test
+  proxies:
+  - 🇭🇰 香港A1|电信联通|2倍|V2
+  - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港E1|电信联通|2倍|V2
+  - ❇️白羊座-AGP(通用)
+  - ❇️白羊座-BGP(通用)
+  - ❇️白羊座-CGP(通用)
+  - ❇️白羊座-IGP(通用)
+  - ❇️白羊座-JGP(流量)
+  - 🇭🇰香江-E(流量)
+  - 🇭🇰香江-F(流量)
+  - 🇭🇰香江-G(流量)
+  - 🇭🇰香江-H(流量)
+  - 🇭🇰香港-A(通用)
+  - 🇭🇰香港-B(流量)
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: 东南亚
+  type: url-test
+  proxies:
+  - 🇯🇵 日本A1|三网|3.5倍|V2
+  - 🇯🇵 日本A2|三网|3.5倍|V2
+  - 🇯🇵 日本B1|移动|2倍|V2
+  - 🇯🇵 日本C1|移动|2倍|V2
+  - 🇯🇵 日本C2|移动|2倍|V2
+  - 🇯🇵 日本C3|移动|2倍|V2
+  - 🇸🇬 新加坡A1|1.4倍|V2
+  - 🇸🇬 新加坡B1|1.8倍|V2
+  - 🇹🇭 泰国A1|移动|0.9倍|V2
+  - 🇻🇳 越南A1|电信移动|1.1倍|V2
+  - 🇯🇵日本-A(通用)
+  - 🇯🇵日本-B(流量)
+  - 🇸🇬新加坡-A(通用)
+  - 🇸🇬新加坡-B(流量)
+  - 🇲🇾马来-A(通用)
+  - 🇲🇾马来-B(流量)
+  - 🇹🇼台湾-A(通用)
+  - 🇹🇼台湾-B(流量)
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: 欧美
+  type: url-test
+  proxies:
+  - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国B2|联通|0.7倍|V2
+  - 🇺🇸 美国A1|联通|1.1倍|V2
+  - 🇺🇸 美国A2|联通|1.1倍|V2
+  - 🇺🇸 美国C2|0.8倍|V1
+  - 🇺🇸 美国E2|0.7倍|V1
+  - 🇨🇦 加拿大A1|0.7倍|V1
+  - 🇩🇪 德国A1|联通|0.7倍|V1
+  - 🇩🇪 德国B1|移动|0.8倍|V1
+  - 🇬🇧 英国A2|联通移动|0.7倍|V1
+  - 🇫🇷 法国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A2|联通|0.7倍|V1
+  - 🇳🇱 荷兰A1|联通|0.8倍|V1
+  - 🇳🇱 荷兰B1|联通|0.7倍|V1
+  - 🇺🇸西美-E(流量)
+  - 🇺🇸西美-F(流量)
+  - 🇺🇸西美-G(流量)
+  - 🇺🇸西美-H(流量)
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: 其他
+  type: url-test
+  proxies:
+  - 🇷🇺 俄罗斯A1|联通|1倍|V1
+  - 🇷🇺 俄罗斯B1|联通|1倍|V1
+  - 🇹🇷 土耳其A1|三网|1.1倍|V2
+  - 🇰🇷韩国-A(通用)
+  - 🇰🇷韩国-B(流量)
+  - 🇸🇬狮城-E(流量)
+  - 🇸🇬狮城-F(流量)
+  - 🇸🇬狮城-G(流量)
+  - 🇸🇬狮城-H(流量)
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: 币安
+  type: url-test
+  proxies:
+  - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+- name: pikpak
+  type: select
+  proxies:
+  - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国A1|联通|1.1倍|V2
+  - 🇺🇸 美国A2|联通|1.1倍|V2
+  - 🇺🇸 美国B2|联通|0.7倍|V2
+  - 🇺🇸 美国C2|0.8倍|V1
+  - 🇺🇸 美国E2|0.7倍|V1
+  - 🇯🇵 日本A1|三网|3.5倍|V2
+  - 🇯🇵 日本A2|三网|3.5倍|V2
+  - 🇯🇵 日本B1|移动|2倍|V2
+  - 🇯🇵 日本C1|移动|2倍|V2
+  - 🇯🇵 日本C2|移动|2倍|V2
+  - 🇯🇵 日本C3|移动|2倍|V2
+  - 🇸🇬 新加坡A1|1.4倍|V2
+  - 🇸🇬 新加坡B1|1.8倍|V2
+  - 🇨🇦 加拿大A1|0.7倍|V1
+  - 🇩🇪 德国A1|联通|0.7倍|V1
+  - 🇩🇪 德国B1|移动|0.8倍|V1
+  - 🇬🇧 英国A2|联通移动|0.7倍|V1
+  - 🇫🇷 法国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A2|联通|0.7倍|V1
+  - 🇳🇱 荷兰A1|联通|0.8倍|V1
+  - 🇳🇱 荷兰B1|联通|0.7倍|V1
+  - 🇹🇭 泰国A1|移动|0.9倍|V2
+  - 🇻🇳 越南A1|电信移动|1.1倍|V2
+  - 🇷🇺 俄罗斯A1|联通|1倍|V1
+  - 🇷🇺 俄罗斯B1|联通|1倍|V1
+  - 🇹🇷 土耳其A1|三网|1.1倍|V2
+  - 🇯🇵日本-A(通用)
+  - 🇯🇵日本-B(流量)
+  - 🇰🇷韩国-A(通用)
+  - 🇰🇷韩国-B(流量)
+  - 🇸🇬新加坡-A(通用)
+  - 🇸🇬新加坡-B(流量)
+  - 🇲🇾马来-A(通用)
+  - 🇲🇾马来-B(流量)
+  - 🇹🇼台湾-A(通用)
+  - 🇹🇼台湾-B(流量)
+  - 🇸🇬狮城-E(流量)
+  - 🇸🇬狮城-F(流量)
+  - 🇸🇬狮城-G(流量)
+  - 🇸🇬狮城-H(流量)
+  - 🇺🇸西美-E(流量)
+  - 🇺🇸西美-F(流量)
+  - 🇺🇸西美-G(流量)
+  - 🇺🇸西美-H(流量)
+- name: ai组
+  type: select
+  proxies:
+  - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国B2|联通|0.7倍|V2
+  - 🇺🇸 美国A1|联通|1.1倍|V2
+  - 🇺🇸 美国A2|联通|1.1倍|V2
+  - 🇺🇸 美国C2|0.8倍|V1
+  - 🇺🇸 美国E2|0.7倍|V1
+  - 🇭🇰 香港A1|电信联通|2倍|V2
+  - 🇭🇰 香港E1|电信联通|2倍|V2
+  - 🇯🇵 日本A1|三网|3.5倍|V2
+  - 🇯🇵 日本A2|三网|3.5倍|V2
+  - 🇯🇵 日本B1|移动|2倍|V2
+  - 🇯🇵 日本C1|移动|2倍|V2
+  - 🇯🇵 日本C2|移动|2倍|V2
+  - 🇯🇵 日本C3|移动|2倍|V2
+  - 🇸🇬 新加坡A1|1.4倍|V2
+  - 🇸🇬 新加坡B1|1.8倍|V2
+  - 🇨🇦 加拿大A1|0.7倍|V1
+  - 🇩🇪 德国A1|联通|0.7倍|V1
+  - 🇩🇪 德国B1|移动|0.8倍|V1
+  - 🇬🇧 英国A2|联通移动|0.7倍|V1
+  - 🇫🇷 法国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A2|联通|0.7倍|V1
+  - 🇳🇱 荷兰A1|联通|0.8倍|V1
+  - 🇳🇱 荷兰B1|联通|0.7倍|V1
+  - 🇹🇭 泰国A1|移动|0.9倍|V2
+  - 🇻🇳 越南A1|电信移动|1.1倍|V2
+  - 🇷🇺 俄罗斯A1|联通|1倍|V1
+  - 🇷🇺 俄罗斯B1|联通|1倍|V1
+  - 🇹🇷 土耳其A1|三网|1.1倍|V2
+  - ❇️白羊座-AGP(通用)
+  - ❇️白羊座-BGP(通用)
+  - ❇️白羊座-CGP(通用)
+  - ❇️白羊座-IGP(通用)
+  - ❇️白羊座-JGP(流量)
+  - 🇭🇰香江-E(流量)
+  - 🇭🇰香江-F(流量)
+  - 🇭🇰香江-G(流量)
+  - 🇭🇰香江-H(流量)
+  - 🇭🇰香港-A(通用)
+  - 🇭🇰香港-B(流量)
+  - 🇯🇵日本-A(通用)
+  - 🇯🇵日本-B(流量)
+  - 🇰🇷韩国-A(通用)
+  - 🇰🇷韩国-B(流量)
+  - 🇸🇬新加坡-A(通用)
+  - 🇸🇬新加坡-B(流量)
+  - 🇲🇾马来-A(通用)
+  - 🇲🇾马来-B(流量)
+  - 🇹🇼台湾-A(通用)
+  - 🇹🇼台湾-B(流量)
+  - 🇸🇬狮城-E(流量)
+  - 🇸🇬狮城-F(流量)
+  - 🇸🇬狮城-G(流量)
+  - 🇸🇬狮城-H(流量)
+  - 🇺🇸西美-E(流量)
+  - 🇺🇸西美-F(流量)
+  - 🇺🇸西美-G(流量)
+  - 🇺🇸西美-H(流量)
+  filter: 香港.*3\.5倍|3\.5倍.*香港
+- name: Microsoft
+  type: select
+  proxies:
+  - 🇭🇰 香港A1|电信联通|2倍|V2
+  - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港E1|电信联通|2倍|V2
+  - 🇯🇵 日本A1|三网|3.5倍|V2
+  - 🇯🇵 日本A2|三网|3.5倍|V2
+  - 🇭🇰香港-A(通用)
+  - 🇭🇰香港-B(流量)
+  filter: 香港|3\.5倍
+- name: 📊crosswall 剩余 357.95GiB（距重置 24 天）
+  type: select
+  proxies:
+  - DIRECT
+- name: 📊Nano 剩余 190.89GiB
+  type: select
+  proxies:
+  - DIRECT
+rule-providers:
+  OpenAI:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/openai.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/OpenAI/OpenAI.yaml
+  Gemini:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/gemini.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gemini/Gemini.yaml
+  PikPak:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/pikpak.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/PikPak/PikPak.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/telegram.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Telegram/Telegram.yaml
+  Binance:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/Binance.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Binance/Binance.yaml
+  Claude:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/claude.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Claude/Claude.yaml
+  Twitter:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/twitter.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Twitter/Twitter.yaml
+  GitHub:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/github.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.yaml
+  RemoteDesktop:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/remotedesktop.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/RemoteDesktop/RemoteDesktop.yaml
+  115:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/115.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/115/115.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/microsoft.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft.yaml
+rules:
+- DOMAIN-SUFFIX,usertrust.com,DIRECT
+- DOMAIN-SUFFIX,rustdesk.com,DIRECT
+- DOMAIN-SUFFIX,open-vsx.org,DIRECT
+- DOMAIN,prod.us-east-1.telemetry.desktop.kiro.dev,DIRECT
+- DOMAIN,q.us-east-1.amazonaws.com,DIRECT
+- DOMAIN-SUFFIX,cursorhub.cloud,DIRECT
+- DOMAIN-SUFFIX,betterclau.de,DIRECT
+- RULE-SET,GitHub,Proxy
+- RULE-SET,Twitter,ai组
+- RULE-SET,Telegram,币安
+- RULE-SET,Claude,ai组
+- RULE-SET,OpenAI,ai组
+- RULE-SET,Gemini,ai组
+- RULE-SET,RemoteDesktop,DIRECT
+- RULE-SET,115,DIRECT
+- RULE-SET,Microsoft,Microsoft
+- DOMAIN-SUFFIX,docker.com,欧美
+- DOMAIN-SUFFIX,docker.io,欧美
+- DOMAIN-SUFFIX,npmjs.org,欧美
+- DOMAIN-SUFFIX,npmjs.com,欧美
+- DOMAIN-SUFFIX,yarnpkg.com,欧美
+- DOMAIN-SUFFIX,pypi.org,欧美
+- DOMAIN-SUFFIX,pythonhosted.org,欧美
+- DOMAIN-SUFFIX,crates.io,欧美
+- DOMAIN-SUFFIX,golang.org,欧美
+- DOMAIN-SUFFIX,brew.sh,欧美
+- DOMAIN-SUFFIX,maven.org,欧美
+- DOMAIN-SUFFIX,gradle.org,欧美
+- DOMAIN-KEYWORD,kisskh,欧美
+- DOMAIN-SUFFIX,xethub.hf.co,pikpak
+- DOMAIN-SUFFIX,pc528.net,DIRECT
+- RULE-SET,Binance,币安
+- RULE-SET,PikPak,pikpak
+- IP-ASN,62041,币安,no-resolve
+- IP-ASN,13335,Proxy,no-resolve
+- IP-ASN,15169,Proxy,no-resolve
+- GEOSITE,private,DIRECT
+- GEOIP,PRIVATE,DIRECT
+- GEOSITE,CN,DIRECT
+- GEOIP,CN,DIRECT
+- GEOIP,HK,DIRECT
+- MATCH,Proxy
+global-client-fingerprint: random
+ipv6: false
+tcp-concurrent: true
+unified-delay: true
+keep-alive-interval: 30
+geo-auto-update: false
+geo-update-interval: 168
+geodata-mode: false
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  listen: :53
+  ipv6: false
+  prefer-h3: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - '*.lan'
+  - '*.local'
+  - '*.localdomain'
+  - localhost.ptlogin2.qq.com
+  - +.msftconnecttest.com
+  - +.msftncsi.com
+  - +.apple.com
+  - +.icloud.com
+  - +.push.apple.com
+  - captive.apple.com
+  - +.github.com
+  - +.githubusercontent.com
+  - +.gitlab.com
+  - +.gitee.com
+  - +.cloudflare.com
+  - +.cloudflare-dns.com
+  - +.cloudflareclient.com
+  - +.cloudflareinsights.com
+  - +.one.one.one.one
+  - +.openai.com
+  - +.chatgpt.com
+  - +.oaistatic.com
+  - +.oaiusercontent.com
+  - +.openaiapi-site.azureedge.net
+  - +.openai.azure.com
+  - +.anthropic.com
+  - +.claude.ai
+  - +.claudeusercontent.com
+  - aistudio.google.com
+  - makersuite.google.com
+  - gemini.google.com
+  - generativelanguage.googleapis.com
+  - oauth2.googleapis.com
+  - accounts.google.com
+  - +.googleapis.com
+  - +.gstatic.com
+  - +.googleusercontent.com
+  - copilot.microsoft.com
+  - sydney.bing.com
+  - +.openrouter.ai
+  - +.huggingface.co
+  - +.hf.co
+  - +.replicate.com
+  - +.together.ai
+  - +.fireworks.ai
+  - +.perplexity.ai
+  - +.x.ai
+  - +.mistral.ai
+  - +.cohere.ai
+  - +.groq.com
+  - +.meta.ai
+  - +.docker.com
+  - +.docker.io
+  - +.gcr.io
+  - +.ghcr.io
+  - +.quay.io
+  - +.synology.com
+  - +.quickconnect.to
+  - +.myqnapcloud.com
+  - +.diskstation.me
+  - +.115.com
+  - +.steamserver.net
+  - +.steampowered.com
+  - +.ea.com
+  - +.epicgames.com
+  - localhost.battle.net
+  - +.discord.gg
+  - +.discord.com
+  - smtp.*
+  - imap.*
+  - pop.*
+  - pop3.*
+  - mail.*
+  - +.home-assistant.io
+  - Mijia Cloud
+  - +.mi.com
+  - +.xiaomi.com
+  - router.asus.com
+  - www.router.asus.com
+  - repeater.asus.com
+  - +.tplinkwifi.net
+  - +.tendawifi.com
+  - +.speedtest.net
+  - fast.com
+  - ntp.*
+  - time.*
+  - +.ntp.org.cn
+  - +.pool.ntp.org
+  - +.usertrust.com
+  - +.rustdesk.com
+  - +.aliyuncs.com
+  - +.tencentcloudapi.com
+  - +.bank
+  - +.icbc.com.cn
+  - +.ccb.com.cn
+  - +.boc.cn
+  - +.abchina.com
+  - 10.0.0.0/8
+  - 172.16.0.0/12
+  - 192.168.0.0/16
+  - 127.0.0.0/8
+  - fc00::/7
+  - fe80::/10
+  - ff00::/8
+  - geosite:cn
+  respect-rules: true
+  use-hosts: true
+  use-system-hosts: false
+  default-nameserver:
+  - 223.5.5.5
+  - 1.1.1.1
+  nameserver:
+  - https://dns.alidns.com/dns-query
+  proxy-server-nameserver:
+  - 223.5.5.5
+  direct-nameserver:
+  - 223.5.5.5
+  fallback:
+  - https://dns.alidns.com/dns-query
+  nameserver-policy:
+    geosite:private,cn:
+    - 223.5.5.5
+sniffer:
+  enable: true
+  override-destination: true
+  parse-pure-ip: true
+  sniff:
+    QUIC:
+      ports:
+      - 443
+    TLS:
+      ports:
+      - 443
+      - 8443
+    HTTP:
+      ports:
+      - 80
+      - 8080-8880
+      override-destination: true
+  force-domain:
+  - +.netflix.com
+  - +.nflxvideo.net
+  - +.amazonaws.com
+  - +.media.dssott.com
+  skip-domain:
+  - +.apple.com
+  - Mijia Cloud
+  - dlg.io.mi.com
+  - +.oray.com
+  - +.sunlogin.net
+  - +.push.apple.com

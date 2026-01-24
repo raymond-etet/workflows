@@ -1,0 +1,71 @@
+# 构建 Clash 配置
+name: Build Clash Config
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "scripts/**"
+      - "test.yaml"
+      - ".github/workflows/clash-config.yml"
+  schedule:
+    - cron: "0 7 * * *" # 每天 UTC 07:00，对应北京时间 15:00
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install pyyaml requests
+
+      - name: Generate config from template
+        env:
+          PRUNE_SUBSCRIPTIONS_LOW_TRAFFIC: "1"
+          SUBSCRIPTION_MIN_REMAINING_GB: "1"
+          FILTER_SUBSCRIPTION_NOISE: "1"
+          EMBED_SUBSCRIPTION_TRAFFIC_GROUPS: "1"
+          # Set to 1 if you want a parent "directory" group (shows extra group in clients).
+          EMBED_SUBSCRIPTION_TRAFFIC_PARENT_GROUP: "0"
+        run: python scripts/build_clash_config.py
+
+      - name: Add report to job summary
+        if: always()
+        run: |
+          if [ -f dist/subscriptions_report.md ]; then
+            cat dist/subscriptions_report.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "No subscription report generated." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Add build status to job summary
+        if: always()
+        run: |
+          if [ -f dist/build_status.json ]; then
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "## Build Status" >> "$GITHUB_STEP_SUMMARY"
+            echo '```json' >> "$GITHUB_STEP_SUMMARY"
+            cat dist/build_status.json >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "No build status generated." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Commit & Push
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add test.yaml dist/config.yaml dist/subscriptions_report.md dist/build_status.json providers/all.yaml
+          git commit -m "chore: build clash config" || echo "No changes to commit"
+          git push

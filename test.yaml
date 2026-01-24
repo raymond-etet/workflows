@@ -1,0 +1,372 @@
+subscriptions:
+- name: crosswall
+  url: http://162.19.79.201/s/66b4d235dd25ee6c378dde2a4a1570c6
+  last_remaining_bytes: 384347509305
+  last_total_bytes: 425201762304
+  last_used_bytes: 40854252999
+  last_expire: 1800116928
+  last_reset_days: 24
+- name: Nano
+  url: https://47.238.198.94/iv/verify_mode.htm?token=e017cb1dc789505b3add5f3299fd9ea8
+  last_remaining_bytes: 204962277902
+  last_total_bytes: 322122547200
+  last_used_bytes: 117160269298
+  last_expire: 1777554767
+global-client-fingerprint: random
+ipv6: false
+tcp-concurrent: true
+unified-delay: true
+keep-alive-interval: 30
+geo-auto-update: false
+geo-update-interval: 168
+geodata-mode: false
+profile:
+  store-selected: true
+  store-fake-ip: true
+mode: rule
+dns:
+  enable: true
+  listen: :53
+  ipv6: false
+  prefer-h3: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - '*.lan'
+  - '*.local'
+  - '*.localdomain'
+  - localhost.ptlogin2.qq.com
+  - +.msftconnecttest.com
+  - +.msftncsi.com
+  - +.apple.com
+  - +.icloud.com
+  - +.push.apple.com
+  - captive.apple.com
+  - +.github.com
+  - +.githubusercontent.com
+  - +.gitlab.com
+  - +.gitee.com
+  - +.cloudflare.com
+  - +.cloudflare-dns.com
+  - +.cloudflareclient.com
+  - +.cloudflareinsights.com
+  - +.one.one.one.one
+  - +.openai.com
+  - +.chatgpt.com
+  - +.oaistatic.com
+  - +.oaiusercontent.com
+  - +.openaiapi-site.azureedge.net
+  - +.openai.azure.com
+  - +.anthropic.com
+  - +.claude.ai
+  - +.claudeusercontent.com
+  - aistudio.google.com
+  - makersuite.google.com
+  - gemini.google.com
+  - generativelanguage.googleapis.com
+  - oauth2.googleapis.com
+  - accounts.google.com
+  - +.googleapis.com
+  - +.gstatic.com
+  - +.googleusercontent.com
+  - copilot.microsoft.com
+  - sydney.bing.com
+  - +.openrouter.ai
+  - +.huggingface.co
+  - +.hf.co
+  - +.replicate.com
+  - +.together.ai
+  - +.fireworks.ai
+  - +.perplexity.ai
+  - +.x.ai
+  - +.mistral.ai
+  - +.cohere.ai
+  - +.groq.com
+  - +.meta.ai
+  - +.docker.com
+  - +.docker.io
+  - +.gcr.io
+  - +.ghcr.io
+  - +.quay.io
+  - +.synology.com
+  - +.quickconnect.to
+  - +.myqnapcloud.com
+  - +.diskstation.me
+  - +.115.com
+  - +.steamserver.net
+  - +.steampowered.com
+  - +.ea.com
+  - +.epicgames.com
+  - localhost.battle.net
+  - +.discord.gg
+  - +.discord.com
+  - smtp.*
+  - imap.*
+  - pop.*
+  - pop3.*
+  - mail.*
+  - +.home-assistant.io
+  - Mijia Cloud
+  - +.mi.com
+  - +.xiaomi.com
+  - router.asus.com
+  - www.router.asus.com
+  - repeater.asus.com
+  - +.tplinkwifi.net
+  - +.tendawifi.com
+  - +.speedtest.net
+  - fast.com
+  - ntp.*
+  - time.*
+  - +.ntp.org.cn
+  - +.pool.ntp.org
+  - +.usertrust.com
+  - +.rustdesk.com
+  - +.aliyuncs.com
+  - +.tencentcloudapi.com
+  - +.bank
+  - +.icbc.com.cn
+  - +.ccb.com.cn
+  - +.boc.cn
+  - +.abchina.com
+  - 10.0.0.0/8
+  - 172.16.0.0/12
+  - 192.168.0.0/16
+  - 127.0.0.0/8
+  - fc00::/7
+  - fe80::/10
+  - ff00::/8
+  - geosite:cn
+  respect-rules: true
+  use-hosts: true
+  use-system-hosts: false
+  default-nameserver:
+  - 223.5.5.5
+  - 1.1.1.1
+  nameserver:
+  - https://dns.alidns.com/dns-query
+  proxy-server-nameserver:
+  - 223.5.5.5
+  direct-nameserver:
+  - 223.5.5.5
+  fallback:
+  - https://dns.alidns.com/dns-query
+  nameserver-policy:
+    geosite:private,cn:
+    - 223.5.5.5
+sniffer:
+  enable: true
+  override-destination: true
+  parse-pure-ip: true
+  sniff:
+    QUIC:
+      ports:
+      - 443
+    TLS:
+      ports:
+      - 443
+      - 8443
+    HTTP:
+      ports:
+      - 80
+      - 8080-8880
+      override-destination: true
+  force-domain:
+  - +.netflix.com
+  - +.nflxvideo.net
+  - +.amazonaws.com
+  - +.media.dssott.com
+  skip-domain:
+  - +.apple.com
+  - Mijia Cloud
+  - dlg.io.mi.com
+  - +.oray.com
+  - +.sunlogin.net
+  - +.push.apple.com
+proxy-groups:
+- name: Proxy
+  type: select
+  proxies:
+  - 香港
+  - 东南亚
+  - 欧美
+  - 全节点
+  - 其他
+- name: 全节点
+  type: url-test
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: 香港
+  type: url-test
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: 东南亚
+  type: url-test
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: 欧美
+  type: url-test
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: 其他
+  type: url-test
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: 币安
+  type: url-test
+  proxies: []
+- name: pikpak
+  type: select
+  proxies: []
+- name: ai组
+  type: select
+  proxies: []
+  filter: 香港.*3\.5倍|3\.5倍.*香港
+- name: Microsoft
+  type: select
+  proxies: []
+  filter: 香港|3\.5倍
+rule-providers:
+  OpenAI:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/openai.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/OpenAI/OpenAI.yaml
+  Gemini:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/gemini.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gemini/Gemini.yaml
+  PikPak:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/pikpak.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/PikPak/PikPak.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/telegram.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Telegram/Telegram.yaml
+  Binance:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/Binance.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Binance/Binance.yaml
+  Claude:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/claude.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Claude/Claude.yaml
+  Twitter:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/twitter.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Twitter/Twitter.yaml
+  GitHub:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/github.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.yaml
+  RemoteDesktop:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/remotedesktop.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/RemoteDesktop/RemoteDesktop.yaml
+  115:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/115.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/115/115.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/microsoft.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft.yaml
+  Google:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/google.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Google/Google.yaml
+rules:
+- DOMAIN-SUFFIX,usertrust.com,DIRECT
+- DOMAIN-SUFFIX,rustdesk.com,DIRECT
+- DOMAIN-SUFFIX,open-vsx.org,DIRECT
+- DOMAIN,prod.us-east-1.telemetry.desktop.kiro.dev,DIRECT
+- DOMAIN,q.us-east-1.amazonaws.com,DIRECT
+- DOMAIN-SUFFIX,cursorhub.cloud,DIRECT
+- DOMAIN-SUFFIX,betterclau.de,DIRECT
+- RULE-SET,GitHub,Proxy
+- RULE-SET,Twitter,ai组
+- RULE-SET,Telegram,币安
+- RULE-SET,Claude,ai组
+- RULE-SET,OpenAI,ai组
+- RULE-SET,Gemini,ai组
+- RULE-SET,Google,ai组
+- RULE-SET,RemoteDesktop,DIRECT
+- RULE-SET,115,DIRECT
+- RULE-SET,Microsoft,Microsoft
+- DOMAIN-SUFFIX,docker.com,欧美
+- DOMAIN-SUFFIX,docker.io,欧美
+- DOMAIN-SUFFIX,npmjs.org,欧美
+- DOMAIN-SUFFIX,npmjs.com,欧美
+- DOMAIN-SUFFIX,yarnpkg.com,欧美
+- DOMAIN-SUFFIX,pypi.org,欧美
+- DOMAIN-SUFFIX,pythonhosted.org,欧美
+- DOMAIN-SUFFIX,crates.io,欧美
+- DOMAIN-SUFFIX,golang.org,欧美
+- DOMAIN-SUFFIX,brew.sh,欧美
+- DOMAIN-SUFFIX,maven.org,欧美
+- DOMAIN-SUFFIX,gradle.org,欧美
+- DOMAIN-KEYWORD,kisskh,欧美
+- DOMAIN-SUFFIX,xethub.hf.co,pikpak
+- DOMAIN-SUFFIX,pc528.net,DIRECT
+- RULE-SET,Binance,币安
+- RULE-SET,PikPak,pikpak
+- IP-ASN,62041,币安,no-resolve
+- IP-ASN,13335,Proxy,no-resolve
+- IP-ASN,15169,Proxy,no-resolve
+- GEOSITE,private,DIRECT
+- GEOIP,PRIVATE,DIRECT
+- GEOSITE,CN,DIRECT
+- GEOIP,CN,DIRECT
+- GEOIP,HK,DIRECT
+- MATCH,Proxy
