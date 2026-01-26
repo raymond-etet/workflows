@@ -188,6 +188,10 @@ sniffer:
 proxy-groups:
 - name: Proxy
   type: select
+  extra-keywords:
+  - Hong Kong
+  - Singapore
+  - Japan
   proxies:
   - 香港
   - 东南亚
@@ -203,6 +207,8 @@ proxy-groups:
   lazy: true
 - name: 香港
   type: url-test
+  exclude-subscriptions:
+  - Nano
   proxies: []
   url: https://www.gstatic.com/generate_204
   interval: 180
@@ -231,18 +237,30 @@ proxy-groups:
   lazy: true
 - name: 币安
   type: url-test
+  extra-keywords:
+  - Hong Kong
+  - Singapore
+  - Japan
   proxies: []
 - name: pikpak
   type: select
   proxies: []
 - name: ai组
   type: select
+  exclude-subscriptions:
+  - Nano
+  exclude-filter: Expire Date
   proxies: []
   filter: 香港.*3\.5倍|3\.5倍.*香港
 - name: Microsoft
   type: select
+  extra-keywords:
+  - Hong Kong
+  - Singapore
+  - Japan
   proxies: []
   filter: 香港|3\.5倍
+
 rule-providers:
   OpenAI:
     type: http

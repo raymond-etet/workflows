@@ -1,4 +1,22 @@
 proxies:
+- name: 官网：keluosi.top
+  server: usf.node.cross666.top
+  port: 65535
+  sni: www.yahoo.com
+  up: 500
+  down: 500
+  skip-cert-verify: true
+  type: hysteria2
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+- name: 套餐到期：2027-01-17
+  server: usf.node.cross666.top
+  port: 65535
+  sni: www.yahoo.com
+  up: 500
+  down: 500
+  skip-cert-verify: true
+  type: hysteria2
+  password: efaed81f-e760-4d87-be6e-05136b25da66
 - name: 🇺🇸 美国F1|电信联通|1.1倍|V1
   server: usf.node.cross666.top
   port: 65535
@@ -87,14 +105,6 @@ proxies:
 - name: 🇯🇵 日本A1|三网|3.5倍|V2
   type: anytls
   server: jpfa1.node.cross666.top
-  port: 31333
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
-  sni: www.yahoo.co.jp
-  skip-cert-verify: true
-- name: 🇯🇵 日本A2|三网|3.5倍|V2
-  type: anytls
-  server: jpfa2.node.cross666.top
   port: 31333
   password: efaed81f-e760-4d87-be6e-05136b25da66
   udp: true
@@ -336,7 +346,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-e.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -355,7 +365,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-f.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -393,7 +403,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-h.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -580,7 +590,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-e.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -637,7 +647,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-h.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -656,7 +666,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-e.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -675,7 +685,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-f.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -694,7 +704,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-g.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -722,3 +732,486 @@ proxies:
   ws-path: /newlogin/login.do
   ws-headers:
     Host: mms-static-bottom-h.aliapp.men
+- name: 0.14 GB | 300 GB
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '16001'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 'Expire Date: 2026-02-26'
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '16001'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇭🇰 Hong Kong丨01
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '16001'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇭🇰 Hong Kong丨02
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '16002'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇭🇰 Hong Kong丨03
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '16003'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇭🇰 Hong Kong丨04
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '16004'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇭🇰 Hong Kong丨05
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '16005'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇭🇰 Hong Kong丨06
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '16006'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇭🇰 Hong Kong丨07
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '16007'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇭🇰 Hong Kong丨08
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '16008'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇭🇰 Hong Kong丨09
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '16009'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇭🇰 Hong Kong丨10
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '16010'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇭🇰 Hong Kong丨11
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '16011'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇭🇰 Hong Kong丨12
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '16012'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇭🇰 Hong Kong丨13
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '16013'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇭🇰 Hong Kong丨14
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '16014'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇭🇰 Hong Kong丨15
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '16015'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇨🇳 Taiwan丨01
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '17001'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇨🇳 Taiwan丨02
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '17002'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇨🇳 Taiwan丨03
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '17003'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇨🇳 Taiwan丨04
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '17004'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇨🇳 Taiwan丨05
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '17005'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇨🇳 Taiwan丨06
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '17006'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇨🇳 Taiwan丨07
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '17007'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇨🇳 Taiwan丨08
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '17008'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇨🇳 Taiwan丨09
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '17009'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇨🇳 Taiwan丨10
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '17010'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇸🇬 Singapore丨01
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '18001'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇸🇬 Singapore丨02
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '18002'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇸🇬 Singapore丨03
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '18003'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇸🇬 Singapore丨04
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '18004'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇸🇬 Singapore丨05
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '18005'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇸🇬 Singapore丨06
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '18006'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇸🇬 Singapore丨07
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '18007'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇸🇬 Singapore丨08
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '18008'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇸🇬 Singapore丨09
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '18009'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇸🇬 Singapore丨10
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '18010'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇯🇵 Japan丨01
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '19001'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇯🇵 Japan丨02
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '19002'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇯🇵 Japan丨03
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '19003'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇯🇵 Japan丨04
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '19004'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇯🇵 Japan丨05
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '19005'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇯🇵 Japan丨06
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '19006'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇯🇵 Japan丨07
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '19007'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇯🇵 Japan丨08
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '19008'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇯🇵 Japan丨09
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '19009'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇯🇵 Japan丨10
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '19010'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇺🇸 United States丨01
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '20001'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇺🇸 United States丨02
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '20002'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇺🇸 United States丨03
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '20003'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇺🇸 United States丨04
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '20004'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇺🇸 United States丨05
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '20005'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇺🇸 United States丨06
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '20006'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇺🇸 United States丨07
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '20007'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇺🇸 United States丨08
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '20008'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇺🇸 United States丨09
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '20009'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇺🇸 United States丨10
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '20010'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇰🇷 South Korea丨01
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '21001'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇨🇦 Canada丨01
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '22002'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇬🇧 Great Britain丨01
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '23001'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇹🇷 Turkey丨01
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '24001'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇮🇳 India丨01
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '25001'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇳🇱 Netherlands丨01
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '26001'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇫🇷 France | 01
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '27001'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇩🇪 Germany | 01
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '28001'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇻🇳 Vietnam | 01
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '29001'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇲🇾 Malaysia丨01
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '29010'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇹🇭 Thailand丨01
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '29015'
+  cipher: aes-256-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true
+- name: 🇵🇭 Philippines丨01
+  type: ss
+  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  port: '29020'
+  cipher: aes-128-gcm
+  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  udp: true

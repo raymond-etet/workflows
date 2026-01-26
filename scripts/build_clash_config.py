@@ -1122,8 +1122,8 @@ def build() -> dict:
         "twitter": list(dict.fromkeys(proxy_names)),
         "Microsoft": [],
     }
-    hk_re = re.compile(r"(hk|hong|港|香江|xiangjiang|gp(?!t)|gp\\d+)", re.IGNORECASE)
-    proxy_keyword_re = re.compile(r"(hong\\s*kong|singapore|japan)", re.IGNORECASE)
+    hk_re = re.compile(r"(hk|hong|港|香江|xiangjiang|gp(?!t)|gp\d+)", re.IGNORECASE)
+    proxy_keyword_re = re.compile(r"(hong\s*kong|singapore|japan)", re.IGNORECASE)
     sg_re = re.compile(r"(sg|singapore|新加坡)", re.IGNORECASE)
     sea_re = re.compile(
         r"(sg|singapore|sea|vn|vietnam|th|thailand|my|malaysia|ph|phil|id|indo|jp|japan|tw|taiwan|越南|泰国|马来|菲|印尼|新加坡|日本|台|臺)",
@@ -1133,9 +1133,10 @@ def build() -> dict:
         r"(us|usa|uk|gb|eu|europe|de|fr|nl|ca|america|美|英|欧|德|法|荷|加)",
         re.IGNORECASE,
     )
-    ai_noise_re = re.compile(r"expire\\s*date", re.IGNORECASE)
+    ai_noise_re = re.compile(r"(expire\s*date|剩余流量|套餐到期|官网|流量|GB\s*\||bit\.ly|github|t\.me)", re.IGNORECASE)
     # ai组默认节点: 同时包含"香港"和"3.5倍"
     ai_default_re = re.compile(r"(香港.*3\.5倍|3\.5倍.*香港)", re.IGNORECASE)
+
     # pikpak默认节点: 同时包含"美国"和"1.1倍"
     pikpak_default_re = re.compile(r"(美国.*1\.1倍|1\.1倍.*美国)", re.IGNORECASE)
     # 币安组筛选: 同时包含"香港"和"3.5倍"
@@ -1144,14 +1145,24 @@ def build() -> dict:
     microsoft_re = re.compile(r"(香港|3\.5倍)", re.IGNORECASE)
 
     # 为 ai组 排序：符合条件的节点排在前面
+    ai_group_conf = next((g for g in template.get("proxy-groups", []) if isinstance(g, dict) and g.get("name") == "ai组"), {})
+    ai_exclude_subs = ai_group_conf.get("exclude-subscriptions", [])
+    ai_exclude_filter = ai_group_conf.get("exclude-filter", "")
+    ai_exclude_re = re.compile(str(ai_exclude_filter), re.IGNORECASE) if ai_exclude_filter else None
+
     ai_candidates = [
         n
         for n in proxy_names
-        if n not in nano_proxy_names and not ai_noise_re.search(n)
+        if (proxy_sources.get(n) not in ai_exclude_subs) 
+        and (not ai_exclude_re or not ai_exclude_re.search(n))
+        and not ai_noise_re.search(n)
     ]
     ai_default_nodes = [n for n in ai_candidates if ai_default_re.search(n)]
     ai_other_nodes = [n for n in ai_candidates if not ai_default_re.search(n)]
     name_sets["ai组"] = list(dict.fromkeys(ai_default_nodes + ai_other_nodes))
+
+    hk_group_conf = next((g for g in template.get("proxy-groups", []) if isinstance(g, dict) and g.get("name") == "香港"), {})
+    hk_exclude_subs = hk_group_conf.get("exclude-subscriptions", [])
 
     for n in proxy_names:
         matched_hk = bool(hk_re.search(n))
@@ -1161,8 +1172,9 @@ def build() -> dict:
         matched_binance = bool(binance_re.search(n))
         matched_microsoft = bool(microsoft_re.search(n))
 
-        if matched_hk and n not in nano_proxy_names:
+        if matched_hk and proxy_sources.get(n) not in hk_exclude_subs:
             name_sets["香港"].append(n)
+
         
         # 币安组: 只保留同时包含"香港"和"3.5倍"的节点
         if matched_binance:
@@ -1198,19 +1210,42 @@ def build() -> dict:
 
     # 筛选出包含 "3.5倍" 的节点
     x35_nodes = [n for n in proxy_names if "3.5倍" in n or "3.5x" in n.lower()]
-    keyword_nodes = [n for n in proxy_names if proxy_keyword_re.search(n)]
+    proxy_group_conf = next((g for g in template.get("proxy-groups", []) if g.get("name") == "Proxy"), {})
+    extra_keywords = proxy_group_conf.get("extra-keywords", [])
+    if extra_keywords:
+        kw_re = re.compile(f"({'|'.join(re.escape(k) for k in extra_keywords)})", re.IGNORECASE)
+        keyword_nodes = [n for n in proxy_names if kw_re.search(n)]
+    else:
+        keyword_nodes = []
 
     for group in template.get("proxy-groups", []):
+        if not isinstance(group, dict):
+            continue
         gname = group.get("name")
+        extra_keywords = group.get("extra-keywords", [])
+        
+        # 提取关键字节点逻辑通用化
+        keyword_nodes = []
+        if extra_keywords:
+            kw_re = re.compile(f"({'|'.join(re.escape(k) for k in extra_keywords)})", re.IGNORECASE)
+            keyword_nodes = [n for n in proxy_names if kw_re.search(n)]
+
         if gname == "Proxy":
-            # 在 Proxy 组中追加 3.5倍 节点，然后是子组
+            # 在 Proxy 组中追加 3.5倍 节点，以及 extra-keywords 节点，然后是子组
             group["proxies"] = dedup(
                 x35_nodes
                 + keyword_nodes
                 + ["香港", "东南亚", "欧美", "全节点", "其他"]
             )
         elif gname in name_sets:
-            group["proxies"] = dedup(name_sets[gname])
+            # 基础节点 + 关键字提取节点
+            group["proxies"] = dedup(name_sets[gname] + keyword_nodes)
+        
+        # 移除自定义字段
+        group.pop("extra-keywords", None)
+        group.pop("exclude-subscriptions", None)
+        group.pop("exclude-filter", None)
+
 
     PROVIDER_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_CONFIG.parent.mkdir(parents=True, exist_ok=True)
