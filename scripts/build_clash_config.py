@@ -701,6 +701,7 @@ def filter_proxies_by_name_noise(proxies: list[dict]) -> tuple[list[dict], list[
 def fetch_proxies(subscriptions, *, min_remaining_bytes: Optional[int] = None):
     proxies = []
     seen_names = set()
+    proxy_sources: dict[str, str] = {}
     prunable_subscriptions = []
     report_rows: list[dict[str, object]] = []
     updated_subscriptions: list[dict[str, object]] = []
@@ -930,9 +931,10 @@ def fetch_proxies(subscriptions, *, min_remaining_bytes: Optional[int] = None):
                 continue
             proxies.append(proxy)
             seen_names.add(proxy_name)
+            proxy_sources[str(proxy_name)] = subscription_name
     if not proxies:
         raise ValueError("未收集到任何代理节点")
-    return proxies, prunable_subscriptions, report_rows, updated_subscriptions
+    return proxies, prunable_subscriptions, report_rows, updated_subscriptions, proxy_sources
 
 
 def build() -> dict:
@@ -978,6 +980,7 @@ def build() -> dict:
     prunable_subscriptions = []
     report_rows: list[dict[str, object]] = []
     updated_subscriptions: list[dict[str, object]] = []
+    proxy_sources: dict[str, str] = {}
 
     if use_local_provider:
         proxies = load_proxies_from_provider(PROVIDER_PATH)
@@ -987,6 +990,7 @@ def build() -> dict:
                 prunable_subscriptions,
                 report_rows,
                 updated_subscriptions,
+                proxy_sources,
             ) = fetch_proxies(subscriptions, min_remaining_bytes=min_remaining_bytes)
         elif not proxies:
             raise SystemExit(
@@ -998,6 +1002,7 @@ def build() -> dict:
             prunable_subscriptions,
             report_rows,
             updated_subscriptions,
+            proxy_sources,
         ) = fetch_proxies(subscriptions, min_remaining_bytes=min_remaining_bytes)
     else:
         raise SystemExit("请在 test.yaml 的 subscriptions 中填写至少一个 Clash 订阅链接")
@@ -1088,6 +1093,11 @@ def build() -> dict:
         status["embedded_subscription_traffic_parent_group"] = bool(include_parent)
 
     proxy_names = [p.get("name") for p in proxies if p.get("name")]
+    nano_proxy_names = {
+        name
+        for name, source in proxy_sources.items()
+        if isinstance(source, str) and source.strip().lower() == "nano"
+    }
 
     template.pop("subscriptions", None)
     template.setdefault("proxy-providers", {})
@@ -1113,6 +1123,7 @@ def build() -> dict:
         "Microsoft": [],
     }
     hk_re = re.compile(r"(hk|hong|港|香江|xiangjiang|gp(?!t)|gp\\d+)", re.IGNORECASE)
+    proxy_keyword_re = re.compile(r"(hong\\s*kong|singapore|japan)", re.IGNORECASE)
     sg_re = re.compile(r"(sg|singapore|新加坡)", re.IGNORECASE)
     sea_re = re.compile(
         r"(sg|singapore|sea|vn|vietnam|th|thailand|my|malaysia|ph|phil|id|indo|jp|japan|tw|taiwan|越南|泰国|马来|菲|印尼|新加坡|日本|台|臺)",
@@ -1122,6 +1133,7 @@ def build() -> dict:
         r"(us|usa|uk|gb|eu|europe|de|fr|nl|ca|america|美|英|欧|德|法|荷|加)",
         re.IGNORECASE,
     )
+    ai_noise_re = re.compile(r"expire\\s*date", re.IGNORECASE)
     # ai组默认节点: 同时包含"香港"和"3.5倍"
     ai_default_re = re.compile(r"(香港.*3\.5倍|3\.5倍.*香港)", re.IGNORECASE)
     # pikpak默认节点: 同时包含"美国"和"1.1倍"
@@ -1132,8 +1144,13 @@ def build() -> dict:
     microsoft_re = re.compile(r"(香港|3\.5倍)", re.IGNORECASE)
 
     # 为 ai组 排序：符合条件的节点排在前面
-    ai_default_nodes = [n for n in proxy_names if ai_default_re.search(n)]
-    ai_other_nodes = [n for n in proxy_names if not ai_default_re.search(n)]
+    ai_candidates = [
+        n
+        for n in proxy_names
+        if n not in nano_proxy_names and not ai_noise_re.search(n)
+    ]
+    ai_default_nodes = [n for n in ai_candidates if ai_default_re.search(n)]
+    ai_other_nodes = [n for n in ai_candidates if not ai_default_re.search(n)]
     name_sets["ai组"] = list(dict.fromkeys(ai_default_nodes + ai_other_nodes))
 
     for n in proxy_names:
@@ -1144,7 +1161,7 @@ def build() -> dict:
         matched_binance = bool(binance_re.search(n))
         matched_microsoft = bool(microsoft_re.search(n))
 
-        if matched_hk:
+        if matched_hk and n not in nano_proxy_names:
             name_sets["香港"].append(n)
         
         # 币安组: 只保留同时包含"香港"和"3.5倍"的节点
@@ -1181,12 +1198,17 @@ def build() -> dict:
 
     # 筛选出包含 "3.5倍" 的节点
     x35_nodes = [n for n in proxy_names if "3.5倍" in n or "3.5x" in n.lower()]
+    keyword_nodes = [n for n in proxy_names if proxy_keyword_re.search(n)]
 
     for group in template.get("proxy-groups", []):
         gname = group.get("name")
         if gname == "Proxy":
             # 在 Proxy 组中追加 3.5倍 节点，然后是子组
-            group["proxies"] = dedup(x35_nodes + ["香港", "东南亚", "欧美", "全节点", "其他"])
+            group["proxies"] = dedup(
+                x35_nodes
+                + keyword_nodes
+                + ["香港", "东南亚", "欧美", "全节点", "其他"]
+            )
         elif gname in name_sets:
             group["proxies"] = dedup(name_sets[gname])
 
