@@ -349,9 +349,9 @@ rule-providers:
 rules:
 - DOMAIN-SUFFIX,usertrust.com,DIRECT
 - DOMAIN-SUFFIX,rustdesk.com,DIRECT
-- DOMAIN-SUFFIX,open-vsx.org,DIRECT
-- DOMAIN,prod.us-east-1.telemetry.desktop.kiro.dev,DIRECT
-- DOMAIN,q.us-east-1.amazonaws.com,DIRECT
+- DOMAIN-SUFFIX,open-vsx.org,ai组
+- DOMAIN,prod.us-east-1.telemetry.desktop.kiro.dev,ai组
+- DOMAIN,q.us-east-1.amazonaws.com,ai组
 - DOMAIN-SUFFIX,cursorhub.cloud,DIRECT
 - DOMAIN-SUFFIX,betterclau.de,DIRECT
 - RULE-SET,GitHub,Proxy
