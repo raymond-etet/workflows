@@ -260,6 +260,11 @@ proxy-groups:
   - Japan
   proxies: []
   filter: 香港|3\.5倍
+- name: Amazon
+  type: select
+  include-subscriptions:
+  - ssrdy
+  proxies: []
 
 rule-providers:
   OpenAI:
@@ -346,6 +351,13 @@ rule-providers:
     interval: 86400
     path: ./rule-set/google.yaml
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Google/Google.yaml
+  Amazon:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/amazon.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Amazon/Amazon.yaml
 rules:
 - DOMAIN-SUFFIX,usertrust.com,DIRECT
 - DOMAIN-SUFFIX,rustdesk.com,DIRECT
@@ -364,6 +376,7 @@ rules:
 - RULE-SET,RemoteDesktop,DIRECT
 - RULE-SET,115,DIRECT
 - RULE-SET,Microsoft,Microsoft
+- RULE-SET,Amazon,Amazon
 - DOMAIN-SUFFIX,docker.com,欧美
 - DOMAIN-SUFFIX,docker.io,欧美
 - DOMAIN-SUFFIX,npmjs.org,欧美

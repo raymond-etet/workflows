@@ -1121,6 +1121,7 @@ def build() -> dict:
         "ai组": list(dict.fromkeys(proxy_names)),
         "twitter": list(dict.fromkeys(proxy_names)),
         "Microsoft": [],
+        "Amazon": [],
     }
     hk_re = re.compile(r"(hk|hong|港|香江|xiangjiang|gp(?!t)|gp\d+)", re.IGNORECASE)
     proxy_keyword_re = re.compile(r"(hong\s*kong|singapore|japan)", re.IGNORECASE)
@@ -1223,12 +1224,21 @@ def build() -> dict:
             continue
         gname = group.get("name")
         extra_keywords = group.get("extra-keywords", [])
+        include_subs = group.get("include-subscriptions", [])
         
         # 提取关键字节点逻辑通用化
         keyword_nodes = []
         if extra_keywords:
             kw_re = re.compile(f"({'|'.join(re.escape(k) for k in extra_keywords)})", re.IGNORECASE)
             keyword_nodes = [n for n in proxy_names if kw_re.search(n)]
+        
+        # 处理 include-subscriptions 逻辑
+        include_nodes = []
+        if include_subs:
+            include_nodes = [
+                n for n in proxy_names
+                if proxy_sources.get(n) in include_subs
+            ]
 
         if gname == "Proxy":
             # 在 Proxy 组中追加 3.5倍 节点，以及 extra-keywords 节点，然后是子组
@@ -1238,13 +1248,17 @@ def build() -> dict:
                 + ["香港", "东南亚", "欧美", "全节点", "其他"]
             )
         elif gname in name_sets:
-            # 基础节点 + 关键字提取节点
-            group["proxies"] = dedup(name_sets[gname] + keyword_nodes)
+            # 基础节点 + 关键字提取节点 + include-subscriptions 节点
+            if include_nodes:
+                group["proxies"] = dedup(include_nodes + keyword_nodes)
+            else:
+                group["proxies"] = dedup(name_sets[gname] + keyword_nodes)
         
         # 移除自定义字段
         group.pop("extra-keywords", None)
         group.pop("exclude-subscriptions", None)
         group.pop("exclude-filter", None)
+        group.pop("include-subscriptions", None)
 
 
     PROVIDER_PATH.parent.mkdir(parents=True, exist_ok=True)
