@@ -13,7 +13,7 @@ subscriptions:
   last_used_bytes: 117160269298
   last_expire: 1777554767
 - name: ssrdy
-  url: https://ec7c74c7993989c18f854334ae6727ff.r7kq-2nfa-hg9x-bt4m-y3pw.sbs/s?t=ec7c74c7993989c18f854334ae6727ff.jpg
+  url: https://535a739574f8c8f5428908ee80821984.r7kq-2nfa-hg9x-bt4m-y3pw.sbs/s?q=5aeda50b&t=535a739574f8c8f5428908ee80821984.jpg
 global-client-fingerprint: random
 ipv6: false
 tcp-concurrent: true
@@ -359,11 +359,14 @@ rule-providers:
     path: ./rule-set/amazon.yaml
     url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Amazon/Amazon.yaml
 rules:
+- DOMAIN-SUFFIX,goclaude.cc,DIRECT
+- IP-CIDR,45.143.234.16/32,DIRECT
+- SRC-IP-CIDR,192.168.1.2/32,DIRECT
 - DOMAIN-SUFFIX,usertrust.com,DIRECT
 - DOMAIN-SUFFIX,rustdesk.com,DIRECT
-- DOMAIN-SUFFIX,open-vsx.org,ai组
-- DOMAIN,prod.us-east-1.telemetry.desktop.kiro.dev,ai组
-- DOMAIN,q.us-east-1.amazonaws.com,ai组
+- DOMAIN-SUFFIX,open-vsx.org,DIRECT
+- DOMAIN,prod.us-east-1.telemetry.desktop.kiro.dev,DIRECT
+- DOMAIN,q.us-east-1.amazonaws.com,DIRECT
 - DOMAIN-SUFFIX,cursorhub.cloud,DIRECT
 - DOMAIN-SUFFIX,betterclau.de,DIRECT
 - RULE-SET,GitHub,Proxy
