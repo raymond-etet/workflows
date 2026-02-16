@@ -12,8 +12,6 @@ subscriptions:
   last_total_bytes: 322122547200
   last_used_bytes: 117160269298
   last_expire: 1777554767
-- name: ssrdy
-  url: https://535a739574f8c8f5428908ee80821984.r7kq-2nfa-hg9x-bt4m-y3pw.sbs/s?q=5aeda50b&t=535a739574f8c8f5428908ee80821984.jpg
 - name: yan
   url: https://43.231.0.155/311fff9a/61b0ec663d0e9de3d64830963c9430a2
 global-client-fingerprint: random
