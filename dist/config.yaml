@@ -1412,6 +1412,17 @@ proxy-groups:
   - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
   - 🇭🇰 香港E1|电信联通|2倍|V2
+  - ❇️白羊座-AGP(通用)
+  - ❇️白羊座-BGP(通用)
+  - ❇️白羊座-CGP(通用)
+  - ❇️白羊座-IGP(通用)
+  - ❇️白羊座-JGP(流量)
+  - 🇭🇰香江-E(流量)
+  - 🇭🇰香江-F(流量)
+  - 🇭🇰香江-G(流量)
+  - 🇭🇰香江-H(流量)
+  - 🇭🇰香港-A(通用)
+  - 🇭🇰香港-B(流量)
   - 🇭🇰 Hong Kong丨01
   - 🇭🇰 Hong Kong丨02
   - 🇭🇰 Hong Kong丨03
@@ -1728,6 +1739,16 @@ proxy-groups:
   - 🇷🇺 俄罗斯A1|联通|1倍|V1
   - 🇷🇺 俄罗斯B1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
+  - ❇️白羊座-AGP(通用)
+  - ❇️白羊座-BGP(通用)
+  - ❇️白羊座-CGP(通用)
+  - ❇️白羊座-IGP(通用)
+  - 🇭🇰香港-A(通用)
+  - 🇯🇵日本-A(通用)
+  - 🇰🇷韩国-A(通用)
+  - 🇸🇬新加坡-A(通用)
+  - 🇲🇾马来-A(通用)
+  - 🇹🇼台湾-A(通用)
   - 🇭🇰 Hong Kong丨01
   - 🇭🇰 Hong Kong丨02
   - 🇭🇰 Hong Kong丨03
@@ -1842,6 +1863,139 @@ proxy-groups:
   - 🇯🇵 Japan丨09
   - 🇯🇵 Japan丨10
   filter: 香港|3\.5倍
+- name: Amazon
+  type: select
+  proxies:
+  - 官网：keluosi.top
+  - 套餐到期：2027-01-17
+  - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国B2|联通|0.7倍|V2
+  - 🇺🇸 美国A1|联通|1.1倍|V2
+  - 🇺🇸 美国A2|联通|1.1倍|V2
+  - 🇺🇸 美国C2|0.8倍|V1
+  - 🇺🇸 美国E2|0.7倍|V1
+  - 🇭🇰 香港A1|电信联通|2倍|V2
+  - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港E1|电信联通|2倍|V2
+  - 🇯🇵 日本A1|三网|3.5倍|V2
+  - 🇯🇵 日本B1|移动|2倍|V2
+  - 🇯🇵 日本C1|移动|2倍|V2
+  - 🇯🇵 日本C2|移动|2倍|V2
+  - 🇯🇵 日本C3|移动|2倍|V2
+  - 🇸🇬 新加坡A1|1.4倍|V2
+  - 🇸🇬 新加坡B1|1.8倍|V2
+  - 🇨🇦 加拿大A1|0.7倍|V1
+  - 🇩🇪 德国A1|联通|0.7倍|V1
+  - 🇩🇪 德国B1|移动|0.8倍|V1
+  - 🇬🇧 英国A2|联通移动|0.7倍|V1
+  - 🇫🇷 法国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A2|联通|0.7倍|V1
+  - 🇳🇱 荷兰A1|联通|0.8倍|V1
+  - 🇳🇱 荷兰B1|联通|0.7倍|V1
+  - 🇹🇭 泰国A1|移动|0.9倍|V2
+  - 🇻🇳 越南A1|电信移动|1.1倍|V2
+  - 🇷🇺 俄罗斯A1|联通|1倍|V1
+  - 🇷🇺 俄罗斯B1|联通|1倍|V1
+  - 🇹🇷 土耳其A1|三网|1.1倍|V2
+  - ❇️白羊座-AGP(通用)
+  - ❇️白羊座-BGP(通用)
+  - ❇️白羊座-CGP(通用)
+  - ❇️白羊座-IGP(通用)
+  - ❇️白羊座-JGP(流量)
+  - 🇭🇰香江-E(流量)
+  - 🇭🇰香江-F(流量)
+  - 🇭🇰香江-G(流量)
+  - 🇭🇰香江-H(流量)
+  - 🇭🇰香港-A(通用)
+  - 🇭🇰香港-B(流量)
+  - 🇯🇵日本-A(通用)
+  - 🇯🇵日本-B(流量)
+  - 🇰🇷韩国-A(通用)
+  - 🇰🇷韩国-B(流量)
+  - 🇸🇬新加坡-A(通用)
+  - 🇸🇬新加坡-B(流量)
+  - 🇲🇾马来-A(通用)
+  - 🇲🇾马来-B(流量)
+  - 🇹🇼台湾-A(通用)
+  - 🇹🇼台湾-B(流量)
+  - 🇸🇬狮城-E(流量)
+  - 🇸🇬狮城-F(流量)
+  - 🇸🇬狮城-G(流量)
+  - 🇸🇬狮城-H(流量)
+  - 🇺🇸西美-E(流量)
+  - 🇺🇸西美-F(流量)
+  - 🇺🇸西美-G(流量)
+  - 🇺🇸西美-H(流量)
+  - 0.14 GB | 300 GB
+  - 'Expire Date: 2026-02-26'
+  - 🇭🇰 Hong Kong丨01
+  - 🇭🇰 Hong Kong丨02
+  - 🇭🇰 Hong Kong丨03
+  - 🇭🇰 Hong Kong丨04
+  - 🇭🇰 Hong Kong丨05
+  - 🇭🇰 Hong Kong丨06
+  - 🇭🇰 Hong Kong丨07
+  - 🇭🇰 Hong Kong丨08
+  - 🇭🇰 Hong Kong丨09
+  - 🇭🇰 Hong Kong丨10
+  - 🇭🇰 Hong Kong丨11
+  - 🇭🇰 Hong Kong丨12
+  - 🇭🇰 Hong Kong丨13
+  - 🇭🇰 Hong Kong丨14
+  - 🇭🇰 Hong Kong丨15
+  - 🇨🇳 Taiwan丨01
+  - 🇨🇳 Taiwan丨02
+  - 🇨🇳 Taiwan丨03
+  - 🇨🇳 Taiwan丨04
+  - 🇨🇳 Taiwan丨05
+  - 🇨🇳 Taiwan丨06
+  - 🇨🇳 Taiwan丨07
+  - 🇨🇳 Taiwan丨08
+  - 🇨🇳 Taiwan丨09
+  - 🇨🇳 Taiwan丨10
+  - 🇸🇬 Singapore丨01
+  - 🇸🇬 Singapore丨02
+  - 🇸🇬 Singapore丨03
+  - 🇸🇬 Singapore丨04
+  - 🇸🇬 Singapore丨05
+  - 🇸🇬 Singapore丨06
+  - 🇸🇬 Singapore丨07
+  - 🇸🇬 Singapore丨08
+  - 🇸🇬 Singapore丨09
+  - 🇸🇬 Singapore丨10
+  - 🇯🇵 Japan丨01
+  - 🇯🇵 Japan丨02
+  - 🇯🇵 Japan丨03
+  - 🇯🇵 Japan丨04
+  - 🇯🇵 Japan丨05
+  - 🇯🇵 Japan丨06
+  - 🇯🇵 Japan丨07
+  - 🇯🇵 Japan丨08
+  - 🇯🇵 Japan丨09
+  - 🇯🇵 Japan丨10
+  - 🇺🇸 United States丨01
+  - 🇺🇸 United States丨02
+  - 🇺🇸 United States丨03
+  - 🇺🇸 United States丨04
+  - 🇺🇸 United States丨05
+  - 🇺🇸 United States丨06
+  - 🇺🇸 United States丨07
+  - 🇺🇸 United States丨08
+  - 🇺🇸 United States丨09
+  - 🇺🇸 United States丨10
+  - 🇰🇷 South Korea丨01
+  - 🇨🇦 Canada丨01
+  - 🇬🇧 Great Britain丨01
+  - 🇹🇷 Turkey丨01
+  - 🇮🇳 India丨01
+  - 🇳🇱 Netherlands丨01
+  - 🇫🇷 France | 01
+  - 🇩🇪 Germany | 01
+  - 🇻🇳 Vietnam | 01
+  - 🇲🇾 Malaysia丨01
+  - 🇹🇭 Thailand丨01
+  - 🇵🇭 Philippines丨01
 rule-providers:
   OpenAI:
     type: http
@@ -1927,7 +2081,17 @@ rule-providers:
     interval: 86400
     path: ./rule-set/google.yaml
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Google/Google.yaml
+  Amazon:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/amazon.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Amazon/Amazon.yaml
 rules:
+- DOMAIN-SUFFIX,goclaude.cc,DIRECT
+- IP-CIDR,45.143.234.16/32,DIRECT
+- SRC-IP-CIDR,192.168.1.2/32,DIRECT
 - DOMAIN-SUFFIX,usertrust.com,DIRECT
 - DOMAIN-SUFFIX,rustdesk.com,DIRECT
 - DOMAIN-SUFFIX,open-vsx.org,DIRECT
@@ -1945,6 +2109,7 @@ rules:
 - RULE-SET,RemoteDesktop,DIRECT
 - RULE-SET,115,DIRECT
 - RULE-SET,Microsoft,Microsoft
+- RULE-SET,Amazon,Amazon
 - DOMAIN-SUFFIX,docker.com,欧美
 - DOMAIN-SUFFIX,docker.io,欧美
 - DOMAIN-SUFFIX,npmjs.org,欧美

@@ -1121,7 +1121,7 @@ def build() -> dict:
         "ai组": list(dict.fromkeys(proxy_names)),
         "twitter": list(dict.fromkeys(proxy_names)),
         "Microsoft": [],
-        "Amazon": [],
+        "Amazon": list(dict.fromkeys(proxy_names)),
     }
     hk_re = re.compile(r"(hk|hong|港|香江|xiangjiang|gp(?!t)|gp\d+)", re.IGNORECASE)
     proxy_keyword_re = re.compile(r"(hong\s*kong|singapore|japan)", re.IGNORECASE)
