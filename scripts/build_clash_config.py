@@ -1211,6 +1211,13 @@ def build() -> dict:
 
     # 筛选出包含 "3.5倍" 的节点
     x35_nodes = [n for n in proxy_names if "3.5倍" in n or "3.5x" in n.lower()]
+    _nx_re = re.compile(r"(\d+(?:\.\d+)?)x", re.IGNORECASE)
+    def _is_nx(name):
+        m = _nx_re.search(name)
+        return m is not None and float(m.group(1)) >= 2
+    iepl_iplc_re = re.compile(r"(iepl|iplc)", re.IGNORECASE)
+    iepl_iplc_nodes = [n for n in proxy_names if iepl_iplc_re.search(n) or _is_nx(n)]
+    box_sea_nodes = [n for n in proxy_names if proxy_sources.get(n) == "box" and sea_re.search(n)]
     proxy_group_conf = next((g for g in template.get("proxy-groups", []) if g.get("name") == "Proxy"), {})
     extra_keywords = proxy_group_conf.get("extra-keywords", [])
     if extra_keywords:
