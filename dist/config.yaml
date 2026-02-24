@@ -5,24 +5,6 @@ proxy-providers:
     path: providers/all.yaml
     health-check: null
 proxies:
-- name: 官网：keluosi.top
-  server: usf.node.cross666.top
-  port: 65535
-  sni: www.yahoo.com
-  up: 500
-  down: 500
-  skip-cert-verify: true
-  type: hysteria2
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-- name: 套餐到期：2027-01-17
-  server: usf.node.cross666.top
-  port: 65535
-  sni: www.yahoo.com
-  up: 500
-  down: 500
-  skip-cert-verify: true
-  type: hysteria2
-  password: efaed81f-e760-4d87-be6e-05136b25da66
 - name: 🇺🇸 美国F1|电信联通|1.1倍|V1
   server: usf.node.cross666.top
   port: 65535
@@ -72,12 +54,12 @@ proxies:
   udp: true
   sni: www.yahoo.com
   skip-cert-verify: true
-- name: 🇭🇰 香港A1|电信联通|2倍|V2
-  server: hka.node.cross666.top
+- name: 🇭🇰 香港A2|电信联通|2倍|V2
+  server: hke1.node.cross666.top
   port: 65535
   sni: mirrors.xtom.hk
-  up: 100
-  down: 100
+  up: 150
+  down: 150
   skip-cert-verify: true
   type: hysteria2
   password: efaed81f-e760-4d87-be6e-05136b25da66
@@ -99,18 +81,17 @@ proxies:
   skip-cert-verify: true
   type: hysteria2
   password: efaed81f-e760-4d87-be6e-05136b25da66
-- name: 🇭🇰 香港E1|电信联通|2倍|V2
-  server: hke1.node.cross666.top
-  port: 65535
-  sni: mirrors.xtom.hk
-  up: 150
-  down: 150
-  skip-cert-verify: true
-  type: hysteria2
+- name: 🇯🇵 日本A2|三网|3.5倍|V2
+  type: anytls
+  server: jpfa2-c.node.cross666.top
+  port: 31333
   password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.co.jp
+  skip-cert-verify: true
 - name: 🇯🇵 日本A1|三网|3.5倍|V2
   type: anytls
-  server: jpfa1.node.cross666.top
+  server: jpfa1-c.node.cross666.top
   port: 31333
   password: efaed81f-e760-4d87-be6e-05136b25da66
   udp: true
@@ -181,14 +162,15 @@ proxies:
   udp: true
   sni: mirror.dogado.de
   skip-cert-verify: true
-- name: 🇩🇪 德国B1|移动|0.8倍|V1
-  type: anytls
+- name: 🇩🇪 德国B1|移动|1.1倍|V1
   server: deb1.node.cross666.top
-  port: 31333
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
+  port: 65535
   sni: mirror.dogado.de
+  up: 500
+  down: 500
   skip-cert-verify: true
+  type: hysteria2
+  password: efaed81f-e760-4d87-be6e-05136b25da66
 - name: 🇬🇧 英国A2|联通移动|0.7倍|V1
   type: anytls
   server: uka2.node.cross666.top
@@ -300,20 +282,6 @@ proxies:
   congestion-controller: bbr
   skip-cert-verify: true
   sni: www.bing.com
-- name: ❇️白羊座-CGP(通用)
-  type: tuic
-  server: alv6b.de180997-0810-4174-8f14-eb8d79d47a0c.7cc0aa7a.demo-chat-airport.com
-  port: 52892
-  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
-  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
-  alpn:
-  - h3
-  disable-sni: true
-  reduce-rtt: false
-  udp-relay-mode: native
-  congestion-controller: bbr
-  skip-cert-verify: true
-  sni: www.bing.com
 - name: ❇️白羊座-IGP(通用)
   type: tuic
   server: jpa.539bb8de-73bb-4398-8c9b-d145a8901e8f.b01401d1.demo-chat-airport.com
@@ -371,7 +339,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-f.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -390,7 +358,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-g.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -409,7 +377,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-h.aliapp.men
-  client-fingerprint: qq
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -596,7 +564,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-e.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -634,7 +602,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-g.aliapp.men
-  client-fingerprint: qq
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -662,6 +630,82 @@ proxies:
   ws-path: /newlogin/login.do
   ws-headers:
     Host: mms-static-gecko-h.aliapp.men
+- name: 🇯🇵东京-E(流量)
+  type: vless
+  server: cos-cdn-p.alicdn.win
+  port: 443
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: mms-static-main-e.coscdn.men
+  client-fingerprint: edge
+  network: ws
+  ws-opts:
+    path: /newlogin/login.do
+    headers:
+      Host: mms-static-main-e.coscdn.men
+  ws-path: /newlogin/login.do
+  ws-headers:
+    Host: mms-static-main-e.coscdn.men
+- name: 🇯🇵东京-F(流量)
+  type: vless
+  server: cos-cdn-r.alicdn.win
+  port: 443
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: mms-static-main-f.coscdn.men
+  client-fingerprint: ios
+  network: ws
+  ws-opts:
+    path: /newlogin/login.do
+    headers:
+      Host: mms-static-main-f.coscdn.men
+  ws-path: /newlogin/login.do
+  ws-headers:
+    Host: mms-static-main-f.coscdn.men
+- name: 🇯🇵东京-G(流量)
+  type: vless
+  server: cos-cdn-t.alicdn.win
+  port: 443
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: mms-static-main-g.aliapp.men
+  client-fingerprint: safari
+  network: ws
+  ws-opts:
+    path: /newlogin/login.do
+    headers:
+      Host: mms-static-main-g.aliapp.men
+  ws-path: /newlogin/login.do
+  ws-headers:
+    Host: mms-static-main-g.aliapp.men
+- name: 🇯🇵东京-H(流量)
+  type: vless
+  server: cos-cdn-y.alicdn.win
+  port: 443
+  uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: mms-static-main-h.aliapp.men
+  client-fingerprint: ios
+  network: ws
+  ws-opts:
+    path: /newlogin/login.do
+    headers:
+      Host: mms-static-main-h.aliapp.men
+  ws-path: /newlogin/login.do
+  ws-headers:
+    Host: mms-static-main-h.aliapp.men
 - name: 🇺🇸西美-E(流量)
   type: vless
   server: cos-cdn-h.alicdn.win
@@ -672,7 +716,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-e.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -691,7 +735,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-f.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -738,488 +782,800 @@ proxies:
   ws-path: /newlogin/login.do
   ws-headers:
     Host: mms-static-bottom-h.aliapp.men
-- name: 0.14 GB | 300 GB
-  type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
-  port: '16001'
-  cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+- name: 官方网站浏览器搜索炎飞.com
+  type: vmess
+  server: 1.1.1.1
+  port: 80
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
   udp: true
-- name: 'Expire Date: 2026-02-26'
+  network: tcp
+- name: 香港-高速节点-1
+  type: vmess
+  server: e1966765.anbuis.cc
+  port: 22217
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 香港-IPLC-5x
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 28c77b61.vukbct.cc
+  port: 13041
+  cipher: aes-128-gcm
+  password: b8b9c49e-0623-4984-8202-7734ec504b53
+  udp: true
+- name: 香港-中转-1
+  type: vmess
+  server: 90f41e30.vukbct.cc
+  port: 27949
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 香港-IEPL-2
+  type: vmess
+  server: c551cf48.vukbct.cc
+  port: 43016
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 香港-中转-3
+  type: vmess
+  server: 90f41e30.vukbct.cc
+  port: 51976
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 香港-IEPL-4
+  type: vmess
+  server: c551cf48.vukbct.cc
+  port: 34808
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 香港-中转-5
+  type: vmess
+  server: 90f41e30.vukbct.cc
+  port: 2855
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 香港-IEPL-6
+  type: vmess
+  server: c551cf48.vukbct.cc
+  port: 28834
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 香港-中转-7
+  type: vmess
+  server: 90f41e30.vukbct.cc
+  port: 12763
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 香港-IEPL-8
+  type: vmess
+  server: c551cf48.vukbct.cc
+  port: 28456
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 台湾-中转-1
+  type: vmess
+  server: 90f41e30.vukbct.cc
+  port: 53195
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 台湾-中转-2
+  type: vmess
+  server: 90f41e30.vukbct.cc
+  port: 39290
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 台湾-IEPL-3
+  type: vmess
+  server: c551cf48.vukbct.cc
+  port: 24593
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 台湾-IEPL-4
+  type: vmess
+  server: c551cf48.vukbct.cc
+  port: 31665
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 台湾家宽-GPT-1
+  type: vmess
+  server: 90f41e30.vukbct.cc
+  port: 3384
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 台湾家宽-GPT-2
+  type: vmess
+  server: c551cf48.vukbct.cc
+  port: 23983
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 日本-GPT-中转-1
+  type: vmess
+  server: 90f41e30.vukbct.cc
+  port: 44253
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 日本-GPT-中转-2
+  type: vmess
+  server: 90f41e30.vukbct.cc
+  port: 279
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 日本-GPT-IEPL-3
+  type: vmess
+  server: c551cf48.vukbct.cc
+  port: 47823
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 日本-GPT-IEPL-4
+  type: vmess
+  server: c551cf48.vukbct.cc
+  port: 59912
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 日本-GPT-中转-5
+  type: vmess
+  server: 90f41e30.vukbct.cc
+  port: 52980
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 日本-GPT-IEPL-6
+  type: vmess
+  server: c551cf48.vukbct.cc
+  port: 16436
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 新加坡-中转-1
+  type: vmess
+  server: 90f41e30.vukbct.cc
+  port: 24397
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 新加坡-中转-2
+  type: vmess
+  server: 90f41e30.vukbct.cc
+  port: 31436
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 新加坡-IEPL-3
+  type: vmess
+  server: c551cf48.vukbct.cc
+  port: 32115
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 新加坡-IEPL-4
+  type: vmess
+  server: c551cf48.vukbct.cc
+  port: 42579
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 美国-中转-2
+  type: vmess
+  server: 90f41e30.vukbct.cc
+  port: 7579
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 美国-IEPL-4
+  type: vmess
+  server: c551cf48.vukbct.cc
+  port: 13405
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 英国-中转-1
+  type: vmess
+  server: 90f41e30.vukbct.cc
+  port: 14791
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 英国-IEPL-2
+  type: vmess
+  server: c551cf48.vukbct.cc
+  port: 21625
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: tcp
+- name: 日本直连1
+  type: vmess
+  server: 6eee.wxwhu.cc
+  port: 443
+  uuid: b8b9c49e-0623-4984-8202-7734ec504b53
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: false
+  servername: 6eee.wxwhu.cc
+  network: ws
+  ws-opts:
+    path: /19ef9d39
+    headers:
+      Host: 6eee.wxwhu.cc
+- name: 台湾家宽直连Hy2
+  server: 19211dc5.anbuis.cc
+  port: 21318
+  sni: 19211dc5.anbuis.cc
+  up: 400
+  down: 600
+  skip-cert-verify: false
+  ports: 20000-30000
+  type: hysteria2
+  password: b8b9c49e-0623-4984-8202-7734ec504b53
+  obfs: salamander
+  obfs-password: 5FP1RasGzirgQ9Q7
+- name: 194.79 GB | 300.08 GB
+  type: ss
+  server: 103.181.164.132
   port: '16001'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
+  udp: true
+- name: 'Traffic Reset: 2 Days Left'
+  type: ss
+  server: 103.181.164.132
+  port: '16001'
+  cipher: aes-256-gcm
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
+  udp: true
+- name: 'Expire Date: 2026-02-27'
+  type: ss
+  server: 103.181.164.132
+  port: '16001'
+  cipher: aes-256-gcm
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇭🇰 Hong Kong丨01
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '16001'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇭🇰 Hong Kong丨02
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '16002'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇭🇰 Hong Kong丨03
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '16003'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇭🇰 Hong Kong丨04
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '16004'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇭🇰 Hong Kong丨05
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '16005'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇭🇰 Hong Kong丨06
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '16006'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇭🇰 Hong Kong丨07
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '16007'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇭🇰 Hong Kong丨08
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '16008'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇭🇰 Hong Kong丨09
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '16009'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇭🇰 Hong Kong丨10
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '16010'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇭🇰 Hong Kong丨11
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '16011'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇭🇰 Hong Kong丨12
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '16012'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇭🇰 Hong Kong丨13
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '16013'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇭🇰 Hong Kong丨14
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '16014'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇭🇰 Hong Kong丨15
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '16015'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇨🇳 Taiwan丨01
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '17001'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇨🇳 Taiwan丨02
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '17002'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇨🇳 Taiwan丨03
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '17003'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇨🇳 Taiwan丨04
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '17004'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇨🇳 Taiwan丨05
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '17005'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇨🇳 Taiwan丨06
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '17006'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇨🇳 Taiwan丨07
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '17007'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇨🇳 Taiwan丨08
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '17008'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇨🇳 Taiwan丨09
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '17009'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇨🇳 Taiwan丨10
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '17010'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇸🇬 Singapore丨01
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '18001'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇸🇬 Singapore丨02
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '18002'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇸🇬 Singapore丨03
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '18003'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇸🇬 Singapore丨04
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '18004'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇸🇬 Singapore丨05
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '18005'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇸🇬 Singapore丨06
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '18006'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇸🇬 Singapore丨07
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '18007'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇸🇬 Singapore丨08
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '18008'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇸🇬 Singapore丨09
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '18009'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇸🇬 Singapore丨10
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '18010'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇯🇵 Japan丨01
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '19001'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇯🇵 Japan丨02
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '19002'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇯🇵 Japan丨03
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '19003'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇯🇵 Japan丨04
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '19004'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇯🇵 Japan丨05
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '19005'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇯🇵 Japan丨06
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '19006'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇯🇵 Japan丨07
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '19007'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇯🇵 Japan丨08
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '19008'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇯🇵 Japan丨09
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '19009'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇯🇵 Japan丨10
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '19010'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇺🇸 United States丨01
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '20001'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇺🇸 United States丨02
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '20002'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇺🇸 United States丨03
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '20003'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇺🇸 United States丨04
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '20004'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇺🇸 United States丨05
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '20005'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇺🇸 United States丨06
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '20006'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇺🇸 United States丨07
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '20007'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇺🇸 United States丨08
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '20008'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇺🇸 United States丨09
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '20009'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇺🇸 United States丨10
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '20010'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇰🇷 South Korea丨01
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '21001'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇨🇦 Canada丨01
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '22002'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇬🇧 Great Britain丨01
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '23001'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇹🇷 Turkey丨01
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '24001'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇮🇳 India丨01
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '25001'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇳🇱 Netherlands丨01
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '26001'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇫🇷 France | 01
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '27001'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇩🇪 Germany | 01
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '28001'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇻🇳 Vietnam | 01
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '29001'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇲🇾 Malaysia丨01
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '29010'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇹🇭 Thailand丨01
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '29015'
   cipher: aes-256-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 - name: 🇵🇭 Philippines丨01
   type: ss
-  server: ARIVMW83BKJPVHNCRQC1.redug8dqjjktoapmdfmqymrvi0iupi.com
+  server: 103.181.164.132
   port: '29020'
   cipher: aes-128-gcm
-  password: 33867084-0595-45c4-8a4c-31b0d8d3e2e5
+  password: 42895afa-1b4b-47e7-bd1b-568fc396d636
   udp: true
 proxy-groups:
 - name: Proxy
@@ -1227,6 +1583,7 @@ proxy-groups:
   proxies:
   - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇯🇵 日本A2|三网|3.5倍|V2
   - 🇯🇵 日本A1|三网|3.5倍|V2
   - 🇭🇰 Hong Kong丨01
   - 🇭🇰 Hong Kong丨02
@@ -1271,18 +1628,16 @@ proxy-groups:
 - name: 全节点
   type: url-test
   proxies:
-  - 官网：keluosi.top
-  - 套餐到期：2027-01-17
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国A1|联通|1.1倍|V2
   - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国C2|0.8倍|V1
   - 🇺🇸 美国E2|0.7倍|V1
-  - 🇭🇰 香港A1|电信联通|2倍|V2
+  - 🇭🇰 香港A2|电信联通|2倍|V2
   - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港E1|电信联通|2倍|V2
+  - 🇯🇵 日本A2|三网|3.5倍|V2
   - 🇯🇵 日本A1|三网|3.5倍|V2
   - 🇯🇵 日本B1|移动|2倍|V2
   - 🇯🇵 日本C1|移动|2倍|V2
@@ -1292,7 +1647,7 @@ proxy-groups:
   - 🇸🇬 新加坡B1|1.8倍|V2
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇩🇪 德国B1|移动|0.8倍|V1
+  - 🇩🇪 德国B1|移动|1.1倍|V1
   - 🇬🇧 英国A2|联通移动|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
   - 🇫🇷 法国A2|联通|0.7倍|V1
@@ -1305,7 +1660,6 @@ proxy-groups:
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
   - ❇️白羊座-AGP(通用)
   - ❇️白羊座-BGP(通用)
-  - ❇️白羊座-CGP(通用)
   - ❇️白羊座-IGP(通用)
   - ❇️白羊座-JGP(流量)
   - 🇭🇰香江-E(流量)
@@ -1328,12 +1682,50 @@ proxy-groups:
   - 🇸🇬狮城-F(流量)
   - 🇸🇬狮城-G(流量)
   - 🇸🇬狮城-H(流量)
+  - 🇯🇵东京-E(流量)
+  - 🇯🇵东京-F(流量)
+  - 🇯🇵东京-G(流量)
+  - 🇯🇵东京-H(流量)
   - 🇺🇸西美-E(流量)
   - 🇺🇸西美-F(流量)
   - 🇺🇸西美-G(流量)
   - 🇺🇸西美-H(流量)
-  - 0.14 GB | 300 GB
-  - 'Expire Date: 2026-02-26'
+  - 官方网站浏览器搜索炎飞.com
+  - 香港-高速节点-1
+  - 香港-IPLC-5x
+  - 香港-中转-1
+  - 香港-IEPL-2
+  - 香港-中转-3
+  - 香港-IEPL-4
+  - 香港-中转-5
+  - 香港-IEPL-6
+  - 香港-中转-7
+  - 香港-IEPL-8
+  - 台湾-中转-1
+  - 台湾-中转-2
+  - 台湾-IEPL-3
+  - 台湾-IEPL-4
+  - 台湾家宽-GPT-1
+  - 台湾家宽-GPT-2
+  - 日本-GPT-中转-1
+  - 日本-GPT-中转-2
+  - 日本-GPT-IEPL-3
+  - 日本-GPT-IEPL-4
+  - 日本-GPT-中转-5
+  - 日本-GPT-IEPL-6
+  - 新加坡-中转-1
+  - 新加坡-中转-2
+  - 新加坡-IEPL-3
+  - 新加坡-IEPL-4
+  - 美国-中转-2
+  - 美国-IEPL-4
+  - 英国-中转-1
+  - 英国-IEPL-2
+  - 日本直连1
+  - 台湾家宽直连Hy2
+  - 194.79 GB | 300.08 GB
+  - 'Traffic Reset: 2 Days Left'
+  - 'Expire Date: 2026-02-27'
   - 🇭🇰 Hong Kong丨01
   - 🇭🇰 Hong Kong丨02
   - 🇭🇰 Hong Kong丨03
@@ -1408,21 +1800,19 @@ proxy-groups:
 - name: 香港
   type: url-test
   proxies:
-  - 🇭🇰 香港A1|电信联通|2倍|V2
+  - 🇭🇰 香港A2|电信联通|2倍|V2
   - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港E1|电信联通|2倍|V2
-  - ❇️白羊座-AGP(通用)
-  - ❇️白羊座-BGP(通用)
-  - ❇️白羊座-CGP(通用)
-  - ❇️白羊座-IGP(通用)
-  - ❇️白羊座-JGP(流量)
-  - 🇭🇰香江-E(流量)
-  - 🇭🇰香江-F(流量)
-  - 🇭🇰香江-G(流量)
-  - 🇭🇰香江-H(流量)
-  - 🇭🇰香港-A(通用)
-  - 🇭🇰香港-B(流量)
+  - 香港-高速节点-1
+  - 香港-IPLC-5x
+  - 香港-中转-1
+  - 香港-IEPL-2
+  - 香港-中转-3
+  - 香港-IEPL-4
+  - 香港-中转-5
+  - 香港-IEPL-6
+  - 香港-中转-7
+  - 香港-IEPL-8
   - 🇭🇰 Hong Kong丨01
   - 🇭🇰 Hong Kong丨02
   - 🇭🇰 Hong Kong丨03
@@ -1445,6 +1835,7 @@ proxy-groups:
 - name: 东南亚
   type: url-test
   proxies:
+  - 🇯🇵 日本A2|三网|3.5倍|V2
   - 🇯🇵 日本A1|三网|3.5倍|V2
   - 🇯🇵 日本B1|移动|2倍|V2
   - 🇯🇵 日本C1|移动|2倍|V2
@@ -1462,6 +1853,24 @@ proxy-groups:
   - 🇲🇾马来-B(流量)
   - 🇹🇼台湾-A(通用)
   - 🇹🇼台湾-B(流量)
+  - 台湾-中转-1
+  - 台湾-中转-2
+  - 台湾-IEPL-3
+  - 台湾-IEPL-4
+  - 台湾家宽-GPT-1
+  - 台湾家宽-GPT-2
+  - 日本-GPT-中转-1
+  - 日本-GPT-中转-2
+  - 日本-GPT-IEPL-3
+  - 日本-GPT-IEPL-4
+  - 日本-GPT-中转-5
+  - 日本-GPT-IEPL-6
+  - 新加坡-中转-1
+  - 新加坡-中转-2
+  - 新加坡-IEPL-3
+  - 新加坡-IEPL-4
+  - 日本直连1
+  - 台湾家宽直连Hy2
   - 🇨🇳 Taiwan丨01
   - 🇨🇳 Taiwan丨02
   - 🇨🇳 Taiwan丨03
@@ -1513,7 +1922,7 @@ proxy-groups:
   - 🇺🇸 美国E2|0.7倍|V1
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇩🇪 德国B1|移动|0.8倍|V1
+  - 🇩🇪 德国B1|移动|1.1倍|V1
   - 🇬🇧 英国A2|联通移动|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
   - 🇫🇷 法国A2|联通|0.7倍|V1
@@ -1523,7 +1932,11 @@ proxy-groups:
   - 🇺🇸西美-F(流量)
   - 🇺🇸西美-G(流量)
   - 🇺🇸西美-H(流量)
-  - 0.14 GB | 300 GB
+  - 美国-中转-2
+  - 美国-IEPL-4
+  - 英国-中转-1
+  - 英国-IEPL-2
+  - 194.79 GB | 300.08 GB
   - 🇨🇦 Canada丨01
   - 🇫🇷 France | 01
   url: https://www.gstatic.com/generate_204
@@ -1533,8 +1946,6 @@ proxy-groups:
 - name: 其他
   type: url-test
   proxies:
-  - 官网：keluosi.top
-  - 套餐到期：2027-01-17
   - 🇷🇺 俄罗斯A1|联通|1倍|V1
   - 🇷🇺 俄罗斯B1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
@@ -1544,7 +1955,13 @@ proxy-groups:
   - 🇸🇬狮城-F(流量)
   - 🇸🇬狮城-G(流量)
   - 🇸🇬狮城-H(流量)
-  - 'Expire Date: 2026-02-26'
+  - 🇯🇵东京-E(流量)
+  - 🇯🇵东京-F(流量)
+  - 🇯🇵东京-G(流量)
+  - 🇯🇵东京-H(流量)
+  - 官方网站浏览器搜索炎飞.com
+  - 'Traffic Reset: 2 Days Left'
+  - 'Expire Date: 2026-02-27'
   - 🇺🇸 United States丨01
   - 🇺🇸 United States丨02
   - 🇺🇸 United States丨03
@@ -1609,11 +2026,10 @@ proxy-groups:
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
   - 🇺🇸 美国A1|联通|1.1倍|V2
   - 🇺🇸 美国A2|联通|1.1倍|V2
-  - 官网：keluosi.top
-  - 套餐到期：2027-01-17
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国C2|0.8倍|V1
   - 🇺🇸 美国E2|0.7倍|V1
+  - 🇯🇵 日本A2|三网|3.5倍|V2
   - 🇯🇵 日本A1|三网|3.5倍|V2
   - 🇯🇵 日本B1|移动|2倍|V2
   - 🇯🇵 日本C1|移动|2倍|V2
@@ -1623,7 +2039,7 @@ proxy-groups:
   - 🇸🇬 新加坡B1|1.8倍|V2
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇩🇪 德国B1|移动|0.8倍|V1
+  - 🇩🇪 德国B1|移动|1.1倍|V1
   - 🇬🇧 英国A2|联通移动|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
   - 🇫🇷 法国A2|联通|0.7倍|V1
@@ -1648,12 +2064,40 @@ proxy-groups:
   - 🇸🇬狮城-F(流量)
   - 🇸🇬狮城-G(流量)
   - 🇸🇬狮城-H(流量)
+  - 🇯🇵东京-E(流量)
+  - 🇯🇵东京-F(流量)
+  - 🇯🇵东京-G(流量)
+  - 🇯🇵东京-H(流量)
   - 🇺🇸西美-E(流量)
   - 🇺🇸西美-F(流量)
   - 🇺🇸西美-G(流量)
   - 🇺🇸西美-H(流量)
-  - 0.14 GB | 300 GB
-  - 'Expire Date: 2026-02-26'
+  - 官方网站浏览器搜索炎飞.com
+  - 台湾-中转-1
+  - 台湾-中转-2
+  - 台湾-IEPL-3
+  - 台湾-IEPL-4
+  - 台湾家宽-GPT-1
+  - 台湾家宽-GPT-2
+  - 日本-GPT-中转-1
+  - 日本-GPT-中转-2
+  - 日本-GPT-IEPL-3
+  - 日本-GPT-IEPL-4
+  - 日本-GPT-中转-5
+  - 日本-GPT-IEPL-6
+  - 新加坡-中转-1
+  - 新加坡-中转-2
+  - 新加坡-IEPL-3
+  - 新加坡-IEPL-4
+  - 美国-中转-2
+  - 美国-IEPL-4
+  - 英国-中转-1
+  - 英国-IEPL-2
+  - 日本直连1
+  - 台湾家宽直连Hy2
+  - 194.79 GB | 300.08 GB
+  - 'Traffic Reset: 2 Days Left'
+  - 'Expire Date: 2026-02-27'
   - 🇨🇳 Taiwan丨01
   - 🇨🇳 Taiwan丨02
   - 🇨🇳 Taiwan丨03
@@ -1717,8 +2161,8 @@ proxy-groups:
   - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国C2|0.8倍|V1
   - 🇺🇸 美国E2|0.7倍|V1
-  - 🇭🇰 香港A1|电信联通|2倍|V2
-  - 🇭🇰 香港E1|电信联通|2倍|V2
+  - 🇭🇰 香港A2|电信联通|2倍|V2
+  - 🇯🇵 日本A2|三网|3.5倍|V2
   - 🇯🇵 日本A1|三网|3.5倍|V2
   - 🇯🇵 日本B1|移动|2倍|V2
   - 🇯🇵 日本C1|移动|2倍|V2
@@ -1728,7 +2172,7 @@ proxy-groups:
   - 🇸🇬 新加坡B1|1.8倍|V2
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇩🇪 德国B1|移动|0.8倍|V1
+  - 🇩🇪 德国B1|移动|1.1倍|V1
   - 🇬🇧 英国A2|联通移动|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
   - 🇫🇷 法国A2|联通|0.7倍|V1
@@ -1739,16 +2183,40 @@ proxy-groups:
   - 🇷🇺 俄罗斯A1|联通|1倍|V1
   - 🇷🇺 俄罗斯B1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
-  - ❇️白羊座-AGP(通用)
-  - ❇️白羊座-BGP(通用)
-  - ❇️白羊座-CGP(通用)
-  - ❇️白羊座-IGP(通用)
-  - 🇭🇰香港-A(通用)
-  - 🇯🇵日本-A(通用)
-  - 🇰🇷韩国-A(通用)
-  - 🇸🇬新加坡-A(通用)
-  - 🇲🇾马来-A(通用)
-  - 🇹🇼台湾-A(通用)
+  - 官方网站浏览器搜索炎飞.com
+  - 香港-高速节点-1
+  - 香港-IPLC-5x
+  - 香港-中转-1
+  - 香港-IEPL-2
+  - 香港-中转-3
+  - 香港-IEPL-4
+  - 香港-中转-5
+  - 香港-IEPL-6
+  - 香港-中转-7
+  - 香港-IEPL-8
+  - 台湾-中转-1
+  - 台湾-中转-2
+  - 台湾-IEPL-3
+  - 台湾-IEPL-4
+  - 台湾家宽-GPT-1
+  - 台湾家宽-GPT-2
+  - 日本-GPT-中转-1
+  - 日本-GPT-中转-2
+  - 日本-GPT-IEPL-3
+  - 日本-GPT-IEPL-4
+  - 日本-GPT-中转-5
+  - 日本-GPT-IEPL-6
+  - 新加坡-中转-1
+  - 新加坡-中转-2
+  - 新加坡-IEPL-3
+  - 新加坡-IEPL-4
+  - 美国-中转-2
+  - 美国-IEPL-4
+  - 英国-中转-1
+  - 英国-IEPL-2
+  - 日本直连1
+  - 台湾家宽直连Hy2
+  - 'Traffic Reset: 2 Days Left'
   - 🇭🇰 Hong Kong丨01
   - 🇭🇰 Hong Kong丨02
   - 🇭🇰 Hong Kong丨03
@@ -1820,13 +2288,23 @@ proxy-groups:
 - name: Microsoft
   type: select
   proxies:
-  - 🇭🇰 香港A1|电信联通|2倍|V2
+  - 🇭🇰 香港A2|电信联通|2倍|V2
   - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港E1|电信联通|2倍|V2
+  - 🇯🇵 日本A2|三网|3.5倍|V2
   - 🇯🇵 日本A1|三网|3.5倍|V2
   - 🇭🇰香港-A(通用)
   - 🇭🇰香港-B(流量)
+  - 香港-高速节点-1
+  - 香港-IPLC-5x
+  - 香港-中转-1
+  - 香港-IEPL-2
+  - 香港-中转-3
+  - 香港-IEPL-4
+  - 香港-中转-5
+  - 香港-IEPL-6
+  - 香港-中转-7
+  - 香港-IEPL-8
   - 🇭🇰 Hong Kong丨01
   - 🇭🇰 Hong Kong丨02
   - 🇭🇰 Hong Kong丨03
@@ -1866,18 +2344,16 @@ proxy-groups:
 - name: Amazon
   type: select
   proxies:
-  - 官网：keluosi.top
-  - 套餐到期：2027-01-17
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国A1|联通|1.1倍|V2
   - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国C2|0.8倍|V1
   - 🇺🇸 美国E2|0.7倍|V1
-  - 🇭🇰 香港A1|电信联通|2倍|V2
+  - 🇭🇰 香港A2|电信联通|2倍|V2
   - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港E1|电信联通|2倍|V2
+  - 🇯🇵 日本A2|三网|3.5倍|V2
   - 🇯🇵 日本A1|三网|3.5倍|V2
   - 🇯🇵 日本B1|移动|2倍|V2
   - 🇯🇵 日本C1|移动|2倍|V2
@@ -1887,7 +2363,7 @@ proxy-groups:
   - 🇸🇬 新加坡B1|1.8倍|V2
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇩🇪 德国B1|移动|0.8倍|V1
+  - 🇩🇪 德国B1|移动|1.1倍|V1
   - 🇬🇧 英国A2|联通移动|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
   - 🇫🇷 法国A2|联通|0.7倍|V1
@@ -1900,7 +2376,6 @@ proxy-groups:
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
   - ❇️白羊座-AGP(通用)
   - ❇️白羊座-BGP(通用)
-  - ❇️白羊座-CGP(通用)
   - ❇️白羊座-IGP(通用)
   - ❇️白羊座-JGP(流量)
   - 🇭🇰香江-E(流量)
@@ -1923,12 +2398,50 @@ proxy-groups:
   - 🇸🇬狮城-F(流量)
   - 🇸🇬狮城-G(流量)
   - 🇸🇬狮城-H(流量)
+  - 🇯🇵东京-E(流量)
+  - 🇯🇵东京-F(流量)
+  - 🇯🇵东京-G(流量)
+  - 🇯🇵东京-H(流量)
   - 🇺🇸西美-E(流量)
   - 🇺🇸西美-F(流量)
   - 🇺🇸西美-G(流量)
   - 🇺🇸西美-H(流量)
-  - 0.14 GB | 300 GB
-  - 'Expire Date: 2026-02-26'
+  - 官方网站浏览器搜索炎飞.com
+  - 香港-高速节点-1
+  - 香港-IPLC-5x
+  - 香港-中转-1
+  - 香港-IEPL-2
+  - 香港-中转-3
+  - 香港-IEPL-4
+  - 香港-中转-5
+  - 香港-IEPL-6
+  - 香港-中转-7
+  - 香港-IEPL-8
+  - 台湾-中转-1
+  - 台湾-中转-2
+  - 台湾-IEPL-3
+  - 台湾-IEPL-4
+  - 台湾家宽-GPT-1
+  - 台湾家宽-GPT-2
+  - 日本-GPT-中转-1
+  - 日本-GPT-中转-2
+  - 日本-GPT-IEPL-3
+  - 日本-GPT-IEPL-4
+  - 日本-GPT-中转-5
+  - 日本-GPT-IEPL-6
+  - 新加坡-中转-1
+  - 新加坡-中转-2
+  - 新加坡-IEPL-3
+  - 新加坡-IEPL-4
+  - 美国-中转-2
+  - 美国-IEPL-4
+  - 英国-中转-1
+  - 英国-IEPL-2
+  - 日本直连1
+  - 台湾家宽直连Hy2
+  - 194.79 GB | 300.08 GB
+  - 'Traffic Reset: 2 Days Left'
+  - 'Expire Date: 2026-02-27'
   - 🇭🇰 Hong Kong丨01
   - 🇭🇰 Hong Kong丨02
   - 🇭🇰 Hong Kong丨03
@@ -1996,6 +2509,22 @@ proxy-groups:
   - 🇲🇾 Malaysia丨01
   - 🇹🇭 Thailand丨01
   - 🇵🇭 Philippines丨01
+- name: 📊crosswall 剩余 293.95GiB（距重置 21 天）
+  type: select
+  proxies:
+  - DIRECT
+- name: 📊Nano 剩余 298.06GiB
+  type: select
+  proxies:
+  - DIRECT
+- name: 📊yan 剩余 133.30GiB（距重置 20 天）
+  type: select
+  proxies:
+  - DIRECT
+- name: 📊box 剩余 105.29GiB
+  type: select
+  proxies:
+  - DIRECT
 rule-providers:
   OpenAI:
     type: http

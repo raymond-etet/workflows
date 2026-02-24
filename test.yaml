@@ -1,21 +1,30 @@
 subscriptions:
 - name: crosswall
   url: http://162.19.79.201/s/66b4d235dd25ee6c378dde2a4a1570c6
-  last_remaining_bytes: 384347509305
+  last_remaining_bytes: 315627046008
   last_total_bytes: 425201762304
-  last_used_bytes: 40854252999
+  last_used_bytes: 109574716296
   last_expire: 1800116928
-  last_reset_days: 24
+  last_reset_days: 21
 - name: Nano
   url: https://47.238.198.94/iv/verify_mode.htm?token=e017cb1dc789505b3add5f3299fd9ea8
-  last_remaining_bytes: 204962277902
+  last_remaining_bytes: 320044062376
   last_total_bytes: 322122547200
-  last_used_bytes: 117160269298
+  last_used_bytes: 2078484824
   last_expire: 1777554767
 - name: yan
   url: https://43.231.0.155/311fff9a/61b0ec663d0e9de3d64830963c9430a2
+  last_remaining_bytes: 143131572085
+  last_total_bytes: 150323855360
+  last_used_bytes: 7192283275
+  last_expire: 1773669753
+  last_reset_days: 20
 - name: box
   url: https://535a739574f8c8f5428908ee80821984.r7kq-2nfa-hg9x-bt4m-y3pw.sbs/s?q=0871e05b&t=535a739574f8c8f5428908ee80821984.jpg
+  last_remaining_bytes: 113056328392
+  last_total_bytes: 322204336128
+  last_used_bytes: 209148007736
+  last_expire: 1772160675
 global-client-fingerprint: random
 ipv6: false
 tcp-concurrent: true
@@ -265,7 +274,6 @@ proxy-groups:
 - name: Amazon
   type: select
   proxies: []
-
 rule-providers:
   OpenAI:
     type: http
