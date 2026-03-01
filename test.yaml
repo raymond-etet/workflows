@@ -372,9 +372,11 @@ rules:
 - SRC-IP-CIDR,192.168.1.2/32,DIRECT
 - DOMAIN-SUFFIX,usertrust.com,DIRECT
 - DOMAIN-SUFFIX,rustdesk.com,DIRECT
-- DOMAIN-SUFFIX,open-vsx.org,DIRECT
-- DOMAIN,prod.us-east-1.telemetry.desktop.kiro.dev,DIRECT
-- DOMAIN,q.us-east-1.amazonaws.com,DIRECT
+- DOMAIN-SUFFIX,open-vsx.org,Amazon
+- DOMAIN-SUFFIX,awsapps.com,Amazon
+- DOMAIN-SUFFIX,shortbread.aws.dev,Amazon
+- DOMAIN,prod.us-east-1.telemetry.desktop.kiro.dev,Amazon
+- DOMAIN,q.us-east-1.amazonaws.com,Amazon
 - DOMAIN-SUFFIX,cursorhub.cloud,DIRECT
 - DOMAIN-SUFFIX,betterclau.de,DIRECT
 - RULE-SET,GitHub,Proxy

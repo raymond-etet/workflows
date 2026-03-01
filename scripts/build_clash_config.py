@@ -1257,9 +1257,13 @@ def build() -> dict:
         elif gname in name_sets:
             # 基础节点 + 关键字提取节点 + include-subscriptions 节点
             if include_nodes:
-                group["proxies"] = dedup(include_nodes + keyword_nodes)
+                computed = dedup(include_nodes + keyword_nodes)
             else:
-                group["proxies"] = dedup(name_sets[gname] + keyword_nodes)
+                computed = dedup(name_sets[gname] + keyword_nodes)
+            if gname == "Amazon":
+                group["proxies"] = dedup(["DIRECT"] + computed)
+            else:
+                group["proxies"] = computed
         
         # 移除自定义字段
         group.pop("extra-keywords", None)
