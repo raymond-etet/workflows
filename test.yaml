@@ -1,24 +1,25 @@
 subscriptions:
 - name: crosswall
   url: http://162.19.79.201/s/66b4d235dd25ee6c378dde2a4a1570c6
-  last_remaining_bytes: 315627046008
-  last_total_bytes: 425201762304
-  last_used_bytes: 109574716296
+  last_remaining_bytes: 166225346088
+  last_total_bytes: 426261307363
+  last_used_bytes: 260035961275
   last_expire: 1800116928
-  last_reset_days: 21
+  last_reset_days: 10
 - name: Nano
   url: https://47.238.198.94/iv/verify_mode.htm?token=e017cb1dc789505b3add5f3299fd9ea8
-  last_remaining_bytes: 320044062376
+  last_remaining_bytes: 321179874376
   last_total_bytes: 322122547200
-  last_used_bytes: 2078484824
+  last_used_bytes: 942672824
   last_expire: 1777554767
 - name: yan
   url: https://43.231.0.155/311fff9a/61b0ec663d0e9de3d64830963c9430a2
-  last_remaining_bytes: 143131572085
+  pause_until_utc: '2026-03-16T18:21:48Z'
+  last_remaining_bytes: 0
   last_total_bytes: 150323855360
-  last_used_bytes: 7192283275
+  last_used_bytes: 150324343348
   last_expire: 1773669753
-  last_reset_days: 20
+  last_reset_days: 10
 global-client-fingerprint: random
 ipv6: false
 tcp-concurrent: true
