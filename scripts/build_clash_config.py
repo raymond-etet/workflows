@@ -10,6 +10,7 @@ import os
 import re
 import subprocess
 import sys
+from collections import Counter
 from typing import Optional
 import urllib.parse
 import urllib.request
@@ -29,6 +30,68 @@ SUBSCRIPTION_REPORT_PATH = REPO_ROOT / "dist" / "subscriptions_report.md"
 BUILD_STATUS_PATH = REPO_ROOT / "dist" / "build_status.json"
 
 BYTES_IN_GIB = 1024**3
+
+QUALITY_DEDICATED = "dedicated"
+QUALITY_HIGH = "high"
+QUALITY_OTHER = "other"
+
+DEFAULT_QUALITY_ORDER = [QUALITY_DEDICATED, QUALITY_HIGH, QUALITY_OTHER]
+DEFAULT_REGION_ORDER = ["HK", "SG", "JP", "US", "EU", "TW", "SEA", "OTHER"]
+
+DEDICATED_KEYWORDS_RE = re.compile(
+    r"(iepl|iplc|专线|原生|住宅|家宽|gia|cn2|cmi|as9929|精品网|公网专线|bgp)",
+    re.IGNORECASE,
+)
+MULTIPLIER_RE = re.compile(r"(\d+(?:\.\d+)?)\s*(?:x|倍)", re.IGNORECASE)
+NOISE_NAME_RE = re.compile(
+    r"(expire\s*date|剩余流量|套餐到期|官网|流量|GB\s*\||bit\.ly|github|t\.me)",
+    re.IGNORECASE,
+)
+REGION_MATCHERS = [
+    (
+        "HK",
+        re.compile(
+            r"(香港|hong\s*kong|香江|hkg|(?<![a-z])hk(?![a-z])|gp(?!t)|gp\d+)",
+            re.IGNORECASE,
+        ),
+    ),
+    (
+        "SG",
+        re.compile(r"(新加坡|singapore|sgp|sin|狮城|(?<![a-z])sg(?![a-z]))", re.IGNORECASE),
+    ),
+    (
+        "JP",
+        re.compile(
+            r"(日本|japan|东京|東京|大阪|tokyo|osaka|tyo|kix|nrt|hnd|(?<![a-z])jp(?![a-z]))",
+            re.IGNORECASE,
+        ),
+    ),
+    (
+        "TW",
+        re.compile(r"(台湾|台灣|taiwan|(?<![a-z])tw(?![a-z]))", re.IGNORECASE),
+    ),
+    (
+        "SEA",
+        re.compile(
+            r"(越南|vietnam|(?<![a-z])vn(?![a-z])|泰国|泰國|thailand|(?<![a-z])th(?![a-z])|马来|馬來|malaysia|(?<![a-z])my(?![a-z])|菲律宾|菲律賓|philippines|(?<![a-z])ph(?![a-z])|印尼|indonesia|indo|jakarta|(?<![a-z])id(?![a-z]))",
+            re.IGNORECASE,
+        ),
+    ),
+    (
+        "US",
+        re.compile(
+            r"(美国|美國|united\s*states|america|usa|洛杉矶|洛杉磯|西雅图|西雅圖|圣何塞|聖何塞|纽约|紐約|lax|sjc|sea|nyc|sfo|ord|atl|dal|(?<![a-z])us(?![a-z]))",
+            re.IGNORECASE,
+        ),
+    ),
+    (
+        "EU",
+        re.compile(
+            r"(英国|英國|伦敦|倫敦|london|德国|德國|法兰克福|法蘭克福|frankfurt|法国|法國|paris|荷兰|荷蘭|amsterdam|欧洲|歐洲|europe|加拿大|canada|lon|fra|par|ams|yyz|yvr|(?<![a-z])uk(?![a-z])|(?<![a-z])gb(?![a-z])|(?<![a-z])de(?![a-z])|(?<![a-z])fr(?![a-z])|(?<![a-z])nl(?![a-z])|(?<![a-z])eu(?![a-z])|(?<![a-z])ca(?![a-z]))",
+            re.IGNORECASE,
+        ),
+    ),
+]
 
 
 def relpath_posix(path: Path) -> str:
@@ -698,6 +761,290 @@ def filter_proxies_by_name_noise(proxies: list[dict]) -> tuple[list[dict], list[
     return kept, removed_names
 
 
+def is_noise_name(name: str) -> bool:
+    if NOISE_NAME_RE.search(name):
+        return True
+    return any(pattern.search(name) for pattern in compile_exclude_name_patterns())
+
+
+def dedup(seq):
+    return list(dict.fromkeys(seq))
+
+
+def clean_list(value) -> list[str]:
+    if isinstance(value, str):
+        stripped = value.strip()
+        return [stripped] if stripped else []
+    if isinstance(value, list):
+        items = []
+        for item in value:
+            stripped = str(item).strip()
+            if stripped:
+                items.append(stripped)
+        return items
+    return []
+
+
+def safe_int(value, default: int) -> int:
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return default
+
+
+def compile_group_patterns(value) -> list[re.Pattern[str]]:
+    compiled: list[re.Pattern[str]] = []
+    for pattern in clean_list(value):
+        try:
+            compiled.append(re.compile(pattern, re.IGNORECASE))
+        except re.error:
+            continue
+    return compiled
+
+
+def extract_multiplier(name: str) -> Optional[float]:
+    values = [float(raw) for raw in MULTIPLIER_RE.findall(name)]
+    return max(values) if values else None
+
+
+def extract_region(name: str) -> str:
+    for region, matcher in REGION_MATCHERS:
+        if matcher.search(name):
+            return region
+    return "OTHER"
+
+
+def extract_quality(name: str, multiplier: Optional[float]) -> str:
+    if DEDICATED_KEYWORDS_RE.search(name):
+        return QUALITY_DEDICATED
+    if multiplier is not None and multiplier >= 2:
+        return QUALITY_HIGH
+    return QUALITY_OTHER
+
+
+def build_node_infos(proxy_names: list[str], proxy_sources: dict[str, str]) -> list[dict[str, object]]:
+    node_infos: list[dict[str, object]] = []
+    for name in dedup(proxy_names):
+        if not isinstance(name, str) or not name.strip():
+            continue
+        multiplier = extract_multiplier(name)
+        node_infos.append(
+            {
+                "name": name,
+                "source": str(proxy_sources.get(name) or ""),
+                "multiplier": multiplier,
+                "quality": extract_quality(name, multiplier),
+                "region": extract_region(name),
+                "is_noise": is_noise_name(name),
+            }
+        )
+    return node_infos
+
+
+def sort_node_infos(
+    node_infos: list[dict[str, object]],
+    *,
+    preferred_regions=None,
+    quality_order=None,
+) -> list[dict[str, object]]:
+    regions = [item.upper() for item in clean_list(preferred_regions)] or DEFAULT_REGION_ORDER
+    qualities = [item.lower() for item in clean_list(quality_order)] or DEFAULT_QUALITY_ORDER
+    region_rank = {name: index for index, name in enumerate(regions)}
+    quality_rank = {name: index for index, name in enumerate(qualities)}
+
+    def multiplier_rank(node: dict[str, object]) -> float:
+        quality = str(node.get("quality") or "")
+        multiplier = node.get("multiplier")
+        if not isinstance(multiplier, (int, float)):
+            return 0.0 if quality == QUALITY_DEDICATED else 999.0
+        if quality == QUALITY_HIGH:
+            return -float(multiplier)
+        if quality == QUALITY_OTHER:
+            return float(multiplier)
+        return 0.0
+
+    return sorted(
+        node_infos,
+        key=lambda node: (
+            quality_rank.get(str(node.get("quality") or "").lower(), len(qualities)),
+            region_rank.get(str(node.get("region") or "OTHER").upper(), len(regions)),
+            multiplier_rank(node),
+            str(node.get("name") or "").lower(),
+        ),
+    )
+
+
+def collect_group_candidates(
+    node_infos: list[dict[str, object]],
+    group: dict,
+) -> list[dict[str, object]]:
+    include_subs = {item.lower() for item in clean_list(group.get("include-subscriptions"))}
+    exclude_subs = {item.lower() for item in clean_list(group.get("exclude-subscriptions"))}
+    region_include = {item.upper() for item in clean_list(group.get("region-include"))}
+    require_quality = str(group.get("require-quality") or "").strip().lower()
+    exclude_patterns = compile_group_patterns(group.get("exclude-patterns"))
+    exclude_patterns.extend(compile_group_patterns(group.get("exclude-filter")))
+
+    candidates: list[dict[str, object]] = []
+    for node in node_infos:
+        if bool(node.get("is_noise")):
+            continue
+        source = str(node.get("source") or "").strip().lower()
+        if include_subs and source not in include_subs:
+            continue
+        if exclude_subs and source in exclude_subs:
+            continue
+        if require_quality and str(node.get("quality") or "") != require_quality:
+            continue
+        if region_include and str(node.get("region") or "OTHER").upper() not in region_include:
+            continue
+        if exclude_patterns and any(p.search(str(node.get("name") or "")) for p in exclude_patterns):
+            continue
+        candidates.append(node)
+
+    return sort_node_infos(
+        candidates,
+        preferred_regions=group.get("preferred-regions"),
+        quality_order=group.get("quality-order"),
+    )
+
+
+def pick_balanced_nodes(
+    pool: list[dict[str, object]],
+    count: int,
+    *,
+    picked_names: set[str],
+    source_counts: Counter,
+    region_counts: Counter,
+    source_cap: Optional[int],
+    region_cap: Optional[int],
+) -> list[dict[str, object]]:
+    selected: list[dict[str, object]] = []
+    for node in pool:
+        name = str(node.get("name") or "")
+        if not name or name in picked_names or bool(node.get("is_noise")):
+            continue
+        source = str(node.get("source") or "").strip().lower()
+        region = str(node.get("region") or "OTHER").upper()
+        if source_cap is not None and source and source_counts[source] >= source_cap:
+            continue
+        if region_cap is not None and region_counts[region] >= region_cap:
+            continue
+
+        selected.append(node)
+        picked_names.add(name)
+        if source:
+            source_counts[source] += 1
+        region_counts[region] += 1
+        if len(selected) >= count:
+            break
+    return selected
+
+
+def extend_manual_nodes(
+    manual_nodes: list[dict[str, object]],
+    pool: list[dict[str, object]],
+    target_count: int,
+    *,
+    picked_names: set[str],
+    source_counts: Counter,
+    region_counts: Counter,
+    source_cap: int,
+    region_cap: int,
+) -> None:
+    if target_count <= 0:
+        return
+
+    for current_source_cap, current_region_cap in (
+        (source_cap, region_cap),
+        (source_cap, None),
+        (None, None),
+    ):
+        remaining = target_count - len(manual_nodes)
+        if remaining <= 0:
+            return
+        manual_nodes.extend(
+            pick_balanced_nodes(
+                pool,
+                remaining,
+                picked_names=picked_names,
+                source_counts=source_counts,
+                region_counts=region_counts,
+                source_cap=current_source_cap,
+                region_cap=current_region_cap,
+            )
+        )
+
+
+def build_proxy_manual_nodes(
+    node_infos: list[dict[str, object]],
+    proxy_group: dict,
+) -> list[str]:
+    manual_count = safe_int(proxy_group.get("manual-pick-count"), 0)
+    if manual_count <= 0:
+        return []
+
+    mix = proxy_group.get("manual-pick-mix") if isinstance(proxy_group.get("manual-pick-mix"), dict) else {}
+    mix_counts = {
+        QUALITY_DEDICATED: safe_int(mix.get(QUALITY_DEDICATED), 4),
+        QUALITY_HIGH: safe_int(mix.get(QUALITY_HIGH), 3),
+        QUALITY_OTHER: safe_int(mix.get(QUALITY_OTHER), 1),
+    }
+    source_cap = safe_int(proxy_group.get("manual-source-cap"), 2)
+    region_cap = safe_int(proxy_group.get("manual-region-cap"), 2)
+    preferred_regions = proxy_group.get("preferred-regions")
+
+    pools = {
+        QUALITY_DEDICATED: sort_node_infos(
+            [node for node in node_infos if node.get("quality") == QUALITY_DEDICATED],
+            preferred_regions=preferred_regions,
+            quality_order=[QUALITY_DEDICATED],
+        ),
+        QUALITY_HIGH: sort_node_infos(
+            [node for node in node_infos if node.get("quality") == QUALITY_HIGH],
+            preferred_regions=preferred_regions,
+            quality_order=[QUALITY_HIGH],
+        ),
+        QUALITY_OTHER: sort_node_infos(
+            [node for node in node_infos if node.get("quality") == QUALITY_OTHER],
+            preferred_regions=preferred_regions,
+            quality_order=[QUALITY_OTHER],
+        ),
+    }
+
+    manual_nodes: list[dict[str, object]] = []
+    picked_names: set[str] = set()
+    source_counts: Counter = Counter()
+    region_counts: Counter = Counter()
+
+    for quality in DEFAULT_QUALITY_ORDER:
+        target_total = mix_counts.get(quality, 0)
+        extend_manual_nodes(
+            manual_nodes,
+            pools[quality],
+            len(manual_nodes) + target_total,
+            picked_names=picked_names,
+            source_counts=source_counts,
+            region_counts=region_counts,
+            source_cap=source_cap,
+            region_cap=region_cap,
+        )
+
+    if len(manual_nodes) < manual_count:
+        extend_manual_nodes(
+            manual_nodes,
+            sort_node_infos(node_infos, preferred_regions=preferred_regions),
+            manual_count,
+            picked_names=picked_names,
+            source_counts=source_counts,
+            region_counts=region_counts,
+            source_cap=source_cap,
+            region_cap=region_cap,
+        )
+
+    return [str(node.get("name") or "") for node in manual_nodes[:manual_count] if node.get("name")]
+
+
 def fetch_proxies(subscriptions, *, min_remaining_bytes: Optional[int] = None):
     proxies = []
     seen_names = set()
@@ -1093,11 +1440,6 @@ def build() -> dict:
         status["embedded_subscription_traffic_parent_group"] = bool(include_parent)
 
     proxy_names = [p.get("name") for p in proxies if p.get("name")]
-    nano_proxy_names = {
-        name
-        for name, source in proxy_sources.items()
-        if isinstance(source, str) and source.strip().lower() == "nano"
-    }
 
     template.pop("subscriptions", None)
     template.setdefault("proxy-providers", {})
@@ -1109,167 +1451,55 @@ def build() -> dict:
     # 同步写入 proxies，兼容不读取 provider 的客户端
     template["proxies"] = proxies
 
-    # 根据名称分类,将节点名称平铺进分组
-    name_sets = {
-        "全节点": list(dict.fromkeys(proxy_names)),
-        "香港": [],
-        "东南亚": [],
-        "欧美": [],
-        "其他": [],
-        "币安": [],
-        "pikpak": [],
-        "ai组": list(dict.fromkeys(proxy_names)),
-        "twitter": list(dict.fromkeys(proxy_names)),
-        "Microsoft": [],
-        "Amazon": list(dict.fromkeys(proxy_names)),
+    node_infos = build_node_infos(proxy_names, proxy_sources)
+    generation_keys = {
+        "exclude-filter",
+        "exclude-patterns",
+        "exclude-subscriptions",
+        "fallback-groups",
+        "filter",
+        "include-subscriptions",
+        "manual-pick-count",
+        "manual-pick-mix",
+        "manual-region-cap",
+        "manual-source-cap",
+        "preferred-regions",
+        "quality-order",
+        "region-include",
+        "require-quality",
+        "extra-keywords",
     }
-    hk_re = re.compile(r"(hk|hong|港|香江|xiangjiang|gp(?!t)|gp\d+)", re.IGNORECASE)
-    proxy_keyword_re = re.compile(r"(hong\s*kong|singapore|japan)", re.IGNORECASE)
-    sg_re = re.compile(r"(sg|singapore|新加坡)", re.IGNORECASE)
-    sea_re = re.compile(
-        r"(sg|singapore|sea|vn|vietnam|th|thailand|my|malaysia|ph|phil|id|indo|jp|japan|tw|taiwan|越南|泰国|马来|菲|印尼|新加坡|日本|台|臺)",
-        re.IGNORECASE,
+
+    proxy_group = next(
+        (
+            g
+            for g in template.get("proxy-groups", [])
+            if isinstance(g, dict) and g.get("name") == "Proxy"
+        ),
+        {},
     )
-    eu_re = re.compile(
-        r"(us|usa|uk|gb|eu|europe|de|fr|nl|ca|america|美|英|欧|德|法|荷|加)",
-        re.IGNORECASE,
-    )
-    ai_noise_re = re.compile(r"(expire\s*date|剩余流量|套餐到期|官网|流量|GB\s*\||bit\.ly|github|t\.me)", re.IGNORECASE)
-    # ai组默认节点: 同时包含"香港"和"3.5倍"
-    ai_default_re = re.compile(r"(香港.*3\.5倍|3\.5倍.*香港)", re.IGNORECASE)
-
-    # pikpak默认节点: 同时包含"美国"和"1.1倍"
-    pikpak_default_re = re.compile(r"(美国.*1\.1倍|1\.1倍.*美国)", re.IGNORECASE)
-    # 币安组筛选: 同时包含"香港"和"3.5倍"
-    binance_re = re.compile(r"(香港.*3\.5倍|3\.5倍.*香港)", re.IGNORECASE)
-    # Microsoft组筛选: 包含"香港"或"3.5倍"
-    microsoft_re = re.compile(r"(香港|3\.5倍)", re.IGNORECASE)
-
-    # 为 ai组 排序：符合条件的节点排在前面
-    ai_group_conf = next((g for g in template.get("proxy-groups", []) if isinstance(g, dict) and g.get("name") == "ai组"), {})
-    ai_exclude_subs = ai_group_conf.get("exclude-subscriptions", [])
-    ai_exclude_filter = ai_group_conf.get("exclude-filter", "")
-    ai_exclude_re = re.compile(str(ai_exclude_filter), re.IGNORECASE) if ai_exclude_filter else None
-
-    ai_candidates = [
-        n
-        for n in proxy_names
-        if (proxy_sources.get(n) not in ai_exclude_subs) 
-        and (not ai_exclude_re or not ai_exclude_re.search(n))
-        and not ai_noise_re.search(n)
-    ]
-    ai_default_nodes = [n for n in ai_candidates if ai_default_re.search(n)]
-    ai_other_nodes = [n for n in ai_candidates if not ai_default_re.search(n)]
-    name_sets["ai组"] = list(dict.fromkeys(ai_default_nodes + ai_other_nodes))
-
-    hk_group_conf = next((g for g in template.get("proxy-groups", []) if isinstance(g, dict) and g.get("name") == "香港"), {})
-    hk_exclude_subs = hk_group_conf.get("exclude-subscriptions", [])
-
-    for n in proxy_names:
-        matched_hk = bool(hk_re.search(n))
-        matched_sg = bool(sg_re.search(n))
-        matched_sea = bool(sea_re.search(n))
-        matched_eu = bool(eu_re.search(n))
-        matched_binance = bool(binance_re.search(n))
-        matched_microsoft = bool(microsoft_re.search(n))
-
-        if matched_hk and proxy_sources.get(n) not in hk_exclude_subs:
-            name_sets["香港"].append(n)
-
-        
-        # 币安组: 只保留同时包含"香港"和"3.5倍"的节点
-        if matched_binance:
-            name_sets["币安"].append(n)
-        
-        # Microsoft组: 包含"香港"或"3.5倍"的节点
-        if matched_microsoft:
-            name_sets["Microsoft"].append(n)
-        
-        if not matched_hk:
-            # pikpak: 除香港外的全节点
-            name_sets["pikpak"].append(n)
-        
-        if matched_sg:
-            # 移除新加坡节点加入币安组的逻辑
-            pass
-        if matched_sea:
-            name_sets["东南亚"].append(n)
-        elif matched_eu:
-            # 如果命中东南亚，则不放入欧美，避免新加坡等误入
-            name_sets["欧美"].append(n)
-        elif not matched_hk:
-            # 未匹配任何区域则归入其他
-            name_sets["其他"].append(n)
-
-    # 为 pikpak 排序：符合"美国+1.1倍"条件的节点排在前面
-    pikpak_default_nodes = [n for n in name_sets["pikpak"] if pikpak_default_re.search(n)]
-    pikpak_other_nodes = [n for n in name_sets["pikpak"] if not pikpak_default_re.search(n)]
-    name_sets["pikpak"] = list(dict.fromkeys(pikpak_default_nodes + pikpak_other_nodes))
-
-    def dedup(seq):
-        return list(dict.fromkeys(seq))
-
-    # 筛选出包含 "3.5倍" 的节点
-    x35_nodes = [n for n in proxy_names if "3.5倍" in n or "3.5x" in n.lower()]
-    _nx_re = re.compile(r"(\d+(?:\.\d+)?)x", re.IGNORECASE)
-    def _is_nx(name):
-        m = _nx_re.search(name)
-        return m is not None and float(m.group(1)) >= 2
-    iepl_iplc_re = re.compile(r"(iepl|iplc)", re.IGNORECASE)
-    iepl_iplc_nodes = [n for n in proxy_names if iepl_iplc_re.search(n) or _is_nx(n)]
-    box_sea_nodes = [n for n in proxy_names if proxy_sources.get(n) == "box" and sea_re.search(n)]
-    proxy_group_conf = next((g for g in template.get("proxy-groups", []) if g.get("name") == "Proxy"), {})
-    extra_keywords = proxy_group_conf.get("extra-keywords", [])
-    if extra_keywords:
-        kw_re = re.compile(f"({'|'.join(re.escape(k) for k in extra_keywords)})", re.IGNORECASE)
-        keyword_nodes = [n for n in proxy_names if kw_re.search(n)]
-    else:
-        keyword_nodes = []
+    proxy_manual_nodes = build_proxy_manual_nodes(node_infos, proxy_group)
 
     for group in template.get("proxy-groups", []):
         if not isinstance(group, dict):
             continue
-        gname = group.get("name")
-        extra_keywords = group.get("extra-keywords", [])
-        include_subs = group.get("include-subscriptions", [])
-        
-        # 提取关键字节点逻辑通用化
-        keyword_nodes = []
-        if extra_keywords:
-            kw_re = re.compile(f"({'|'.join(re.escape(k) for k in extra_keywords)})", re.IGNORECASE)
-            keyword_nodes = [n for n in proxy_names if kw_re.search(n)]
-        
-        # 处理 include-subscriptions 逻辑
-        include_nodes = []
-        if include_subs:
-            include_nodes = [
-                n for n in proxy_names
-                if proxy_sources.get(n) in include_subs
+
+        fallback_groups = clean_list(group.get("fallback-groups"))
+        has_generation_meta = any(key in group for key in generation_keys)
+
+        if group.get("name") == "Proxy" and group.get("manual-pick-count"):
+            group["proxies"] = dedup(proxy_manual_nodes + fallback_groups)
+        elif fallback_groups:
+            group["proxies"] = dedup(fallback_groups)
+        elif has_generation_meta:
+            group["proxies"] = [
+                str(node.get("name") or "")
+                for node in collect_group_candidates(node_infos, group)
+                if node.get("name")
             ]
 
-        if gname == "Proxy":
-            # 在 Proxy 组中追加 3.5倍 节点，以及 extra-keywords 节点，然后是子组
-            group["proxies"] = dedup(
-                x35_nodes
-                + keyword_nodes
-                + ["香港", "东南亚", "欧美", "全节点", "其他"]
-            )
-        elif gname in name_sets:
-            # 基础节点 + 关键字提取节点 + include-subscriptions 节点
-            if include_nodes:
-                computed = dedup(include_nodes + keyword_nodes)
-            else:
-                computed = dedup(name_sets[gname] + keyword_nodes)
-            if gname == "Amazon":
-                group["proxies"] = dedup(["DIRECT"] + computed)
-            else:
-                group["proxies"] = computed
-        
-        # 移除自定义字段
-        group.pop("extra-keywords", None)
-        group.pop("exclude-subscriptions", None)
-        group.pop("exclude-filter", None)
-        group.pop("include-subscriptions", None)
+        for key in generation_keys:
+            group.pop(key, None)
 
 
     PROVIDER_PATH.parent.mkdir(parents=True, exist_ok=True)

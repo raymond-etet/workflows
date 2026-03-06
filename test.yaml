@@ -19,12 +19,6 @@ subscriptions:
   last_used_bytes: 7192283275
   last_expire: 1773669753
   last_reset_days: 20
-- name: box
-  url: https://535a739574f8c8f5428908ee80821984.r7kq-2nfa-hg9x-bt4m-y3pw.sbs/s?q=0871e05b&t=535a739574f8c8f5428908ee80821984.jpg
-  last_remaining_bytes: 113056328392
-  last_total_bytes: 322204336128
-  last_used_bytes: 209148007736
-  last_expire: 1772160675
 global-client-fingerprint: random
 ipv6: false
 tcp-concurrent: true
@@ -199,81 +193,584 @@ sniffer:
 proxy-groups:
 - name: Proxy
   type: select
-  extra-keywords:
-  - Hong Kong
-  - Singapore
-  - Japan
-  proxies:
-  - 香港
-  - 东南亚
+  manual-pick-count: 8
+  manual-pick-mix:
+    dedicated: 4
+    high: 3
+    other: 1
+  manual-source-cap: 2
+  manual-region-cap: 2
+  preferred-regions:
+  - HK
+  - SG
+  - JP
+  - US
+  - EU
+  - TW
+  - SEA
+  - OTHER
+  fallback-groups:
+  - ai组
+  - Microsoft
+  - 币安
+  - pikpak
+  - Amazon
   - 欧美
+  - 香港
   - 全节点
   - 其他
+  proxies: []
 - name: 全节点
   type: url-test
+  quality-order:
+  - dedicated
+  - high
+  - other
+  preferred-regions:
+  - HK
+  - SG
+  - JP
+  - US
+  - EU
+  - TW
+  - SEA
+  - OTHER
   proxies: []
   url: https://www.gstatic.com/generate_204
   interval: 180
   tolerance: 50
   lazy: true
 - name: 香港
-  type: url-test
-  exclude-subscriptions:
-  - Nano
+  type: select
+  fallback-groups:
+  - HK-专线
+  - HK-高倍率
+  - HK-其他
+  - 全节点
   proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
 - name: 东南亚
-  type: url-test
+  type: select
+  fallback-groups:
+  - SEA-专线
+  - SEA-高倍率
+  - SEA-其他
+  - 全节点
   proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
 - name: 欧美
-  type: url-test
+  type: select
+  fallback-groups:
+  - EUUS-专线
+  - EUUS-高倍率
+  - EUUS-其他
+  - 全节点
   proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
 - name: 其他
   type: url-test
+  region-include:
+  - OTHER
+  quality-order:
+  - dedicated
+  - high
+  - other
+  preferred-regions:
+  - OTHER
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: ai组
+  type: select
+  fallback-groups:
+  - AI-专线
+  - AI-高倍率
+  - AI-其他
+  - 欧美
+  - 全节点
+  proxies: []
+- name: AI-专线
+  type: url-test
+  require-quality: dedicated
+  preferred-regions:
+  - HK
+  - SG
+  - JP
+  - US
+  - EU
+  - TW
+  - SEA
+  - OTHER
+  exclude-subscriptions:
+  - Nano
+  exclude-patterns:
+  - Expire Date
+  - 剩余流量
+  - 套餐到期
+  - 官网
+  - bit\.ly
+  - github
+  - t\.me
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: AI-高倍率
+  type: url-test
+  require-quality: high
+  preferred-regions:
+  - HK
+  - SG
+  - JP
+  - US
+  - EU
+  - TW
+  - SEA
+  - OTHER
+  exclude-subscriptions:
+  - Nano
+  exclude-patterns:
+  - Expire Date
+  - 剩余流量
+  - 套餐到期
+  - 官网
+  - bit\.ly
+  - github
+  - t\.me
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: AI-其他
+  type: url-test
+  require-quality: other
+  preferred-regions:
+  - HK
+  - SG
+  - JP
+  - US
+  - EU
+  - TW
+  - SEA
+  - OTHER
+  exclude-subscriptions:
+  - Nano
+  exclude-patterns:
+  - Expire Date
+  - 剩余流量
+  - 套餐到期
+  - 官网
+  - bit\.ly
+  - github
+  - t\.me
   proxies: []
   url: https://www.gstatic.com/generate_204
   interval: 180
   tolerance: 50
   lazy: true
 - name: 币安
-  type: url-test
-  extra-keywords:
-  - Hong Kong
-  - Singapore
-  - Japan
+  type: select
+  fallback-groups:
+  - BN-专线
+  - BN-高倍率
+  - BN-其他
+  - 香港
+  - 全节点
   proxies: []
 - name: pikpak
   type: select
+  fallback-groups:
+  - PK-专线
+  - PK-高倍率
+  - PK-其他
+  - 欧美
+  - 全节点
   proxies: []
-- name: ai组
-  type: select
-  exclude-subscriptions:
-  - Nano
-  exclude-filter: Expire Date
-  proxies: []
-  filter: 香港.*3\.5倍|3\.5倍.*香港
 - name: Microsoft
   type: select
-  extra-keywords:
-  - Hong Kong
-  - Singapore
-  - Japan
+  fallback-groups:
+  - MS-专线
+  - MS-高倍率
+  - MS-其他
+  - 欧美
+  - 全节点
   proxies: []
-  filter: 香港|3\.5倍
 - name: Amazon
   type: select
+  fallback-groups:
+  - AMZ-专线
+  - AMZ-高倍率
+  - AMZ-其他
+  - 欧美
+  - DIRECT
   proxies: []
+- name: MS-专线
+  type: url-test
+  require-quality: dedicated
+  preferred-regions:
+  - HK
+  - SG
+  - JP
+  - US
+  - EU
+  - TW
+  - SEA
+  - OTHER
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: MS-高倍率
+  type: url-test
+  require-quality: high
+  preferred-regions:
+  - HK
+  - SG
+  - JP
+  - US
+  - EU
+  - TW
+  - SEA
+  - OTHER
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: MS-其他
+  type: url-test
+  require-quality: other
+  preferred-regions:
+  - HK
+  - SG
+  - JP
+  - US
+  - EU
+  - TW
+  - SEA
+  - OTHER
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: BN-专线
+  type: url-test
+  require-quality: dedicated
+  preferred-regions:
+  - HK
+  - JP
+  - SG
+  - US
+  - EU
+  - TW
+  - SEA
+  - OTHER
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: BN-高倍率
+  type: url-test
+  require-quality: high
+  preferred-regions:
+  - HK
+  - JP
+  - SG
+  - US
+  - EU
+  - TW
+  - SEA
+  - OTHER
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: BN-其他
+  type: url-test
+  require-quality: other
+  preferred-regions:
+  - HK
+  - JP
+  - SG
+  - US
+  - EU
+  - TW
+  - SEA
+  - OTHER
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: PK-专线
+  type: url-test
+  require-quality: dedicated
+  preferred-regions:
+  - US
+  - JP
+  - SG
+  - HK
+  - EU
+  - TW
+  - SEA
+  - OTHER
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: PK-高倍率
+  type: url-test
+  require-quality: high
+  preferred-regions:
+  - US
+  - JP
+  - SG
+  - HK
+  - EU
+  - TW
+  - SEA
+  - OTHER
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: PK-其他
+  type: url-test
+  require-quality: other
+  preferred-regions:
+  - US
+  - JP
+  - SG
+  - HK
+  - EU
+  - TW
+  - SEA
+  - OTHER
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: AMZ-专线
+  type: url-test
+  require-quality: dedicated
+  preferred-regions:
+  - US
+  - SG
+  - EU
+  - JP
+  - HK
+  - TW
+  - SEA
+  - OTHER
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: AMZ-高倍率
+  type: url-test
+  require-quality: high
+  preferred-regions:
+  - US
+  - SG
+  - EU
+  - JP
+  - HK
+  - TW
+  - SEA
+  - OTHER
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: AMZ-其他
+  type: url-test
+  require-quality: other
+  preferred-regions:
+  - US
+  - SG
+  - EU
+  - JP
+  - HK
+  - TW
+  - SEA
+  - OTHER
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: EUUS-专线
+  type: url-test
+  require-quality: dedicated
+  region-include:
+  - US
+  - EU
+  preferred-regions:
+  - US
+  - EU
+  - SG
+  - JP
+  - HK
+  - TW
+  - SEA
+  - OTHER
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: EUUS-高倍率
+  type: url-test
+  require-quality: high
+  region-include:
+  - US
+  - EU
+  preferred-regions:
+  - US
+  - EU
+  - SG
+  - JP
+  - HK
+  - TW
+  - SEA
+  - OTHER
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: EUUS-其他
+  type: url-test
+  require-quality: other
+  region-include:
+  - US
+  - EU
+  preferred-regions:
+  - US
+  - EU
+  - SG
+  - JP
+  - HK
+  - TW
+  - SEA
+  - OTHER
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: HK-专线
+  type: url-test
+  require-quality: dedicated
+  region-include:
+  - HK
+  exclude-subscriptions:
+  - Nano
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: HK-高倍率
+  type: url-test
+  require-quality: high
+  region-include:
+  - HK
+  exclude-subscriptions:
+  - Nano
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: HK-其他
+  type: url-test
+  require-quality: other
+  region-include:
+  - HK
+  exclude-subscriptions:
+  - Nano
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: SEA-专线
+  type: url-test
+  require-quality: dedicated
+  region-include:
+  - SG
+  - JP
+  - TW
+  - SEA
+  preferred-regions:
+  - SG
+  - JP
+  - TW
+  - SEA
+  - HK
+  - US
+  - EU
+  - OTHER
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: SEA-高倍率
+  type: url-test
+  require-quality: high
+  region-include:
+  - SG
+  - JP
+  - TW
+  - SEA
+  preferred-regions:
+  - SG
+  - JP
+  - TW
+  - SEA
+  - HK
+  - US
+  - EU
+  - OTHER
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: SEA-其他
+  type: url-test
+  require-quality: other
+  region-include:
+  - SG
+  - JP
+  - TW
+  - SEA
+  preferred-regions:
+  - SG
+  - JP
+  - TW
+  - SEA
+  - HK
+  - US
+  - EU
+  - OTHER
+  proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
 rule-providers:
   OpenAI:
     type: http
