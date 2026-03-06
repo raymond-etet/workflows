@@ -320,7 +320,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-e.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -339,7 +339,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-f.coscdn.men
-  client-fingerprint: edge
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -358,7 +358,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-g.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -377,7 +377,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-h.aliapp.men
-  client-fingerprint: safari
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -583,7 +583,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-f.coscdn.men
-  client-fingerprint: edge
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -602,7 +602,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-g.aliapp.men
-  client-fingerprint: safari
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -640,7 +640,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-e.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -659,7 +659,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-f.coscdn.men
-  client-fingerprint: edge
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -678,7 +678,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-g.aliapp.men
-  client-fingerprint: safari
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -697,7 +697,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-h.aliapp.men
-  client-fingerprint: safari
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -716,7 +716,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-e.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -735,7 +735,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-f.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -852,24 +852,129 @@ proxy-groups:
 - name: 香港
   type: select
   proxies:
-  - HK-专线
-  - HK-高倍率
-  - HK-其他
-  - 全节点
+  - ❇️白羊座-BGP(通用)
+  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港A2|电信联通|2倍|V2
+  - 🇯🇵 日本A1|三网|3.5倍|V2
+  - 🇯🇵 日本A2|三网|3.5倍|V2
+  - 🇯🇵 日本B1|移动|2倍|V2
+  - 🇯🇵 日本C1|移动|2倍|V2
+  - 🇯🇵 日本C2|移动|2倍|V2
+  - 🇯🇵 日本C3|移动|2倍|V2
+  - ❇️白羊座-AGP(通用)
+  - ❇️白羊座-IGP(通用)
+  - 🇭🇰香港-A(通用)
+  - 🇸🇬 新加坡A1|1.4倍|V2
+  - 🇸🇬 新加坡B1|1.8倍|V2
+  - 🇸🇬新加坡-A(通用)
+  - 🇯🇵日本-A(通用)
+  - 🇺🇸 美国B2|联通|0.7倍|V2
+  - 🇺🇸 美国E2|0.7倍|V1
+  - 🇺🇸 美国C2|0.8倍|V1
+  - 🇺🇸 美国A1|联通|1.1倍|V2
+  - 🇺🇸 美国A2|联通|1.1倍|V2
+  - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇨🇦 加拿大A1|0.7倍|V1
+  - 🇩🇪 德国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A2|联通|0.7倍|V1
+  - 🇬🇧 英国A2|联通移动|0.7倍|V1
+  - 🇳🇱 荷兰B1|联通|0.7倍|V1
+  - 🇳🇱 荷兰A1|联通|0.8倍|V1
+  - 🇩🇪 德国B1|移动|1.1倍|V1
+  - 🇹🇼台湾-A(通用)
+  - 🇹🇭 泰国A1|移动|0.9倍|V2
+  - 🇻🇳 越南A1|电信移动|1.1倍|V2
+  - 🇲🇾马来-A(通用)
+  - 🇷🇺 俄罗斯A1|联通|1倍|V1
+  - 🇷🇺 俄罗斯B1|联通|1倍|V1
+  - 🇹🇷 土耳其A1|三网|1.1倍|V2
+  - 🇰🇷韩国-A(通用)
 - name: 东南亚
   type: select
   proxies:
-  - SEA-专线
-  - SEA-高倍率
-  - SEA-其他
-  - 全节点
+  - ❇️白羊座-BGP(通用)
+  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港A2|电信联通|2倍|V2
+  - 🇯🇵 日本A1|三网|3.5倍|V2
+  - 🇯🇵 日本A2|三网|3.5倍|V2
+  - 🇯🇵 日本B1|移动|2倍|V2
+  - 🇯🇵 日本C1|移动|2倍|V2
+  - 🇯🇵 日本C2|移动|2倍|V2
+  - 🇯🇵 日本C3|移动|2倍|V2
+  - ❇️白羊座-AGP(通用)
+  - ❇️白羊座-IGP(通用)
+  - 🇭🇰香港-A(通用)
+  - 🇸🇬 新加坡A1|1.4倍|V2
+  - 🇸🇬 新加坡B1|1.8倍|V2
+  - 🇸🇬新加坡-A(通用)
+  - 🇯🇵日本-A(通用)
+  - 🇺🇸 美国B2|联通|0.7倍|V2
+  - 🇺🇸 美国E2|0.7倍|V1
+  - 🇺🇸 美国C2|0.8倍|V1
+  - 🇺🇸 美国A1|联通|1.1倍|V2
+  - 🇺🇸 美国A2|联通|1.1倍|V2
+  - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇨🇦 加拿大A1|0.7倍|V1
+  - 🇩🇪 德国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A2|联通|0.7倍|V1
+  - 🇬🇧 英国A2|联通移动|0.7倍|V1
+  - 🇳🇱 荷兰B1|联通|0.7倍|V1
+  - 🇳🇱 荷兰A1|联通|0.8倍|V1
+  - 🇩🇪 德国B1|移动|1.1倍|V1
+  - 🇹🇼台湾-A(通用)
+  - 🇹🇭 泰国A1|移动|0.9倍|V2
+  - 🇻🇳 越南A1|电信移动|1.1倍|V2
+  - 🇲🇾马来-A(通用)
+  - 🇷🇺 俄罗斯A1|联通|1倍|V1
+  - 🇷🇺 俄罗斯B1|联通|1倍|V1
+  - 🇹🇷 土耳其A1|三网|1.1倍|V2
+  - 🇰🇷韩国-A(通用)
 - name: 欧美
   type: select
   proxies:
-  - EUUS-专线
-  - EUUS-高倍率
-  - EUUS-其他
-  - 全节点
+  - ❇️白羊座-BGP(通用)
+  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港A2|电信联通|2倍|V2
+  - 🇯🇵 日本A1|三网|3.5倍|V2
+  - 🇯🇵 日本A2|三网|3.5倍|V2
+  - 🇯🇵 日本B1|移动|2倍|V2
+  - 🇯🇵 日本C1|移动|2倍|V2
+  - 🇯🇵 日本C2|移动|2倍|V2
+  - 🇯🇵 日本C3|移动|2倍|V2
+  - ❇️白羊座-AGP(通用)
+  - ❇️白羊座-IGP(通用)
+  - 🇭🇰香港-A(通用)
+  - 🇸🇬 新加坡A1|1.4倍|V2
+  - 🇸🇬 新加坡B1|1.8倍|V2
+  - 🇸🇬新加坡-A(通用)
+  - 🇯🇵日本-A(通用)
+  - 🇺🇸 美国B2|联通|0.7倍|V2
+  - 🇺🇸 美国E2|0.7倍|V1
+  - 🇺🇸 美国C2|0.8倍|V1
+  - 🇺🇸 美国A1|联通|1.1倍|V2
+  - 🇺🇸 美国A2|联通|1.1倍|V2
+  - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇨🇦 加拿大A1|0.7倍|V1
+  - 🇩🇪 德国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A2|联通|0.7倍|V1
+  - 🇬🇧 英国A2|联通移动|0.7倍|V1
+  - 🇳🇱 荷兰B1|联通|0.7倍|V1
+  - 🇳🇱 荷兰A1|联通|0.8倍|V1
+  - 🇩🇪 德国B1|移动|1.1倍|V1
+  - 🇹🇼台湾-A(通用)
+  - 🇹🇭 泰国A1|移动|0.9倍|V2
+  - 🇻🇳 越南A1|电信移动|1.1倍|V2
+  - 🇲🇾马来-A(通用)
+  - 🇷🇺 俄罗斯A1|联通|1倍|V1
+  - 🇷🇺 俄罗斯B1|联通|1倍|V1
+  - 🇹🇷 土耳其A1|三网|1.1倍|V2
+  - 🇰🇷韩国-A(通用)
 - name: 其他
   type: url-test
   proxies:
@@ -884,11 +989,45 @@ proxy-groups:
 - name: ai组
   type: select
   proxies:
-  - AI-专线
-  - AI-高倍率
-  - AI-其他
-  - 欧美
-  - 全节点
+  - ❇️白羊座-BGP(通用)
+  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港A2|电信联通|2倍|V2
+  - 🇯🇵 日本A1|三网|3.5倍|V2
+  - 🇯🇵 日本A2|三网|3.5倍|V2
+  - 🇯🇵 日本B1|移动|2倍|V2
+  - 🇯🇵 日本C1|移动|2倍|V2
+  - 🇯🇵 日本C2|移动|2倍|V2
+  - 🇯🇵 日本C3|移动|2倍|V2
+  - ❇️白羊座-AGP(通用)
+  - ❇️白羊座-IGP(通用)
+  - 🇭🇰香港-A(通用)
+  - 🇸🇬 新加坡A1|1.4倍|V2
+  - 🇸🇬 新加坡B1|1.8倍|V2
+  - 🇸🇬新加坡-A(通用)
+  - 🇯🇵日本-A(通用)
+  - 🇺🇸 美国B2|联通|0.7倍|V2
+  - 🇺🇸 美国E2|0.7倍|V1
+  - 🇺🇸 美国C2|0.8倍|V1
+  - 🇺🇸 美国A1|联通|1.1倍|V2
+  - 🇺🇸 美国A2|联通|1.1倍|V2
+  - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇨🇦 加拿大A1|0.7倍|V1
+  - 🇩🇪 德国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A2|联通|0.7倍|V1
+  - 🇬🇧 英国A2|联通移动|0.7倍|V1
+  - 🇳🇱 荷兰B1|联通|0.7倍|V1
+  - 🇳🇱 荷兰A1|联通|0.8倍|V1
+  - 🇩🇪 德国B1|移动|1.1倍|V1
+  - 🇹🇼台湾-A(通用)
+  - 🇹🇭 泰国A1|移动|0.9倍|V2
+  - 🇻🇳 越南A1|电信移动|1.1倍|V2
+  - 🇲🇾马来-A(通用)
+  - 🇷🇺 俄罗斯A1|联通|1倍|V1
+  - 🇷🇺 俄罗斯B1|联通|1倍|V1
+  - 🇹🇷 土耳其A1|三网|1.1倍|V2
+  - 🇰🇷韩国-A(通用)
 - name: AI-专线
   type: url-test
   proxies:
@@ -943,35 +1082,171 @@ proxy-groups:
 - name: 币安
   type: select
   proxies:
-  - BN-专线
-  - BN-高倍率
-  - BN-其他
-  - 香港
-  - 全节点
+  - ❇️白羊座-BGP(通用)
+  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港A2|电信联通|2倍|V2
+  - 🇯🇵 日本A1|三网|3.5倍|V2
+  - 🇯🇵 日本A2|三网|3.5倍|V2
+  - 🇯🇵 日本B1|移动|2倍|V2
+  - 🇯🇵 日本C1|移动|2倍|V2
+  - 🇯🇵 日本C2|移动|2倍|V2
+  - 🇯🇵 日本C3|移动|2倍|V2
+  - ❇️白羊座-AGP(通用)
+  - ❇️白羊座-IGP(通用)
+  - 🇭🇰香港-A(通用)
+  - 🇸🇬 新加坡A1|1.4倍|V2
+  - 🇸🇬 新加坡B1|1.8倍|V2
+  - 🇸🇬新加坡-A(通用)
+  - 🇯🇵日本-A(通用)
+  - 🇺🇸 美国B2|联通|0.7倍|V2
+  - 🇺🇸 美国E2|0.7倍|V1
+  - 🇺🇸 美国C2|0.8倍|V1
+  - 🇺🇸 美国A1|联通|1.1倍|V2
+  - 🇺🇸 美国A2|联通|1.1倍|V2
+  - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇨🇦 加拿大A1|0.7倍|V1
+  - 🇩🇪 德国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A2|联通|0.7倍|V1
+  - 🇬🇧 英国A2|联通移动|0.7倍|V1
+  - 🇳🇱 荷兰B1|联通|0.7倍|V1
+  - 🇳🇱 荷兰A1|联通|0.8倍|V1
+  - 🇩🇪 德国B1|移动|1.1倍|V1
+  - 🇹🇼台湾-A(通用)
+  - 🇹🇭 泰国A1|移动|0.9倍|V2
+  - 🇻🇳 越南A1|电信移动|1.1倍|V2
+  - 🇲🇾马来-A(通用)
+  - 🇷🇺 俄罗斯A1|联通|1倍|V1
+  - 🇷🇺 俄罗斯B1|联通|1倍|V1
+  - 🇹🇷 土耳其A1|三网|1.1倍|V2
+  - 🇰🇷韩国-A(通用)
 - name: pikpak
   type: select
   proxies:
-  - PK-专线
-  - PK-高倍率
-  - PK-其他
-  - 欧美
-  - 全节点
+  - ❇️白羊座-BGP(通用)
+  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港A2|电信联通|2倍|V2
+  - 🇯🇵 日本A1|三网|3.5倍|V2
+  - 🇯🇵 日本A2|三网|3.5倍|V2
+  - 🇯🇵 日本B1|移动|2倍|V2
+  - 🇯🇵 日本C1|移动|2倍|V2
+  - 🇯🇵 日本C2|移动|2倍|V2
+  - 🇯🇵 日本C3|移动|2倍|V2
+  - ❇️白羊座-AGP(通用)
+  - ❇️白羊座-IGP(通用)
+  - 🇭🇰香港-A(通用)
+  - 🇸🇬 新加坡A1|1.4倍|V2
+  - 🇸🇬 新加坡B1|1.8倍|V2
+  - 🇸🇬新加坡-A(通用)
+  - 🇯🇵日本-A(通用)
+  - 🇺🇸 美国B2|联通|0.7倍|V2
+  - 🇺🇸 美国E2|0.7倍|V1
+  - 🇺🇸 美国C2|0.8倍|V1
+  - 🇺🇸 美国A1|联通|1.1倍|V2
+  - 🇺🇸 美国A2|联通|1.1倍|V2
+  - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇨🇦 加拿大A1|0.7倍|V1
+  - 🇩🇪 德国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A2|联通|0.7倍|V1
+  - 🇬🇧 英国A2|联通移动|0.7倍|V1
+  - 🇳🇱 荷兰B1|联通|0.7倍|V1
+  - 🇳🇱 荷兰A1|联通|0.8倍|V1
+  - 🇩🇪 德国B1|移动|1.1倍|V1
+  - 🇹🇼台湾-A(通用)
+  - 🇹🇭 泰国A1|移动|0.9倍|V2
+  - 🇻🇳 越南A1|电信移动|1.1倍|V2
+  - 🇲🇾马来-A(通用)
+  - 🇷🇺 俄罗斯A1|联通|1倍|V1
+  - 🇷🇺 俄罗斯B1|联通|1倍|V1
+  - 🇹🇷 土耳其A1|三网|1.1倍|V2
+  - 🇰🇷韩国-A(通用)
 - name: Microsoft
   type: select
   proxies:
-  - MS-专线
-  - MS-高倍率
-  - MS-其他
-  - 欧美
-  - 全节点
+  - ❇️白羊座-BGP(通用)
+  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港A2|电信联通|2倍|V2
+  - 🇯🇵 日本A1|三网|3.5倍|V2
+  - 🇯🇵 日本A2|三网|3.5倍|V2
+  - 🇯🇵 日本B1|移动|2倍|V2
+  - 🇯🇵 日本C1|移动|2倍|V2
+  - 🇯🇵 日本C2|移动|2倍|V2
+  - 🇯🇵 日本C3|移动|2倍|V2
+  - ❇️白羊座-AGP(通用)
+  - ❇️白羊座-IGP(通用)
+  - 🇭🇰香港-A(通用)
+  - 🇸🇬 新加坡A1|1.4倍|V2
+  - 🇸🇬 新加坡B1|1.8倍|V2
+  - 🇸🇬新加坡-A(通用)
+  - 🇯🇵日本-A(通用)
+  - 🇺🇸 美国B2|联通|0.7倍|V2
+  - 🇺🇸 美国E2|0.7倍|V1
+  - 🇺🇸 美国C2|0.8倍|V1
+  - 🇺🇸 美国A1|联通|1.1倍|V2
+  - 🇺🇸 美国A2|联通|1.1倍|V2
+  - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇨🇦 加拿大A1|0.7倍|V1
+  - 🇩🇪 德国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A2|联通|0.7倍|V1
+  - 🇬🇧 英国A2|联通移动|0.7倍|V1
+  - 🇳🇱 荷兰B1|联通|0.7倍|V1
+  - 🇳🇱 荷兰A1|联通|0.8倍|V1
+  - 🇩🇪 德国B1|移动|1.1倍|V1
+  - 🇹🇼台湾-A(通用)
+  - 🇹🇭 泰国A1|移动|0.9倍|V2
+  - 🇻🇳 越南A1|电信移动|1.1倍|V2
+  - 🇲🇾马来-A(通用)
+  - 🇷🇺 俄罗斯A1|联通|1倍|V1
+  - 🇷🇺 俄罗斯B1|联通|1倍|V1
+  - 🇹🇷 土耳其A1|三网|1.1倍|V2
+  - 🇰🇷韩国-A(通用)
 - name: Amazon
   type: select
   proxies:
-  - AMZ-专线
-  - AMZ-高倍率
-  - AMZ-其他
-  - 欧美
-  - DIRECT
+  - ❇️白羊座-BGP(通用)
+  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港A2|电信联通|2倍|V2
+  - 🇯🇵 日本A1|三网|3.5倍|V2
+  - 🇯🇵 日本A2|三网|3.5倍|V2
+  - 🇯🇵 日本B1|移动|2倍|V2
+  - 🇯🇵 日本C1|移动|2倍|V2
+  - 🇯🇵 日本C2|移动|2倍|V2
+  - 🇯🇵 日本C3|移动|2倍|V2
+  - ❇️白羊座-AGP(通用)
+  - ❇️白羊座-IGP(通用)
+  - 🇭🇰香港-A(通用)
+  - 🇸🇬 新加坡A1|1.4倍|V2
+  - 🇸🇬 新加坡B1|1.8倍|V2
+  - 🇸🇬新加坡-A(通用)
+  - 🇯🇵日本-A(通用)
+  - 🇺🇸 美国B2|联通|0.7倍|V2
+  - 🇺🇸 美国E2|0.7倍|V1
+  - 🇺🇸 美国C2|0.8倍|V1
+  - 🇺🇸 美国A1|联通|1.1倍|V2
+  - 🇺🇸 美国A2|联通|1.1倍|V2
+  - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇨🇦 加拿大A1|0.7倍|V1
+  - 🇩🇪 德国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A2|联通|0.7倍|V1
+  - 🇬🇧 英国A2|联通移动|0.7倍|V1
+  - 🇳🇱 荷兰B1|联通|0.7倍|V1
+  - 🇳🇱 荷兰A1|联通|0.8倍|V1
+  - 🇩🇪 德国B1|移动|1.1倍|V1
+  - 🇹🇼台湾-A(通用)
+  - 🇹🇭 泰国A1|移动|0.9倍|V2
+  - 🇻🇳 越南A1|电信移动|1.1倍|V2
+  - 🇲🇾马来-A(通用)
+  - 🇷🇺 俄罗斯A1|联通|1倍|V1
+  - 🇷🇺 俄罗斯B1|联通|1倍|V1
+  - 🇹🇷 土耳其A1|三网|1.1倍|V2
+  - 🇰🇷韩国-A(通用)
 - name: MS-专线
   type: url-test
   proxies:
@@ -1214,14 +1489,42 @@ proxy-groups:
   lazy: true
 - name: EUUS-专线
   type: url-test
-  proxies: []
+  proxies:
+  - 🇺🇸 美国B2|联通|0.7倍|V2
+  - 🇺🇸 美国E2|0.7倍|V1
+  - 🇺🇸 美国C2|0.8倍|V1
+  - 🇺🇸 美国A1|联通|1.1倍|V2
+  - 🇺🇸 美国A2|联通|1.1倍|V2
+  - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇨🇦 加拿大A1|0.7倍|V1
+  - 🇩🇪 德国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A2|联通|0.7倍|V1
+  - 🇬🇧 英国A2|联通移动|0.7倍|V1
+  - 🇳🇱 荷兰B1|联通|0.7倍|V1
+  - 🇳🇱 荷兰A1|联通|0.8倍|V1
+  - 🇩🇪 德国B1|移动|1.1倍|V1
   url: https://www.gstatic.com/generate_204
   interval: 180
   tolerance: 50
   lazy: true
 - name: EUUS-高倍率
   type: url-test
-  proxies: []
+  proxies:
+  - 🇺🇸 美国B2|联通|0.7倍|V2
+  - 🇺🇸 美国E2|0.7倍|V1
+  - 🇺🇸 美国C2|0.8倍|V1
+  - 🇺🇸 美国A1|联通|1.1倍|V2
+  - 🇺🇸 美国A2|联通|1.1倍|V2
+  - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇨🇦 加拿大A1|0.7倍|V1
+  - 🇩🇪 德国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A2|联通|0.7倍|V1
+  - 🇬🇧 英国A2|联通移动|0.7倍|V1
+  - 🇳🇱 荷兰B1|联通|0.7倍|V1
+  - 🇳🇱 荷兰A1|联通|0.8倍|V1
+  - 🇩🇪 德国B1|移动|1.1倍|V1
   url: https://www.gstatic.com/generate_204
   interval: 180
   tolerance: 50
@@ -1266,14 +1569,21 @@ proxy-groups:
   lazy: true
 - name: HK-其他
   type: url-test
-  proxies: []
+  proxies:
+  - 🇭🇰 香港A2|电信联通|2倍|V2
   url: https://www.gstatic.com/generate_204
   interval: 180
   tolerance: 50
   lazy: true
 - name: SEA-专线
   type: url-test
-  proxies: []
+  proxies:
+  - 🇯🇵 日本A1|三网|3.5倍|V2
+  - 🇯🇵 日本A2|三网|3.5倍|V2
+  - 🇯🇵 日本B1|移动|2倍|V2
+  - 🇯🇵 日本C1|移动|2倍|V2
+  - 🇯🇵 日本C2|移动|2倍|V2
+  - 🇯🇵 日本C3|移动|2倍|V2
   url: https://www.gstatic.com/generate_204
   interval: 180
   tolerance: 50
@@ -1306,7 +1616,7 @@ proxy-groups:
   interval: 180
   tolerance: 50
   lazy: true
-- name: 📊crosswall 剩余 154.81GiB（距重置 10 天）
+- name: 📊crosswall 剩余 154.43GiB（距重置 10 天）
   type: select
   proxies:
   - DIRECT
