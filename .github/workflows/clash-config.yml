@@ -40,6 +40,9 @@ jobs:
           EMBED_SUBSCRIPTION_TRAFFIC_PARENT_GROUP: "0"
         run: python scripts/build_clash_config.py
 
+      - name: Validate generated proxy groups
+        run: node scripts/check_no_empty_proxy_groups.js dist/config.yaml
+
       - name: Add report to job summary
         if: always()
         run: |

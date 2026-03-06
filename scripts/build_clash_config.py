@@ -37,6 +37,11 @@ QUALITY_OTHER = "other"
 
 DEFAULT_QUALITY_ORDER = [QUALITY_DEDICATED, QUALITY_HIGH, QUALITY_OTHER]
 DEFAULT_REGION_ORDER = ["HK", "SG", "JP", "US", "EU", "TW", "SEA", "OTHER"]
+QUALITY_FALLBACK_ORDER = {
+    QUALITY_DEDICATED: [QUALITY_HIGH, QUALITY_OTHER],
+    QUALITY_HIGH: [QUALITY_OTHER, QUALITY_DEDICATED],
+    QUALITY_OTHER: [QUALITY_HIGH, QUALITY_DEDICATED],
+}
 
 DEDICATED_KEYWORDS_RE = re.compile(
     r"(iepl|iplc|专线|原生|住宅|家宽|gia|cn2|cmi|as9929|精品网|公网专线|bgp)",
@@ -909,6 +914,35 @@ def collect_group_candidates(
     )
 
 
+def collect_group_proxy_names(
+    node_infos: list[dict[str, object]],
+    group: dict,
+) -> list[str]:
+    require_quality = str(group.get("require-quality") or "").strip().lower()
+    qualities_to_try = [require_quality] if require_quality else []
+    qualities_to_try.extend(QUALITY_FALLBACK_ORDER.get(require_quality, []))
+
+    candidate_groups: list[dict] = []
+    if qualities_to_try:
+        for quality in qualities_to_try:
+            candidate_group = dict(group)
+            candidate_group["require-quality"] = quality
+            candidate_groups.append(candidate_group)
+    else:
+        candidate_groups.append(group)
+
+    for candidate_group in candidate_groups:
+        proxy_names = [
+            str(node.get("name") or "")
+            for node in collect_group_candidates(node_infos, candidate_group)
+            if node.get("name")
+        ]
+        if proxy_names:
+            return proxy_names
+
+    return []
+
+
 def pick_balanced_nodes(
     pool: list[dict[str, object]],
     count: int,
@@ -1489,14 +1523,12 @@ def build() -> dict:
 
         if group.get("name") == "Proxy" and group.get("manual-pick-count"):
             group["proxies"] = dedup(proxy_manual_nodes + fallback_groups)
+        elif has_generation_meta:
+            group["proxies"] = collect_group_proxy_names(node_infos, group)
+            if not group["proxies"] and fallback_groups:
+                group["proxies"] = dedup(fallback_groups)
         elif fallback_groups:
             group["proxies"] = dedup(fallback_groups)
-        elif has_generation_meta:
-            group["proxies"] = [
-                str(node.get("name") or "")
-                for node in collect_group_candidates(node_infos, group)
-                if node.get("name")
-            ]
 
         for key in generation_keys:
             group.pop(key, None)
