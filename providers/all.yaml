@@ -1,4 +1,13 @@
 proxies:
+- name: 🇺🇸 美国H1|实验|1.1倍|V1
+  server: ush1-c4uc3r8wykfpmdw4.node.cross666.top
+  port: 65535
+  sni: www.yahoo.com
+  up: 500
+  down: 500
+  skip-cert-verify: true
+  type: hysteria2
+  password: efaed81f-e760-4d87-be6e-05136b25da66
 - name: 🇺🇸 美国F1|电信联通|1.1倍|V1
   server: usf.node.cross666.top
   port: 65535
@@ -314,7 +323,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-e.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -333,7 +342,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-f.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -352,7 +361,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-g.aliapp.men
-  client-fingerprint: safari
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -371,7 +380,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-h.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -558,7 +567,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-e.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -577,7 +586,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-f.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -596,7 +605,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-g.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -634,7 +643,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-e.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -691,7 +700,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-h.aliapp.men
-  client-fingerprint: qq
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -767,7 +776,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-h.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do

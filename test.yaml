@@ -1,9 +1,9 @@
 subscriptions:
 - name: crosswall
   url: http://162.19.79.201/s/66b4d235dd25ee6c378dde2a4a1570c6
-  last_remaining_bytes: 165815251083
+  last_remaining_bytes: 165028051603
   last_total_bytes: 426261307363
-  last_used_bytes: 260446056280
+  last_used_bytes: 261233255760
   last_expire: 1800116928
   last_reset_days: 10
 - name: Nano

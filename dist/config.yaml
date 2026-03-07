@@ -5,6 +5,15 @@ proxy-providers:
     path: providers/all.yaml
     health-check: null
 proxies:
+- name: 🇺🇸 美国H1|实验|1.1倍|V1
+  server: ush1-c4uc3r8wykfpmdw4.node.cross666.top
+  port: 65535
+  sni: www.yahoo.com
+  up: 500
+  down: 500
+  skip-cert-verify: true
+  type: hysteria2
+  password: efaed81f-e760-4d87-be6e-05136b25da66
 - name: 🇺🇸 美国F1|电信联通|1.1倍|V1
   server: usf.node.cross666.top
   port: 65535
@@ -320,7 +329,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-e.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -339,7 +348,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-f.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -358,7 +367,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-g.aliapp.men
-  client-fingerprint: safari
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -377,7 +386,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-h.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -564,7 +573,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-e.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -583,7 +592,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-f.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -602,7 +611,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-g.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -640,7 +649,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-e.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -697,7 +706,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-h.aliapp.men
-  client-fingerprint: qq
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -773,7 +782,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-h.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -829,6 +838,7 @@ proxy-groups:
   - 🇺🇸 美国A1|联通|1.1倍|V2
   - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -875,6 +885,7 @@ proxy-groups:
   - 🇺🇸 美国A1|联通|1.1倍|V2
   - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -917,6 +928,7 @@ proxy-groups:
   - 🇺🇸 美国A1|联通|1.1倍|V2
   - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -959,6 +971,7 @@ proxy-groups:
   - 🇺🇸 美国A1|联通|1.1倍|V2
   - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -987,7 +1000,7 @@ proxy-groups:
   tolerance: 50
   lazy: true
 - name: ai组
-  type: select
+  type: fallback
   proxies:
   - ❇️白羊座-BGP(通用)
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
@@ -1012,6 +1025,7 @@ proxy-groups:
   - 🇺🇸 美国A1|联通|1.1倍|V2
   - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -1028,6 +1042,10 @@ proxy-groups:
   - 🇷🇺 俄罗斯B1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
   - 🇰🇷韩国-A(通用)
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
 - name: AI-专线
   type: url-test
   proxies:
@@ -1062,6 +1080,7 @@ proxy-groups:
   - 🇺🇸 美国A1|联通|1.1倍|V2
   - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -1080,7 +1099,7 @@ proxy-groups:
   tolerance: 50
   lazy: true
 - name: 币安
-  type: select
+  type: fallback
   proxies:
   - ❇️白羊座-BGP(通用)
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
@@ -1105,6 +1124,7 @@ proxy-groups:
   - 🇺🇸 美国A1|联通|1.1倍|V2
   - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -1121,8 +1141,12 @@ proxy-groups:
   - 🇷🇺 俄罗斯B1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
   - 🇰🇷韩国-A(通用)
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
 - name: pikpak
-  type: select
+  type: fallback
   proxies:
   - ❇️白羊座-BGP(通用)
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
@@ -1147,6 +1171,7 @@ proxy-groups:
   - 🇺🇸 美国A1|联通|1.1倍|V2
   - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -1163,8 +1188,12 @@ proxy-groups:
   - 🇷🇺 俄罗斯B1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
   - 🇰🇷韩国-A(通用)
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
 - name: Microsoft
-  type: select
+  type: fallback
   proxies:
   - ❇️白羊座-BGP(通用)
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
@@ -1189,6 +1218,7 @@ proxy-groups:
   - 🇺🇸 美国A1|联通|1.1倍|V2
   - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -1205,8 +1235,12 @@ proxy-groups:
   - 🇷🇺 俄罗斯B1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
   - 🇰🇷韩国-A(通用)
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
 - name: Amazon
-  type: select
+  type: fallback
   proxies:
   - ❇️白羊座-BGP(通用)
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
@@ -1231,6 +1265,7 @@ proxy-groups:
   - 🇺🇸 美国A1|联通|1.1倍|V2
   - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -1247,6 +1282,10 @@ proxy-groups:
   - 🇷🇺 俄罗斯B1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
   - 🇰🇷韩国-A(通用)
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
 - name: MS-专线
   type: url-test
   proxies:
@@ -1287,6 +1326,7 @@ proxy-groups:
   - 🇺🇸 美国A1|联通|1.1倍|V2
   - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -1347,6 +1387,7 @@ proxy-groups:
   - 🇺🇸 美国A1|联通|1.1倍|V2
   - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -1400,6 +1441,7 @@ proxy-groups:
   - 🇺🇸 美国A1|联通|1.1倍|V2
   - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇯🇵日本-A(通用)
   - 🇸🇬 新加坡A1|1.4倍|V2
   - 🇸🇬 新加坡B1|1.8倍|V2
@@ -1460,6 +1502,7 @@ proxy-groups:
   - 🇺🇸 美国A1|联通|1.1倍|V2
   - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇸🇬 新加坡A1|1.4倍|V2
   - 🇸🇬 新加坡B1|1.8倍|V2
   - 🇸🇬新加坡-A(通用)
@@ -1496,6 +1539,7 @@ proxy-groups:
   - 🇺🇸 美国A1|联通|1.1倍|V2
   - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -1517,6 +1561,7 @@ proxy-groups:
   - 🇺🇸 美国A1|联通|1.1倍|V2
   - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -1538,6 +1583,7 @@ proxy-groups:
   - 🇺🇸 美国A1|联通|1.1倍|V2
   - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -1616,7 +1662,7 @@ proxy-groups:
   interval: 180
   tolerance: 50
   lazy: true
-- name: 📊crosswall 剩余 154.43GiB（距重置 10 天）
+- name: 📊crosswall 剩余 153.69GiB（距重置 10 天）
   type: select
   proxies:
   - DIRECT
