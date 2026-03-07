@@ -281,7 +281,7 @@ proxy-groups:
   tolerance: 50
   lazy: true
 - name: ai组
-  type: select
+  type: fallback
   fallback-groups:
   - AI-专线
   - AI-高倍率
@@ -289,6 +289,10 @@ proxy-groups:
   - 欧美
   - 全节点
   proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
 - name: AI-专线
   type: url-test
   require-quality: dedicated
@@ -371,7 +375,7 @@ proxy-groups:
   tolerance: 50
   lazy: true
 - name: 币安
-  type: select
+  type: fallback
   fallback-groups:
   - BN-专线
   - BN-高倍率
@@ -379,8 +383,12 @@ proxy-groups:
   - 香港
   - 全节点
   proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
 - name: pikpak
-  type: select
+  type: fallback
   fallback-groups:
   - PK-专线
   - PK-高倍率
@@ -388,8 +396,12 @@ proxy-groups:
   - 欧美
   - 全节点
   proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
 - name: Microsoft
-  type: select
+  type: fallback
   fallback-groups:
   - MS-专线
   - MS-高倍率
@@ -397,8 +409,12 @@ proxy-groups:
   - 欧美
   - 全节点
   proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
 - name: Amazon
-  type: select
+  type: fallback
   fallback-groups:
   - AMZ-专线
   - AMZ-高倍率
@@ -406,6 +422,10 @@ proxy-groups:
   - 欧美
   - DIRECT
   proxies: []
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
 - name: MS-专线
   type: url-test
   require-quality: dedicated
