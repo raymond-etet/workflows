@@ -202,7 +202,6 @@ proxy-groups:
       - OTHER
     fallback-groups:
       - AI
-      - 开发
       - 币安
       - PikPak
       - Microsoft
