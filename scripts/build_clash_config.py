@@ -92,7 +92,7 @@ REGION_MATCHERS = [
     (
         "EU",
         re.compile(
-            r"(英国|英國|伦敦|倫敦|london|德国|德國|法兰克福|法蘭克福|frankfurt|法国|法國|paris|荷兰|荷蘭|amsterdam|欧洲|歐洲|europe|加拿大|canada|lon|fra|par|ams|yyz|yvr|(?<![a-z])uk(?![a-z])|(?<![a-z])gb(?![a-z])|(?<![a-z])de(?![a-z])|(?<![a-z])fr(?![a-z])|(?<![a-z])nl(?![a-z])|(?<![a-z])eu(?![a-z])|(?<![a-z])ca(?![a-z]))",
+            r"(英国|英國|伦敦|倫敦|london|德国|德國|法兰克福|法蘭克福|frankfurt|法国|法國|paris|荷兰|荷蘭|amsterdam|欧洲|歐洲|europe|加拿大|canada|芬兰|芬蘭|finland|helsinki|lon|fra|par|ams|yyz|yvr|(?<![a-z])uk(?![a-z])|(?<![a-z])gb(?![a-z])|(?<![a-z])de(?![a-z])|(?<![a-z])fr(?![a-z])|(?<![a-z])nl(?![a-z])|(?<![a-z])eu(?![a-z])|(?<![a-z])ca(?![a-z])|(?<![a-z])fi(?![a-z]))",
             re.IGNORECASE,
         ),
     ),
@@ -1490,13 +1490,8 @@ def build() -> dict:
         "exclude-filter",
         "exclude-patterns",
         "exclude-subscriptions",
-        "fallback-groups",
         "filter",
         "include-subscriptions",
-        "manual-pick-count",
-        "manual-pick-mix",
-        "manual-region-cap",
-        "manual-source-cap",
         "preferred-regions",
         "quality-order",
         "region-include",

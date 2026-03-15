@@ -1,797 +1,812 @@
 subscriptions:
-- name: crosswall
-  url: http://162.19.79.201/s/66b4d235dd25ee6c378dde2a4a1570c6
-  last_remaining_bytes: 165028051603
-  last_total_bytes: 426261307363
-  last_used_bytes: 261233255760
-  last_expire: 1800116928
-  last_reset_days: 10
-- name: Nano
-  url: https://47.238.198.94/iv/verify_mode.htm?token=e017cb1dc789505b3add5f3299fd9ea8
-  last_remaining_bytes: 321179874376
-  last_total_bytes: 322122547200
-  last_used_bytes: 942672824
-  last_expire: 1777554767
-- name: yan
-  url: https://43.231.0.155/311fff9a/61b0ec663d0e9de3d64830963c9430a2
-  pause_until_utc: '2026-03-16T18:21:48Z'
-  last_remaining_bytes: 0
-  last_total_bytes: 150323855360
-  last_used_bytes: 150324343348
-  last_expire: 1773669753
-  last_reset_days: 10
-global-client-fingerprint: random
+  - name: crosswall
+    url: http://162.19.79.201/s/66b4d235dd25ee6c378dde2a4a1570c6
+    last_remaining_bytes: 165028051603
+    last_total_bytes: 426261307363
+    last_used_bytes: 261233255760
+    last_expire: 1800116928
+    last_reset_days: 10
+  - name: Nano
+    url: https://47.238.198.94/iv/verify_mode.htm?token=e017cb1dc789505b3add5f3299fd9ea8
+    last_remaining_bytes: 321179874376
+    last_total_bytes: 322122547200
+    last_used_bytes: 942672824
+    last_expire: 1777554767
+  - name: viking
+    url: https://pics9.sknil-gnikiv.com/wx5TqEUTwXks/v1/w7LQhnaSTnjD/VikingLinks?token=da5e9b0465c4e8546a626c2968c96cff.532y5cjqx4b.jpg 
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7894
+allow-lan: true
+mode: rule
+log-level: info
 ipv6: false
-tcp-concurrent: true
 unified-delay: true
+tcp-concurrent: true
+geodata-mode: true
+geodata-loader: standard
+geo-auto-update: true
+geo-update-interval: 48
+geox-url:
+  geoip: https://testingcf.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip.dat
+  geosite: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
+  mmdb: https://testingcf.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb
+global-client-fingerprint: chrome
+keep-alive-idle: 600
 keep-alive-interval: 30
-geo-auto-update: false
-geo-update-interval: 168
-geodata-mode: false
 profile:
   store-selected: true
   store-fake-ip: true
-mode: rule
+
+tun:
+  enable: true
+  stack: mixed
+  mtu: 1500
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
+
 dns:
   enable: true
-  listen: :53
+  listen: 0.0.0.0:1053
   ipv6: false
-  prefer-h3: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
-  - '*.lan'
-  - '*.local'
-  - '*.localdomain'
-  - localhost.ptlogin2.qq.com
-  - +.msftconnecttest.com
-  - +.msftncsi.com
-  - +.apple.com
-  - +.icloud.com
-  - +.push.apple.com
-  - captive.apple.com
-  - +.github.com
-  - +.githubusercontent.com
-  - +.gitlab.com
-  - +.gitee.com
-  - +.cloudflare.com
-  - +.cloudflare-dns.com
-  - +.cloudflareclient.com
-  - +.cloudflareinsights.com
-  - +.one.one.one.one
-  - +.openai.com
-  - +.chatgpt.com
-  - +.oaistatic.com
-  - +.oaiusercontent.com
-  - +.openaiapi-site.azureedge.net
-  - +.openai.azure.com
-  - +.anthropic.com
-  - +.claude.ai
-  - +.claudeusercontent.com
-  - aistudio.google.com
-  - makersuite.google.com
-  - gemini.google.com
-  - generativelanguage.googleapis.com
-  - oauth2.googleapis.com
-  - accounts.google.com
-  - +.googleapis.com
-  - +.gstatic.com
-  - +.googleusercontent.com
-  - copilot.microsoft.com
-  - sydney.bing.com
-  - +.openrouter.ai
-  - +.huggingface.co
-  - +.hf.co
-  - +.replicate.com
-  - +.together.ai
-  - +.fireworks.ai
-  - +.perplexity.ai
-  - +.x.ai
-  - +.mistral.ai
-  - +.cohere.ai
-  - +.groq.com
-  - +.meta.ai
-  - +.docker.com
-  - +.docker.io
-  - +.gcr.io
-  - +.ghcr.io
-  - +.quay.io
-  - +.synology.com
-  - +.quickconnect.to
-  - +.myqnapcloud.com
-  - +.diskstation.me
-  - +.115.com
-  - +.steamserver.net
-  - +.steampowered.com
-  - +.ea.com
-  - +.epicgames.com
-  - localhost.battle.net
-  - +.discord.gg
-  - +.discord.com
-  - smtp.*
-  - imap.*
-  - pop.*
-  - pop3.*
-  - mail.*
-  - +.home-assistant.io
-  - Mijia Cloud
-  - +.mi.com
-  - +.xiaomi.com
-  - router.asus.com
-  - www.router.asus.com
-  - repeater.asus.com
-  - +.tplinkwifi.net
-  - +.tendawifi.com
-  - +.speedtest.net
-  - fast.com
-  - ntp.*
-  - time.*
-  - +.ntp.org.cn
-  - +.pool.ntp.org
-  - +.usertrust.com
-  - +.rustdesk.com
-  - +.aliyuncs.com
-  - +.tencentcloudapi.com
-  - +.bank
-  - +.icbc.com.cn
-  - +.ccb.com.cn
-  - +.boc.cn
-  - +.abchina.com
-  - 10.0.0.0/8
-  - 172.16.0.0/12
-  - 192.168.0.0/16
-  - 127.0.0.0/8
-  - fc00::/7
-  - fe80::/10
-  - ff00::/8
-  - geosite:cn
+    - "*.lan"
+    - "*.local"
+    - "*.localdomain"
+    - localhost.ptlogin2.qq.com
+    - localhost.sec.qq.com
+    - localhost.work.weixin.qq.com
+    - Mijia Cloud
+    - router.asus.com
+    - www.router.asus.com
+    - repeater.asus.com
+    - +.tplinkwifi.net
+    - +.tendawifi.com
+    - +.miwifi.com
+    - connect.rom.miui.com
+    - +.msftconnecttest.com
+    - +.msftncsi.com
+    - time.windows.com
+    - ntp.*
+    - time.*
+    - +.ntp.org
+    - +.ntp.org.cn
+    - +.pool.ntp.org
+    - +.apple.com
+    - +.icloud.com
+    - +.push.apple.com
+    - captive.apple.com
+    - +.weixin.qq.com
+    - +.wechat.com
+    - +.qq.com
+    - +.wpsmail.net
+    - +.mi.com
+    - +.xiaomi.com
+    - dlg.io.mi.com
+    - +.oray.com
+    - +.sunlogin.net
+    - +.synology.com
+    - +.quickconnect.to
+    - +.myqnapcloud.com
+    - +.diskstation.me
+    - +.home-assistant.io
+    - +.speedtest.net
+    - fast.com
+    - smtp.*
+    - imap.*
+    - pop.*
+    - pop3.*
+    - mail.*
+    - +.usertrust.com
+    - +.bank
+    - +.icbc.com.cn
+    - +.ccb.com.cn
+    - +.boc.cn
+    - +.abchina.com
+    - 10.0.0.0/8
+    - 172.16.0.0/12
+    - 192.168.0.0/16
+    - 127.0.0.0/8
+    - geosite:cn
   respect-rules: true
   use-hosts: true
   use-system-hosts: false
   default-nameserver:
-  - 223.5.5.5
-  - 1.1.1.1
-  nameserver:
-  - https://dns.alidns.com/dns-query
-  proxy-server-nameserver:
-  - 223.5.5.5
-  direct-nameserver:
-  - 223.5.5.5
-  fallback:
-  - https://dns.alidns.com/dns-query
-  nameserver-policy:
-    geosite:private,cn:
     - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  direct-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  direct-nameserver-follow-policy: true
+  fallback:
+    - https://1.1.1.1/dns-query
+    - https://dns.google/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    geosite:
+      - gfw
+    ipcidr:
+      - 240.0.0.0/4
+  nameserver-policy:
+    "geosite:private":
+      - 223.5.5.5
+      - 119.29.29.29
+    "geosite:cn":
+      - 223.5.5.5
+      - 119.29.29.29
+
 sniffer:
   enable: true
   override-destination: true
   parse-pure-ip: true
   sniff:
-    QUIC:
-      ports:
-      - 443
-    TLS:
-      ports:
-      - 443
-      - 8443
     HTTP:
       ports:
-      - 80
-      - 8080-8880
+        - 80
+        - 8080-8880
       override-destination: true
+    TLS:
+      ports:
+        - 443
+        - 8443
+    QUIC:
+      ports:
+        - 443
+        - 8443
   force-domain:
-  - +.netflix.com
-  - +.nflxvideo.net
-  - +.amazonaws.com
-  - +.media.dssott.com
+    - +.netflix.com
+    - +.nflxvideo.net
+    - +.amazonaws.com
+    - +.media.dssott.com
   skip-domain:
-  - +.apple.com
-  - Mijia Cloud
-  - dlg.io.mi.com
-  - +.oray.com
-  - +.sunlogin.net
-  - +.push.apple.com
+    - +.apple.com
+    - +.push.apple.com
+    - Mijia Cloud
+    - dlg.io.mi.com
+    - +.oray.com
+    - +.sunlogin.net
+
 proxy-groups:
-- name: Proxy
-  type: select
-  manual-pick-count: 8
-  manual-pick-mix:
-    dedicated: 4
-    high: 3
-    other: 1
-  manual-source-cap: 2
-  manual-region-cap: 2
-  preferred-regions:
-  - HK
-  - SG
-  - JP
-  - US
-  - EU
-  - TW
-  - SEA
-  - OTHER
-  fallback-groups:
-  - ai组
-  - Microsoft
-  - 币安
-  - pikpak
-  - Amazon
-  - 欧美
-  - 香港
-  - 全节点
-  - 其他
-  proxies: []
-- name: 全节点
-  type: url-test
-  quality-order:
-  - dedicated
-  - high
-  - other
-  preferred-regions:
-  - HK
-  - SG
-  - JP
-  - US
-  - EU
-  - TW
-  - SEA
-  - OTHER
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: 香港
-  type: select
-  fallback-groups:
-  - HK-专线
-  - HK-高倍率
-  - HK-其他
-  - 全节点
-  proxies: []
-- name: 东南亚
-  type: select
-  fallback-groups:
-  - SEA-专线
-  - SEA-高倍率
-  - SEA-其他
-  - 全节点
-  proxies: []
-- name: 欧美
-  type: select
-  fallback-groups:
-  - EUUS-专线
-  - EUUS-高倍率
-  - EUUS-其他
-  - 全节点
-  proxies: []
-- name: 其他
-  type: url-test
-  region-include:
-  - OTHER
-  quality-order:
-  - dedicated
-  - high
-  - other
-  preferred-regions:
-  - OTHER
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: ai组
-  type: fallback
-  fallback-groups:
-  - AI-专线
-  - AI-高倍率
-  - AI-其他
-  - 欧美
-  - 全节点
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: AI-专线
-  type: url-test
-  require-quality: dedicated
-  preferred-regions:
-  - HK
-  - SG
-  - JP
-  - US
-  - EU
-  - TW
-  - SEA
-  - OTHER
-  exclude-subscriptions:
-  - Nano
-  exclude-patterns:
-  - Expire Date
-  - 剩余流量
-  - 套餐到期
-  - 官网
-  - bit\.ly
-  - github
-  - t\.me
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: AI-高倍率
-  type: url-test
-  require-quality: high
-  preferred-regions:
-  - HK
-  - SG
-  - JP
-  - US
-  - EU
-  - TW
-  - SEA
-  - OTHER
-  exclude-subscriptions:
-  - Nano
-  exclude-patterns:
-  - Expire Date
-  - 剩余流量
-  - 套餐到期
-  - 官网
-  - bit\.ly
-  - github
-  - t\.me
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: AI-其他
-  type: url-test
-  require-quality: other
-  preferred-regions:
-  - HK
-  - SG
-  - JP
-  - US
-  - EU
-  - TW
-  - SEA
-  - OTHER
-  exclude-subscriptions:
-  - Nano
-  exclude-patterns:
-  - Expire Date
-  - 剩余流量
-  - 套餐到期
-  - 官网
-  - bit\.ly
-  - github
-  - t\.me
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: 币安
-  type: fallback
-  fallback-groups:
-  - BN-专线
-  - BN-高倍率
-  - BN-其他
-  - 香港
-  - 全节点
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: pikpak
-  type: fallback
-  fallback-groups:
-  - PK-专线
-  - PK-高倍率
-  - PK-其他
-  - 欧美
-  - 全节点
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: Microsoft
-  type: fallback
-  fallback-groups:
-  - MS-专线
-  - MS-高倍率
-  - MS-其他
-  - 欧美
-  - 全节点
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: Amazon
-  type: fallback
-  fallback-groups:
-  - AMZ-专线
-  - AMZ-高倍率
-  - AMZ-其他
-  - 欧美
-  - DIRECT
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: MS-专线
-  type: url-test
-  require-quality: dedicated
-  preferred-regions:
-  - HK
-  - SG
-  - JP
-  - US
-  - EU
-  - TW
-  - SEA
-  - OTHER
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: MS-高倍率
-  type: url-test
-  require-quality: high
-  preferred-regions:
-  - HK
-  - SG
-  - JP
-  - US
-  - EU
-  - TW
-  - SEA
-  - OTHER
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: MS-其他
-  type: url-test
-  require-quality: other
-  preferred-regions:
-  - HK
-  - SG
-  - JP
-  - US
-  - EU
-  - TW
-  - SEA
-  - OTHER
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: BN-专线
-  type: url-test
-  require-quality: dedicated
-  preferred-regions:
-  - HK
-  - JP
-  - SG
-  - US
-  - EU
-  - TW
-  - SEA
-  - OTHER
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: BN-高倍率
-  type: url-test
-  require-quality: high
-  preferred-regions:
-  - HK
-  - JP
-  - SG
-  - US
-  - EU
-  - TW
-  - SEA
-  - OTHER
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: BN-其他
-  type: url-test
-  require-quality: other
-  preferred-regions:
-  - HK
-  - JP
-  - SG
-  - US
-  - EU
-  - TW
-  - SEA
-  - OTHER
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: PK-专线
-  type: url-test
-  require-quality: dedicated
-  preferred-regions:
-  - US
-  - JP
-  - SG
-  - HK
-  - EU
-  - TW
-  - SEA
-  - OTHER
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: PK-高倍率
-  type: url-test
-  require-quality: high
-  preferred-regions:
-  - US
-  - JP
-  - SG
-  - HK
-  - EU
-  - TW
-  - SEA
-  - OTHER
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: PK-其他
-  type: url-test
-  require-quality: other
-  preferred-regions:
-  - US
-  - JP
-  - SG
-  - HK
-  - EU
-  - TW
-  - SEA
-  - OTHER
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: AMZ-专线
-  type: url-test
-  require-quality: dedicated
-  preferred-regions:
-  - US
-  - SG
-  - EU
-  - JP
-  - HK
-  - TW
-  - SEA
-  - OTHER
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: AMZ-高倍率
-  type: url-test
-  require-quality: high
-  preferred-regions:
-  - US
-  - SG
-  - EU
-  - JP
-  - HK
-  - TW
-  - SEA
-  - OTHER
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: AMZ-其他
-  type: url-test
-  require-quality: other
-  preferred-regions:
-  - US
-  - SG
-  - EU
-  - JP
-  - HK
-  - TW
-  - SEA
-  - OTHER
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: EUUS-专线
-  type: url-test
-  require-quality: dedicated
-  region-include:
-  - US
-  - EU
-  preferred-regions:
-  - US
-  - EU
-  - SG
-  - JP
-  - HK
-  - TW
-  - SEA
-  - OTHER
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: EUUS-高倍率
-  type: url-test
-  require-quality: high
-  region-include:
-  - US
-  - EU
-  preferred-regions:
-  - US
-  - EU
-  - SG
-  - JP
-  - HK
-  - TW
-  - SEA
-  - OTHER
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: EUUS-其他
-  type: url-test
-  require-quality: other
-  region-include:
-  - US
-  - EU
-  preferred-regions:
-  - US
-  - EU
-  - SG
-  - JP
-  - HK
-  - TW
-  - SEA
-  - OTHER
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: HK-专线
-  type: url-test
-  require-quality: dedicated
-  region-include:
-  - HK
-  exclude-subscriptions:
-  - Nano
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: HK-高倍率
-  type: url-test
-  require-quality: high
-  region-include:
-  - HK
-  exclude-subscriptions:
-  - Nano
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: HK-其他
-  type: url-test
-  require-quality: other
-  region-include:
-  - HK
-  exclude-subscriptions:
-  - Nano
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: SEA-专线
-  type: url-test
-  require-quality: dedicated
-  region-include:
-  - SG
-  - JP
-  - TW
-  - SEA
-  preferred-regions:
-  - SG
-  - JP
-  - TW
-  - SEA
-  - HK
-  - US
-  - EU
-  - OTHER
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: SEA-高倍率
-  type: url-test
-  require-quality: high
-  region-include:
-  - SG
-  - JP
-  - TW
-  - SEA
-  preferred-regions:
-  - SG
-  - JP
-  - TW
-  - SEA
-  - HK
-  - US
-  - EU
-  - OTHER
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: SEA-其他
-  type: url-test
-  require-quality: other
-  region-include:
-  - SG
-  - JP
-  - TW
-  - SEA
-  preferred-regions:
-  - SG
-  - JP
-  - TW
-  - SEA
-  - HK
-  - US
-  - EU
-  - OTHER
-  proxies: []
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
+  - name: Proxy
+    type: select
+    manual-pick-count: 8
+    manual-pick-mix:
+      dedicated: 4
+      high: 3
+      other: 1
+    manual-source-cap: 2
+    manual-region-cap: 2
+    preferred-regions:
+      - HK
+      - SG
+      - JP
+      - US
+      - EU
+      - TW
+      - SEA
+      - OTHER
+    fallback-groups:
+      - AI
+      - 开发
+      - 币安
+      - PikPak
+      - Microsoft
+      - Amazon
+      - 香港
+      - 新加坡
+      - 日本
+      - 美国
+      - 欧洲
+      - 全节点
+      - 其他
+      - DIRECT
+    proxies: []
+
+  - name: Final
+    type: select
+    fallback-groups:
+      - Proxy
+      - DIRECT
+      - 美国
+      - 欧洲
+      - 全节点
+    proxies: []
+
+  - name: 国内
+    type: select
+    fallback-groups:
+      - DIRECT
+      - Proxy
+    proxies: []
+
+  - name: 全节点
+    type: url-test
+    quality-order:
+      - dedicated
+      - high
+      - other
+    preferred-regions:
+      - HK
+      - SG
+      - JP
+      - US
+      - EU
+      - TW
+      - SEA
+      - OTHER
+    proxies: []
+    url: https://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 50
+    lazy: true
+
+  - name: 香港-自动
+    type: url-test
+    region-include:
+      - HK
+    proxies: []
+    url: https://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 50
+    lazy: true
+
+  - name: 香港-手动
+    type: select
+    region-include:
+      - HK
+    proxies: []
+
+  - name: 香港
+    type: select
+    fallback-groups:
+      - 香港-自动
+      - 香港-手动
+      - 全节点
+    proxies: []
+
+  - name: 新加坡-自动
+    type: url-test
+    region-include:
+      - SG
+    proxies: []
+    url: https://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 50
+    lazy: true
+
+  - name: 新加坡-手动
+    type: select
+    region-include:
+      - SG
+    proxies: []
+
+  - name: 新加坡
+    type: select
+    fallback-groups:
+      - 新加坡-自动
+      - 新加坡-手动
+      - 全节点
+    proxies: []
+
+  - name: 日本-自动
+    type: url-test
+    region-include:
+      - JP
+    proxies: []
+    url: https://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 50
+    lazy: true
+
+  - name: 日本-手动
+    type: select
+    region-include:
+      - JP
+    proxies: []
+
+  - name: 日本
+    type: select
+    fallback-groups:
+      - 日本-自动
+      - 日本-手动
+      - 全节点
+    proxies: []
+
+  - name: 台湾-自动
+    type: url-test
+    region-include:
+      - TW
+    proxies: []
+    url: https://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 50
+    lazy: true
+
+  - name: 台湾-手动
+    type: select
+    region-include:
+      - TW
+    proxies: []
+
+  - name: 台湾
+    type: select
+    fallback-groups:
+      - 台湾-自动
+      - 台湾-手动
+      - 全节点
+    proxies: []
+
+  - name: 美国-自动
+    type: url-test
+    region-include:
+      - US
+    proxies: []
+    url: https://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 50
+    lazy: true
+
+  - name: 美国-手动
+    type: select
+    region-include:
+      - US
+    proxies: []
+
+  - name: 美国
+    type: select
+    fallback-groups:
+      - 美国-自动
+      - 美国-手动
+      - 全节点
+    proxies: []
+
+  - name: 欧洲-自动
+    type: url-test
+    region-include:
+      - EU
+    proxies: []
+    url: https://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 50
+    lazy: true
+
+  - name: 欧洲-手动
+    type: select
+    region-include:
+      - EU
+    proxies: []
+
+  - name: 欧洲
+    type: select
+    fallback-groups:
+      - 欧洲-自动
+      - 欧洲-手动
+      - 全节点
+    proxies: []
+
+  - name: 东南亚-自动
+    type: url-test
+    region-include:
+      - SEA
+    proxies: []
+    url: https://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 50
+    lazy: true
+
+  - name: 东南亚-手动
+    type: select
+    region-include:
+      - SEA
+    proxies: []
+
+  - name: 东南亚
+    type: select
+    fallback-groups:
+      - 东南亚-自动
+      - 东南亚-手动
+      - 全节点
+    proxies: []
+
+  - name: 其他-自动
+    type: url-test
+    region-include:
+      - OTHER
+    preferred-regions:
+      - OTHER
+    proxies: []
+    url: https://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 50
+    lazy: true
+
+  - name: 其他-手动
+    type: select
+    region-include:
+      - OTHER
+    preferred-regions:
+      - OTHER
+    proxies: []
+
+  - name: 其他
+    type: select
+    fallback-groups:
+      - 其他-自动
+      - 其他-手动
+      - 全节点
+    proxies: []
+
+  - name: AI
+    type: fallback
+    fallback-groups:
+      - 新加坡
+      - 日本
+      - 美国
+      - 欧洲
+      - 香港
+      - 全节点
+    proxies: []
+    url: https://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 50
+    lazy: true
+
+  - name: 开发
+    type: select
+    fallback-groups:
+      - Proxy
+      - 美国
+      - 欧洲
+      - 新加坡
+      - 日本
+      - 全节点
+      - DIRECT
+    proxies: []
+
+  - name: 币安
+    type: fallback
+    fallback-groups:
+      - 香港
+      - 新加坡
+      - 日本
+      - 欧洲
+      - 美国
+      - 全节点
+    proxies: []
+    url: https://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 50
+    lazy: true
+
+  - name: PikPak
+    type: fallback
+    fallback-groups:
+      - 美国
+      - 日本
+      - 新加坡
+      - 香港
+      - 全节点
+    proxies: []
+    url: https://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 50
+    lazy: true
+
+  - name: Microsoft
+    type: fallback
+    fallback-groups:
+      - 美国
+      - 欧洲
+      - 新加坡
+      - 日本
+      - 全节点
+      - DIRECT
+    proxies: []
+    url: https://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 50
+    lazy: true
+
+  - name: Amazon
+    type: fallback
+    fallback-groups:
+      - 美国
+      - 欧洲
+      - 新加坡
+      - 日本
+      - 全节点
+      - DIRECT
+    proxies: []
+    url: https://www.gstatic.com/generate_204
+    interval: 180
+    tolerance: 50
+    lazy: true
+
+  - name: OpenAI
+    type: select
+    fallback-groups:
+      - AI
+      - 新加坡
+      - 日本
+      - 美国
+      - 欧洲
+      - 香港
+      - 全节点
+      - Proxy
+    proxies: []
+
+  - name: Claude
+    type: select
+    fallback-groups:
+      - AI
+      - 新加坡
+      - 日本
+      - 美国
+      - 欧洲
+      - 香港
+      - 全节点
+      - Proxy
+    proxies: []
+
+  - name: Gemini
+    type: select
+    fallback-groups:
+      - AI
+      - 新加坡
+      - 日本
+      - 美国
+      - 欧洲
+      - 香港
+      - 全节点
+      - Proxy
+    proxies: []
+
+  - name: Google
+    type: select
+    fallback-groups:
+      - AI
+      - 开发
+      - 新加坡
+      - 日本
+      - 美国
+      - 欧洲
+      - 全节点
+      - Proxy
+    proxies: []
+
+  - name: GitHub
+    type: select
+    fallback-groups:
+      - 开发
+      - 美国
+      - 欧洲
+      - 新加坡
+      - 日本
+      - 全节点
+      - Proxy
+      - DIRECT
+    proxies: []
+
+  - name: Telegram
+    type: select
+    fallback-groups:
+      - Proxy
+      - 新加坡
+      - 日本
+      - 香港
+      - 美国
+      - 欧洲
+      - 全节点
+    proxies: []
+
+  - name: Discord
+    type: select
+    fallback-groups:
+      - Proxy
+      - 美国
+      - 日本
+      - 新加坡
+      - 香港
+      - 全节点
+    proxies: []
+
+  - name: Twitter
+    type: select
+    fallback-groups:
+      - Proxy
+      - 美国
+      - 日本
+      - 新加坡
+      - 香港
+      - 欧洲
+      - 全节点
+    proxies: []
+
+  - name: TikTok
+    type: select
+    fallback-groups:
+      - Proxy
+      - 日本
+      - 新加坡
+      - 美国
+      - 香港
+      - 全节点
+    proxies: []
+
+  - name: YouTube
+    type: select
+    fallback-groups:
+      - Proxy
+      - 日本
+      - 新加坡
+      - 美国
+      - 香港
+      - 欧洲
+      - 全节点
+    proxies: []
+
+  - name: Netflix
+    type: select
+    fallback-groups:
+      - Proxy
+      - 日本
+      - 新加坡
+      - 美国
+      - 香港
+      - 欧洲
+      - 全节点
+    proxies: []
+
+  - name: Disney+
+    type: select
+    fallback-groups:
+      - Proxy
+      - 日本
+      - 新加坡
+      - 美国
+      - 香港
+      - 欧洲
+      - 全节点
+    proxies: []
+
+  - name: HBO
+    type: select
+    fallback-groups:
+      - Proxy
+      - 美国
+      - 日本
+      - 新加坡
+      - 香港
+      - 欧洲
+      - 全节点
+    proxies: []
+
+  - name: Bahamut
+    type: select
+    fallback-groups:
+      - 台湾
+      - 香港
+      - 日本
+      - 新加坡
+      - Proxy
+      - 全节点
+    proxies: []
+
+  - name: BiliBili
+    type: select
+    fallback-groups:
+      - DIRECT
+      - 台湾
+      - 香港
+      - 日本
+      - Proxy
+      - 全节点
+    proxies: []
+
+  - name: GlobalMedia
+    type: select
+    fallback-groups:
+      - Proxy
+      - 美国
+      - 日本
+      - 新加坡
+      - 香港
+      - 欧洲
+      - 全节点
+    proxies: []
+
+  - name: PayPal
+    type: select
+    fallback-groups:
+      - 美国
+      - 欧洲
+      - Proxy
+      - 香港
+      - 全节点
+    proxies: []
+
+  - name: Crypto
+    type: select
+    fallback-groups:
+      - 币安
+      - 香港
+      - 新加坡
+      - 日本
+      - 美国
+      - 欧洲
+      - Proxy
+      - 全节点
+    proxies: []
+
+  - name: Apple
+    type: select
+    fallback-groups:
+      - DIRECT
+      - Proxy
+      - 香港
+      - 日本
+      - 新加坡
+      - 美国
+      - 全节点
+    proxies: []
+
+  - name: Steam
+    type: select
+    fallback-groups:
+      - DIRECT
+      - Proxy
+      - 香港
+      - 日本
+      - 新加坡
+      - 美国
+      - 全节点
+    proxies: []
+
+  - name: Emby
+    type: select
+    fallback-groups:
+      - DIRECT
+      - Proxy
+      - 香港
+      - 日本
+      - 新加坡
+      - 美国
+      - 全节点
+    proxies: []
+
+  - name: "115"
+    type: select
+    fallback-groups:
+      - DIRECT
+      - Proxy
+    proxies: []
+
+  - name: RemoteDesktop
+    type: select
+    fallback-groups:
+      - DIRECT
+      - Proxy
+      - 香港
+      - 日本
+      - 美国
+      - 全节点
+    proxies: []
+
 rule-providers:
   OpenAI:
     type: http
@@ -800,34 +815,6 @@ rule-providers:
     interval: 86400
     path: ./rule-set/openai.yaml
     url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/OpenAI/OpenAI.yaml
-  Gemini:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 86400
-    path: ./rule-set/gemini.yaml
-    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gemini/Gemini.yaml
-  PikPak:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 86400
-    path: ./rule-set/pikpak.yaml
-    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/PikPak/PikPak.yaml
-  Telegram:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 86400
-    path: ./rule-set/telegram.yaml
-    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Telegram/Telegram.yaml
-  Binance:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 86400
-    path: ./rule-set/Binance.yaml
-    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Binance/Binance.yaml
   Claude:
     type: http
     behavior: classical
@@ -835,13 +822,13 @@ rule-providers:
     interval: 86400
     path: ./rule-set/claude.yaml
     url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Claude/Claude.yaml
-  Twitter:
+  Gemini:
     type: http
     behavior: classical
     format: yaml
     interval: 86400
-    path: ./rule-set/twitter.yaml
-    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Twitter/Twitter.yaml
+    path: ./rule-set/gemini.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gemini/Gemini.yaml
   GitHub:
     type: http
     behavior: classical
@@ -849,34 +836,125 @@ rule-providers:
     interval: 86400
     path: ./rule-set/github.yaml
     url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.yaml
-  RemoteDesktop:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 86400
-    path: ./rule-set/remotedesktop.yaml
-    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/RemoteDesktop/RemoteDesktop.yaml
-  115:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 86400
-    path: ./rule-set/115.yaml
-    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/115/115.yaml
-  Microsoft:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 86400
-    path: ./rule-set/microsoft.yaml
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft.yaml
   Google:
     type: http
     behavior: classical
     format: yaml
     interval: 86400
     path: ./rule-set/google.yaml
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Google/Google.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Google/Google.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/telegram.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Telegram/Telegram.yaml
+  Discord:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/discord.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Discord/Discord.yaml
+  Twitter:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/twitter.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Twitter/Twitter.yaml
+  TikTok:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/tiktok.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TikTok/TikTok.yaml
+  YouTube:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/youtube.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YouTube/YouTube.yaml
+  Netflix:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/netflix.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Netflix/Netflix.yaml
+  Disney:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/disney.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Disney/Disney.yaml
+  HBO:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/hbo.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HBO/HBO.yaml
+  Bahamut:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/bahamut.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Bahamut/Bahamut.yaml
+  BiliBili:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/bilibili.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BiliBili/BiliBili.yaml
+  GlobalMedia:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/globalmedia.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GlobalMedia/GlobalMedia.yaml
+  PayPal:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/paypal.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/PayPal/PayPal.yaml
+  Binance:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/binance.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Binance/Binance.yaml
+  Crypto:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/crypto.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/haha-miao/rule_file/refs/heads/main/clash/crypto/Crypto.yaml
+  PikPak:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/pikpak.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/PikPak/PikPak.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/microsoft.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft.yaml
   Amazon:
     type: http
     behavior: classical
@@ -884,53 +962,125 @@ rule-providers:
     interval: 86400
     path: ./rule-set/amazon.yaml
     url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Amazon/Amazon.yaml
+  Apple:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/apple.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple.yaml
+  Steam:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/steam.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Steam/Steam.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/steamcn.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SteamCN/SteamCN.yaml
+  "115":
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/115.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/115/115.yaml
+  RemoteDesktop:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/remotedesktop.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/RemoteDesktop/RemoteDesktop.yaml
+  EmbyDirect:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/emby-direct.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/haha-miao/rule_file/refs/heads/main/clash/emby/emby-direct.yaml
+  EmbyProxy:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/emby-proxy.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/haha-miao/rule_file/refs/heads/main/clash/emby/emby-proxy.yaml
+  Proxy:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/proxy.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Proxy/Proxy.yaml
+
 rules:
-- DOMAIN-SUFFIX,goclaude.cc,DIRECT
-- IP-CIDR,45.143.234.16/32,DIRECT
-- SRC-IP-CIDR,192.168.1.2/32,DIRECT
-- DOMAIN-SUFFIX,usertrust.com,DIRECT
-- DOMAIN-SUFFIX,rustdesk.com,DIRECT
-- DOMAIN-SUFFIX,open-vsx.org,Amazon
-- DOMAIN-SUFFIX,awsapps.com,Amazon
-- DOMAIN-SUFFIX,shortbread.aws.dev,Amazon
-- DOMAIN,prod.us-east-1.telemetry.desktop.kiro.dev,Amazon
-- DOMAIN,q.us-east-1.amazonaws.com,Amazon
-- DOMAIN-SUFFIX,cursorhub.cloud,DIRECT
-- DOMAIN-SUFFIX,betterclau.de,DIRECT
-- RULE-SET,GitHub,Proxy
-- RULE-SET,Twitter,ai组
-- RULE-SET,Telegram,币安
-- RULE-SET,Claude,ai组
-- RULE-SET,OpenAI,ai组
-- RULE-SET,Gemini,ai组
-- RULE-SET,Google,ai组
-- RULE-SET,RemoteDesktop,DIRECT
-- RULE-SET,115,DIRECT
-- RULE-SET,Microsoft,Microsoft
-- RULE-SET,Amazon,Amazon
-- DOMAIN-SUFFIX,docker.com,欧美
-- DOMAIN-SUFFIX,docker.io,欧美
-- DOMAIN-SUFFIX,npmjs.org,欧美
-- DOMAIN-SUFFIX,npmjs.com,欧美
-- DOMAIN-SUFFIX,yarnpkg.com,欧美
-- DOMAIN-SUFFIX,pypi.org,欧美
-- DOMAIN-SUFFIX,pythonhosted.org,欧美
-- DOMAIN-SUFFIX,crates.io,欧美
-- DOMAIN-SUFFIX,golang.org,欧美
-- DOMAIN-SUFFIX,brew.sh,欧美
-- DOMAIN-SUFFIX,maven.org,欧美
-- DOMAIN-SUFFIX,gradle.org,欧美
-- DOMAIN-KEYWORD,kisskh,欧美
-- DOMAIN-SUFFIX,xethub.hf.co,pikpak
-- DOMAIN-SUFFIX,pc528.net,DIRECT
-- RULE-SET,Binance,币安
-- RULE-SET,PikPak,pikpak
-- IP-ASN,62041,币安,no-resolve
-- IP-ASN,13335,Proxy,no-resolve
-- IP-ASN,15169,Proxy,no-resolve
-- GEOSITE,private,DIRECT
-- GEOIP,PRIVATE,DIRECT
-- GEOSITE,CN,DIRECT
-- GEOIP,CN,DIRECT
-- GEOIP,HK,DIRECT
-- MATCH,Proxy
+  - DOMAIN-SUFFIX,usertrust.com,DIRECT
+  - DOMAIN-SUFFIX,rustdesk.com,DIRECT
+  - DOMAIN-SUFFIX,cursorhub.cloud,DIRECT
+  - DOMAIN-SUFFIX,open-vsx.org,Amazon
+  - DOMAIN-SUFFIX,awsapps.com,Amazon
+  - DOMAIN-SUFFIX,shortbread.aws.dev,Amazon
+  - DOMAIN,prod.us-east-1.telemetry.desktop.kiro.dev,Amazon
+  - DOMAIN,q.us-east-1.amazonaws.com,Amazon
+  - DOMAIN-SUFFIX,docker.com,开发
+  - DOMAIN-SUFFIX,docker.io,开发
+  - DOMAIN-SUFFIX,gcr.io,开发
+  - DOMAIN-SUFFIX,ghcr.io,开发
+  - DOMAIN-SUFFIX,quay.io,开发
+  - DOMAIN-SUFFIX,npmjs.org,开发
+  - DOMAIN-SUFFIX,npmjs.com,开发
+  - DOMAIN-SUFFIX,yarnpkg.com,开发
+  - DOMAIN-SUFFIX,pypi.org,开发
+  - DOMAIN-SUFFIX,pythonhosted.org,开发
+  - DOMAIN-SUFFIX,crates.io,开发
+  - DOMAIN-SUFFIX,golang.org,开发
+  - DOMAIN-SUFFIX,brew.sh,开发
+  - DOMAIN-SUFFIX,maven.org,开发
+  - DOMAIN-SUFFIX,gradle.org,开发
+  - DOMAIN-SUFFIX,xethub.hf.co,PikPak
+  - DOMAIN-SUFFIX,goclaude.cc,Proxy
+  - DOMAIN-SUFFIX,devaicode.dev,Proxy
+  - RULE-SET,EmbyDirect,DIRECT
+  - RULE-SET,EmbyProxy,Emby
+  - RULE-SET,RemoteDesktop,RemoteDesktop
+  - RULE-SET,115,115
+  - RULE-SET,OpenAI,OpenAI
+  - RULE-SET,Claude,Claude
+  - RULE-SET,Gemini,Gemini
+  - RULE-SET,Google,Google
+  - RULE-SET,GitHub,GitHub
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,Discord,Discord
+  - RULE-SET,Twitter,Twitter
+  - RULE-SET,TikTok,TikTok
+  - RULE-SET,YouTube,YouTube
+  - RULE-SET,Netflix,Netflix
+  - RULE-SET,Disney,Disney+
+  - RULE-SET,HBO,HBO
+  - RULE-SET,Bahamut,Bahamut
+  - RULE-SET,BiliBili,BiliBili
+  - RULE-SET,GlobalMedia,GlobalMedia
+  - RULE-SET,PayPal,PayPal
+  - RULE-SET,Crypto,Crypto
+  - RULE-SET,Binance,币安
+  - RULE-SET,PikPak,PikPak
+  - RULE-SET,Microsoft,Microsoft
+  - RULE-SET,Amazon,Amazon
+  - RULE-SET,Apple,Apple
+  - RULE-SET,Steam,Steam
+  - RULE-SET,SteamCN,DIRECT
+  - RULE-SET,Proxy,Proxy
+  - IP-ASN,62041,币安,no-resolve
+  - IP-ASN,13335,Proxy,no-resolve
+  - IP-ASN,15169,Proxy,no-resolve
+  - GEOSITE,private,DIRECT
+  - GEOIP,PRIVATE,DIRECT
+  - GEOSITE,CN,国内
+  - GEOIP,CN,国内
+  - MATCH,Final

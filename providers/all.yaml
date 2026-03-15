@@ -1,13 +1,28 @@
 proxies:
-- name: 🇺🇸 美国H1|实验|1.1倍|V1
-  server: ush1-c4uc3r8wykfpmdw4.node.cross666.top
-  port: 65535
-  sni: www.yahoo.com
-  up: 500
-  down: 500
-  skip-cert-verify: true
-  type: hysteria2
+- name: 官网：keluosi.top
+  type: anytls
+  server: usg1-c-chic51aa6lrlzvyf.node.cross666.top
+  port: 31333
   password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.com
+  skip-cert-verify: true
+- name: 套餐到期：2027-01-17
+  type: anytls
+  server: usg1-c-chic51aa6lrlzvyf.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国G1|三网|1.2倍|V1
+  type: anytls
+  server: usg1-c-chic51aa6lrlzvyf.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.com
+  skip-cert-verify: true
 - name: 🇺🇸 美国F1|电信联通|1.1倍|V1
   server: usf.node.cross666.top
   port: 65535
@@ -20,22 +35,6 @@ proxies:
 - name: 🇺🇸 美国B2|联通|0.7倍|V2
   type: anytls
   server: usb1.node.cross666.top
-  port: 31333
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
-  sni: www.yahoo.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国A1|联通|1.1倍|V2
-  type: anytls
-  server: usa1.node.cross666.top
-  port: 31333
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
-  sni: www.yahoo.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国A2|联通|1.1倍|V2
-  type: anytls
-  server: usa2.node.cross666.top
   port: 31333
   password: efaed81f-e760-4d87-be6e-05136b25da66
   udp: true
@@ -58,7 +57,7 @@ proxies:
   sni: www.yahoo.com
   skip-cert-verify: true
 - name: 🇭🇰 香港A2|电信联通|2倍|V2
-  server: hke1.node.cross666.top
+  server: hka2-1govz7w0l7w0lgt5.node.cross666.top
   port: 65535
   sni: mirrors.xtom.hk
   up: 150
@@ -108,30 +107,6 @@ proxies:
   udp: true
   sni: www.yahoo.co.jp
   skip-cert-verify: true
-- name: 🇯🇵 日本C1|移动|2倍|V2
-  type: anytls
-  server: jpc1.node.cross666.top
-  port: 31333
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
-  sni: www.yahoo.co.jp
-  skip-cert-verify: true
-- name: 🇯🇵 日本C2|移动|2倍|V2
-  type: anytls
-  server: jpc2.node.cross666.top
-  port: 31333
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
-  sni: www.yahoo.co.jp
-  skip-cert-verify: true
-- name: 🇯🇵 日本C3|移动|2倍|V2
-  type: anytls
-  server: jpc3.node.cross666.top
-  port: 31333
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
-  sni: www.yahoo.co.jp
-  skip-cert-verify: true
 - name: 🇸🇬 新加坡A1|1.4倍|V2
   server: sga.node.cross666.top
   port: 65535
@@ -141,7 +116,7 @@ proxies:
   skip-cert-verify: true
   type: hysteria2
   password: efaed81f-e760-4d87-be6e-05136b25da66
-- name: 🇸🇬 新加坡B1|1.8倍|V2
+- name: 🇸🇬 新加坡B1|1.2倍|V2
   type: anytls
   server: sgb1.node.cross666.top
   port: 31333
@@ -323,7 +298,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-e.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -342,7 +317,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-f.coscdn.men
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -361,7 +336,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-g.aliapp.men
-  client-fingerprint: qq
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -380,7 +355,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-h.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -567,7 +542,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-e.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -586,7 +561,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-f.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -605,7 +580,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-g.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -624,7 +599,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-h.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -643,7 +618,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-e.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -662,7 +637,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-f.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -681,7 +656,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-g.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -700,7 +675,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-h.aliapp.men
-  client-fingerprint: safari
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -719,7 +694,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-e.coscdn.men
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -738,7 +713,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-f.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -757,7 +732,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-g.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -776,7 +751,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-h.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -785,3 +760,262 @@ proxies:
   ws-path: /newlogin/login.do
   ws-headers:
     Host: mms-static-bottom-h.aliapp.men
+- name: 套餐到期：2026-06-10
+  type: ss
+  server: pgyqlssq524.szb.fmrpqngvbh.tkbgmvvasd.org
+  port: 26020
+  cipher: 2022-blake3-aes-256-gcm
+  password: OTgzZmUzZjNlZjA5NjUyZDMyZjgxMjMyOGU2ODg3ZjY=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇭🇰 HK-IEPL-08-NewMedia
+  type: ss
+  server: pgyqlssq524.szb.fmrpqngvbh.tkbgmvvasd.org
+  port: 26020
+  cipher: 2022-blake3-aes-256-gcm
+  password: OTgzZmUzZjNlZjA5NjUyZDMyZjgxMjMyOGU2ODg3ZjY=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇭🇰 HK-01-CTC
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26001
+  cipher: 2022-blake3-aes-256-gcm
+  password: YWQzZGIzZDlmMGE5M2JkODA3ZTE1NGUzNDBhNDE3ZDI=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇭🇰 HK-02-JinX
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26002
+  cipher: 2022-blake3-aes-256-gcm
+  password: OTYwY2M2ZjJkMWM3ZTg5ZDE1ZDI4MGIwNWNjM2RkZjU=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇭🇰 HK-03-HGC
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26003
+  cipher: 2022-blake3-aes-256-gcm
+  password: MGIxMDIxOWMyZTMwNmJlNDg5MDU0NGVkMmIxZTUwNmM=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇭🇰 HK-04-Eons
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26004
+  cipher: 2022-blake3-aes-256-gcm
+  password: NWNjZGVkY2NkYjk4ODZiNTIwYmI0ZmNiMGEyYTBmMzY=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇭🇰 HK-05-HostHatch
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26005
+  cipher: 2022-blake3-aes-256-gcm
+  password: NDJkYmFlY2FmODIzOGUxY2Q5NmZmYjFlNGIzODE3YzM=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇭🇰 HK-07-DMIT
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26021
+  cipher: 2022-blake3-aes-256-gcm
+  password: Mzk5NmE3ODNhZDNjMDcyMjg3NThlZTk2ZWU1MjgxZDA=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇭🇰 HK-08-NewMedia
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26020
+  cipher: 2022-blake3-aes-256-gcm
+  password: OTgzZmUzZjNlZjA5NjUyZDMyZjgxMjMyOGU2ODg3ZjY=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇭🇰 HK-09-FXT
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26045
+  cipher: 2022-blake3-aes-256-gcm
+  password: MTIyNDJiZWZkZjNkMzY4NWMwOWNmYjJmNjQzNThkMDU=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇭🇰 HK-11-Akari
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26050
+  cipher: 2022-blake3-aes-256-gcm
+  password: YWIwZDRmMGQ4ZTQzZmVkYzM3MGVlMDA0NmFmZmQyNjU=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇸🇬 SG-01-SG.GS
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26007
+  cipher: 2022-blake3-aes-256-gcm
+  password: Y2U0MGRhN2U3ODc2NGJkNDNkYTIwYWI3OGQ0OWFmYWI=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇸🇬 SG-02-Datacamp
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26008
+  cipher: 2022-blake3-aes-256-gcm
+  password: NzVmYmEwNDcxNTNkYWVjMWZmM2Q0MzUwYjVkMGE4Yjg=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇸🇬 SG-03-Eons
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26009
+  cipher: 2022-blake3-aes-256-gcm
+  password: ZDBmZTA5YWM1NGM5N2U3MGUzM2YzZDUzMTFhYTQxNDk=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇸🇬 SG-04-JinX
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26011
+  cipher: 2022-blake3-aes-256-gcm
+  password: ZDEwZTM2NmYzNjUxYTA2ZGJlZDBmN2NmMmQ5MmQ1MmE=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇸🇬 SG-05-HostHatch
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26010
+  cipher: 2022-blake3-aes-256-gcm
+  password: MTBiN2UyYTI5YzBiN2U2ZWRkNzE3ZjA5OWRjMTlkNGM=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇸🇬 SG-07-Leaseweb
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26022
+  cipher: 2022-blake3-aes-256-gcm
+  password: ZDY2NzMxMGFmMGQzZDViMDMyY2NlMGUxNjYwMWZhYmU=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇯🇵 JP-01-Sakura
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26030
+  cipher: 2022-blake3-aes-256-gcm
+  password: ZmYyNjNmNThiZmIxYmFhODcxMTJkZDY1NDA3N2YwMzQ=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇯🇵 JP-02-JinX
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26031
+  cipher: 2022-blake3-aes-256-gcm
+  password: MWUxMGU3OWFhYWJjMTgzZGY5MGI5YWE2YzgzY2E5ZDQ=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇯🇵 JP-03-Akari
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26025
+  cipher: 2022-blake3-aes-256-gcm
+  password: MWQ0NGU2OTJiNTU2Yzk2OTEzZDFiYWQ3Njg0OGQ5MGE=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇯🇵 JP-04-HostHatch
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26029
+  cipher: 2022-blake3-aes-256-gcm
+  password: OThjOTBmOGMwZWE0MjZhZTgzOWM4NDg1YzhhOGFlMGI=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇯🇵 JP-05-DDPS
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26028
+  cipher: 2022-blake3-aes-256-gcm
+  password: NDEwYWI4ODhkOTk5ZTA3YjZkYjViM2Y5MmY1YjUwNzI=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇯🇵 JP-10-Leasweb
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26080
+  cipher: 2022-blake3-aes-256-gcm
+  password: YWY2YmE0MzYxZDMwNGNjMTcyNjkxOWMzODhlOWQ4ZGM=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇨🇳 TW-01-Hinet
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26037
+  cipher: 2022-blake3-aes-256-gcm
+  password: NjBjNTUzN2JjOTE5YjZlYWNjMDYxMWFiZmQ4Mzg5M2I=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇨🇳 TW-02-AKILE
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26038
+  cipher: 2022-blake3-aes-256-gcm
+  password: Mjc5YzU5NzhjYWRmNzYzM2Y4ZjUxNWU2YjAzYzU1ZWY=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇨🇳 TW-03-Akari
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26039
+  cipher: 2022-blake3-aes-256-gcm
+  password: Y2FhYmM1NjE0YWQ1ZDhmZmE3ODY4ZjkyZTNiZWQ4MTE=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇨🇳 TW-04-MoeChuang
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26042
+  cipher: 2022-blake3-aes-256-gcm
+  password: Y2FhYmM1NjE0YWQ1ZDhmZmE3ODY4ZjkyZTNiZWQ4MTE=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇺🇸 US-01-HostHatch
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26034
+  cipher: 2022-blake3-aes-256-gcm
+  password: NGIyMjk0NzA0MjFhMzcxMzhhZjEzODA1ZjdlNWE4NzE=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇺🇸 US-02-Jinx
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26035
+  cipher: 2022-blake3-aes-256-gcm
+  password: NThiZTRiZDNlMTIwNDgzMDhkYjc3ZWFlYjZlOWM0YWI=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇺🇸 US-03--Alpha
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26036
+  cipher: 2022-blake3-aes-256-gcm
+  password: YzA3NWJhOGNlMjIwMGJhNWE4ZWY2NmY3NDczOWNjZDM=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇺🇸 US-04-Eons
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26033
+  cipher: 2022-blake3-aes-256-gcm
+  password: NmExODBjMmUzZWMzMTc5YjRjNzM1ODk5NWUxMzA4Yzc=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇺🇸 US-05-Leassweb
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26040
+  cipher: 2022-blake3-aes-256-gcm
+  password: YWUyYTJhNDk1ZmFmMzdlMzY4MmM5ODM3MzhmYzlkMDU=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇩🇪 DE-01-Dataforest
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26012
+  cipher: 2022-blake3-aes-256-gcm
+  password: MTc2ZTA2ZDI0Y2U1YWIyYzgyNDQxNjFhNmY2NjNjZjE=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇩🇪 DE-02-BAGE
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26013
+  cipher: 2022-blake3-aes-256-gcm
+  password: ZDQwZmYxYjU2NDk1N2NmNzJlMzBlN2E2OWJjZDg2ZjM=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇩🇪 DE-04-Leaseweb
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26015
+  cipher: 2022-blake3-aes-256-gcm
+  password: NTlmN2I5NmZjMzU4ZWJiNmE5ZjY5MGNkOTI1ODUxZTM=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇬🇧 UK-01-HostHatch
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26016
+  cipher: 2022-blake3-aes-256-gcm
+  password: MjY1YzJjZDMwYTdkM2QwYzFjZTQ4ZmUyMjYzZTkwYzU=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇫🇮 FI-01-Cgi Global
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26017
+  cipher: 2022-blake3-aes-256-gcm
+  password: NWQ5NjBiZTgxZGNjYmM2ODJjZjEwY2RjNjI5ZWNlMGQ=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true

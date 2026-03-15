@@ -1,19 +1,38 @@
 mode: rule
+port: 7890
+socks-port: 7891
+allow-lan: true
+log-level: info
 proxy-providers:
   all:
     type: file
     path: providers/all.yaml
     health-check: null
 proxies:
-- name: 🇺🇸 美国H1|实验|1.1倍|V1
-  server: ush1-c4uc3r8wykfpmdw4.node.cross666.top
-  port: 65535
-  sni: www.yahoo.com
-  up: 500
-  down: 500
-  skip-cert-verify: true
-  type: hysteria2
+- name: 官网：keluosi.top
+  type: anytls
+  server: usg1-c-chic51aa6lrlzvyf.node.cross666.top
+  port: 31333
   password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.com
+  skip-cert-verify: true
+- name: 套餐到期：2027-01-17
+  type: anytls
+  server: usg1-c-chic51aa6lrlzvyf.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国G1|三网|1.2倍|V1
+  type: anytls
+  server: usg1-c-chic51aa6lrlzvyf.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.com
+  skip-cert-verify: true
 - name: 🇺🇸 美国F1|电信联通|1.1倍|V1
   server: usf.node.cross666.top
   port: 65535
@@ -26,22 +45,6 @@ proxies:
 - name: 🇺🇸 美国B2|联通|0.7倍|V2
   type: anytls
   server: usb1.node.cross666.top
-  port: 31333
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
-  sni: www.yahoo.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国A1|联通|1.1倍|V2
-  type: anytls
-  server: usa1.node.cross666.top
-  port: 31333
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
-  sni: www.yahoo.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国A2|联通|1.1倍|V2
-  type: anytls
-  server: usa2.node.cross666.top
   port: 31333
   password: efaed81f-e760-4d87-be6e-05136b25da66
   udp: true
@@ -64,7 +67,7 @@ proxies:
   sni: www.yahoo.com
   skip-cert-verify: true
 - name: 🇭🇰 香港A2|电信联通|2倍|V2
-  server: hke1.node.cross666.top
+  server: hka2-1govz7w0l7w0lgt5.node.cross666.top
   port: 65535
   sni: mirrors.xtom.hk
   up: 150
@@ -114,30 +117,6 @@ proxies:
   udp: true
   sni: www.yahoo.co.jp
   skip-cert-verify: true
-- name: 🇯🇵 日本C1|移动|2倍|V2
-  type: anytls
-  server: jpc1.node.cross666.top
-  port: 31333
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
-  sni: www.yahoo.co.jp
-  skip-cert-verify: true
-- name: 🇯🇵 日本C2|移动|2倍|V2
-  type: anytls
-  server: jpc2.node.cross666.top
-  port: 31333
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
-  sni: www.yahoo.co.jp
-  skip-cert-verify: true
-- name: 🇯🇵 日本C3|移动|2倍|V2
-  type: anytls
-  server: jpc3.node.cross666.top
-  port: 31333
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
-  sni: www.yahoo.co.jp
-  skip-cert-verify: true
 - name: 🇸🇬 新加坡A1|1.4倍|V2
   server: sga.node.cross666.top
   port: 65535
@@ -147,7 +126,7 @@ proxies:
   skip-cert-verify: true
   type: hysteria2
   password: efaed81f-e760-4d87-be6e-05136b25da66
-- name: 🇸🇬 新加坡B1|1.8倍|V2
+- name: 🇸🇬 新加坡B1|1.2倍|V2
   type: anytls
   server: sgb1.node.cross666.top
   port: 31333
@@ -329,7 +308,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-e.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -348,7 +327,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-f.coscdn.men
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -367,7 +346,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-g.aliapp.men
-  client-fingerprint: qq
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -386,7 +365,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-h.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -573,7 +552,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-e.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -592,7 +571,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-f.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -611,7 +590,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-g.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -630,7 +609,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-h.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -649,7 +628,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-e.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -668,7 +647,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-f.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -687,7 +666,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-g.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -706,7 +685,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-h.aliapp.men
-  client-fingerprint: safari
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -725,7 +704,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-e.coscdn.men
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -744,7 +723,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-f.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -763,7 +742,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-g.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -782,7 +761,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-h.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -791,54 +770,384 @@ proxies:
   ws-path: /newlogin/login.do
   ws-headers:
     Host: mms-static-bottom-h.aliapp.men
+- name: 套餐到期：2026-06-10
+  type: ss
+  server: pgyqlssq524.szb.fmrpqngvbh.tkbgmvvasd.org
+  port: 26020
+  cipher: 2022-blake3-aes-256-gcm
+  password: OTgzZmUzZjNlZjA5NjUyZDMyZjgxMjMyOGU2ODg3ZjY=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇭🇰 HK-IEPL-08-NewMedia
+  type: ss
+  server: pgyqlssq524.szb.fmrpqngvbh.tkbgmvvasd.org
+  port: 26020
+  cipher: 2022-blake3-aes-256-gcm
+  password: OTgzZmUzZjNlZjA5NjUyZDMyZjgxMjMyOGU2ODg3ZjY=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇭🇰 HK-01-CTC
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26001
+  cipher: 2022-blake3-aes-256-gcm
+  password: YWQzZGIzZDlmMGE5M2JkODA3ZTE1NGUzNDBhNDE3ZDI=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇭🇰 HK-02-JinX
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26002
+  cipher: 2022-blake3-aes-256-gcm
+  password: OTYwY2M2ZjJkMWM3ZTg5ZDE1ZDI4MGIwNWNjM2RkZjU=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇭🇰 HK-03-HGC
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26003
+  cipher: 2022-blake3-aes-256-gcm
+  password: MGIxMDIxOWMyZTMwNmJlNDg5MDU0NGVkMmIxZTUwNmM=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇭🇰 HK-04-Eons
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26004
+  cipher: 2022-blake3-aes-256-gcm
+  password: NWNjZGVkY2NkYjk4ODZiNTIwYmI0ZmNiMGEyYTBmMzY=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇭🇰 HK-05-HostHatch
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26005
+  cipher: 2022-blake3-aes-256-gcm
+  password: NDJkYmFlY2FmODIzOGUxY2Q5NmZmYjFlNGIzODE3YzM=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇭🇰 HK-07-DMIT
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26021
+  cipher: 2022-blake3-aes-256-gcm
+  password: Mzk5NmE3ODNhZDNjMDcyMjg3NThlZTk2ZWU1MjgxZDA=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇭🇰 HK-08-NewMedia
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26020
+  cipher: 2022-blake3-aes-256-gcm
+  password: OTgzZmUzZjNlZjA5NjUyZDMyZjgxMjMyOGU2ODg3ZjY=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇭🇰 HK-09-FXT
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26045
+  cipher: 2022-blake3-aes-256-gcm
+  password: MTIyNDJiZWZkZjNkMzY4NWMwOWNmYjJmNjQzNThkMDU=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇭🇰 HK-11-Akari
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26050
+  cipher: 2022-blake3-aes-256-gcm
+  password: YWIwZDRmMGQ4ZTQzZmVkYzM3MGVlMDA0NmFmZmQyNjU=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇸🇬 SG-01-SG.GS
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26007
+  cipher: 2022-blake3-aes-256-gcm
+  password: Y2U0MGRhN2U3ODc2NGJkNDNkYTIwYWI3OGQ0OWFmYWI=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇸🇬 SG-02-Datacamp
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26008
+  cipher: 2022-blake3-aes-256-gcm
+  password: NzVmYmEwNDcxNTNkYWVjMWZmM2Q0MzUwYjVkMGE4Yjg=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇸🇬 SG-03-Eons
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26009
+  cipher: 2022-blake3-aes-256-gcm
+  password: ZDBmZTA5YWM1NGM5N2U3MGUzM2YzZDUzMTFhYTQxNDk=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇸🇬 SG-04-JinX
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26011
+  cipher: 2022-blake3-aes-256-gcm
+  password: ZDEwZTM2NmYzNjUxYTA2ZGJlZDBmN2NmMmQ5MmQ1MmE=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇸🇬 SG-05-HostHatch
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26010
+  cipher: 2022-blake3-aes-256-gcm
+  password: MTBiN2UyYTI5YzBiN2U2ZWRkNzE3ZjA5OWRjMTlkNGM=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇸🇬 SG-07-Leaseweb
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26022
+  cipher: 2022-blake3-aes-256-gcm
+  password: ZDY2NzMxMGFmMGQzZDViMDMyY2NlMGUxNjYwMWZhYmU=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇯🇵 JP-01-Sakura
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26030
+  cipher: 2022-blake3-aes-256-gcm
+  password: ZmYyNjNmNThiZmIxYmFhODcxMTJkZDY1NDA3N2YwMzQ=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇯🇵 JP-02-JinX
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26031
+  cipher: 2022-blake3-aes-256-gcm
+  password: MWUxMGU3OWFhYWJjMTgzZGY5MGI5YWE2YzgzY2E5ZDQ=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇯🇵 JP-03-Akari
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26025
+  cipher: 2022-blake3-aes-256-gcm
+  password: MWQ0NGU2OTJiNTU2Yzk2OTEzZDFiYWQ3Njg0OGQ5MGE=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇯🇵 JP-04-HostHatch
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26029
+  cipher: 2022-blake3-aes-256-gcm
+  password: OThjOTBmOGMwZWE0MjZhZTgzOWM4NDg1YzhhOGFlMGI=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇯🇵 JP-05-DDPS
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26028
+  cipher: 2022-blake3-aes-256-gcm
+  password: NDEwYWI4ODhkOTk5ZTA3YjZkYjViM2Y5MmY1YjUwNzI=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇯🇵 JP-10-Leasweb
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26080
+  cipher: 2022-blake3-aes-256-gcm
+  password: YWY2YmE0MzYxZDMwNGNjMTcyNjkxOWMzODhlOWQ4ZGM=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇨🇳 TW-01-Hinet
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26037
+  cipher: 2022-blake3-aes-256-gcm
+  password: NjBjNTUzN2JjOTE5YjZlYWNjMDYxMWFiZmQ4Mzg5M2I=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇨🇳 TW-02-AKILE
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26038
+  cipher: 2022-blake3-aes-256-gcm
+  password: Mjc5YzU5NzhjYWRmNzYzM2Y4ZjUxNWU2YjAzYzU1ZWY=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇨🇳 TW-03-Akari
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26039
+  cipher: 2022-blake3-aes-256-gcm
+  password: Y2FhYmM1NjE0YWQ1ZDhmZmE3ODY4ZjkyZTNiZWQ4MTE=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇨🇳 TW-04-MoeChuang
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26042
+  cipher: 2022-blake3-aes-256-gcm
+  password: Y2FhYmM1NjE0YWQ1ZDhmZmE3ODY4ZjkyZTNiZWQ4MTE=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇺🇸 US-01-HostHatch
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26034
+  cipher: 2022-blake3-aes-256-gcm
+  password: NGIyMjk0NzA0MjFhMzcxMzhhZjEzODA1ZjdlNWE4NzE=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇺🇸 US-02-Jinx
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26035
+  cipher: 2022-blake3-aes-256-gcm
+  password: NThiZTRiZDNlMTIwNDgzMDhkYjc3ZWFlYjZlOWM0YWI=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇺🇸 US-03--Alpha
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26036
+  cipher: 2022-blake3-aes-256-gcm
+  password: YzA3NWJhOGNlMjIwMGJhNWE4ZWY2NmY3NDczOWNjZDM=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇺🇸 US-04-Eons
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26033
+  cipher: 2022-blake3-aes-256-gcm
+  password: NmExODBjMmUzZWMzMTc5YjRjNzM1ODk5NWUxMzA4Yzc=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇺🇸 US-05-Leassweb
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26040
+  cipher: 2022-blake3-aes-256-gcm
+  password: YWUyYTJhNDk1ZmFmMzdlMzY4MmM5ODM3MzhmYzlkMDU=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇩🇪 DE-01-Dataforest
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26012
+  cipher: 2022-blake3-aes-256-gcm
+  password: MTc2ZTA2ZDI0Y2U1YWIyYzgyNDQxNjFhNmY2NjNjZjE=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇩🇪 DE-02-BAGE
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26013
+  cipher: 2022-blake3-aes-256-gcm
+  password: ZDQwZmYxYjU2NDk1N2NmNzJlMzBlN2E2OWJjZDg2ZjM=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇩🇪 DE-04-Leaseweb
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26015
+  cipher: 2022-blake3-aes-256-gcm
+  password: NTlmN2I5NmZjMzU4ZWJiNmE5ZjY5MGNkOTI1ODUxZTM=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇬🇧 UK-01-HostHatch
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26016
+  cipher: 2022-blake3-aes-256-gcm
+  password: MjY1YzJjZDMwYTdkM2QwYzFjZTQ4ZmUyMjYzZTkwYzU=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
+- name: 🇫🇮 FI-01-Cgi Global
+  type: ss
+  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
+  port: 26017
+  cipher: 2022-blake3-aes-256-gcm
+  password: NWQ5NjBiZTgxZGNjYmM2ODJjZjEwY2RjNjI5ZWNlMGQ=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  udp: true
 proxy-groups:
 - name: Proxy
   type: select
+  manual-pick-count: 8
+  manual-pick-mix:
+    dedicated: 4
+    high: 3
+    other: 1
+  manual-source-cap: 2
+  manual-region-cap: 2
+  fallback-groups:
+  - AI
+  - 开发
+  - 币安
+  - PikPak
+  - Microsoft
+  - Amazon
+  - 香港
+  - 新加坡
+  - 日本
+  - 美国
+  - 欧洲
+  - 全节点
+  - 其他
+  - DIRECT
   proxies:
   - ❇️白羊座-BGP(通用)
+  - 🇭🇰 HK-IEPL-08-NewMedia
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
   - 🇭🇰 香港A2|电信联通|2倍|V2
   - 🇯🇵 日本A1|三网|3.5倍|V2
   - 🇯🇵 日本A2|三网|3.5倍|V2
-  - 🇸🇬新加坡-A(通用)
-  - 🇯🇵 日本B1|移动|2倍|V2
-  - ai组
-  - Microsoft
+  - 🇸🇬 SG-01-SG.GS
+  - AI
+  - 开发
   - 币安
-  - pikpak
+  - PikPak
+  - Microsoft
   - Amazon
-  - 欧美
   - 香港
+  - 新加坡
+  - 日本
+  - 美国
+  - 欧洲
   - 全节点
   - 其他
+  - DIRECT
+- name: Final
+  type: select
+  fallback-groups:
+  - Proxy
+  - DIRECT
+  - 美国
+  - 欧洲
+  - 全节点
+  proxies:
+  - Proxy
+  - DIRECT
+  - 美国
+  - 欧洲
+  - 全节点
+- name: 国内
+  type: select
+  fallback-groups:
+  - DIRECT
+  - Proxy
+  proxies:
+  - DIRECT
+  - Proxy
 - name: 全节点
   type: url-test
   proxies:
   - ❇️白羊座-BGP(通用)
+  - 🇭🇰 HK-IEPL-08-NewMedia
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
   - 🇭🇰 香港A2|电信联通|2倍|V2
   - 🇯🇵 日本A1|三网|3.5倍|V2
   - 🇯🇵 日本A2|三网|3.5倍|V2
   - 🇯🇵 日本B1|移动|2倍|V2
-  - 🇯🇵 日本C1|移动|2倍|V2
-  - 🇯🇵 日本C2|移动|2倍|V2
-  - 🇯🇵 日本C3|移动|2倍|V2
   - ❇️白羊座-AGP(通用)
   - ❇️白羊座-IGP(通用)
+  - 🇭🇰 HK-01-CTC
+  - 🇭🇰 HK-02-JinX
+  - 🇭🇰 HK-03-HGC
+  - 🇭🇰 HK-04-Eons
+  - 🇭🇰 HK-05-HostHatch
+  - 🇭🇰 HK-07-DMIT
+  - 🇭🇰 HK-08-NewMedia
+  - 🇭🇰 HK-09-FXT
+  - 🇭🇰 HK-11-Akari
   - 🇭🇰香港-A(通用)
+  - 🇸🇬 新加坡B1|1.2倍|V2
   - 🇸🇬 新加坡A1|1.4倍|V2
-  - 🇸🇬 新加坡B1|1.8倍|V2
+  - 🇸🇬 SG-01-SG.GS
+  - 🇸🇬 SG-02-Datacamp
+  - 🇸🇬 SG-03-Eons
+  - 🇸🇬 SG-04-JinX
+  - 🇸🇬 SG-05-HostHatch
+  - 🇸🇬 SG-07-Leaseweb
   - 🇸🇬新加坡-A(通用)
+  - 🇯🇵 JP-01-Sakura
+  - 🇯🇵 JP-02-JinX
+  - 🇯🇵 JP-03-Akari
+  - 🇯🇵 JP-04-HostHatch
+  - 🇯🇵 JP-05-DDPS
+  - 🇯🇵 JP-10-Leasweb
   - 🇯🇵日本-A(通用)
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国E2|0.7倍|V1
   - 🇺🇸 美国C2|0.8倍|V1
-  - 🇺🇸 美国A1|联通|1.1倍|V2
-  - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
-  - 🇺🇸 美国H1|实验|1.1倍|V1
+  - 🇺🇸 美国G1|三网|1.2倍|V1
+  - 🇺🇸 US-01-HostHatch
+  - 🇺🇸 US-02-Jinx
+  - 🇺🇸 US-03--Alpha
+  - 🇺🇸 US-04-Eons
+  - 🇺🇸 US-05-Leassweb
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -847,6 +1156,15 @@ proxy-groups:
   - 🇳🇱 荷兰B1|联通|0.7倍|V1
   - 🇳🇱 荷兰A1|联通|0.8倍|V1
   - 🇩🇪 德国B1|移动|1.1倍|V1
+  - 🇩🇪 DE-01-Dataforest
+  - 🇩🇪 DE-02-BAGE
+  - 🇩🇪 DE-04-Leaseweb
+  - 🇫🇮 FI-01-Cgi Global
+  - 🇬🇧 UK-01-HostHatch
+  - 🇨🇳 TW-01-Hinet
+  - 🇨🇳 TW-02-AKILE
+  - 🇨🇳 TW-03-Akari
+  - 🇨🇳 TW-04-MoeChuang
   - 🇹🇼台湾-A(通用)
   - 🇹🇭 泰国A1|移动|0.9倍|V2
   - 🇻🇳 越南A1|电信移动|1.1倍|V2
@@ -859,33 +1177,211 @@ proxy-groups:
   interval: 180
   tolerance: 50
   lazy: true
+- name: 香港-自动
+  type: url-test
+  proxies:
+  - ❇️白羊座-BGP(通用)
+  - 🇭🇰 HK-IEPL-08-NewMedia
+  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港A2|电信联通|2倍|V2
+  - ❇️白羊座-AGP(通用)
+  - ❇️白羊座-IGP(通用)
+  - 🇭🇰 HK-01-CTC
+  - 🇭🇰 HK-02-JinX
+  - 🇭🇰 HK-03-HGC
+  - 🇭🇰 HK-04-Eons
+  - 🇭🇰 HK-05-HostHatch
+  - 🇭🇰 HK-07-DMIT
+  - 🇭🇰 HK-08-NewMedia
+  - 🇭🇰 HK-09-FXT
+  - 🇭🇰 HK-11-Akari
+  - 🇭🇰香港-A(通用)
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: 香港-手动
+  type: select
+  proxies:
+  - ❇️白羊座-BGP(通用)
+  - 🇭🇰 HK-IEPL-08-NewMedia
+  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港A2|电信联通|2倍|V2
+  - ❇️白羊座-AGP(通用)
+  - ❇️白羊座-IGP(通用)
+  - 🇭🇰 HK-01-CTC
+  - 🇭🇰 HK-02-JinX
+  - 🇭🇰 HK-03-HGC
+  - 🇭🇰 HK-04-Eons
+  - 🇭🇰 HK-05-HostHatch
+  - 🇭🇰 HK-07-DMIT
+  - 🇭🇰 HK-08-NewMedia
+  - 🇭🇰 HK-09-FXT
+  - 🇭🇰 HK-11-Akari
+  - 🇭🇰香港-A(通用)
 - name: 香港
   type: select
+  fallback-groups:
+  - 香港-自动
+  - 香港-手动
+  - 全节点
   proxies:
-  - ❇️白羊座-BGP(通用)
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港A2|电信联通|2倍|V2
+  - 香港-自动
+  - 香港-手动
+  - 全节点
+- name: 新加坡-自动
+  type: url-test
+  proxies:
+  - 🇸🇬 新加坡B1|1.2倍|V2
+  - 🇸🇬 新加坡A1|1.4倍|V2
+  - 🇸🇬 SG-01-SG.GS
+  - 🇸🇬 SG-02-Datacamp
+  - 🇸🇬 SG-03-Eons
+  - 🇸🇬 SG-04-JinX
+  - 🇸🇬 SG-05-HostHatch
+  - 🇸🇬 SG-07-Leaseweb
+  - 🇸🇬新加坡-A(通用)
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: 新加坡-手动
+  type: select
+  proxies:
+  - 🇸🇬 新加坡B1|1.2倍|V2
+  - 🇸🇬 新加坡A1|1.4倍|V2
+  - 🇸🇬 SG-01-SG.GS
+  - 🇸🇬 SG-02-Datacamp
+  - 🇸🇬 SG-03-Eons
+  - 🇸🇬 SG-04-JinX
+  - 🇸🇬 SG-05-HostHatch
+  - 🇸🇬 SG-07-Leaseweb
+  - 🇸🇬新加坡-A(通用)
+- name: 新加坡
+  type: select
+  fallback-groups:
+  - 新加坡-自动
+  - 新加坡-手动
+  - 全节点
+  proxies:
+  - 新加坡-自动
+  - 新加坡-手动
+  - 全节点
+- name: 日本-自动
+  type: url-test
+  proxies:
   - 🇯🇵 日本A1|三网|3.5倍|V2
   - 🇯🇵 日本A2|三网|3.5倍|V2
   - 🇯🇵 日本B1|移动|2倍|V2
-  - 🇯🇵 日本C1|移动|2倍|V2
-  - 🇯🇵 日本C2|移动|2倍|V2
-  - 🇯🇵 日本C3|移动|2倍|V2
-  - ❇️白羊座-AGP(通用)
-  - ❇️白羊座-IGP(通用)
-  - 🇭🇰香港-A(通用)
-  - 🇸🇬 新加坡A1|1.4倍|V2
-  - 🇸🇬 新加坡B1|1.8倍|V2
-  - 🇸🇬新加坡-A(通用)
+  - 🇯🇵 JP-01-Sakura
+  - 🇯🇵 JP-02-JinX
+  - 🇯🇵 JP-03-Akari
+  - 🇯🇵 JP-04-HostHatch
+  - 🇯🇵 JP-05-DDPS
+  - 🇯🇵 JP-10-Leasweb
   - 🇯🇵日本-A(通用)
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: 日本-手动
+  type: select
+  proxies:
+  - 🇯🇵 日本A1|三网|3.5倍|V2
+  - 🇯🇵 日本A2|三网|3.5倍|V2
+  - 🇯🇵 日本B1|移动|2倍|V2
+  - 🇯🇵 JP-01-Sakura
+  - 🇯🇵 JP-02-JinX
+  - 🇯🇵 JP-03-Akari
+  - 🇯🇵 JP-04-HostHatch
+  - 🇯🇵 JP-05-DDPS
+  - 🇯🇵 JP-10-Leasweb
+  - 🇯🇵日本-A(通用)
+- name: 日本
+  type: select
+  fallback-groups:
+  - 日本-自动
+  - 日本-手动
+  - 全节点
+  proxies:
+  - 日本-自动
+  - 日本-手动
+  - 全节点
+- name: 台湾-自动
+  type: url-test
+  proxies:
+  - 🇨🇳 TW-01-Hinet
+  - 🇨🇳 TW-02-AKILE
+  - 🇨🇳 TW-03-Akari
+  - 🇨🇳 TW-04-MoeChuang
+  - 🇹🇼台湾-A(通用)
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: 台湾-手动
+  type: select
+  proxies:
+  - 🇨🇳 TW-01-Hinet
+  - 🇨🇳 TW-02-AKILE
+  - 🇨🇳 TW-03-Akari
+  - 🇨🇳 TW-04-MoeChuang
+  - 🇹🇼台湾-A(通用)
+- name: 台湾
+  type: select
+  fallback-groups:
+  - 台湾-自动
+  - 台湾-手动
+  - 全节点
+  proxies:
+  - 台湾-自动
+  - 台湾-手动
+  - 全节点
+- name: 美国-自动
+  type: url-test
+  proxies:
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国E2|0.7倍|V1
   - 🇺🇸 美国C2|0.8倍|V1
-  - 🇺🇸 美国A1|联通|1.1倍|V2
-  - 🇺🇸 美国A2|联通|1.1倍|V2
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
-  - 🇺🇸 美国H1|实验|1.1倍|V1
+  - 🇺🇸 美国G1|三网|1.2倍|V1
+  - 🇺🇸 US-01-HostHatch
+  - 🇺🇸 US-02-Jinx
+  - 🇺🇸 US-03--Alpha
+  - 🇺🇸 US-04-Eons
+  - 🇺🇸 US-05-Leassweb
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: 美国-手动
+  type: select
+  proxies:
+  - 🇺🇸 美国B2|联通|0.7倍|V2
+  - 🇺🇸 美国E2|0.7倍|V1
+  - 🇺🇸 美国C2|0.8倍|V1
+  - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国G1|三网|1.2倍|V1
+  - 🇺🇸 US-01-HostHatch
+  - 🇺🇸 US-02-Jinx
+  - 🇺🇸 US-03--Alpha
+  - 🇺🇸 US-04-Eons
+  - 🇺🇸 US-05-Leassweb
+- name: 美国
+  type: select
+  fallback-groups:
+  - 美国-自动
+  - 美国-手动
+  - 全节点
+  proxies:
+  - 美国-自动
+  - 美国-手动
+  - 全节点
+- name: 欧洲-自动
+  type: url-test
+  proxies:
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -894,786 +1390,613 @@ proxy-groups:
   - 🇳🇱 荷兰B1|联通|0.7倍|V1
   - 🇳🇱 荷兰A1|联通|0.8倍|V1
   - 🇩🇪 德国B1|移动|1.1倍|V1
-  - 🇹🇼台湾-A(通用)
+  - 🇩🇪 DE-01-Dataforest
+  - 🇩🇪 DE-02-BAGE
+  - 🇩🇪 DE-04-Leaseweb
+  - 🇫🇮 FI-01-Cgi Global
+  - 🇬🇧 UK-01-HostHatch
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: 欧洲-手动
+  type: select
+  proxies:
+  - 🇨🇦 加拿大A1|0.7倍|V1
+  - 🇩🇪 德国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A2|联通|0.7倍|V1
+  - 🇬🇧 英国A2|联通移动|0.7倍|V1
+  - 🇳🇱 荷兰B1|联通|0.7倍|V1
+  - 🇳🇱 荷兰A1|联通|0.8倍|V1
+  - 🇩🇪 德国B1|移动|1.1倍|V1
+  - 🇩🇪 DE-01-Dataforest
+  - 🇩🇪 DE-02-BAGE
+  - 🇩🇪 DE-04-Leaseweb
+  - 🇫🇮 FI-01-Cgi Global
+  - 🇬🇧 UK-01-HostHatch
+- name: 欧洲
+  type: select
+  fallback-groups:
+  - 欧洲-自动
+  - 欧洲-手动
+  - 全节点
+  proxies:
+  - 欧洲-自动
+  - 欧洲-手动
+  - 全节点
+- name: 东南亚-自动
+  type: url-test
+  proxies:
   - 🇹🇭 泰国A1|移动|0.9倍|V2
   - 🇻🇳 越南A1|电信移动|1.1倍|V2
   - 🇲🇾马来-A(通用)
-  - 🇷🇺 俄罗斯A1|联通|1倍|V1
-  - 🇷🇺 俄罗斯B1|联通|1倍|V1
-  - 🇹🇷 土耳其A1|三网|1.1倍|V2
-  - 🇰🇷韩国-A(通用)
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: 东南亚-手动
+  type: select
+  proxies:
+  - 🇹🇭 泰国A1|移动|0.9倍|V2
+  - 🇻🇳 越南A1|电信移动|1.1倍|V2
+  - 🇲🇾马来-A(通用)
 - name: 东南亚
   type: select
+  fallback-groups:
+  - 东南亚-自动
+  - 东南亚-手动
+  - 全节点
   proxies:
-  - ❇️白羊座-BGP(通用)
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港A2|电信联通|2倍|V2
-  - 🇯🇵 日本A1|三网|3.5倍|V2
-  - 🇯🇵 日本A2|三网|3.5倍|V2
-  - 🇯🇵 日本B1|移动|2倍|V2
-  - 🇯🇵 日本C1|移动|2倍|V2
-  - 🇯🇵 日本C2|移动|2倍|V2
-  - 🇯🇵 日本C3|移动|2倍|V2
-  - ❇️白羊座-AGP(通用)
-  - ❇️白羊座-IGP(通用)
-  - 🇭🇰香港-A(通用)
-  - 🇸🇬 新加坡A1|1.4倍|V2
-  - 🇸🇬 新加坡B1|1.8倍|V2
-  - 🇸🇬新加坡-A(通用)
-  - 🇯🇵日本-A(通用)
-  - 🇺🇸 美国B2|联通|0.7倍|V2
-  - 🇺🇸 美国E2|0.7倍|V1
-  - 🇺🇸 美国C2|0.8倍|V1
-  - 🇺🇸 美国A1|联通|1.1倍|V2
-  - 🇺🇸 美国A2|联通|1.1倍|V2
-  - 🇺🇸 美国F1|电信联通|1.1倍|V1
-  - 🇺🇸 美国H1|实验|1.1倍|V1
-  - 🇨🇦 加拿大A1|0.7倍|V1
-  - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A2|联通|0.7倍|V1
-  - 🇬🇧 英国A2|联通移动|0.7倍|V1
-  - 🇳🇱 荷兰B1|联通|0.7倍|V1
-  - 🇳🇱 荷兰A1|联通|0.8倍|V1
-  - 🇩🇪 德国B1|移动|1.1倍|V1
-  - 🇹🇼台湾-A(通用)
-  - 🇹🇭 泰国A1|移动|0.9倍|V2
-  - 🇻🇳 越南A1|电信移动|1.1倍|V2
-  - 🇲🇾马来-A(通用)
+  - 东南亚-自动
+  - 东南亚-手动
+  - 全节点
+- name: 其他-自动
+  type: url-test
+  proxies:
   - 🇷🇺 俄罗斯A1|联通|1倍|V1
   - 🇷🇺 俄罗斯B1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
   - 🇰🇷韩国-A(通用)
-- name: 欧美
+  url: https://www.gstatic.com/generate_204
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: 其他-手动
   type: select
   proxies:
-  - ❇️白羊座-BGP(通用)
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港A2|电信联通|2倍|V2
-  - 🇯🇵 日本A1|三网|3.5倍|V2
-  - 🇯🇵 日本A2|三网|3.5倍|V2
-  - 🇯🇵 日本B1|移动|2倍|V2
-  - 🇯🇵 日本C1|移动|2倍|V2
-  - 🇯🇵 日本C2|移动|2倍|V2
-  - 🇯🇵 日本C3|移动|2倍|V2
-  - ❇️白羊座-AGP(通用)
-  - ❇️白羊座-IGP(通用)
-  - 🇭🇰香港-A(通用)
-  - 🇸🇬 新加坡A1|1.4倍|V2
-  - 🇸🇬 新加坡B1|1.8倍|V2
-  - 🇸🇬新加坡-A(通用)
-  - 🇯🇵日本-A(通用)
-  - 🇺🇸 美国B2|联通|0.7倍|V2
-  - 🇺🇸 美国E2|0.7倍|V1
-  - 🇺🇸 美国C2|0.8倍|V1
-  - 🇺🇸 美国A1|联通|1.1倍|V2
-  - 🇺🇸 美国A2|联通|1.1倍|V2
-  - 🇺🇸 美国F1|电信联通|1.1倍|V1
-  - 🇺🇸 美国H1|实验|1.1倍|V1
-  - 🇨🇦 加拿大A1|0.7倍|V1
-  - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A2|联通|0.7倍|V1
-  - 🇬🇧 英国A2|联通移动|0.7倍|V1
-  - 🇳🇱 荷兰B1|联通|0.7倍|V1
-  - 🇳🇱 荷兰A1|联通|0.8倍|V1
-  - 🇩🇪 德国B1|移动|1.1倍|V1
-  - 🇹🇼台湾-A(通用)
-  - 🇹🇭 泰国A1|移动|0.9倍|V2
-  - 🇻🇳 越南A1|电信移动|1.1倍|V2
-  - 🇲🇾马来-A(通用)
   - 🇷🇺 俄罗斯A1|联通|1倍|V1
   - 🇷🇺 俄罗斯B1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
   - 🇰🇷韩国-A(通用)
 - name: 其他
-  type: url-test
+  type: select
+  fallback-groups:
+  - 其他-自动
+  - 其他-手动
+  - 全节点
   proxies:
-  - 🇷🇺 俄罗斯A1|联通|1倍|V1
-  - 🇷🇺 俄罗斯B1|联通|1倍|V1
-  - 🇹🇷 土耳其A1|三网|1.1倍|V2
-  - 🇰🇷韩国-A(通用)
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: ai组
+  - 其他-自动
+  - 其他-手动
+  - 全节点
+- name: AI
   type: fallback
+  fallback-groups:
+  - 新加坡
+  - 日本
+  - 美国
+  - 欧洲
+  - 香港
+  - 全节点
   proxies:
-  - ❇️白羊座-BGP(通用)
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港A2|电信联通|2倍|V2
-  - 🇯🇵 日本A1|三网|3.5倍|V2
-  - 🇯🇵 日本A2|三网|3.5倍|V2
-  - 🇯🇵 日本B1|移动|2倍|V2
-  - 🇯🇵 日本C1|移动|2倍|V2
-  - 🇯🇵 日本C2|移动|2倍|V2
-  - 🇯🇵 日本C3|移动|2倍|V2
-  - ❇️白羊座-AGP(通用)
-  - ❇️白羊座-IGP(通用)
-  - 🇭🇰香港-A(通用)
-  - 🇸🇬 新加坡A1|1.4倍|V2
-  - 🇸🇬 新加坡B1|1.8倍|V2
-  - 🇸🇬新加坡-A(通用)
-  - 🇯🇵日本-A(通用)
-  - 🇺🇸 美国B2|联通|0.7倍|V2
-  - 🇺🇸 美国E2|0.7倍|V1
-  - 🇺🇸 美国C2|0.8倍|V1
-  - 🇺🇸 美国A1|联通|1.1倍|V2
-  - 🇺🇸 美国A2|联通|1.1倍|V2
-  - 🇺🇸 美国F1|电信联通|1.1倍|V1
-  - 🇺🇸 美国H1|实验|1.1倍|V1
-  - 🇨🇦 加拿大A1|0.7倍|V1
-  - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A2|联通|0.7倍|V1
-  - 🇬🇧 英国A2|联通移动|0.7倍|V1
-  - 🇳🇱 荷兰B1|联通|0.7倍|V1
-  - 🇳🇱 荷兰A1|联通|0.8倍|V1
-  - 🇩🇪 德国B1|移动|1.1倍|V1
-  - 🇹🇼台湾-A(通用)
-  - 🇹🇭 泰国A1|移动|0.9倍|V2
-  - 🇻🇳 越南A1|电信移动|1.1倍|V2
-  - 🇲🇾马来-A(通用)
-  - 🇷🇺 俄罗斯A1|联通|1倍|V1
-  - 🇷🇺 俄罗斯B1|联通|1倍|V1
-  - 🇹🇷 土耳其A1|三网|1.1倍|V2
-  - 🇰🇷韩国-A(通用)
+  - 新加坡
+  - 日本
+  - 美国
+  - 欧洲
+  - 香港
+  - 全节点
   url: https://www.gstatic.com/generate_204
   interval: 180
   tolerance: 50
   lazy: true
-- name: AI-专线
-  type: url-test
+- name: 开发
+  type: select
+  fallback-groups:
+  - Proxy
+  - 美国
+  - 欧洲
+  - 新加坡
+  - 日本
+  - 全节点
+  - DIRECT
   proxies:
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: AI-高倍率
-  type: url-test
-  proxies:
-  - 🇭🇰 香港A2|电信联通|2倍|V2
-  - 🇯🇵 日本A1|三网|3.5倍|V2
-  - 🇯🇵 日本A2|三网|3.5倍|V2
-  - 🇯🇵 日本B1|移动|2倍|V2
-  - 🇯🇵 日本C1|移动|2倍|V2
-  - 🇯🇵 日本C2|移动|2倍|V2
-  - 🇯🇵 日本C3|移动|2倍|V2
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: AI-其他
-  type: url-test
-  proxies:
-  - 🇸🇬 新加坡A1|1.4倍|V2
-  - 🇸🇬 新加坡B1|1.8倍|V2
-  - 🇺🇸 美国B2|联通|0.7倍|V2
-  - 🇺🇸 美国E2|0.7倍|V1
-  - 🇺🇸 美国C2|0.8倍|V1
-  - 🇺🇸 美国A1|联通|1.1倍|V2
-  - 🇺🇸 美国A2|联通|1.1倍|V2
-  - 🇺🇸 美国F1|电信联通|1.1倍|V1
-  - 🇺🇸 美国H1|实验|1.1倍|V1
-  - 🇨🇦 加拿大A1|0.7倍|V1
-  - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A2|联通|0.7倍|V1
-  - 🇬🇧 英国A2|联通移动|0.7倍|V1
-  - 🇳🇱 荷兰B1|联通|0.7倍|V1
-  - 🇳🇱 荷兰A1|联通|0.8倍|V1
-  - 🇩🇪 德国B1|移动|1.1倍|V1
-  - 🇹🇭 泰国A1|移动|0.9倍|V2
-  - 🇻🇳 越南A1|电信移动|1.1倍|V2
-  - 🇷🇺 俄罗斯A1|联通|1倍|V1
-  - 🇷🇺 俄罗斯B1|联通|1倍|V1
-  - 🇹🇷 土耳其A1|三网|1.1倍|V2
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
+  - Proxy
+  - 美国
+  - 欧洲
+  - 新加坡
+  - 日本
+  - 全节点
+  - DIRECT
 - name: 币安
   type: fallback
+  fallback-groups:
+  - 香港
+  - 新加坡
+  - 日本
+  - 欧洲
+  - 美国
+  - 全节点
   proxies:
-  - ❇️白羊座-BGP(通用)
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港A2|电信联通|2倍|V2
-  - 🇯🇵 日本A1|三网|3.5倍|V2
-  - 🇯🇵 日本A2|三网|3.5倍|V2
-  - 🇯🇵 日本B1|移动|2倍|V2
-  - 🇯🇵 日本C1|移动|2倍|V2
-  - 🇯🇵 日本C2|移动|2倍|V2
-  - 🇯🇵 日本C3|移动|2倍|V2
-  - ❇️白羊座-AGP(通用)
-  - ❇️白羊座-IGP(通用)
-  - 🇭🇰香港-A(通用)
-  - 🇸🇬 新加坡A1|1.4倍|V2
-  - 🇸🇬 新加坡B1|1.8倍|V2
-  - 🇸🇬新加坡-A(通用)
-  - 🇯🇵日本-A(通用)
-  - 🇺🇸 美国B2|联通|0.7倍|V2
-  - 🇺🇸 美国E2|0.7倍|V1
-  - 🇺🇸 美国C2|0.8倍|V1
-  - 🇺🇸 美国A1|联通|1.1倍|V2
-  - 🇺🇸 美国A2|联通|1.1倍|V2
-  - 🇺🇸 美国F1|电信联通|1.1倍|V1
-  - 🇺🇸 美国H1|实验|1.1倍|V1
-  - 🇨🇦 加拿大A1|0.7倍|V1
-  - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A2|联通|0.7倍|V1
-  - 🇬🇧 英国A2|联通移动|0.7倍|V1
-  - 🇳🇱 荷兰B1|联通|0.7倍|V1
-  - 🇳🇱 荷兰A1|联通|0.8倍|V1
-  - 🇩🇪 德国B1|移动|1.1倍|V1
-  - 🇹🇼台湾-A(通用)
-  - 🇹🇭 泰国A1|移动|0.9倍|V2
-  - 🇻🇳 越南A1|电信移动|1.1倍|V2
-  - 🇲🇾马来-A(通用)
-  - 🇷🇺 俄罗斯A1|联通|1倍|V1
-  - 🇷🇺 俄罗斯B1|联通|1倍|V1
-  - 🇹🇷 土耳其A1|三网|1.1倍|V2
-  - 🇰🇷韩国-A(通用)
+  - 香港
+  - 新加坡
+  - 日本
+  - 欧洲
+  - 美国
+  - 全节点
   url: https://www.gstatic.com/generate_204
   interval: 180
   tolerance: 50
   lazy: true
-- name: pikpak
+- name: PikPak
   type: fallback
+  fallback-groups:
+  - 美国
+  - 日本
+  - 新加坡
+  - 香港
+  - 全节点
   proxies:
-  - ❇️白羊座-BGP(通用)
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港A2|电信联通|2倍|V2
-  - 🇯🇵 日本A1|三网|3.5倍|V2
-  - 🇯🇵 日本A2|三网|3.5倍|V2
-  - 🇯🇵 日本B1|移动|2倍|V2
-  - 🇯🇵 日本C1|移动|2倍|V2
-  - 🇯🇵 日本C2|移动|2倍|V2
-  - 🇯🇵 日本C3|移动|2倍|V2
-  - ❇️白羊座-AGP(通用)
-  - ❇️白羊座-IGP(通用)
-  - 🇭🇰香港-A(通用)
-  - 🇸🇬 新加坡A1|1.4倍|V2
-  - 🇸🇬 新加坡B1|1.8倍|V2
-  - 🇸🇬新加坡-A(通用)
-  - 🇯🇵日本-A(通用)
-  - 🇺🇸 美国B2|联通|0.7倍|V2
-  - 🇺🇸 美国E2|0.7倍|V1
-  - 🇺🇸 美国C2|0.8倍|V1
-  - 🇺🇸 美国A1|联通|1.1倍|V2
-  - 🇺🇸 美国A2|联通|1.1倍|V2
-  - 🇺🇸 美国F1|电信联通|1.1倍|V1
-  - 🇺🇸 美国H1|实验|1.1倍|V1
-  - 🇨🇦 加拿大A1|0.7倍|V1
-  - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A2|联通|0.7倍|V1
-  - 🇬🇧 英国A2|联通移动|0.7倍|V1
-  - 🇳🇱 荷兰B1|联通|0.7倍|V1
-  - 🇳🇱 荷兰A1|联通|0.8倍|V1
-  - 🇩🇪 德国B1|移动|1.1倍|V1
-  - 🇹🇼台湾-A(通用)
-  - 🇹🇭 泰国A1|移动|0.9倍|V2
-  - 🇻🇳 越南A1|电信移动|1.1倍|V2
-  - 🇲🇾马来-A(通用)
-  - 🇷🇺 俄罗斯A1|联通|1倍|V1
-  - 🇷🇺 俄罗斯B1|联通|1倍|V1
-  - 🇹🇷 土耳其A1|三网|1.1倍|V2
-  - 🇰🇷韩国-A(通用)
+  - 美国
+  - 日本
+  - 新加坡
+  - 香港
+  - 全节点
   url: https://www.gstatic.com/generate_204
   interval: 180
   tolerance: 50
   lazy: true
 - name: Microsoft
   type: fallback
+  fallback-groups:
+  - 美国
+  - 欧洲
+  - 新加坡
+  - 日本
+  - 全节点
+  - DIRECT
   proxies:
-  - ❇️白羊座-BGP(通用)
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港A2|电信联通|2倍|V2
-  - 🇯🇵 日本A1|三网|3.5倍|V2
-  - 🇯🇵 日本A2|三网|3.5倍|V2
-  - 🇯🇵 日本B1|移动|2倍|V2
-  - 🇯🇵 日本C1|移动|2倍|V2
-  - 🇯🇵 日本C2|移动|2倍|V2
-  - 🇯🇵 日本C3|移动|2倍|V2
-  - ❇️白羊座-AGP(通用)
-  - ❇️白羊座-IGP(通用)
-  - 🇭🇰香港-A(通用)
-  - 🇸🇬 新加坡A1|1.4倍|V2
-  - 🇸🇬 新加坡B1|1.8倍|V2
-  - 🇸🇬新加坡-A(通用)
-  - 🇯🇵日本-A(通用)
-  - 🇺🇸 美国B2|联通|0.7倍|V2
-  - 🇺🇸 美国E2|0.7倍|V1
-  - 🇺🇸 美国C2|0.8倍|V1
-  - 🇺🇸 美国A1|联通|1.1倍|V2
-  - 🇺🇸 美国A2|联通|1.1倍|V2
-  - 🇺🇸 美国F1|电信联通|1.1倍|V1
-  - 🇺🇸 美国H1|实验|1.1倍|V1
-  - 🇨🇦 加拿大A1|0.7倍|V1
-  - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A2|联通|0.7倍|V1
-  - 🇬🇧 英国A2|联通移动|0.7倍|V1
-  - 🇳🇱 荷兰B1|联通|0.7倍|V1
-  - 🇳🇱 荷兰A1|联通|0.8倍|V1
-  - 🇩🇪 德国B1|移动|1.1倍|V1
-  - 🇹🇼台湾-A(通用)
-  - 🇹🇭 泰国A1|移动|0.9倍|V2
-  - 🇻🇳 越南A1|电信移动|1.1倍|V2
-  - 🇲🇾马来-A(通用)
-  - 🇷🇺 俄罗斯A1|联通|1倍|V1
-  - 🇷🇺 俄罗斯B1|联通|1倍|V1
-  - 🇹🇷 土耳其A1|三网|1.1倍|V2
-  - 🇰🇷韩国-A(通用)
+  - 美国
+  - 欧洲
+  - 新加坡
+  - 日本
+  - 全节点
+  - DIRECT
   url: https://www.gstatic.com/generate_204
   interval: 180
   tolerance: 50
   lazy: true
 - name: Amazon
   type: fallback
+  fallback-groups:
+  - 美国
+  - 欧洲
+  - 新加坡
+  - 日本
+  - 全节点
+  - DIRECT
   proxies:
-  - ❇️白羊座-BGP(通用)
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港A2|电信联通|2倍|V2
-  - 🇯🇵 日本A1|三网|3.5倍|V2
-  - 🇯🇵 日本A2|三网|3.5倍|V2
-  - 🇯🇵 日本B1|移动|2倍|V2
-  - 🇯🇵 日本C1|移动|2倍|V2
-  - 🇯🇵 日本C2|移动|2倍|V2
-  - 🇯🇵 日本C3|移动|2倍|V2
-  - ❇️白羊座-AGP(通用)
-  - ❇️白羊座-IGP(通用)
-  - 🇭🇰香港-A(通用)
-  - 🇸🇬 新加坡A1|1.4倍|V2
-  - 🇸🇬 新加坡B1|1.8倍|V2
-  - 🇸🇬新加坡-A(通用)
-  - 🇯🇵日本-A(通用)
-  - 🇺🇸 美国B2|联通|0.7倍|V2
-  - 🇺🇸 美国E2|0.7倍|V1
-  - 🇺🇸 美国C2|0.8倍|V1
-  - 🇺🇸 美国A1|联通|1.1倍|V2
-  - 🇺🇸 美国A2|联通|1.1倍|V2
-  - 🇺🇸 美国F1|电信联通|1.1倍|V1
-  - 🇺🇸 美国H1|实验|1.1倍|V1
-  - 🇨🇦 加拿大A1|0.7倍|V1
-  - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A2|联通|0.7倍|V1
-  - 🇬🇧 英国A2|联通移动|0.7倍|V1
-  - 🇳🇱 荷兰B1|联通|0.7倍|V1
-  - 🇳🇱 荷兰A1|联通|0.8倍|V1
-  - 🇩🇪 德国B1|移动|1.1倍|V1
-  - 🇹🇼台湾-A(通用)
-  - 🇹🇭 泰国A1|移动|0.9倍|V2
-  - 🇻🇳 越南A1|电信移动|1.1倍|V2
-  - 🇲🇾马来-A(通用)
-  - 🇷🇺 俄罗斯A1|联通|1倍|V1
-  - 🇷🇺 俄罗斯B1|联通|1倍|V1
-  - 🇹🇷 土耳其A1|三网|1.1倍|V2
-  - 🇰🇷韩国-A(通用)
+  - 美国
+  - 欧洲
+  - 新加坡
+  - 日本
+  - 全节点
+  - DIRECT
   url: https://www.gstatic.com/generate_204
   interval: 180
   tolerance: 50
   lazy: true
-- name: MS-专线
-  type: url-test
-  proxies:
-  - ❇️白羊座-BGP(通用)
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: MS-高倍率
-  type: url-test
-  proxies:
-  - 🇭🇰 香港A2|电信联通|2倍|V2
-  - 🇯🇵 日本A1|三网|3.5倍|V2
-  - 🇯🇵 日本A2|三网|3.5倍|V2
-  - 🇯🇵 日本B1|移动|2倍|V2
-  - 🇯🇵 日本C1|移动|2倍|V2
-  - 🇯🇵 日本C2|移动|2倍|V2
-  - 🇯🇵 日本C3|移动|2倍|V2
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: MS-其他
-  type: url-test
-  proxies:
-  - ❇️白羊座-AGP(通用)
-  - ❇️白羊座-IGP(通用)
-  - 🇭🇰香港-A(通用)
-  - 🇸🇬 新加坡A1|1.4倍|V2
-  - 🇸🇬 新加坡B1|1.8倍|V2
-  - 🇸🇬新加坡-A(通用)
-  - 🇯🇵日本-A(通用)
-  - 🇺🇸 美国B2|联通|0.7倍|V2
-  - 🇺🇸 美国E2|0.7倍|V1
-  - 🇺🇸 美国C2|0.8倍|V1
-  - 🇺🇸 美国A1|联通|1.1倍|V2
-  - 🇺🇸 美国A2|联通|1.1倍|V2
-  - 🇺🇸 美国F1|电信联通|1.1倍|V1
-  - 🇺🇸 美国H1|实验|1.1倍|V1
-  - 🇨🇦 加拿大A1|0.7倍|V1
-  - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A2|联通|0.7倍|V1
-  - 🇬🇧 英国A2|联通移动|0.7倍|V1
-  - 🇳🇱 荷兰B1|联通|0.7倍|V1
-  - 🇳🇱 荷兰A1|联通|0.8倍|V1
-  - 🇩🇪 德国B1|移动|1.1倍|V1
-  - 🇹🇼台湾-A(通用)
-  - 🇹🇭 泰国A1|移动|0.9倍|V2
-  - 🇻🇳 越南A1|电信移动|1.1倍|V2
-  - 🇲🇾马来-A(通用)
-  - 🇷🇺 俄罗斯A1|联通|1倍|V1
-  - 🇷🇺 俄罗斯B1|联通|1倍|V1
-  - 🇹🇷 土耳其A1|三网|1.1倍|V2
-  - 🇰🇷韩国-A(通用)
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: BN-专线
-  type: url-test
-  proxies:
-  - ❇️白羊座-BGP(通用)
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: BN-高倍率
-  type: url-test
-  proxies:
-  - 🇭🇰 香港A2|电信联通|2倍|V2
-  - 🇯🇵 日本A1|三网|3.5倍|V2
-  - 🇯🇵 日本A2|三网|3.5倍|V2
-  - 🇯🇵 日本B1|移动|2倍|V2
-  - 🇯🇵 日本C1|移动|2倍|V2
-  - 🇯🇵 日本C2|移动|2倍|V2
-  - 🇯🇵 日本C3|移动|2倍|V2
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: BN-其他
-  type: url-test
-  proxies:
-  - ❇️白羊座-AGP(通用)
-  - ❇️白羊座-IGP(通用)
-  - 🇭🇰香港-A(通用)
-  - 🇯🇵日本-A(通用)
-  - 🇸🇬 新加坡A1|1.4倍|V2
-  - 🇸🇬 新加坡B1|1.8倍|V2
-  - 🇸🇬新加坡-A(通用)
-  - 🇺🇸 美国B2|联通|0.7倍|V2
-  - 🇺🇸 美国E2|0.7倍|V1
-  - 🇺🇸 美国C2|0.8倍|V1
-  - 🇺🇸 美国A1|联通|1.1倍|V2
-  - 🇺🇸 美国A2|联通|1.1倍|V2
-  - 🇺🇸 美国F1|电信联通|1.1倍|V1
-  - 🇺🇸 美国H1|实验|1.1倍|V1
-  - 🇨🇦 加拿大A1|0.7倍|V1
-  - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A2|联通|0.7倍|V1
-  - 🇬🇧 英国A2|联通移动|0.7倍|V1
-  - 🇳🇱 荷兰B1|联通|0.7倍|V1
-  - 🇳🇱 荷兰A1|联通|0.8倍|V1
-  - 🇩🇪 德国B1|移动|1.1倍|V1
-  - 🇹🇼台湾-A(通用)
-  - 🇹🇭 泰国A1|移动|0.9倍|V2
-  - 🇻🇳 越南A1|电信移动|1.1倍|V2
-  - 🇲🇾马来-A(通用)
-  - 🇷🇺 俄罗斯A1|联通|1倍|V1
-  - 🇷🇺 俄罗斯B1|联通|1倍|V1
-  - 🇹🇷 土耳其A1|三网|1.1倍|V2
-  - 🇰🇷韩国-A(通用)
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: PK-专线
-  type: url-test
-  proxies:
-  - ❇️白羊座-BGP(通用)
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: PK-高倍率
-  type: url-test
-  proxies:
-  - 🇯🇵 日本A1|三网|3.5倍|V2
-  - 🇯🇵 日本A2|三网|3.5倍|V2
-  - 🇯🇵 日本B1|移动|2倍|V2
-  - 🇯🇵 日本C1|移动|2倍|V2
-  - 🇯🇵 日本C2|移动|2倍|V2
-  - 🇯🇵 日本C3|移动|2倍|V2
-  - 🇭🇰 香港A2|电信联通|2倍|V2
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: PK-其他
-  type: url-test
-  proxies:
-  - 🇺🇸 美国B2|联通|0.7倍|V2
-  - 🇺🇸 美国E2|0.7倍|V1
-  - 🇺🇸 美国C2|0.8倍|V1
-  - 🇺🇸 美国A1|联通|1.1倍|V2
-  - 🇺🇸 美国A2|联通|1.1倍|V2
-  - 🇺🇸 美国F1|电信联通|1.1倍|V1
-  - 🇺🇸 美国H1|实验|1.1倍|V1
-  - 🇯🇵日本-A(通用)
-  - 🇸🇬 新加坡A1|1.4倍|V2
-  - 🇸🇬 新加坡B1|1.8倍|V2
-  - 🇸🇬新加坡-A(通用)
-  - ❇️白羊座-AGP(通用)
-  - ❇️白羊座-IGP(通用)
-  - 🇭🇰香港-A(通用)
-  - 🇨🇦 加拿大A1|0.7倍|V1
-  - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A2|联通|0.7倍|V1
-  - 🇬🇧 英国A2|联通移动|0.7倍|V1
-  - 🇳🇱 荷兰B1|联通|0.7倍|V1
-  - 🇳🇱 荷兰A1|联通|0.8倍|V1
-  - 🇩🇪 德国B1|移动|1.1倍|V1
-  - 🇹🇼台湾-A(通用)
-  - 🇹🇭 泰国A1|移动|0.9倍|V2
-  - 🇻🇳 越南A1|电信移动|1.1倍|V2
-  - 🇲🇾马来-A(通用)
-  - 🇷🇺 俄罗斯A1|联通|1倍|V1
-  - 🇷🇺 俄罗斯B1|联通|1倍|V1
-  - 🇹🇷 土耳其A1|三网|1.1倍|V2
-  - 🇰🇷韩国-A(通用)
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: AMZ-专线
-  type: url-test
-  proxies:
-  - ❇️白羊座-BGP(通用)
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: AMZ-高倍率
-  type: url-test
-  proxies:
-  - 🇯🇵 日本A1|三网|3.5倍|V2
-  - 🇯🇵 日本A2|三网|3.5倍|V2
-  - 🇯🇵 日本B1|移动|2倍|V2
-  - 🇯🇵 日本C1|移动|2倍|V2
-  - 🇯🇵 日本C2|移动|2倍|V2
-  - 🇯🇵 日本C3|移动|2倍|V2
-  - 🇭🇰 香港A2|电信联通|2倍|V2
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: AMZ-其他
-  type: url-test
-  proxies:
-  - 🇺🇸 美国B2|联通|0.7倍|V2
-  - 🇺🇸 美国E2|0.7倍|V1
-  - 🇺🇸 美国C2|0.8倍|V1
-  - 🇺🇸 美国A1|联通|1.1倍|V2
-  - 🇺🇸 美国A2|联通|1.1倍|V2
-  - 🇺🇸 美国F1|电信联通|1.1倍|V1
-  - 🇺🇸 美国H1|实验|1.1倍|V1
-  - 🇸🇬 新加坡A1|1.4倍|V2
-  - 🇸🇬 新加坡B1|1.8倍|V2
-  - 🇸🇬新加坡-A(通用)
-  - 🇨🇦 加拿大A1|0.7倍|V1
-  - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A2|联通|0.7倍|V1
-  - 🇬🇧 英国A2|联通移动|0.7倍|V1
-  - 🇳🇱 荷兰B1|联通|0.7倍|V1
-  - 🇳🇱 荷兰A1|联通|0.8倍|V1
-  - 🇩🇪 德国B1|移动|1.1倍|V1
-  - 🇯🇵日本-A(通用)
-  - ❇️白羊座-AGP(通用)
-  - ❇️白羊座-IGP(通用)
-  - 🇭🇰香港-A(通用)
-  - 🇹🇼台湾-A(通用)
-  - 🇹🇭 泰国A1|移动|0.9倍|V2
-  - 🇻🇳 越南A1|电信移动|1.1倍|V2
-  - 🇲🇾马来-A(通用)
-  - 🇷🇺 俄罗斯A1|联通|1倍|V1
-  - 🇷🇺 俄罗斯B1|联通|1倍|V1
-  - 🇹🇷 土耳其A1|三网|1.1倍|V2
-  - 🇰🇷韩国-A(通用)
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: EUUS-专线
-  type: url-test
-  proxies:
-  - 🇺🇸 美国B2|联通|0.7倍|V2
-  - 🇺🇸 美国E2|0.7倍|V1
-  - 🇺🇸 美国C2|0.8倍|V1
-  - 🇺🇸 美国A1|联通|1.1倍|V2
-  - 🇺🇸 美国A2|联通|1.1倍|V2
-  - 🇺🇸 美国F1|电信联通|1.1倍|V1
-  - 🇺🇸 美国H1|实验|1.1倍|V1
-  - 🇨🇦 加拿大A1|0.7倍|V1
-  - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A2|联通|0.7倍|V1
-  - 🇬🇧 英国A2|联通移动|0.7倍|V1
-  - 🇳🇱 荷兰B1|联通|0.7倍|V1
-  - 🇳🇱 荷兰A1|联通|0.8倍|V1
-  - 🇩🇪 德国B1|移动|1.1倍|V1
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: EUUS-高倍率
-  type: url-test
-  proxies:
-  - 🇺🇸 美国B2|联通|0.7倍|V2
-  - 🇺🇸 美国E2|0.7倍|V1
-  - 🇺🇸 美国C2|0.8倍|V1
-  - 🇺🇸 美国A1|联通|1.1倍|V2
-  - 🇺🇸 美国A2|联通|1.1倍|V2
-  - 🇺🇸 美国F1|电信联通|1.1倍|V1
-  - 🇺🇸 美国H1|实验|1.1倍|V1
-  - 🇨🇦 加拿大A1|0.7倍|V1
-  - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A2|联通|0.7倍|V1
-  - 🇬🇧 英国A2|联通移动|0.7倍|V1
-  - 🇳🇱 荷兰B1|联通|0.7倍|V1
-  - 🇳🇱 荷兰A1|联通|0.8倍|V1
-  - 🇩🇪 德国B1|移动|1.1倍|V1
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: EUUS-其他
-  type: url-test
-  proxies:
-  - 🇺🇸 美国B2|联通|0.7倍|V2
-  - 🇺🇸 美国E2|0.7倍|V1
-  - 🇺🇸 美国C2|0.8倍|V1
-  - 🇺🇸 美国A1|联通|1.1倍|V2
-  - 🇺🇸 美国A2|联通|1.1倍|V2
-  - 🇺🇸 美国F1|电信联通|1.1倍|V1
-  - 🇺🇸 美国H1|实验|1.1倍|V1
-  - 🇨🇦 加拿大A1|0.7倍|V1
-  - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A2|联通|0.7倍|V1
-  - 🇬🇧 英国A2|联通移动|0.7倍|V1
-  - 🇳🇱 荷兰B1|联通|0.7倍|V1
-  - 🇳🇱 荷兰A1|联通|0.8倍|V1
-  - 🇩🇪 德国B1|移动|1.1倍|V1
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: HK-专线
-  type: url-test
-  proxies:
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: HK-高倍率
-  type: url-test
-  proxies:
-  - 🇭🇰 香港A2|电信联通|2倍|V2
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: HK-其他
-  type: url-test
-  proxies:
-  - 🇭🇰 香港A2|电信联通|2倍|V2
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: SEA-专线
-  type: url-test
-  proxies:
-  - 🇯🇵 日本A1|三网|3.5倍|V2
-  - 🇯🇵 日本A2|三网|3.5倍|V2
-  - 🇯🇵 日本B1|移动|2倍|V2
-  - 🇯🇵 日本C1|移动|2倍|V2
-  - 🇯🇵 日本C2|移动|2倍|V2
-  - 🇯🇵 日本C3|移动|2倍|V2
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: SEA-高倍率
-  type: url-test
-  proxies:
-  - 🇯🇵 日本A1|三网|3.5倍|V2
-  - 🇯🇵 日本A2|三网|3.5倍|V2
-  - 🇯🇵 日本B1|移动|2倍|V2
-  - 🇯🇵 日本C1|移动|2倍|V2
-  - 🇯🇵 日本C2|移动|2倍|V2
-  - 🇯🇵 日本C3|移动|2倍|V2
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: SEA-其他
-  type: url-test
-  proxies:
-  - 🇸🇬 新加坡A1|1.4倍|V2
-  - 🇸🇬 新加坡B1|1.8倍|V2
-  - 🇸🇬新加坡-A(通用)
-  - 🇯🇵日本-A(通用)
-  - 🇹🇼台湾-A(通用)
-  - 🇹🇭 泰国A1|移动|0.9倍|V2
-  - 🇻🇳 越南A1|电信移动|1.1倍|V2
-  - 🇲🇾马来-A(通用)
-  url: https://www.gstatic.com/generate_204
-  interval: 180
-  tolerance: 50
-  lazy: true
-- name: 📊crosswall 剩余 153.69GiB（距重置 10 天）
+- name: OpenAI
   type: select
+  fallback-groups:
+  - AI
+  - 新加坡
+  - 日本
+  - 美国
+  - 欧洲
+  - 香港
+  - 全节点
+  - Proxy
+  proxies:
+  - AI
+  - 新加坡
+  - 日本
+  - 美国
+  - 欧洲
+  - 香港
+  - 全节点
+  - Proxy
+- name: Claude
+  type: select
+  fallback-groups:
+  - AI
+  - 新加坡
+  - 日本
+  - 美国
+  - 欧洲
+  - 香港
+  - 全节点
+  - Proxy
+  proxies:
+  - AI
+  - 新加坡
+  - 日本
+  - 美国
+  - 欧洲
+  - 香港
+  - 全节点
+  - Proxy
+- name: Gemini
+  type: select
+  fallback-groups:
+  - AI
+  - 新加坡
+  - 日本
+  - 美国
+  - 欧洲
+  - 香港
+  - 全节点
+  - Proxy
+  proxies:
+  - AI
+  - 新加坡
+  - 日本
+  - 美国
+  - 欧洲
+  - 香港
+  - 全节点
+  - Proxy
+- name: Google
+  type: select
+  fallback-groups:
+  - AI
+  - 开发
+  - 新加坡
+  - 日本
+  - 美国
+  - 欧洲
+  - 全节点
+  - Proxy
+  proxies:
+  - AI
+  - 开发
+  - 新加坡
+  - 日本
+  - 美国
+  - 欧洲
+  - 全节点
+  - Proxy
+- name: GitHub
+  type: select
+  fallback-groups:
+  - 开发
+  - 美国
+  - 欧洲
+  - 新加坡
+  - 日本
+  - 全节点
+  - Proxy
+  - DIRECT
+  proxies:
+  - 开发
+  - 美国
+  - 欧洲
+  - 新加坡
+  - 日本
+  - 全节点
+  - Proxy
+  - DIRECT
+- name: Telegram
+  type: select
+  fallback-groups:
+  - Proxy
+  - 新加坡
+  - 日本
+  - 香港
+  - 美国
+  - 欧洲
+  - 全节点
+  proxies:
+  - Proxy
+  - 新加坡
+  - 日本
+  - 香港
+  - 美国
+  - 欧洲
+  - 全节点
+- name: Discord
+  type: select
+  fallback-groups:
+  - Proxy
+  - 美国
+  - 日本
+  - 新加坡
+  - 香港
+  - 全节点
+  proxies:
+  - Proxy
+  - 美国
+  - 日本
+  - 新加坡
+  - 香港
+  - 全节点
+- name: Twitter
+  type: select
+  fallback-groups:
+  - Proxy
+  - 美国
+  - 日本
+  - 新加坡
+  - 香港
+  - 欧洲
+  - 全节点
+  proxies:
+  - Proxy
+  - 美国
+  - 日本
+  - 新加坡
+  - 香港
+  - 欧洲
+  - 全节点
+- name: TikTok
+  type: select
+  fallback-groups:
+  - Proxy
+  - 日本
+  - 新加坡
+  - 美国
+  - 香港
+  - 全节点
+  proxies:
+  - Proxy
+  - 日本
+  - 新加坡
+  - 美国
+  - 香港
+  - 全节点
+- name: YouTube
+  type: select
+  fallback-groups:
+  - Proxy
+  - 日本
+  - 新加坡
+  - 美国
+  - 香港
+  - 欧洲
+  - 全节点
+  proxies:
+  - Proxy
+  - 日本
+  - 新加坡
+  - 美国
+  - 香港
+  - 欧洲
+  - 全节点
+- name: Netflix
+  type: select
+  fallback-groups:
+  - Proxy
+  - 日本
+  - 新加坡
+  - 美国
+  - 香港
+  - 欧洲
+  - 全节点
+  proxies:
+  - Proxy
+  - 日本
+  - 新加坡
+  - 美国
+  - 香港
+  - 欧洲
+  - 全节点
+- name: Disney+
+  type: select
+  fallback-groups:
+  - Proxy
+  - 日本
+  - 新加坡
+  - 美国
+  - 香港
+  - 欧洲
+  - 全节点
+  proxies:
+  - Proxy
+  - 日本
+  - 新加坡
+  - 美国
+  - 香港
+  - 欧洲
+  - 全节点
+- name: HBO
+  type: select
+  fallback-groups:
+  - Proxy
+  - 美国
+  - 日本
+  - 新加坡
+  - 香港
+  - 欧洲
+  - 全节点
+  proxies:
+  - Proxy
+  - 美国
+  - 日本
+  - 新加坡
+  - 香港
+  - 欧洲
+  - 全节点
+- name: Bahamut
+  type: select
+  fallback-groups:
+  - 台湾
+  - 香港
+  - 日本
+  - 新加坡
+  - Proxy
+  - 全节点
+  proxies:
+  - 台湾
+  - 香港
+  - 日本
+  - 新加坡
+  - Proxy
+  - 全节点
+- name: BiliBili
+  type: select
+  fallback-groups:
+  - DIRECT
+  - 台湾
+  - 香港
+  - 日本
+  - Proxy
+  - 全节点
   proxies:
   - DIRECT
-- name: 📊Nano 剩余 299.12GiB
+  - 台湾
+  - 香港
+  - 日本
+  - Proxy
+  - 全节点
+- name: GlobalMedia
   type: select
+  fallback-groups:
+  - Proxy
+  - 美国
+  - 日本
+  - 新加坡
+  - 香港
+  - 欧洲
+  - 全节点
+  proxies:
+  - Proxy
+  - 美国
+  - 日本
+  - 新加坡
+  - 香港
+  - 欧洲
+  - 全节点
+- name: PayPal
+  type: select
+  fallback-groups:
+  - 美国
+  - 欧洲
+  - Proxy
+  - 香港
+  - 全节点
+  proxies:
+  - 美国
+  - 欧洲
+  - Proxy
+  - 香港
+  - 全节点
+- name: Crypto
+  type: select
+  fallback-groups:
+  - 币安
+  - 香港
+  - 新加坡
+  - 日本
+  - 美国
+  - 欧洲
+  - Proxy
+  - 全节点
+  proxies:
+  - 币安
+  - 香港
+  - 新加坡
+  - 日本
+  - 美国
+  - 欧洲
+  - Proxy
+  - 全节点
+- name: Apple
+  type: select
+  fallback-groups:
+  - DIRECT
+  - Proxy
+  - 香港
+  - 日本
+  - 新加坡
+  - 美国
+  - 全节点
   proxies:
   - DIRECT
-- name: 📊yan 暂停中（剩余 0.00GiB，距重置 10 天）
+  - Proxy
+  - 香港
+  - 日本
+  - 新加坡
+  - 美国
+  - 全节点
+- name: Steam
   type: select
+  fallback-groups:
+  - DIRECT
+  - Proxy
+  - 香港
+  - 日本
+  - 新加坡
+  - 美国
+  - 全节点
   proxies:
   - DIRECT
+  - Proxy
+  - 香港
+  - 日本
+  - 新加坡
+  - 美国
+  - 全节点
+- name: Emby
+  type: select
+  fallback-groups:
+  - DIRECT
+  - Proxy
+  - 香港
+  - 日本
+  - 新加坡
+  - 美国
+  - 全节点
+  proxies:
+  - DIRECT
+  - Proxy
+  - 香港
+  - 日本
+  - 新加坡
+  - 美国
+  - 全节点
+- name: '115'
+  type: select
+  fallback-groups:
+  - DIRECT
+  - Proxy
+  proxies:
+  - DIRECT
+  - Proxy
+- name: RemoteDesktop
+  type: select
+  fallback-groups:
+  - DIRECT
+  - Proxy
+  - 香港
+  - 日本
+  - 美国
+  - 全节点
+  proxies:
+  - DIRECT
+  - Proxy
+  - 香港
+  - 日本
+  - 美国
+  - 全节点
 rule-providers:
   OpenAI:
     type: http
@@ -1682,34 +2005,6 @@ rule-providers:
     interval: 86400
     path: ./rule-set/openai.yaml
     url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/OpenAI/OpenAI.yaml
-  Gemini:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 86400
-    path: ./rule-set/gemini.yaml
-    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gemini/Gemini.yaml
-  PikPak:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 86400
-    path: ./rule-set/pikpak.yaml
-    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/PikPak/PikPak.yaml
-  Telegram:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 86400
-    path: ./rule-set/telegram.yaml
-    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Telegram/Telegram.yaml
-  Binance:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 86400
-    path: ./rule-set/Binance.yaml
-    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Binance/Binance.yaml
   Claude:
     type: http
     behavior: classical
@@ -1717,13 +2012,13 @@ rule-providers:
     interval: 86400
     path: ./rule-set/claude.yaml
     url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Claude/Claude.yaml
-  Twitter:
+  Gemini:
     type: http
     behavior: classical
     format: yaml
     interval: 86400
-    path: ./rule-set/twitter.yaml
-    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Twitter/Twitter.yaml
+    path: ./rule-set/gemini.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gemini/Gemini.yaml
   GitHub:
     type: http
     behavior: classical
@@ -1731,34 +2026,125 @@ rule-providers:
     interval: 86400
     path: ./rule-set/github.yaml
     url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.yaml
-  RemoteDesktop:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 86400
-    path: ./rule-set/remotedesktop.yaml
-    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/RemoteDesktop/RemoteDesktop.yaml
-  115:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 86400
-    path: ./rule-set/115.yaml
-    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/115/115.yaml
-  Microsoft:
-    type: http
-    behavior: classical
-    format: yaml
-    interval: 86400
-    path: ./rule-set/microsoft.yaml
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft.yaml
   Google:
     type: http
     behavior: classical
     format: yaml
     interval: 86400
     path: ./rule-set/google.yaml
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Google/Google.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Google/Google.yaml
+  Telegram:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/telegram.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Telegram/Telegram.yaml
+  Discord:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/discord.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Discord/Discord.yaml
+  Twitter:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/twitter.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Twitter/Twitter.yaml
+  TikTok:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/tiktok.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TikTok/TikTok.yaml
+  YouTube:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/youtube.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YouTube/YouTube.yaml
+  Netflix:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/netflix.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Netflix/Netflix.yaml
+  Disney:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/disney.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Disney/Disney.yaml
+  HBO:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/hbo.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HBO/HBO.yaml
+  Bahamut:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/bahamut.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Bahamut/Bahamut.yaml
+  BiliBili:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/bilibili.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BiliBili/BiliBili.yaml
+  GlobalMedia:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/globalmedia.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GlobalMedia/GlobalMedia.yaml
+  PayPal:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/paypal.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/PayPal/PayPal.yaml
+  Binance:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/binance.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Binance/Binance.yaml
+  Crypto:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/crypto.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/haha-miao/rule_file/refs/heads/main/clash/crypto/Crypto.yaml
+  PikPak:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/pikpak.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/PikPak/PikPak.yaml
+  Microsoft:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/microsoft.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft.yaml
   Amazon:
     type: http
     behavior: classical
@@ -1766,72 +2152,161 @@ rule-providers:
     interval: 86400
     path: ./rule-set/amazon.yaml
     url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Amazon/Amazon.yaml
+  Apple:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/apple.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple.yaml
+  Steam:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/steam.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Steam/Steam.yaml
+  SteamCN:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/steamcn.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SteamCN/SteamCN.yaml
+  '115':
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/115.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/115/115.yaml
+  RemoteDesktop:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/remotedesktop.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/RemoteDesktop/RemoteDesktop.yaml
+  EmbyDirect:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/emby-direct.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/haha-miao/rule_file/refs/heads/main/clash/emby/emby-direct.yaml
+  EmbyProxy:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/emby-proxy.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/haha-miao/rule_file/refs/heads/main/clash/emby/emby-proxy.yaml
+  Proxy:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./rule-set/proxy.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Proxy/Proxy.yaml
 rules:
-- DOMAIN-SUFFIX,goclaude.cc,DIRECT
-- IP-CIDR,45.143.234.16/32,DIRECT
-- SRC-IP-CIDR,192.168.1.2/32,DIRECT
 - DOMAIN-SUFFIX,usertrust.com,DIRECT
 - DOMAIN-SUFFIX,rustdesk.com,DIRECT
+- DOMAIN-SUFFIX,cursorhub.cloud,DIRECT
 - DOMAIN-SUFFIX,open-vsx.org,Amazon
 - DOMAIN-SUFFIX,awsapps.com,Amazon
 - DOMAIN-SUFFIX,shortbread.aws.dev,Amazon
 - DOMAIN,prod.us-east-1.telemetry.desktop.kiro.dev,Amazon
 - DOMAIN,q.us-east-1.amazonaws.com,Amazon
-- DOMAIN-SUFFIX,cursorhub.cloud,DIRECT
-- DOMAIN-SUFFIX,betterclau.de,DIRECT
-- RULE-SET,GitHub,Proxy
-- RULE-SET,Twitter,ai组
-- RULE-SET,Telegram,币安
-- RULE-SET,Claude,ai组
-- RULE-SET,OpenAI,ai组
-- RULE-SET,Gemini,ai组
-- RULE-SET,Google,ai组
-- RULE-SET,RemoteDesktop,DIRECT
-- RULE-SET,115,DIRECT
+- DOMAIN-SUFFIX,docker.com,开发
+- DOMAIN-SUFFIX,docker.io,开发
+- DOMAIN-SUFFIX,gcr.io,开发
+- DOMAIN-SUFFIX,ghcr.io,开发
+- DOMAIN-SUFFIX,quay.io,开发
+- DOMAIN-SUFFIX,npmjs.org,开发
+- DOMAIN-SUFFIX,npmjs.com,开发
+- DOMAIN-SUFFIX,yarnpkg.com,开发
+- DOMAIN-SUFFIX,pypi.org,开发
+- DOMAIN-SUFFIX,pythonhosted.org,开发
+- DOMAIN-SUFFIX,crates.io,开发
+- DOMAIN-SUFFIX,golang.org,开发
+- DOMAIN-SUFFIX,brew.sh,开发
+- DOMAIN-SUFFIX,maven.org,开发
+- DOMAIN-SUFFIX,gradle.org,开发
+- DOMAIN-SUFFIX,xethub.hf.co,PikPak
+- DOMAIN-SUFFIX,goclaude.cc,Proxy
+- DOMAIN-SUFFIX,devaicode.dev,Proxy
+- RULE-SET,EmbyDirect,DIRECT
+- RULE-SET,EmbyProxy,Emby
+- RULE-SET,RemoteDesktop,RemoteDesktop
+- RULE-SET,115,115
+- RULE-SET,OpenAI,OpenAI
+- RULE-SET,Claude,Claude
+- RULE-SET,Gemini,Gemini
+- RULE-SET,Google,Google
+- RULE-SET,GitHub,GitHub
+- RULE-SET,Telegram,Telegram
+- RULE-SET,Discord,Discord
+- RULE-SET,Twitter,Twitter
+- RULE-SET,TikTok,TikTok
+- RULE-SET,YouTube,YouTube
+- RULE-SET,Netflix,Netflix
+- RULE-SET,Disney,Disney+
+- RULE-SET,HBO,HBO
+- RULE-SET,Bahamut,Bahamut
+- RULE-SET,BiliBili,BiliBili
+- RULE-SET,GlobalMedia,GlobalMedia
+- RULE-SET,PayPal,PayPal
+- RULE-SET,Crypto,Crypto
+- RULE-SET,Binance,币安
+- RULE-SET,PikPak,PikPak
 - RULE-SET,Microsoft,Microsoft
 - RULE-SET,Amazon,Amazon
-- DOMAIN-SUFFIX,docker.com,欧美
-- DOMAIN-SUFFIX,docker.io,欧美
-- DOMAIN-SUFFIX,npmjs.org,欧美
-- DOMAIN-SUFFIX,npmjs.com,欧美
-- DOMAIN-SUFFIX,yarnpkg.com,欧美
-- DOMAIN-SUFFIX,pypi.org,欧美
-- DOMAIN-SUFFIX,pythonhosted.org,欧美
-- DOMAIN-SUFFIX,crates.io,欧美
-- DOMAIN-SUFFIX,golang.org,欧美
-- DOMAIN-SUFFIX,brew.sh,欧美
-- DOMAIN-SUFFIX,maven.org,欧美
-- DOMAIN-SUFFIX,gradle.org,欧美
-- DOMAIN-KEYWORD,kisskh,欧美
-- DOMAIN-SUFFIX,xethub.hf.co,pikpak
-- DOMAIN-SUFFIX,pc528.net,DIRECT
-- RULE-SET,Binance,币安
-- RULE-SET,PikPak,pikpak
+- RULE-SET,Apple,Apple
+- RULE-SET,Steam,Steam
+- RULE-SET,SteamCN,DIRECT
+- RULE-SET,Proxy,Proxy
 - IP-ASN,62041,币安,no-resolve
 - IP-ASN,13335,Proxy,no-resolve
 - IP-ASN,15169,Proxy,no-resolve
 - GEOSITE,private,DIRECT
 - GEOIP,PRIVATE,DIRECT
-- GEOSITE,CN,DIRECT
-- GEOIP,CN,DIRECT
-- GEOIP,HK,DIRECT
-- MATCH,Proxy
-global-client-fingerprint: random
+- GEOSITE,CN,国内
+- GEOIP,CN,国内
+- MATCH,Final
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7894
 ipv6: false
-tcp-concurrent: true
 unified-delay: true
+tcp-concurrent: true
+geodata-mode: true
+geodata-loader: standard
+geo-auto-update: true
+geo-update-interval: 48
+geox-url:
+  geoip: https://testingcf.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip.dat
+  geosite: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
+  mmdb: https://testingcf.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb
+global-client-fingerprint: chrome
+keep-alive-idle: 600
 keep-alive-interval: 30
-geo-auto-update: false
-geo-update-interval: 168
-geodata-mode: false
 profile:
   store-selected: true
   store-fake-ip: true
+tun:
+  enable: true
+  stack: mixed
+  mtu: 1500
+  dns-hijack:
+  - any:53
+  - tcp://any:53
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
 dns:
   enable: true
-  listen: :53
+  listen: 0.0.0.0:1053
   ipv6: false
-  prefer-h3: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
@@ -1839,94 +2314,50 @@ dns:
   - '*.local'
   - '*.localdomain'
   - localhost.ptlogin2.qq.com
-  - +.msftconnecttest.com
-  - +.msftncsi.com
-  - +.apple.com
-  - +.icloud.com
-  - +.push.apple.com
-  - captive.apple.com
-  - +.github.com
-  - +.githubusercontent.com
-  - +.gitlab.com
-  - +.gitee.com
-  - +.cloudflare.com
-  - +.cloudflare-dns.com
-  - +.cloudflareclient.com
-  - +.cloudflareinsights.com
-  - +.one.one.one.one
-  - +.openai.com
-  - +.chatgpt.com
-  - +.oaistatic.com
-  - +.oaiusercontent.com
-  - +.openaiapi-site.azureedge.net
-  - +.openai.azure.com
-  - +.anthropic.com
-  - +.claude.ai
-  - +.claudeusercontent.com
-  - aistudio.google.com
-  - makersuite.google.com
-  - gemini.google.com
-  - generativelanguage.googleapis.com
-  - oauth2.googleapis.com
-  - accounts.google.com
-  - +.googleapis.com
-  - +.gstatic.com
-  - +.googleusercontent.com
-  - copilot.microsoft.com
-  - sydney.bing.com
-  - +.openrouter.ai
-  - +.huggingface.co
-  - +.hf.co
-  - +.replicate.com
-  - +.together.ai
-  - +.fireworks.ai
-  - +.perplexity.ai
-  - +.x.ai
-  - +.mistral.ai
-  - +.cohere.ai
-  - +.groq.com
-  - +.meta.ai
-  - +.docker.com
-  - +.docker.io
-  - +.gcr.io
-  - +.ghcr.io
-  - +.quay.io
-  - +.synology.com
-  - +.quickconnect.to
-  - +.myqnapcloud.com
-  - +.diskstation.me
-  - +.115.com
-  - +.steamserver.net
-  - +.steampowered.com
-  - +.ea.com
-  - +.epicgames.com
-  - localhost.battle.net
-  - +.discord.gg
-  - +.discord.com
-  - smtp.*
-  - imap.*
-  - pop.*
-  - pop3.*
-  - mail.*
-  - +.home-assistant.io
+  - localhost.sec.qq.com
+  - localhost.work.weixin.qq.com
   - Mijia Cloud
-  - +.mi.com
-  - +.xiaomi.com
   - router.asus.com
   - www.router.asus.com
   - repeater.asus.com
   - +.tplinkwifi.net
   - +.tendawifi.com
-  - +.speedtest.net
-  - fast.com
+  - +.miwifi.com
+  - connect.rom.miui.com
+  - +.msftconnecttest.com
+  - +.msftncsi.com
+  - time.windows.com
   - ntp.*
   - time.*
+  - +.ntp.org
   - +.ntp.org.cn
   - +.pool.ntp.org
+  - +.apple.com
+  - +.icloud.com
+  - +.push.apple.com
+  - captive.apple.com
+  - +.weixin.qq.com
+  - +.wechat.com
+  - +.qq.com
+  - +.wpsmail.net
+  - +.mi.com
+  - +.xiaomi.com
+  - dlg.io.mi.com
+  - +.oray.com
+  - +.sunlogin.net
+  - +.synology.com
+  - +.quickconnect.to
+  - +.myqnapcloud.com
+  - +.diskstation.me
+  - +.home-assistant.io
+  - +.speedtest.net
+  - fast.com
+  - smtp.*
+  - imap.*
+  - pop.*
+  - pop3.*
+  - mail.*
   - +.usertrust.com
-  - +.rustdesk.com
-  - +.aliyuncs.com
-  - +.tencentcloudapi.com
   - +.bank
   - +.icbc.com.cn
   - +.ccb.com.cn
@@ -1936,44 +2367,58 @@ dns:
   - 172.16.0.0/12
   - 192.168.0.0/16
   - 127.0.0.0/8
-  - fc00::/7
-  - fe80::/10
-  - ff00::/8
   - geosite:cn
   respect-rules: true
   use-hosts: true
   use-system-hosts: false
   default-nameserver:
   - 223.5.5.5
-  - 1.1.1.1
+  - 119.29.29.29
   nameserver:
   - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
   proxy-server-nameserver:
-  - 223.5.5.5
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
   direct-nameserver:
   - 223.5.5.5
+  - 119.29.29.29
+  direct-nameserver-follow-policy: true
   fallback:
-  - https://dns.alidns.com/dns-query
+  - https://1.1.1.1/dns-query
+  - https://dns.google/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    geosite:
+    - gfw
+    ipcidr:
+    - 240.0.0.0/4
   nameserver-policy:
-    geosite:private,cn:
+    geosite:private:
     - 223.5.5.5
+    - 119.29.29.29
+    geosite:cn:
+    - 223.5.5.5
+    - 119.29.29.29
 sniffer:
   enable: true
   override-destination: true
   parse-pure-ip: true
   sniff:
-    QUIC:
-      ports:
-      - 443
-    TLS:
-      ports:
-      - 443
-      - 8443
     HTTP:
       ports:
       - 80
       - 8080-8880
       override-destination: true
+    TLS:
+      ports:
+      - 443
+      - 8443
+    QUIC:
+      ports:
+      - 443
+      - 8443
   force-domain:
   - +.netflix.com
   - +.nflxvideo.net
@@ -1981,8 +2426,8 @@ sniffer:
   - +.media.dssott.com
   skip-domain:
   - +.apple.com
+  - +.push.apple.com
   - Mijia Cloud
   - dlg.io.mi.com
   - +.oray.com
   - +.sunlogin.net
-  - +.push.apple.com
