@@ -308,7 +308,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-e.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -327,7 +327,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-f.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -365,7 +365,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-h.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -552,7 +552,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-e.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -590,7 +590,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-g.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -609,7 +609,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-h.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -628,7 +628,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-e.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -647,7 +647,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-f.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -685,7 +685,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-h.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -704,7 +704,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-e.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -742,7 +742,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-g.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -761,7 +761,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-h.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -1029,9 +1029,550 @@ proxies:
   cipher: 2022-blake3-aes-256-gcm
   password: NWQ5NjBiZTgxZGNjYmM2ODJjZjEwY2RjNjI5ZWNlMGQ=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
   udp: true
+- name: 套餐到期：2026-04-16
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 20745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🏘️ 官网：Candytally.club
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 20745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 💌 邮箱：Candytallycloud@gmail.com
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 20745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🔗 节点异常请更新订阅！
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 20745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🙂如更新失败请到官网重新导入(需重登账号)
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 20745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港1-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 20745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港2-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 20745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港3-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 20745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港3-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 20745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港家宽1-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 56225
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港家宽1-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 56225
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港家宽1-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 56225
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港家宽1-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 56225
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾1-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 53515
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾2-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 53515
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾2-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 53515
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾2-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 53515
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾家宽1-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 33369
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾家宽2-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 33369
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾家宽2-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 33369
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾家宽2-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 33369
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇸🇬 新加坡1-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 25507
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇸🇬 新加坡2-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 25507
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇸🇬 新加坡3-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 25507
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇸🇬 新加坡3-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 25507
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽1-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 23199
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽1-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 23199
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽1-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 23199
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽1-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 23199
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽2-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 15853
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽2-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 15853
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽2-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 15853
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽2-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 15853
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本1-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 59528
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本2-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 59528
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本3-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 59528
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本3-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 59528
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国家宽1-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 26538
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国家宽2-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 26538
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国家宽3-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 26538
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国家宽3-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 26538
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国1-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 56582
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国2-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 56582
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国1-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 56582
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国1-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 56582
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇩🇪 德国1-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 24226
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇩🇪 德国2-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 24226
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇩🇪 德国3-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 24226
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇩🇪 德国3-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 24226
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇰🇷 韩国-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 52270
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇹🇭 泰国-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 29743
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇦🇷 阿根廷-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 21625
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇹🇷 土耳其-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 24737
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇬🇧 英国-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 14863
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇬🇧 英国家宽-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 15056
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇫🇷 法国-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 12408
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇻🇳 越南-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 26805
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇷🇺 俄罗斯-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 14269
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇦🇪 迪拜-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 58492
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇲🇽 墨西哥-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 53994
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
 proxy-groups:
 - name: Proxy
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
   manual-pick-count: 8
   manual-pick-mix:
     dedicated: 4
@@ -1041,7 +1582,6 @@ proxy-groups:
   manual-region-cap: 2
   fallback-groups:
   - AI
-  - 开发
   - 币安
   - PikPak
   - Microsoft
@@ -1057,14 +1597,13 @@ proxy-groups:
   proxies:
   - ❇️白羊座-BGP(通用)
   - 🇭🇰 HK-IEPL-08-NewMedia
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港A2|电信联通|2倍|V2
+  - 🇸🇬 新加坡1-负载IEPL
+  - 🇸🇬 新加坡2-联通IEPL
   - 🇯🇵 日本A1|三网|3.5倍|V2
   - 🇯🇵 日本A2|三网|3.5倍|V2
-  - 🇸🇬 SG-01-SG.GS
+  - 🇭🇰 香港A2|电信联通|2倍|V2
+  - 🇺🇸 US-01-HostHatch
   - AI
-  - 开发
   - 币安
   - PikPak
   - Microsoft
@@ -1079,6 +1618,7 @@ proxy-groups:
   - DIRECT
 - name: Final
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
   fallback-groups:
   - Proxy
   - DIRECT
@@ -1093,6 +1633,7 @@ proxy-groups:
   - 全节点
 - name: 国内
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
   fallback-groups:
   - DIRECT
   - Proxy
@@ -1101,11 +1642,67 @@ proxy-groups:
   - Proxy
 - name: 全节点
   type: url-test
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
   proxies:
   - ❇️白羊座-BGP(通用)
   - 🇭🇰 HK-IEPL-08-NewMedia
+  - 🇭🇰 香港1-负载IEPL
+  - 🇭🇰 香港2-联通IEPL
+  - 🇭🇰 香港3-电信IEPL
+  - 🇭🇰 香港3-移动IEPL
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港家宽1-电信IEPL
+  - 🇭🇰 香港家宽1-移动IEPL
+  - 🇭🇰 香港家宽1-联通IEPL
+  - 🇭🇰 香港家宽1-负载IEPL
+  - 🇸🇬 新加坡1-负载IEPL
+  - 🇸🇬 新加坡2-联通IEPL
+  - 🇸🇬 新加坡3-电信IEPL
+  - 🇸🇬 新加坡3-移动IEPL
+  - 🇯🇵 日本1-负载IEPL
+  - 🇯🇵 日本2-联通IEPL
+  - 🇯🇵 日本3-电信IEPL
+  - 🇯🇵 日本3-移动IEPL
+  - 🇯🇵 日本家宽1-电信IEPL
+  - 🇯🇵 日本家宽1-移动IEPL
+  - 🇯🇵 日本家宽1-联通IEPL
+  - 🇯🇵 日本家宽1-负载IEPL
+  - 🇯🇵 日本家宽2-电信IEPL
+  - 🇯🇵 日本家宽2-移动IEPL
+  - 🇯🇵 日本家宽2-联通IEPL
+  - 🇯🇵 日本家宽2-负载IEPL
+  - 🇺🇸 美国1-电信IEPL
+  - 🇺🇸 美国1-移动IEPL
+  - 🇺🇸 美国1-负载IEPL
+  - 🇺🇸 美国2-联通IEPL
+  - 🇺🇸 美国家宽1-负载IEPL
+  - 🇺🇸 美国家宽2-联通IEPL
+  - 🇺🇸 美国家宽3-电信IEPL
+  - 🇺🇸 美国家宽3-移动IEPL
+  - 🇩🇪 德国1-负载IEPL
+  - 🇩🇪 德国2-联通IEPL
+  - 🇩🇪 德国3-电信IEPL
+  - 🇩🇪 德国3-移动IEPL
+  - 🇫🇷 法国-IEPL
+  - 🇬🇧 英国-IEPL
+  - 🇬🇧 英国家宽-IEPL
+  - 🇨🇳 台湾1-负载IEPL
+  - 🇨🇳 台湾2-电信IEPL
+  - 🇨🇳 台湾2-移动IEPL
+  - 🇨🇳 台湾2-联通IEPL
+  - 🇨🇳 台湾家宽1-负载IEPL
+  - 🇨🇳 台湾家宽2-电信IEPL
+  - 🇨🇳 台湾家宽2-移动IEPL
+  - 🇨🇳 台湾家宽2-联通IEPL
+  - 🇹🇭 泰国-IEPL
+  - 🇻🇳 越南-IEPL
+  - 🇦🇪 迪拜-IEPL
+  - 🇦🇷 阿根廷-IEPL
+  - 🇰🇷 韩国-IEPL
+  - 🇲🇽 墨西哥-IEPL
+  - 🇷🇺 俄罗斯-IEPL
+  - 🇹🇷 土耳其-IEPL
   - 🇭🇰 香港A2|电信联通|2倍|V2
   - 🇯🇵 日本A1|三网|3.5倍|V2
   - 🇯🇵 日本A2|三网|3.5倍|V2
@@ -1173,17 +1770,28 @@ proxy-groups:
   - 🇷🇺 俄罗斯B1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
   - 🇰🇷韩国-A(通用)
+  - 💌 邮箱：Candytallycloud@gmail.com
+  - 🔗 节点异常请更新订阅！
   url: https://www.gstatic.com/generate_204
   interval: 180
   tolerance: 50
   lazy: true
 - name: 香港-自动
   type: url-test
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
   proxies:
   - ❇️白羊座-BGP(通用)
   - 🇭🇰 HK-IEPL-08-NewMedia
+  - 🇭🇰 香港1-负载IEPL
+  - 🇭🇰 香港2-联通IEPL
+  - 🇭🇰 香港3-电信IEPL
+  - 🇭🇰 香港3-移动IEPL
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港家宽1-电信IEPL
+  - 🇭🇰 香港家宽1-移动IEPL
+  - 🇭🇰 香港家宽1-联通IEPL
+  - 🇭🇰 香港家宽1-负载IEPL
   - 🇭🇰 香港A2|电信联通|2倍|V2
   - ❇️白羊座-AGP(通用)
   - ❇️白羊座-IGP(通用)
@@ -1203,11 +1811,20 @@ proxy-groups:
   lazy: true
 - name: 香港-手动
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
   proxies:
   - ❇️白羊座-BGP(通用)
   - 🇭🇰 HK-IEPL-08-NewMedia
+  - 🇭🇰 香港1-负载IEPL
+  - 🇭🇰 香港2-联通IEPL
+  - 🇭🇰 香港3-电信IEPL
+  - 🇭🇰 香港3-移动IEPL
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港家宽1-电信IEPL
+  - 🇭🇰 香港家宽1-移动IEPL
+  - 🇭🇰 香港家宽1-联通IEPL
+  - 🇭🇰 香港家宽1-负载IEPL
   - 🇭🇰 香港A2|电信联通|2倍|V2
   - ❇️白羊座-AGP(通用)
   - ❇️白羊座-IGP(通用)
@@ -1223,6 +1840,7 @@ proxy-groups:
   - 🇭🇰香港-A(通用)
 - name: 香港
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
   fallback-groups:
   - 香港-自动
   - 香港-手动
@@ -1233,7 +1851,12 @@ proxy-groups:
   - 全节点
 - name: 新加坡-自动
   type: url-test
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
   proxies:
+  - 🇸🇬 新加坡1-负载IEPL
+  - 🇸🇬 新加坡2-联通IEPL
+  - 🇸🇬 新加坡3-电信IEPL
+  - 🇸🇬 新加坡3-移动IEPL
   - 🇸🇬 新加坡B1|1.2倍|V2
   - 🇸🇬 新加坡A1|1.4倍|V2
   - 🇸🇬 SG-01-SG.GS
@@ -1249,7 +1872,12 @@ proxy-groups:
   lazy: true
 - name: 新加坡-手动
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
   proxies:
+  - 🇸🇬 新加坡1-负载IEPL
+  - 🇸🇬 新加坡2-联通IEPL
+  - 🇸🇬 新加坡3-电信IEPL
+  - 🇸🇬 新加坡3-移动IEPL
   - 🇸🇬 新加坡B1|1.2倍|V2
   - 🇸🇬 新加坡A1|1.4倍|V2
   - 🇸🇬 SG-01-SG.GS
@@ -1261,6 +1889,7 @@ proxy-groups:
   - 🇸🇬新加坡-A(通用)
 - name: 新加坡
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
   fallback-groups:
   - 新加坡-自动
   - 新加坡-手动
@@ -1271,7 +1900,20 @@ proxy-groups:
   - 全节点
 - name: 日本-自动
   type: url-test
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
   proxies:
+  - 🇯🇵 日本1-负载IEPL
+  - 🇯🇵 日本2-联通IEPL
+  - 🇯🇵 日本3-电信IEPL
+  - 🇯🇵 日本3-移动IEPL
+  - 🇯🇵 日本家宽1-电信IEPL
+  - 🇯🇵 日本家宽1-移动IEPL
+  - 🇯🇵 日本家宽1-联通IEPL
+  - 🇯🇵 日本家宽1-负载IEPL
+  - 🇯🇵 日本家宽2-电信IEPL
+  - 🇯🇵 日本家宽2-移动IEPL
+  - 🇯🇵 日本家宽2-联通IEPL
+  - 🇯🇵 日本家宽2-负载IEPL
   - 🇯🇵 日本A1|三网|3.5倍|V2
   - 🇯🇵 日本A2|三网|3.5倍|V2
   - 🇯🇵 日本B1|移动|2倍|V2
@@ -1288,7 +1930,20 @@ proxy-groups:
   lazy: true
 - name: 日本-手动
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
   proxies:
+  - 🇯🇵 日本1-负载IEPL
+  - 🇯🇵 日本2-联通IEPL
+  - 🇯🇵 日本3-电信IEPL
+  - 🇯🇵 日本3-移动IEPL
+  - 🇯🇵 日本家宽1-电信IEPL
+  - 🇯🇵 日本家宽1-移动IEPL
+  - 🇯🇵 日本家宽1-联通IEPL
+  - 🇯🇵 日本家宽1-负载IEPL
+  - 🇯🇵 日本家宽2-电信IEPL
+  - 🇯🇵 日本家宽2-移动IEPL
+  - 🇯🇵 日本家宽2-联通IEPL
+  - 🇯🇵 日本家宽2-负载IEPL
   - 🇯🇵 日本A1|三网|3.5倍|V2
   - 🇯🇵 日本A2|三网|3.5倍|V2
   - 🇯🇵 日本B1|移动|2倍|V2
@@ -1301,6 +1956,7 @@ proxy-groups:
   - 🇯🇵日本-A(通用)
 - name: 日本
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
   fallback-groups:
   - 日本-自动
   - 日本-手动
@@ -1311,7 +1967,16 @@ proxy-groups:
   - 全节点
 - name: 台湾-自动
   type: url-test
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
   proxies:
+  - 🇨🇳 台湾1-负载IEPL
+  - 🇨🇳 台湾2-电信IEPL
+  - 🇨🇳 台湾2-移动IEPL
+  - 🇨🇳 台湾2-联通IEPL
+  - 🇨🇳 台湾家宽1-负载IEPL
+  - 🇨🇳 台湾家宽2-电信IEPL
+  - 🇨🇳 台湾家宽2-移动IEPL
+  - 🇨🇳 台湾家宽2-联通IEPL
   - 🇨🇳 TW-01-Hinet
   - 🇨🇳 TW-02-AKILE
   - 🇨🇳 TW-03-Akari
@@ -1323,7 +1988,16 @@ proxy-groups:
   lazy: true
 - name: 台湾-手动
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
   proxies:
+  - 🇨🇳 台湾1-负载IEPL
+  - 🇨🇳 台湾2-电信IEPL
+  - 🇨🇳 台湾2-移动IEPL
+  - 🇨🇳 台湾2-联通IEPL
+  - 🇨🇳 台湾家宽1-负载IEPL
+  - 🇨🇳 台湾家宽2-电信IEPL
+  - 🇨🇳 台湾家宽2-移动IEPL
+  - 🇨🇳 台湾家宽2-联通IEPL
   - 🇨🇳 TW-01-Hinet
   - 🇨🇳 TW-02-AKILE
   - 🇨🇳 TW-03-Akari
@@ -1331,6 +2005,7 @@ proxy-groups:
   - 🇹🇼台湾-A(通用)
 - name: 台湾
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
   fallback-groups:
   - 台湾-自动
   - 台湾-手动
@@ -1341,7 +2016,16 @@ proxy-groups:
   - 全节点
 - name: 美国-自动
   type: url-test
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
   proxies:
+  - 🇺🇸 美国1-电信IEPL
+  - 🇺🇸 美国1-移动IEPL
+  - 🇺🇸 美国1-负载IEPL
+  - 🇺🇸 美国2-联通IEPL
+  - 🇺🇸 美国家宽1-负载IEPL
+  - 🇺🇸 美国家宽2-联通IEPL
+  - 🇺🇸 美国家宽3-电信IEPL
+  - 🇺🇸 美国家宽3-移动IEPL
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国E2|0.7倍|V1
   - 🇺🇸 美国C2|0.8倍|V1
@@ -1358,7 +2042,16 @@ proxy-groups:
   lazy: true
 - name: 美国-手动
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
   proxies:
+  - 🇺🇸 美国1-电信IEPL
+  - 🇺🇸 美国1-移动IEPL
+  - 🇺🇸 美国1-负载IEPL
+  - 🇺🇸 美国2-联通IEPL
+  - 🇺🇸 美国家宽1-负载IEPL
+  - 🇺🇸 美国家宽2-联通IEPL
+  - 🇺🇸 美国家宽3-电信IEPL
+  - 🇺🇸 美国家宽3-移动IEPL
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国E2|0.7倍|V1
   - 🇺🇸 美国C2|0.8倍|V1
@@ -1371,6 +2064,7 @@ proxy-groups:
   - 🇺🇸 US-05-Leassweb
 - name: 美国
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
   fallback-groups:
   - 美国-自动
   - 美国-手动
@@ -1381,7 +2075,15 @@ proxy-groups:
   - 全节点
 - name: 欧洲-自动
   type: url-test
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   proxies:
+  - 🇩🇪 德国1-负载IEPL
+  - 🇩🇪 德国2-联通IEPL
+  - 🇩🇪 德国3-电信IEPL
+  - 🇩🇪 德国3-移动IEPL
+  - 🇫🇷 法国-IEPL
+  - 🇬🇧 英国-IEPL
+  - 🇬🇧 英国家宽-IEPL
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -1401,7 +2103,15 @@ proxy-groups:
   lazy: true
 - name: 欧洲-手动
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   proxies:
+  - 🇩🇪 德国1-负载IEPL
+  - 🇩🇪 德国2-联通IEPL
+  - 🇩🇪 德国3-电信IEPL
+  - 🇩🇪 德国3-移动IEPL
+  - 🇫🇷 法国-IEPL
+  - 🇬🇧 英国-IEPL
+  - 🇬🇧 英国家宽-IEPL
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -1417,6 +2127,7 @@ proxy-groups:
   - 🇬🇧 UK-01-HostHatch
 - name: 欧洲
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   fallback-groups:
   - 欧洲-自动
   - 欧洲-手动
@@ -1427,7 +2138,10 @@ proxy-groups:
   - 全节点
 - name: 东南亚-自动
   type: url-test
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   proxies:
+  - 🇹🇭 泰国-IEPL
+  - 🇻🇳 越南-IEPL
   - 🇹🇭 泰国A1|移动|0.9倍|V2
   - 🇻🇳 越南A1|电信移动|1.1倍|V2
   - 🇲🇾马来-A(通用)
@@ -1437,12 +2151,16 @@ proxy-groups:
   lazy: true
 - name: 东南亚-手动
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   proxies:
+  - 🇹🇭 泰国-IEPL
+  - 🇻🇳 越南-IEPL
   - 🇹🇭 泰国A1|移动|0.9倍|V2
   - 🇻🇳 越南A1|电信移动|1.1倍|V2
   - 🇲🇾马来-A(通用)
 - name: 东南亚
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   fallback-groups:
   - 东南亚-自动
   - 东南亚-手动
@@ -1453,24 +2171,43 @@ proxy-groups:
   - 全节点
 - name: 其他-自动
   type: url-test
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   proxies:
+  - 🇦🇪 迪拜-IEPL
+  - 🇦🇷 阿根廷-IEPL
+  - 🇰🇷 韩国-IEPL
+  - 🇲🇽 墨西哥-IEPL
+  - 🇷🇺 俄罗斯-IEPL
+  - 🇹🇷 土耳其-IEPL
   - 🇷🇺 俄罗斯A1|联通|1倍|V1
   - 🇷🇺 俄罗斯B1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
   - 🇰🇷韩国-A(通用)
+  - 💌 邮箱：Candytallycloud@gmail.com
+  - 🔗 节点异常请更新订阅！
   url: https://www.gstatic.com/generate_204
   interval: 180
   tolerance: 50
   lazy: true
 - name: 其他-手动
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   proxies:
+  - 🇦🇪 迪拜-IEPL
+  - 🇦🇷 阿根廷-IEPL
+  - 🇰🇷 韩国-IEPL
+  - 🇲🇽 墨西哥-IEPL
+  - 🇷🇺 俄罗斯-IEPL
+  - 🇹🇷 土耳其-IEPL
   - 🇷🇺 俄罗斯A1|联通|1倍|V1
   - 🇷🇺 俄罗斯B1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
   - 🇰🇷韩国-A(通用)
+  - 💌 邮箱：Candytallycloud@gmail.com
+  - 🔗 节点异常请更新订阅！
 - name: 其他
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   fallback-groups:
   - 其他-自动
   - 其他-手动
@@ -1481,6 +2218,7 @@ proxy-groups:
   - 全节点
 - name: AI
   type: fallback
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
   fallback-groups:
   - 新加坡
   - 日本
@@ -1501,6 +2239,7 @@ proxy-groups:
   lazy: true
 - name: 开发
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
   fallback-groups:
   - Proxy
   - 美国
@@ -1519,6 +2258,7 @@ proxy-groups:
   - DIRECT
 - name: 币安
   type: fallback
+  icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/bian.png
   fallback-groups:
   - 香港
   - 新加坡
@@ -1539,6 +2279,7 @@ proxy-groups:
   lazy: true
 - name: PikPak
   type: fallback
+  icon: https://raw.githubusercontent.com/black2c7/Emby-icons/main/Icons/Pikpak.png
   fallback-groups:
   - 美国
   - 日本
@@ -1557,6 +2298,7 @@ proxy-groups:
   lazy: true
 - name: Microsoft
   type: fallback
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
   fallback-groups:
   - 美国
   - 欧洲
@@ -1577,6 +2319,7 @@ proxy-groups:
   lazy: true
 - name: Amazon
   type: fallback
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Amazon.png
   fallback-groups:
   - 美国
   - 欧洲
@@ -1597,6 +2340,7 @@ proxy-groups:
   lazy: true
 - name: OpenAI
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
   fallback-groups:
   - AI
   - 新加坡
@@ -1617,6 +2361,7 @@ proxy-groups:
   - Proxy
 - name: Claude
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Claude.png
   fallback-groups:
   - AI
   - 新加坡
@@ -1637,6 +2382,7 @@ proxy-groups:
   - Proxy
 - name: Gemini
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Gemini.png
   fallback-groups:
   - AI
   - 新加坡
@@ -1657,6 +2403,7 @@ proxy-groups:
   - Proxy
 - name: Google
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
   fallback-groups:
   - AI
   - 开发
@@ -1677,6 +2424,7 @@ proxy-groups:
   - Proxy
 - name: GitHub
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
   fallback-groups:
   - 开发
   - 美国
@@ -1697,6 +2445,7 @@ proxy-groups:
   - DIRECT
 - name: Telegram
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
   fallback-groups:
   - Proxy
   - 新加坡
@@ -1715,6 +2464,7 @@ proxy-groups:
   - 全节点
 - name: Discord
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Discord.png
   fallback-groups:
   - Proxy
   - 美国
@@ -1731,6 +2481,7 @@ proxy-groups:
   - 全节点
 - name: Twitter
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
   fallback-groups:
   - Proxy
   - 美国
@@ -1749,6 +2500,7 @@ proxy-groups:
   - 全节点
 - name: TikTok
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
   fallback-groups:
   - Proxy
   - 日本
@@ -1765,6 +2517,7 @@ proxy-groups:
   - 全节点
 - name: YouTube
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
   fallback-groups:
   - Proxy
   - 日本
@@ -1783,6 +2536,7 @@ proxy-groups:
   - 全节点
 - name: Netflix
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
   fallback-groups:
   - Proxy
   - 日本
@@ -1801,6 +2555,7 @@ proxy-groups:
   - 全节点
 - name: Disney+
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney+.png
   fallback-groups:
   - Proxy
   - 日本
@@ -1819,6 +2574,7 @@ proxy-groups:
   - 全节点
 - name: HBO
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HBO.png
   fallback-groups:
   - Proxy
   - 美国
@@ -1837,6 +2593,7 @@ proxy-groups:
   - 全节点
 - name: Bahamut
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bahamut.png
   fallback-groups:
   - 台湾
   - 香港
@@ -1853,6 +2610,7 @@ proxy-groups:
   - 全节点
 - name: BiliBili
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili.png
   fallback-groups:
   - DIRECT
   - 台湾
@@ -1869,6 +2627,7 @@ proxy-groups:
   - 全节点
 - name: GlobalMedia
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/GlobalMedia.png
   fallback-groups:
   - Proxy
   - 美国
@@ -1887,6 +2646,7 @@ proxy-groups:
   - 全节点
 - name: PayPal
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PayPal.png
   fallback-groups:
   - 美国
   - 欧洲
@@ -1901,6 +2661,7 @@ proxy-groups:
   - 全节点
 - name: Crypto
   type: select
+  icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/bian.png
   fallback-groups:
   - 币安
   - 香港
@@ -1921,6 +2682,7 @@ proxy-groups:
   - 全节点
 - name: Apple
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
   fallback-groups:
   - DIRECT
   - Proxy
@@ -1939,6 +2701,7 @@ proxy-groups:
   - 全节点
 - name: Steam
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png
   fallback-groups:
   - DIRECT
   - Proxy
@@ -1957,6 +2720,7 @@ proxy-groups:
   - 全节点
 - name: Emby
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
   fallback-groups:
   - DIRECT
   - Proxy
@@ -1975,6 +2739,7 @@ proxy-groups:
   - 全节点
 - name: '115'
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/115.png
   fallback-groups:
   - DIRECT
   - Proxy
@@ -1983,6 +2748,7 @@ proxy-groups:
   - Proxy
 - name: RemoteDesktop
   type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/RemoteDesktop.png
   fallback-groups:
   - DIRECT
   - Proxy

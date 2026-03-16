@@ -298,7 +298,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-e.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -317,7 +317,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-f.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -355,7 +355,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-h.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -542,7 +542,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-e.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -580,7 +580,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-g.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -599,7 +599,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-h.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -618,7 +618,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-e.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -637,7 +637,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-f.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -675,7 +675,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-h.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -694,7 +694,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-e.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -732,7 +732,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-g.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -751,7 +751,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-h.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -1019,3 +1019,543 @@ proxies:
   cipher: 2022-blake3-aes-256-gcm
   password: NWQ5NjBiZTgxZGNjYmM2ODJjZjEwY2RjNjI5ZWNlMGQ=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
   udp: true
+- name: 套餐到期：2026-04-16
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 20745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🏘️ 官网：Candytally.club
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 20745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 💌 邮箱：Candytallycloud@gmail.com
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 20745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🔗 节点异常请更新订阅！
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 20745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🙂如更新失败请到官网重新导入(需重登账号)
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 20745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港1-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 20745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港2-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 20745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港3-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 20745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港3-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 20745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港家宽1-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 56225
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港家宽1-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 56225
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港家宽1-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 56225
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港家宽1-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 56225
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾1-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 53515
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾2-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 53515
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾2-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 53515
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾2-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 53515
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾家宽1-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 33369
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾家宽2-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 33369
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾家宽2-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 33369
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾家宽2-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 33369
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇸🇬 新加坡1-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 25507
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇸🇬 新加坡2-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 25507
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇸🇬 新加坡3-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 25507
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇸🇬 新加坡3-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 25507
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽1-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 23199
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽1-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 23199
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽1-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 23199
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽1-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 23199
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽2-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 15853
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽2-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 15853
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽2-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 15853
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽2-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 15853
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本1-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 59528
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本2-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 59528
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本3-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 59528
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本3-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 59528
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国家宽1-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 26538
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国家宽2-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 26538
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国家宽3-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 26538
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国家宽3-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 26538
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国1-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 56582
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国2-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 56582
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国1-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 56582
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国1-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 56582
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇩🇪 德国1-负载IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 24226
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇩🇪 德国2-联通IEPL
+  type: trojan
+  server: lt2ho2st.dybwklz.cn
+  port: 24226
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇩🇪 德国3-移动IEPL
+  type: trojan
+  server: yd2ho2st.dybwklz.cn
+  port: 24226
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇩🇪 德国3-电信IEPL
+  type: trojan
+  server: dx2ho2st.dybwklz.cn
+  port: 24226
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇰🇷 韩国-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 52270
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇹🇭 泰国-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 29743
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇦🇷 阿根廷-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 21625
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇹🇷 土耳其-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 24737
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇬🇧 英国-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 14863
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇬🇧 英国家宽-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 15056
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇫🇷 法国-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 12408
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇻🇳 越南-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 26805
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇷🇺 俄罗斯-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 14269
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇦🇪 迪拜-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 58492
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇲🇽 墨西哥-IEPL
+  type: trojan
+  server: ie2pl2zong.dybwklz.cn
+  port: 53994
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp

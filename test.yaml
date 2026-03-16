@@ -13,7 +13,9 @@ subscriptions:
     last_used_bytes: 942672824
     last_expire: 1777554767
   - name: viking
-    url: https://pics9.sknil-gnikiv.com/wx5TqEUTwXks/v1/w7LQhnaSTnjD/VikingLinks?token=da5e9b0465c4e8546a626c2968c96cff.532y5cjqx4b.jpg 
+    url: https://pics9.sknil-gnikiv.com/wx5TqEUTwXks/v1/w7LQhnaSTnjD/VikingLinks?token=da5e9b0465c4e8546a626c2968c96cff.532y5cjqx4b.jpg
+  - name: tangguo
+    url: https://114.132.219.239:9888/tgyunsub?token=6c1297854ef2c62c8e55d7609902c27a
 port: 7890
 socks-port: 7891
 redir-port: 7892
@@ -184,6 +186,7 @@ sniffer:
 proxy-groups:
   - name: Proxy
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
     manual-pick-count: 8
     manual-pick-mix:
       dedicated: 4
@@ -218,6 +221,7 @@ proxy-groups:
 
   - name: Final
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
     fallback-groups:
       - Proxy
       - DIRECT
@@ -228,6 +232,7 @@ proxy-groups:
 
   - name: 国内
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
     fallback-groups:
       - DIRECT
       - Proxy
@@ -235,6 +240,7 @@ proxy-groups:
 
   - name: 全节点
     type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
     quality-order:
       - dedicated
       - high
@@ -256,6 +262,7 @@ proxy-groups:
 
   - name: 香港-自动
     type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
     region-include:
       - HK
     proxies: []
@@ -266,12 +273,14 @@ proxy-groups:
 
   - name: 香港-手动
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
     region-include:
       - HK
     proxies: []
 
   - name: 香港
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
     fallback-groups:
       - 香港-自动
       - 香港-手动
@@ -280,6 +289,7 @@ proxy-groups:
 
   - name: 新加坡-自动
     type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
     region-include:
       - SG
     proxies: []
@@ -290,12 +300,14 @@ proxy-groups:
 
   - name: 新加坡-手动
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
     region-include:
       - SG
     proxies: []
 
   - name: 新加坡
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
     fallback-groups:
       - 新加坡-自动
       - 新加坡-手动
@@ -304,6 +316,7 @@ proxy-groups:
 
   - name: 日本-自动
     type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
     region-include:
       - JP
     proxies: []
@@ -314,12 +327,14 @@ proxy-groups:
 
   - name: 日本-手动
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
     region-include:
       - JP
     proxies: []
 
   - name: 日本
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
     fallback-groups:
       - 日本-自动
       - 日本-手动
@@ -328,6 +343,7 @@ proxy-groups:
 
   - name: 台湾-自动
     type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
     region-include:
       - TW
     proxies: []
@@ -338,12 +354,14 @@ proxy-groups:
 
   - name: 台湾-手动
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
     region-include:
       - TW
     proxies: []
 
   - name: 台湾
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
     fallback-groups:
       - 台湾-自动
       - 台湾-手动
@@ -352,6 +370,7 @@ proxy-groups:
 
   - name: 美国-自动
     type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
     region-include:
       - US
     proxies: []
@@ -362,12 +381,14 @@ proxy-groups:
 
   - name: 美国-手动
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
     region-include:
       - US
     proxies: []
 
   - name: 美国
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
     fallback-groups:
       - 美国-自动
       - 美国-手动
@@ -376,6 +397,7 @@ proxy-groups:
 
   - name: 欧洲-自动
     type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
     region-include:
       - EU
     proxies: []
@@ -386,12 +408,14 @@ proxy-groups:
 
   - name: 欧洲-手动
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
     region-include:
       - EU
     proxies: []
 
   - name: 欧洲
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
     fallback-groups:
       - 欧洲-自动
       - 欧洲-手动
@@ -400,6 +424,7 @@ proxy-groups:
 
   - name: 东南亚-自动
     type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
     region-include:
       - SEA
     proxies: []
@@ -410,12 +435,14 @@ proxy-groups:
 
   - name: 东南亚-手动
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
     region-include:
       - SEA
     proxies: []
 
   - name: 东南亚
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
     fallback-groups:
       - 东南亚-自动
       - 东南亚-手动
@@ -424,6 +451,7 @@ proxy-groups:
 
   - name: 其他-自动
     type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
     region-include:
       - OTHER
     preferred-regions:
@@ -436,6 +464,7 @@ proxy-groups:
 
   - name: 其他-手动
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
     region-include:
       - OTHER
     preferred-regions:
@@ -444,6 +473,7 @@ proxy-groups:
 
   - name: 其他
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
     fallback-groups:
       - 其他-自动
       - 其他-手动
@@ -452,6 +482,7 @@ proxy-groups:
 
   - name: AI
     type: fallback
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
     fallback-groups:
       - 新加坡
       - 日本
@@ -467,6 +498,7 @@ proxy-groups:
 
   - name: 开发
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
     fallback-groups:
       - Proxy
       - 美国
@@ -479,6 +511,7 @@ proxy-groups:
 
   - name: 币安
     type: fallback
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/bian.png
     fallback-groups:
       - 香港
       - 新加坡
@@ -494,6 +527,7 @@ proxy-groups:
 
   - name: PikPak
     type: fallback
+    icon: https://raw.githubusercontent.com/black2c7/Emby-icons/main/Icons/Pikpak.png
     fallback-groups:
       - 美国
       - 日本
@@ -508,6 +542,7 @@ proxy-groups:
 
   - name: Microsoft
     type: fallback
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
     fallback-groups:
       - 美国
       - 欧洲
@@ -523,6 +558,7 @@ proxy-groups:
 
   - name: Amazon
     type: fallback
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Amazon.png
     fallback-groups:
       - 美国
       - 欧洲
@@ -538,6 +574,7 @@ proxy-groups:
 
   - name: OpenAI
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
     fallback-groups:
       - AI
       - 新加坡
@@ -551,6 +588,7 @@ proxy-groups:
 
   - name: Claude
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Claude.png
     fallback-groups:
       - AI
       - 新加坡
@@ -564,6 +602,7 @@ proxy-groups:
 
   - name: Gemini
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Gemini.png
     fallback-groups:
       - AI
       - 新加坡
@@ -577,6 +616,7 @@ proxy-groups:
 
   - name: Google
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
     fallback-groups:
       - AI
       - 开发
@@ -590,6 +630,7 @@ proxy-groups:
 
   - name: GitHub
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
     fallback-groups:
       - 开发
       - 美国
@@ -603,6 +644,7 @@ proxy-groups:
 
   - name: Telegram
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
     fallback-groups:
       - Proxy
       - 新加坡
@@ -615,6 +657,7 @@ proxy-groups:
 
   - name: Discord
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Discord.png
     fallback-groups:
       - Proxy
       - 美国
@@ -626,6 +669,7 @@ proxy-groups:
 
   - name: Twitter
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
     fallback-groups:
       - Proxy
       - 美国
@@ -638,6 +682,7 @@ proxy-groups:
 
   - name: TikTok
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
     fallback-groups:
       - Proxy
       - 日本
@@ -649,6 +694,7 @@ proxy-groups:
 
   - name: YouTube
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
     fallback-groups:
       - Proxy
       - 日本
@@ -661,6 +707,7 @@ proxy-groups:
 
   - name: Netflix
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
     fallback-groups:
       - Proxy
       - 日本
@@ -673,6 +720,7 @@ proxy-groups:
 
   - name: Disney+
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney+.png
     fallback-groups:
       - Proxy
       - 日本
@@ -685,6 +733,7 @@ proxy-groups:
 
   - name: HBO
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HBO.png
     fallback-groups:
       - Proxy
       - 美国
@@ -697,6 +746,7 @@ proxy-groups:
 
   - name: Bahamut
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bahamut.png
     fallback-groups:
       - 台湾
       - 香港
@@ -708,6 +758,7 @@ proxy-groups:
 
   - name: BiliBili
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili.png
     fallback-groups:
       - DIRECT
       - 台湾
@@ -719,6 +770,7 @@ proxy-groups:
 
   - name: GlobalMedia
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/GlobalMedia.png
     fallback-groups:
       - Proxy
       - 美国
@@ -731,6 +783,7 @@ proxy-groups:
 
   - name: PayPal
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PayPal.png
     fallback-groups:
       - 美国
       - 欧洲
@@ -741,6 +794,7 @@ proxy-groups:
 
   - name: Crypto
     type: select
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/bian.png
     fallback-groups:
       - 币安
       - 香港
@@ -754,6 +808,7 @@ proxy-groups:
 
   - name: Apple
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
     fallback-groups:
       - DIRECT
       - Proxy
@@ -766,6 +821,7 @@ proxy-groups:
 
   - name: Steam
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png
     fallback-groups:
       - DIRECT
       - Proxy
@@ -778,6 +834,7 @@ proxy-groups:
 
   - name: Emby
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
     fallback-groups:
       - DIRECT
       - Proxy
@@ -790,6 +847,7 @@ proxy-groups:
 
   - name: "115"
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/115.png
     fallback-groups:
       - DIRECT
       - Proxy
@@ -797,6 +855,7 @@ proxy-groups:
 
   - name: RemoteDesktop
     type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/RemoteDesktop.png
     fallback-groups:
       - DIRECT
       - Proxy
