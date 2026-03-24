@@ -491,7 +491,7 @@ proxy-groups:
       - 香港
       - 全节点
     proxies: []
-    url: https://www.gstatic.com/generate_204
+    url: https://chatgpt.com/
     interval: 180
     tolerance: 50
     lazy: true
