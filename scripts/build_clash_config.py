@@ -30,6 +30,7 @@ SUBSCRIPTION_REPORT_PATH = REPO_ROOT / "dist" / "subscriptions_report.md"
 BUILD_STATUS_PATH = REPO_ROOT / "dist" / "build_status.json"
 
 BYTES_IN_GIB = 1024**3
+SUBSCRIPTION_FETCH_TIMEOUT_SECONDS = 60
 
 QUALITY_DEDICATED = "dedicated"
 QUALITY_HIGH = "high"
@@ -1201,7 +1202,9 @@ def fetch_proxies(subscriptions, *, min_remaining_bytes: Optional[int] = None):
             },
         )
         ctx = ssl._create_unverified_context()
-        with urllib.request.urlopen(req, timeout=30, context=ctx) as resp:
+        with urllib.request.urlopen(
+            req, timeout=SUBSCRIPTION_FETCH_TIMEOUT_SECONDS, context=ctx
+        ) as resp:
             body = resp.read().decode(
                 resp.headers.get_content_charset() or "utf-8", errors="replace"
             )

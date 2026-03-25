@@ -142,5 +142,54 @@ class BuildStateWriteBackTests(unittest.TestCase):
             self.assertEqual(saved_subscription["last_expire"], 1800000000)
 
 
+class SubscriptionFetchTimeoutTests(unittest.TestCase):
+    def test_fetch_proxies_uses_sixty_second_timeout(self):
+        observed = {}
+
+        class FakeHeaders(dict):
+            def get_content_charset(self):
+                return "utf-8"
+
+        class FakeResponse:
+            def __init__(self):
+                self.headers = FakeHeaders()
+
+            def __enter__(self):
+                return self
+
+            def __exit__(self, exc_type, exc, tb):
+                return False
+
+            def read(self):
+                return json.dumps(
+                    {
+                        "proxies": [
+                            {
+                                "name": "demo-node",
+                                "type": "ss",
+                                "server": "1.1.1.1",
+                                "port": 443,
+                                "cipher": "aes-128-gcm",
+                                "password": "secret",
+                            }
+                        ]
+                    }
+                ).encode("utf-8")
+
+        def fake_urlopen(req, timeout, context):
+            observed["timeout"] = timeout
+            return FakeResponse()
+
+        with mock.patch.object(
+            build_clash_config.urllib.request, "urlopen", side_effect=fake_urlopen
+        ):
+            proxies, _, _, _, _ = build_clash_config.fetch_proxies(
+                [{"name": "demo", "url": "https://example.com/sub"}]
+            )
+
+        self.assertEqual(observed["timeout"], 60)
+        self.assertEqual(len(proxies), 1)
+
+
 if __name__ == "__main__":
     unittest.main()
