@@ -7,7 +7,7 @@ subscriptions:
     last_expire: 1800116928
     last_reset_days: 10
   - name: Nano
-    url: https://47.238.198.94/iv/verify_mode.htm?token=e017cb1dc789505b3add5f3299fd9ea8
+    url: https://64.23.199.158/iv/verify_mode.htm?token=e017cb1dc789505b3add5f3299fd9ea8
     last_remaining_bytes: 321179874376
     last_total_bytes: 322122547200
     last_used_bytes: 942672824
