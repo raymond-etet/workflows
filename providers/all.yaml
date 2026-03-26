@@ -1,12 +1,4 @@
 proxies:
-- name: 🇺🇸 美国H1|实验|1.1倍|V1
-  type: anytls
-  server: ush1-c4uc3r8wykfpmdw4.node.cross666.top
-  port: 31333
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
-  sni: www.yahoo.com
-  skip-cert-verify: true
 - name: 🇺🇸 美国G1|三网|1.2倍|V1
   type: anytls
   server: usg1-c-chic51aa6lrlzvyf.node.cross666.top
@@ -108,6 +100,16 @@ proxies:
   udp: true
   sni: www.yahoo.co.jp
   skip-cert-verify: true
+- name: 🇯🇵 日本B2|实验|联通移动|2倍|V2
+  server: 141.11.131.31
+  port: 35623
+  sni: www.bing.com
+  up: 100
+  down: 100
+  skip-cert-verify: true
+  ports: 35000-40000
+  type: hysteria2
+  password: efaed81f-e760-4d87-be6e-05136b25da66
 - name: 🇸🇬 新加坡A1|1.4倍|V2
   server: sga.node.cross666.top
   port: 65535
@@ -117,7 +119,7 @@ proxies:
   skip-cert-verify: true
   type: hysteria2
   password: efaed81f-e760-4d87-be6e-05136b25da66
-- name: 🇸🇬 新加坡B1|1.2倍|V2
+- name: 🇸🇬 新加坡B1|移动|1.2倍|V2
   type: anytls
   server: sgb1.node.cross666.top
   port: 31333
@@ -310,7 +312,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-f.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -329,7 +331,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-g.aliapp.men
-  client-fingerprint: safari
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -348,7 +350,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-h.aliapp.men
-  client-fingerprint: safari
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -535,7 +537,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-e.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -554,7 +556,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-f.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -573,7 +575,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-g.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -592,7 +594,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-h.aliapp.men
-  client-fingerprint: safari
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -611,7 +613,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-e.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -649,7 +651,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-g.aliapp.men
-  client-fingerprint: safari
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -668,7 +670,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-h.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -687,7 +689,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-e.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -725,7 +727,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-g.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -744,7 +746,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-h.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -834,6 +836,114 @@ proxies:
   skip-cert-verify: true
   sni: mcdn.bilivideo.com
   network: tcp
+- name: 🇸🇬 SG-01-SG.GS
+  type: trojan
+  server: hsaerghasd.vjowmvhdwa.cc
+  port: 26007
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
+  udp: true
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
+- name: 🇸🇬 SG-02-Datacamp
+  type: trojan
+  server: hsaerghasd.vjowmvhdwa.cc
+  port: 26008
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
+  udp: true
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
+- name: 🇸🇬 SG-03-Eons
+  type: trojan
+  server: hsaerghasd.vjowmvhdwa.cc
+  port: 26009
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
+  udp: true
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
+- name: 🇸🇬 SG-04-JinX
+  type: trojan
+  server: hsaerghasd.vjowmvhdwa.cc
+  port: 26011
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
+  udp: true
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
+- name: 🇸🇬 SG-05-HostHatch
+  type: trojan
+  server: hsaerghasd.vjowmvhdwa.cc
+  port: 26010
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
+  udp: true
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
+- name: 🇸🇬 SG-07-Leaseweb
+  type: trojan
+  server: hsaerghasd.vjowmvhdwa.cc
+  port: 26022
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
+  udp: true
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
+- name: 🇯🇵 JP-01-Sakura
+  type: trojan
+  server: hsaerghasd.vjowmvhdwa.cc
+  port: 26030
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
+  udp: true
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
+- name: 🇯🇵 JP-02-JinX
+  type: trojan
+  server: hsaerghasd.vjowmvhdwa.cc
+  port: 26031
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
+  udp: true
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
+- name: 🇯🇵 JP-03-Akari
+  type: trojan
+  server: hsaerghasd.vjowmvhdwa.cc
+  port: 26025
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
+  udp: true
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
+- name: 🇯🇵 JP-04-HostHatch
+  type: trojan
+  server: hsaerghasd.vjowmvhdwa.cc
+  port: 26029
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
+  udp: true
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
+- name: 🇯🇵 JP-05-DDPS
+  type: trojan
+  server: hsaerghasd.vjowmvhdwa.cc
+  port: 26028
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
+  udp: true
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
+- name: 🇯🇵 JP-10-Leasweb
+  type: trojan
+  server: hsaerghasd.vjowmvhdwa.cc
+  port: 26080
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
+  udp: true
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
 - name: 🇫🇮 FI-01-Cgi Global
   type: trojan
   server: hsaerghasd.vjowmvhdwa.cc
@@ -879,90 +989,6 @@ proxies:
   skip-cert-verify: true
   sni: mcdn.bilivideo.com
   network: tcp
-- name: 🇸🇬 SG-01-SG.GS
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26007
-  cipher: 2022-blake3-aes-256-gcm
-  password: Y2U0MGRhN2U3ODc2NGJkNDNkYTIwYWI3OGQ0OWFmYWI=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
-  udp: true
-- name: 🇸🇬 SG-02-Datacamp
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26008
-  cipher: 2022-blake3-aes-256-gcm
-  password: NzVmYmEwNDcxNTNkYWVjMWZmM2Q0MzUwYjVkMGE4Yjg=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
-  udp: true
-- name: 🇸🇬 SG-03-Eons
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26009
-  cipher: 2022-blake3-aes-256-gcm
-  password: ZDBmZTA5YWM1NGM5N2U3MGUzM2YzZDUzMTFhYTQxNDk=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
-  udp: true
-- name: 🇸🇬 SG-04-JinX
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26011
-  cipher: 2022-blake3-aes-256-gcm
-  password: ZDEwZTM2NmYzNjUxYTA2ZGJlZDBmN2NmMmQ5MmQ1MmE=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
-  udp: true
-- name: 🇸🇬 SG-05-HostHatch
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26010
-  cipher: 2022-blake3-aes-256-gcm
-  password: MTBiN2UyYTI5YzBiN2U2ZWRkNzE3ZjA5OWRjMTlkNGM=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
-  udp: true
-- name: 🇸🇬 SG-07-Leaseweb
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26022
-  cipher: 2022-blake3-aes-256-gcm
-  password: ZDY2NzMxMGFmMGQzZDViMDMyY2NlMGUxNjYwMWZhYmU=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
-  udp: true
-- name: 🇯🇵 JP-01-Sakura
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26030
-  cipher: 2022-blake3-aes-256-gcm
-  password: ZmYyNjNmNThiZmIxYmFhODcxMTJkZDY1NDA3N2YwMzQ=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
-  udp: true
-- name: 🇯🇵 JP-02-JinX
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26031
-  cipher: 2022-blake3-aes-256-gcm
-  password: MWUxMGU3OWFhYWJjMTgzZGY5MGI5YWE2YzgzY2E5ZDQ=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
-  udp: true
-- name: 🇯🇵 JP-03-Akari
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26025
-  cipher: 2022-blake3-aes-256-gcm
-  password: MWQ0NGU2OTJiNTU2Yzk2OTEzZDFiYWQ3Njg0OGQ5MGE=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
-  udp: true
-- name: 🇯🇵 JP-04-HostHatch
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26029
-  cipher: 2022-blake3-aes-256-gcm
-  password: OThjOTBmOGMwZWE0MjZhZTgzOWM4NDg1YzhhOGFlMGI=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
-  udp: true
-- name: 🇯🇵 JP-05-DDPS
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26028
-  cipher: 2022-blake3-aes-256-gcm
-  password: NDEwYWI4ODhkOTk5ZTA3YjZkYjViM2Y5MmY1YjUwNzI=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
-  udp: true
-- name: 🇯🇵 JP-10-Leasweb
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26080
-  cipher: 2022-blake3-aes-256-gcm
-  password: YWY2YmE0MzYxZDMwNGNjMTcyNjkxOWMzODhlOWQ4ZGM=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
-  udp: true
 - name: 🇨🇳 TW-01-Hinet
   type: ss
   server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org

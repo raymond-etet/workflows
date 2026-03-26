@@ -1,31 +1,31 @@
 subscriptions:
 - name: crosswall
   url: http://162.19.79.201/s/66b4d235dd25ee6c378dde2a4a1570c6
-  last_remaining_bytes: 408329204330
+  last_remaining_bytes: 387568773025
   last_total_bytes: 428122894614
-  last_used_bytes: 19793690284
+  last_used_bytes: 40554121589
   last_expire: 1800116928
-  last_reset_days: 23
+  last_reset_days: 22
 - name: Nano
   url: https://64.23.199.158/iv/verify_mode.htm?token=e017cb1dc789505b3add5f3299fd9ea8
-  last_remaining_bytes: 220285166408
+  last_remaining_bytes: 219480904828
   last_total_bytes: 322122547200
-  last_used_bytes: 101837380792
+  last_used_bytes: 102641642372
   last_expire: 1777554767
 - name: viking
   url: https://pics9.sknil-gnikiv.com/wx5TqEUTwXks/v1/w7LQhnaSTnjD/VikingLinks?token=da5e9b0465c4e8546a626c2968c96cff.532y5cjqx4b.jpg
-  last_remaining_bytes: 215755082016
+  last_remaining_bytes: 211195504026
   last_total_bytes: 268435456000
-  last_used_bytes: 52680373984
+  last_used_bytes: 57239951974
   last_expire: 1781082311
-  last_reset_days: 17
+  last_reset_days: 16
 - name: tangguo
   url: https://114.132.219.239:9888/tgyunsub?token=6c1297854ef2c62c8e55d7609902c27a
   last_remaining_bytes: 0
   last_total_bytes: 107374182400
   last_used_bytes: 107431794001
   last_expire: 1776345679
-  last_reset_days: 23
+  last_reset_days: 22
 port: 7890
 socks-port: 7891
 redir-port: 7892
