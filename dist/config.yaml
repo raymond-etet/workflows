@@ -9,9 +9,9 @@ proxy-providers:
     path: providers/all.yaml
     health-check: null
 proxies:
-- name: 🇺🇸 美国G1|三网|1.2倍|V1
+- name: 🇺🇸 美国G2|三网|1.2倍|V1
   type: anytls
-  server: usg1-c-chic51aa6lrlzvyf.node.cross666.top
+  server: usg2-0co2xkid.node.cross666.top
   port: 31333
   password: efaed81f-e760-4d87-be6e-05136b25da66
   udp: true
@@ -34,9 +34,9 @@ proxies:
   udp: true
   sni: www.yahoo.com
   skip-cert-verify: true
-- name: 🇺🇸 美国C2|0.8倍|V1
+- name: 🇺🇸 美国C5|0.8倍|V1
   type: anytls
-  server: usc2.node.cross666.top
+  server: usc5.node.cross666.top
   port: 31333
   password: efaed81f-e760-4d87-be6e-05136b25da66
   udp: true
@@ -110,16 +110,6 @@ proxies:
   udp: true
   sni: www.yahoo.co.jp
   skip-cert-verify: true
-- name: 🇯🇵 日本B2|实验|联通移动|2倍|V2
-  server: 141.11.131.31
-  port: 35623
-  sni: www.bing.com
-  up: 100
-  down: 100
-  skip-cert-verify: true
-  ports: 35000-40000
-  type: hysteria2
-  password: efaed81f-e760-4d87-be6e-05136b25da66
 - name: 🇸🇬 新加坡A1|1.4倍|V2
   server: sga.node.cross666.top
   port: 65535
@@ -303,7 +293,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-e.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -322,7 +312,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-f.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -360,7 +350,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-h.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -547,7 +537,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-e.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -566,7 +556,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-f.coscdn.men
-  client-fingerprint: edge
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -604,7 +594,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-h.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -642,7 +632,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-f.coscdn.men
-  client-fingerprint: edge
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -661,7 +651,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-g.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -680,7 +670,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-h.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -699,7 +689,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-e.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -718,7 +708,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-f.coscdn.men
-  client-fingerprint: edge
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -737,7 +727,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-g.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -756,7 +746,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-h.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -767,7 +757,7 @@ proxies:
     Host: mms-static-bottom-h.aliapp.men
 - name: 🇭🇰 HK-01-CTC
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26078
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -776,7 +766,7 @@ proxies:
   network: tcp
 - name: 🇭🇰 HK-02-JinX
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26002
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -785,7 +775,7 @@ proxies:
   network: tcp
 - name: 🇭🇰 HK-03-HGC
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26003
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -794,7 +784,7 @@ proxies:
   network: tcp
 - name: 🇭🇰 HK-04-Eons
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26004
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -803,7 +793,7 @@ proxies:
   network: tcp
 - name: 🇭🇰 HK-05-HostHatch
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26005
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -812,7 +802,7 @@ proxies:
   network: tcp
 - name: 🇭🇰 HK-07-DMIT
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26021
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -821,7 +811,7 @@ proxies:
   network: tcp
 - name: 🇭🇰 HK-08-NewMedia
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26020
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -830,7 +820,7 @@ proxies:
   network: tcp
 - name: 🇭🇰 HK-09-FXT
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26045
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -839,7 +829,7 @@ proxies:
   network: tcp
 - name: 🇭🇰 HK-10-Akari
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26050
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -848,7 +838,7 @@ proxies:
   network: tcp
 - name: 🇸🇬 SG-01-SG.GS
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26007
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -857,7 +847,7 @@ proxies:
   network: tcp
 - name: 🇸🇬 SG-02-Datacamp
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26008
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -866,7 +856,7 @@ proxies:
   network: tcp
 - name: 🇸🇬 SG-03-Eons
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26009
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -875,7 +865,7 @@ proxies:
   network: tcp
 - name: 🇸🇬 SG-04-JinX
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26011
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -884,7 +874,7 @@ proxies:
   network: tcp
 - name: 🇸🇬 SG-05-HostHatch
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26010
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -893,7 +883,7 @@ proxies:
   network: tcp
 - name: 🇸🇬 SG-07-Leaseweb
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26022
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -902,7 +892,7 @@ proxies:
   network: tcp
 - name: 🇯🇵 JP-01-Sakura
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26030
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -911,7 +901,7 @@ proxies:
   network: tcp
 - name: 🇯🇵 JP-02-JinX
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26031
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -920,7 +910,7 @@ proxies:
   network: tcp
 - name: 🇯🇵 JP-03-Akari
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26025
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -929,7 +919,7 @@ proxies:
   network: tcp
 - name: 🇯🇵 JP-04-HostHatch
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26029
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -938,7 +928,7 @@ proxies:
   network: tcp
 - name: 🇯🇵 JP-05-DDPS
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26028
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -947,44 +937,89 @@ proxies:
   network: tcp
 - name: 🇯🇵 JP-10-Leasweb
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26080
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
   skip-cert-verify: true
   sni: mcdn.bilivideo.com
   network: tcp
-- name: 🇫🇮 FI-01-Cgi Global
+- name: 🇨🇳 TW-01-Hinet
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
-  port: 26017
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  port: 26037
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
   skip-cert-verify: true
   sni: mcdn.bilivideo.com
   network: tcp
-- name: 🇬🇧 UK-01-HostHatch
+- name: 🇨🇳 TW-02-AKILE
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
-  port: 26016
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  port: 26038
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
   skip-cert-verify: true
   sni: mcdn.bilivideo.com
   network: tcp
-- name: 🇩🇪 DE-04-Leaseweb
+- name: 🇨🇳 TW-03-Akari
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
-  port: 26015
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  port: 26039
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
   skip-cert-verify: true
   sni: mcdn.bilivideo.com
   network: tcp
-- name: 🇩🇪 DE-02-BAGE
+- name: 🇨🇳 TW-04-MoeChuang
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
-  port: 26013
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  port: 26042
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
+  udp: true
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
+- name: 🇺🇸 US-01-HostHatch
+  type: trojan
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  port: 26034
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
+  udp: true
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
+- name: 🇺🇸 US-02-Jinx
+  type: trojan
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  port: 26035
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
+  udp: true
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
+- name: 🇺🇸 US-03-Alpha
+  type: trojan
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  port: 26036
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
+  udp: true
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
+- name: 🇺🇸 US-04-Eons
+  type: trojan
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  port: 26033
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
+  udp: true
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
+- name: 🇺🇸 US-05-Leassweb
+  type: trojan
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  port: 26040
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
   skip-cert-verify: true
@@ -992,76 +1027,49 @@ proxies:
   network: tcp
 - name: 🇩🇪 DE-01-Dataforest
   type: trojan
-  server: hsaerghasd.vjowmvhdwa.cc
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
   port: 26012
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
   skip-cert-verify: true
   sni: mcdn.bilivideo.com
   network: tcp
-- name: 🇨🇳 TW-01-Hinet
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26037
-  cipher: 2022-blake3-aes-256-gcm
-  password: NjBjNTUzN2JjOTE5YjZlYWNjMDYxMWFiZmQ4Mzg5M2I=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+- name: 🇩🇪 DE-02-BAGE
+  type: trojan
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  port: 26013
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
-- name: 🇨🇳 TW-02-AKILE
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26038
-  cipher: 2022-blake3-aes-256-gcm
-  password: Mjc5YzU5NzhjYWRmNzYzM2Y4ZjUxNWU2YjAzYzU1ZWY=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
+- name: 🇩🇪 DE-04-Leaseweb
+  type: trojan
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  port: 26015
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
-- name: 🇨🇳 TW-03-Akari
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26039
-  cipher: 2022-blake3-aes-256-gcm
-  password: Y2FhYmM1NjE0YWQ1ZDhmZmE3ODY4ZjkyZTNiZWQ4MTE=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
+- name: 🇬🇧 UK-01-HostHatch
+  type: trojan
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  port: 26016
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
-- name: 🇨🇳 TW-04-MoeChuang
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26042
-  cipher: 2022-blake3-aes-256-gcm
-  password: Y2FhYmM1NjE0YWQ1ZDhmZmE3ODY4ZjkyZTNiZWQ4MTE=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
+- name: 🇫🇮 FI-01-Cgi Global
+  type: trojan
+  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  port: 26017
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
-- name: 🇺🇸 US-01-HostHatch
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26034
-  cipher: 2022-blake3-aes-256-gcm
-  password: NGIyMjk0NzA0MjFhMzcxMzhhZjEzODA1ZjdlNWE4NzE=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
-  udp: true
-- name: 🇺🇸 US-02-Jinx
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26035
-  cipher: 2022-blake3-aes-256-gcm
-  password: NThiZTRiZDNlMTIwNDgzMDhkYjc3ZWFlYjZlOWM0YWI=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
-  udp: true
-- name: 🇺🇸 US-03--Alpha
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26036
-  cipher: 2022-blake3-aes-256-gcm
-  password: YzA3NWJhOGNlMjIwMGJhNWE4ZWY2NmY3NDczOWNjZDM=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
-  udp: true
-- name: 🇺🇸 US-04-Eons
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26033
-  cipher: 2022-blake3-aes-256-gcm
-  password: NmExODBjMmUzZWMzMTc5YjRjNzM1ODk5NWUxMzA4Yzc=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
-  udp: true
-- name: 🇺🇸 US-05-Leassweb
-  type: ss
-  server: hitmhwwid.dkqmglymmq.sd.harriylaumax.org
-  port: 26040
-  cipher: 2022-blake3-aes-256-gcm
-  password: YWUyYTJhNDk1ZmFmMzdlMzY4MmM5ODM3MzhmYzlkMDU=:OTdjYzcyNGQtOTZiNy00MWMyLTg2YTItMGMwZGVmMjY=
-  udp: true
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
 proxy-groups:
 - name: Proxy
   type: select
@@ -1145,7 +1153,6 @@ proxy-groups:
   - 🇯🇵 日本A3|三网|3倍|V2
   - 🇯🇵 日本A4|三网|3倍|V2
   - 🇯🇵 日本B1|联通移动|2倍|V2
-  - 🇯🇵 日本B2|实验|联通移动|2倍|V2
   - ❇️白羊座-AGP(通用)
   - ❇️白羊座-EGP(通用)
   - 🇭🇰 HK-01-CTC
@@ -1176,12 +1183,12 @@ proxy-groups:
   - 🇯🇵日本-A(通用)
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国E2|0.7倍|V1
-  - 🇺🇸 美国C2|0.8倍|V1
+  - 🇺🇸 美国C5|0.8倍|V1
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
-  - 🇺🇸 美国G1|三网|1.2倍|V1
+  - 🇺🇸 美国G2|三网|1.2倍|V1
   - 🇺🇸 US-01-HostHatch
   - 🇺🇸 US-02-Jinx
-  - 🇺🇸 US-03--Alpha
+  - 🇺🇸 US-03-Alpha
   - 🇺🇸 US-04-Eons
   - 🇺🇸 US-05-Leassweb
   - 🇨🇦 加拿大A1|0.7倍|V1
@@ -1317,7 +1324,6 @@ proxy-groups:
   - 🇯🇵 日本A3|三网|3倍|V2
   - 🇯🇵 日本A4|三网|3倍|V2
   - 🇯🇵 日本B1|联通移动|2倍|V2
-  - 🇯🇵 日本B2|实验|联通移动|2倍|V2
   - 🇯🇵 JP-01-Sakura
   - 🇯🇵 JP-02-JinX
   - 🇯🇵 JP-03-Akari
@@ -1336,7 +1342,6 @@ proxy-groups:
   - 🇯🇵 日本A3|三网|3倍|V2
   - 🇯🇵 日本A4|三网|3倍|V2
   - 🇯🇵 日本B1|联通移动|2倍|V2
-  - 🇯🇵 日本B2|实验|联通移动|2倍|V2
   - 🇯🇵 JP-01-Sakura
   - 🇯🇵 JP-02-JinX
   - 🇯🇵 JP-03-Akari
@@ -1394,12 +1399,12 @@ proxy-groups:
   proxies:
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国E2|0.7倍|V1
-  - 🇺🇸 美国C2|0.8倍|V1
+  - 🇺🇸 美国C5|0.8倍|V1
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
-  - 🇺🇸 美国G1|三网|1.2倍|V1
+  - 🇺🇸 美国G2|三网|1.2倍|V1
   - 🇺🇸 US-01-HostHatch
   - 🇺🇸 US-02-Jinx
-  - 🇺🇸 US-03--Alpha
+  - 🇺🇸 US-03-Alpha
   - 🇺🇸 US-04-Eons
   - 🇺🇸 US-05-Leassweb
   url: https://www.gstatic.com/generate_204
@@ -1412,12 +1417,12 @@ proxy-groups:
   proxies:
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国E2|0.7倍|V1
-  - 🇺🇸 美国C2|0.8倍|V1
+  - 🇺🇸 美国C5|0.8倍|V1
   - 🇺🇸 美国F1|电信联通|1.1倍|V1
-  - 🇺🇸 美国G1|三网|1.2倍|V1
+  - 🇺🇸 美国G2|三网|1.2倍|V1
   - 🇺🇸 US-01-HostHatch
   - 🇺🇸 US-02-Jinx
-  - 🇺🇸 US-03--Alpha
+  - 🇺🇸 US-03-Alpha
   - 🇺🇸 US-04-Eons
   - 🇺🇸 US-05-Leassweb
 - name: 美国
@@ -2085,19 +2090,19 @@ proxy-groups:
   - 日本
   - 美国
   - 全节点
-- name: 📊crosswall 剩余 360.95GiB（距重置 22 天）
+- name: 📊crosswall 剩余 338.37GiB（距重置 21 天）
   type: select
   proxies:
   - DIRECT
-- name: 📊Nano 剩余 204.41GiB
+- name: 📊Nano 剩余 203.51GiB
   type: select
   proxies:
   - DIRECT
-- name: 📊viking 剩余 196.69GiB（距重置 16 天）
+- name: 📊viking 剩余 196.41GiB（距重置 15 天）
   type: select
   proxies:
   - DIRECT
-- name: 📊tangguo 剩余 0.00GiB（距重置 22 天）
+- name: 📊tangguo 剩余 0.00GiB（距重置 21 天）
   type: select
   proxies:
   - DIRECT
