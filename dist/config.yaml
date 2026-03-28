@@ -59,6 +59,15 @@ proxies:
   skip-cert-verify: true
   type: hysteria2
   password: efaed81f-e760-4d87-be6e-05136b25da66
+- name: 🇭🇰 香港B1|实验|1.5倍|V2
+  server: hkb1-ky9lxarq.node.cross666.top
+  port: 65535
+  sni: mirrors.xtom.hk
+  up: 80
+  down: 80
+  skip-cert-verify: true
+  type: hysteria2
+  password: efaed81f-e760-4d87-be6e-05136b25da66
 - name: 🇭🇰 香港C5|三网|3.5倍|V2|家宽
   server: hkc5.node.cross666.top
   port: 65535
@@ -293,7 +302,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-e.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -312,7 +321,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-f.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -331,7 +340,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-g.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -350,7 +359,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-h.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -537,7 +546,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-e.coscdn.men
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -556,7 +565,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-f.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -575,7 +584,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-g.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -594,7 +603,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-h.aliapp.men
-  client-fingerprint: safari
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -613,7 +622,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-e.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -632,7 +641,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-f.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -651,7 +660,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-g.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -689,7 +698,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-e.coscdn.men
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -708,7 +717,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-f.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -746,7 +755,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-h.aliapp.men
-  client-fingerprint: safari
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -1153,6 +1162,7 @@ proxy-groups:
   - 🇯🇵 日本A3|三网|3倍|V2
   - 🇯🇵 日本A4|三网|3倍|V2
   - 🇯🇵 日本B1|联通移动|2倍|V2
+  - 🇭🇰 香港B1|实验|1.5倍|V2
   - ❇️白羊座-AGP(通用)
   - ❇️白羊座-EGP(通用)
   - 🇭🇰 HK-01-CTC
@@ -1228,6 +1238,7 @@ proxy-groups:
   - 🇭🇰 香港C4|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
   - 🇭🇰 香港A2|电信联通|2倍|V1
+  - 🇭🇰 香港B1|实验|1.5倍|V2
   - ❇️白羊座-AGP(通用)
   - ❇️白羊座-EGP(通用)
   - 🇭🇰 HK-01-CTC
@@ -1253,6 +1264,7 @@ proxy-groups:
   - 🇭🇰 香港C4|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
   - 🇭🇰 香港A2|电信联通|2倍|V1
+  - 🇭🇰 香港B1|实验|1.5倍|V2
   - ❇️白羊座-AGP(通用)
   - ❇️白羊座-EGP(通用)
   - 🇭🇰 HK-01-CTC
@@ -2090,19 +2102,19 @@ proxy-groups:
   - 日本
   - 美国
   - 全节点
-- name: 📊crosswall 剩余 338.37GiB（距重置 21 天）
+- name: 📊crosswall 剩余 328.02GiB（距重置 20 天）
   type: select
   proxies:
   - DIRECT
-- name: 📊Nano 剩余 203.51GiB
+- name: 📊Nano 剩余 201.77GiB
   type: select
   proxies:
   - DIRECT
-- name: 📊viking 剩余 196.41GiB（距重置 15 天）
+- name: 📊viking 剩余 196.41GiB（距重置 14 天）
   type: select
   proxies:
   - DIRECT
-- name: 📊tangguo 剩余 0.00GiB（距重置 21 天）
+- name: 📊tangguo 剩余 0.00GiB（距重置 20 天）
   type: select
   proxies:
   - DIRECT
