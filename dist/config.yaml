@@ -59,7 +59,7 @@ proxies:
   skip-cert-verify: true
   type: hysteria2
   password: efaed81f-e760-4d87-be6e-05136b25da66
-- name: 🇭🇰 香港B1|实验|1.5倍|V2
+- name: 🇭🇰 香港B1|实验|联通|1.5倍|V2
   server: hkb1-ky9lxarq.node.cross666.top
   port: 65535
   sni: mirrors.xtom.hk
@@ -321,7 +321,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-f.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -359,7 +359,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-h.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -546,7 +546,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-e.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -565,7 +565,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-f.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -584,7 +584,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-g.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -622,7 +622,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-e.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -641,7 +641,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-f.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -736,7 +736,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-g.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -755,7 +755,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-h.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -766,7 +766,7 @@ proxies:
     Host: mms-static-bottom-h.aliapp.men
 - name: 🇭🇰 HK-01-CTC
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26078
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -775,7 +775,7 @@ proxies:
   network: tcp
 - name: 🇭🇰 HK-02-JinX
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26002
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -784,7 +784,7 @@ proxies:
   network: tcp
 - name: 🇭🇰 HK-03-HGC
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26003
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -793,7 +793,7 @@ proxies:
   network: tcp
 - name: 🇭🇰 HK-04-Eons
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26004
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -802,7 +802,7 @@ proxies:
   network: tcp
 - name: 🇭🇰 HK-05-HostHatch
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26005
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -811,7 +811,7 @@ proxies:
   network: tcp
 - name: 🇭🇰 HK-07-DMIT
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26021
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -820,7 +820,7 @@ proxies:
   network: tcp
 - name: 🇭🇰 HK-08-NewMedia
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26020
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -829,7 +829,7 @@ proxies:
   network: tcp
 - name: 🇭🇰 HK-09-FXT
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26045
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -838,7 +838,7 @@ proxies:
   network: tcp
 - name: 🇭🇰 HK-10-Akari
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26050
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -847,7 +847,7 @@ proxies:
   network: tcp
 - name: 🇸🇬 SG-01-SG.GS
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26007
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -856,7 +856,7 @@ proxies:
   network: tcp
 - name: 🇸🇬 SG-02-Datacamp
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26008
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -865,7 +865,7 @@ proxies:
   network: tcp
 - name: 🇸🇬 SG-03-Eons
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26009
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -874,7 +874,7 @@ proxies:
   network: tcp
 - name: 🇸🇬 SG-04-JinX
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26011
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -883,7 +883,7 @@ proxies:
   network: tcp
 - name: 🇸🇬 SG-05-HostHatch
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26010
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -892,7 +892,7 @@ proxies:
   network: tcp
 - name: 🇸🇬 SG-07-Leaseweb
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26022
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -901,7 +901,7 @@ proxies:
   network: tcp
 - name: 🇯🇵 JP-01-Sakura
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26030
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -910,7 +910,7 @@ proxies:
   network: tcp
 - name: 🇯🇵 JP-02-JinX
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26031
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -919,7 +919,7 @@ proxies:
   network: tcp
 - name: 🇯🇵 JP-03-Akari
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26025
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -928,7 +928,7 @@ proxies:
   network: tcp
 - name: 🇯🇵 JP-04-HostHatch
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26029
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -937,7 +937,7 @@ proxies:
   network: tcp
 - name: 🇯🇵 JP-05-DDPS
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26028
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -946,7 +946,7 @@ proxies:
   network: tcp
 - name: 🇯🇵 JP-10-Leasweb
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26080
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -955,7 +955,7 @@ proxies:
   network: tcp
 - name: 🇨🇳 TW-01-Hinet
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26037
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -964,7 +964,7 @@ proxies:
   network: tcp
 - name: 🇨🇳 TW-02-AKILE
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26038
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -973,7 +973,7 @@ proxies:
   network: tcp
 - name: 🇨🇳 TW-03-Akari
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26039
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -982,7 +982,7 @@ proxies:
   network: tcp
 - name: 🇨🇳 TW-04-MoeChuang
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26042
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -991,7 +991,7 @@ proxies:
   network: tcp
 - name: 🇺🇸 US-01-HostHatch
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26034
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -1000,7 +1000,7 @@ proxies:
   network: tcp
 - name: 🇺🇸 US-02-Jinx
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26035
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -1009,7 +1009,7 @@ proxies:
   network: tcp
 - name: 🇺🇸 US-03-Alpha
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26036
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -1018,7 +1018,7 @@ proxies:
   network: tcp
 - name: 🇺🇸 US-04-Eons
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26033
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -1027,7 +1027,7 @@ proxies:
   network: tcp
 - name: 🇺🇸 US-05-Leassweb
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26040
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -1036,7 +1036,7 @@ proxies:
   network: tcp
 - name: 🇩🇪 DE-01-Dataforest
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26012
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -1045,7 +1045,7 @@ proxies:
   network: tcp
 - name: 🇩🇪 DE-02-BAGE
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26013
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -1054,7 +1054,7 @@ proxies:
   network: tcp
 - name: 🇩🇪 DE-04-Leaseweb
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26015
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -1063,7 +1063,7 @@ proxies:
   network: tcp
 - name: 🇬🇧 UK-01-HostHatch
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26016
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -1072,7 +1072,7 @@ proxies:
   network: tcp
 - name: 🇫🇮 FI-01-Cgi Global
   type: trojan
-  server: 6gjsjujad.4667dth.vjowmvhdwa.cc
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26017
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
@@ -1162,7 +1162,7 @@ proxy-groups:
   - 🇯🇵 日本A3|三网|3倍|V2
   - 🇯🇵 日本A4|三网|3倍|V2
   - 🇯🇵 日本B1|联通移动|2倍|V2
-  - 🇭🇰 香港B1|实验|1.5倍|V2
+  - 🇭🇰 香港B1|实验|联通|1.5倍|V2
   - ❇️白羊座-AGP(通用)
   - ❇️白羊座-EGP(通用)
   - 🇭🇰 HK-01-CTC
@@ -1238,7 +1238,7 @@ proxy-groups:
   - 🇭🇰 香港C4|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
   - 🇭🇰 香港A2|电信联通|2倍|V1
-  - 🇭🇰 香港B1|实验|1.5倍|V2
+  - 🇭🇰 香港B1|实验|联通|1.5倍|V2
   - ❇️白羊座-AGP(通用)
   - ❇️白羊座-EGP(通用)
   - 🇭🇰 HK-01-CTC
@@ -1264,7 +1264,7 @@ proxy-groups:
   - 🇭🇰 香港C4|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
   - 🇭🇰 香港A2|电信联通|2倍|V1
-  - 🇭🇰 香港B1|实验|1.5倍|V2
+  - 🇭🇰 香港B1|实验|联通|1.5倍|V2
   - ❇️白羊座-AGP(通用)
   - ❇️白羊座-EGP(通用)
   - 🇭🇰 HK-01-CTC
@@ -2102,19 +2102,19 @@ proxy-groups:
   - 日本
   - 美国
   - 全节点
-- name: 📊crosswall 剩余 328.02GiB（距重置 20 天）
+- name: 📊crosswall 剩余 321.25GiB（距重置 19 天）
   type: select
   proxies:
   - DIRECT
-- name: 📊Nano 剩余 201.77GiB
+- name: 📊Nano 剩余 201.38GiB
   type: select
   proxies:
   - DIRECT
-- name: 📊viking 剩余 196.41GiB（距重置 14 天）
+- name: 📊viking 剩余 196.41GiB（距重置 13 天）
   type: select
   proxies:
   - DIRECT
-- name: 📊tangguo 剩余 0.00GiB（距重置 20 天）
+- name: 📊tangguo 剩余 0.00GiB（距重置 19 天）
   type: select
   proxies:
   - DIRECT
