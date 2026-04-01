@@ -30,7 +30,6 @@ SUBSCRIPTION_REPORT_PATH = REPO_ROOT / "dist" / "subscriptions_report.md"
 BUILD_STATUS_PATH = REPO_ROOT / "dist" / "build_status.json"
 
 BYTES_IN_GIB = 1024**3
-SUBSCRIPTION_FETCH_TIMEOUT_SECONDS = 60
 
 QUALITY_DEDICATED = "dedicated"
 QUALITY_HIGH = "high"
@@ -372,60 +371,6 @@ def parse_date_like_utc(value: str) -> Optional[dt.datetime]:
 
 def format_utc_rfc3339(value: dt.datetime) -> str:
     return value.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-
-
-def decide_subscription_handling(
-    *,
-    remaining: Optional[int],
-    expire: Optional[int],
-    threshold: Optional[int],
-    reset_at_dt: Optional[dt.datetime],
-    reset_days_hint: Optional[int],
-    now: dt.datetime,
-) -> dict[str, object]:
-    now_ts = int(now.timestamp())
-
-    if isinstance(expire, int) and expire > 0 and expire <= now_ts:
-        return {
-            "status": "skipped(expired)",
-            "pause_until_utc": None,
-            "should_skip_proxies": True,
-            "prune": False,
-        }
-
-    if isinstance(remaining, int) and remaining <= 0:
-        return {
-            "status": "skipped(depleted)",
-            "pause_until_utc": None,
-            "should_skip_proxies": True,
-            "prune": False,
-        }
-
-    status = "ok"
-    pause_until_utc: Optional[str] = None
-    should_skip_proxies = False
-
-    if threshold is not None and remaining is not None and remaining < threshold:
-        should_skip_proxies = True
-        if reset_at_dt is not None and reset_at_dt > now:
-            status = "paused(until-reset)"
-            pause_until_utc = format_utc_rfc3339(reset_at_dt)
-        elif isinstance(reset_days_hint, int) and reset_days_hint > 0:
-            status = "paused(until-reset)"
-            pause_until_utc = format_utc_rfc3339(
-                now + dt.timedelta(days=reset_days_hint)
-            )
-        else:
-            status = "depleted(unknown-reset)"
-    elif threshold is not None and remaining is None:
-        status = "ok(unknown-remaining)"
-
-    return {
-        "status": status,
-        "pause_until_utc": pause_until_utc,
-        "should_skip_proxies": should_skip_proxies,
-        "prune": False,
-    }
 
 
 def human_bytes_to_int(value: str) -> Optional[int]:
@@ -1202,9 +1147,7 @@ def fetch_proxies(subscriptions, *, min_remaining_bytes: Optional[int] = None):
             },
         )
         ctx = ssl._create_unverified_context()
-        with urllib.request.urlopen(
-            req, timeout=SUBSCRIPTION_FETCH_TIMEOUT_SECONDS, context=ctx
-        ) as resp:
+        with urllib.request.urlopen(req, timeout=30, context=ctx) as resp:
             body = resp.read().decode(
                 resp.headers.get_content_charset() or "utf-8", errors="replace"
             )
@@ -1295,20 +1238,31 @@ def fetch_proxies(subscriptions, *, min_remaining_bytes: Optional[int] = None):
         if remaining is None and isinstance(remaining_hint, int):
             remaining = remaining_hint
 
-        decision = decide_subscription_handling(
-            remaining=remaining,
-            expire=expire,
-            threshold=threshold,
-            reset_at_dt=reset_at_dt,
-            reset_days_hint=int(reset_days_hint)
-            if isinstance(reset_days_hint, int)
-            else None,
-            now=now,
-        )
-        status = str(decision["status"])
-        pause_until_utc = decision["pause_until_utc"]
-        should_skip_proxies = bool(decision["should_skip_proxies"])
-        prune = bool(decision["prune"])
+        status = "ok"
+        pause_until_utc: Optional[str] = None
+        should_skip_proxies = False
+        if threshold is not None and remaining is not None and remaining < threshold:
+            should_skip_proxies = True
+            if reset_at_dt is not None and reset_at_dt > now:
+                status = "paused(until-reset)"
+                pause_until_utc = format_utc_rfc3339(reset_at_dt)
+            elif isinstance(reset_days_hint, int) and int(reset_days_hint) > 0:
+                status = "paused(until-reset)"
+                pause_until_utc = format_utc_rfc3339(
+                    now + dt.timedelta(days=int(reset_days_hint))
+                )
+            else:
+                # Keep subscription info (and keep trying on next run) unless it has expired.
+                status = "depleted(unknown-reset)"
+        elif threshold is not None and remaining is None:
+            status = "ok(unknown-remaining)"
+
+        prune = False
+        if status.startswith("depleted") and isinstance(expire, int) and expire > 0:
+            # If reset info is unknown, only remove subscription info after it expires.
+            prune = int(now.timestamp()) >= expire
+            if prune:
+                status = "removed(expired)"
 
         updated_sub = dict(sub)
         if pause_until_utc:
@@ -1345,7 +1299,6 @@ def fetch_proxies(subscriptions, *, min_remaining_bytes: Optional[int] = None):
 
         if (
             status.startswith("paused")
-            or status.startswith("skipped")
             or status.startswith("removed")
             or status.startswith("depleted")
             or should_skip_proxies
@@ -1437,13 +1390,16 @@ def build() -> dict:
 
     # Persist subscription state (pause_until / last_remaining / prune-expired) back to `test.yaml`.
     # IMPORTANT: do this before we inject generated display groups into `template`.
-    if yaml and (not use_local_provider) and updated_subscriptions:
+    if (
+        yaml
+        and (not use_local_provider)
+        and updated_subscriptions
+        and (prune_low_traffic or any("pause_until_utc" in s for s in updated_subscriptions))
+    ):
         new_subscriptions = []
         for s in updated_subscriptions:
             entry: dict[str, object] = {"name": s.get("name"), "url": s.get("url")}
-            if isinstance(s.get("pause_until_utc"), str) and str(
-                s.get("pause_until_utc")
-            ).strip():
+            if isinstance(s.get("pause_until_utc"), str) and str(s.get("pause_until_utc")).strip():
                 entry["pause_until_utc"] = s.get("pause_until_utc")
             for key in (
                 "last_remaining_bytes",
