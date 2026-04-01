@@ -309,7 +309,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-e.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -328,7 +328,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-f.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -347,7 +347,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-g.aliapp.men
-  client-fingerprint: qq
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -366,7 +366,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-h.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -553,7 +553,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-e.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -591,7 +591,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-g.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -610,7 +610,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-h.aliapp.men
-  client-fingerprint: safari
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -648,7 +648,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-f.coscdn.men
-  client-fingerprint: edge
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -667,7 +667,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-g.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -705,7 +705,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-e.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -724,7 +724,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-f.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -743,7 +743,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-g.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -762,7 +762,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-h.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -1743,13 +1743,13 @@ proxy-groups:
   - DIRECT
   proxies:
   - ❇️白羊座-BGP(通用)
+  - 🇭🇰 香港1-负载IEPL
+  - 🇸🇬 新加坡1-负载IEPL
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港A2|电信联通|2倍|V1
   - 🇸🇬 新加坡A1|三网|3倍|V2
+  - 🇭🇰 香港A2|电信联通|2倍|V1
   - 🇯🇵 日本A3|三网|3倍|V2
-  - 🇸🇬 SG-01-SG.GS
+  - 🇯🇵 JP-01-Sakura
   - AI
   - 币安
   - PikPak
@@ -1792,9 +1792,69 @@ proxy-groups:
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
   proxies:
   - ❇️白羊座-BGP(通用)
+  - 🇭🇰 香港1-负载IEPL
+  - 🇭🇰 香港2-联通IEPL
+  - 🇭🇰 香港3-电信IEPL
+  - 🇭🇰 香港3-移动IEPL
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港家宽02-IEPL
+  - 🇸🇬 新加坡1-负载IEPL
+  - 🇸🇬 新加坡2-联通IEPL
+  - 🇸🇬 新加坡3-电信IEPL
+  - 🇸🇬 新加坡3-移动IEPL
+  - 🇯🇵 日本1-负载IEPL
+  - 🇯🇵 日本2-联通IEPL
+  - 🇯🇵 日本3-电信IEPL
+  - 🇯🇵 日本3-移动IEPL
+  - 🇯🇵 日本家宽1-电信IEPL
+  - 🇯🇵 日本家宽1-移动IEPL
+  - 🇯🇵 日本家宽1-联通IEPL
+  - 🇯🇵 日本家宽1-负载IEPL
+  - 🇯🇵 日本家宽2-电信IEPL
+  - 🇯🇵 日本家宽2-移动IEPL
+  - 🇯🇵 日本家宽2-联通IEPL
+  - 🇯🇵 日本家宽2-负载IEPL
+  - 🇺🇸 美国1-电信IEPL
+  - 🇺🇸 美国1-移动IEPL
+  - 🇺🇸 美国1-负载IEPL
+  - 🇺🇸 美国2-联通IEPL
+  - 🇺🇸 美国家宽02-IEPL
+  - 🇺🇸 美国家宽03-IEPL
+  - 🇺🇸 美国家宽1-负载IEPL
+  - 🇺🇸 美国家宽2-联通IEPL
+  - 🇺🇸 美国家宽3-电信IEPL
+  - 🇺🇸 美国家宽3-移动IEPL
+  - 🇨🇦 加拿大-IEPL
+  - 🇩🇪 德国1-负载IEPL
+  - 🇩🇪 德国2-联通IEPL
+  - 🇩🇪 德国3-电信IEPL
+  - 🇩🇪 德国3-移动IEPL
+  - 🇩🇪 德国家宽-IEPL
+  - 🇫🇷 法国-IEPL
+  - 🇬🇧 英国-IEPL
+  - 🇬🇧 英国家宽-IEPL
+  - 🇨🇳 台湾1-负载IEPL
+  - 🇨🇳 台湾2-电信IEPL
+  - 🇨🇳 台湾2-移动IEPL
+  - 🇨🇳 台湾2-联通IEPL
+  - 🇨🇳 台湾家宽02-IEPL
+  - 🇲🇾 马来西亚-IEPL
+  - 🇹🇭 泰国-IEPL
+  - 🇻🇳 越南-IEPL
+  - 🇻🇳 越南家宽-IEPL
+  - 🇦🇪 迪拜-IEPL
+  - 🇦🇷 阿根廷-IEPL
+  - 🇦🇺 澳大利亚-IEPL
+  - 🇧🇷 巴西-IEPL
+  - 🇮🇩 印度尼西亚-IEPL
+  - 🇰🇷 韩国-IEPL
+  - 🇰🇷 韩国家宽-IEPL
+  - 🇲🇽 墨西哥-IEPL
+  - 🇷🇺 俄罗斯-IEPL
+  - 🇹🇷 土耳其-IEPL
+  - 🇿🇦 南非-IEPL
   - 🇭🇰 香港A2|电信联通|2倍|V1
   - 🇸🇬 新加坡A1|三网|3倍|V2
   - 🇯🇵 日本A3|三网|3倍|V2
@@ -1811,6 +1871,7 @@ proxy-groups:
   - 🇭🇰 HK-08-NewMedia
   - 🇭🇰 HK-09-FXT
   - 🇭🇰 HK-10-Akari
+  - 🇭🇰 香港直连01（临时备用）
   - 🇭🇰香港-A(通用)
   - 🇸🇬 新加坡B1|移动|1.2倍|V2
   - 🇸🇬 SG-01-SG.GS
@@ -1819,6 +1880,7 @@ proxy-groups:
   - 🇸🇬 SG-04-JinX
   - 🇸🇬 SG-05-HostHatch
   - 🇸🇬 SG-07-Leaseweb
+  - 🇸🇬 新加坡直连01（临时备用）
   - 🇸🇬新加坡-A(通用)
   - 🇯🇵 JP-01-Sakura
   - 🇯🇵 JP-02-JinX
@@ -1826,6 +1888,7 @@ proxy-groups:
   - 🇯🇵 JP-04-HostHatch
   - 🇯🇵 JP-05-DDPS
   - 🇯🇵 JP-10-Leasweb
+  - 🇯🇵 日本直连01（临时备用）
   - 🇯🇵日本-A(通用)
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国E2|0.7倍|V1
@@ -1854,6 +1917,7 @@ proxy-groups:
   - 🇨🇳 TW-02-AKILE
   - 🇨🇳 TW-03-Akari
   - 🇨🇳 TW-04-MoeChuang
+  - 🇨🇳 台湾直连01（临时备用）
   - 🇹🇼台湾-A(通用)
   - 🇹🇭 泰国A1|移动|0.9倍|V2
   - 🇻🇳 越南A1|电信移动|1.1倍|V2
@@ -1861,6 +1925,8 @@ proxy-groups:
   - 🇷🇺 俄罗斯A1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
   - 🇰🇷韩国-A(通用)
+  - 💌 邮箱：Candytallycloud@gmail.com
+  - 🔗 节点异常请更新订阅！
   url: https://www.gstatic.com/generate_204
   interval: 180
   tolerance: 50
@@ -1870,9 +1936,14 @@ proxy-groups:
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
   proxies:
   - ❇️白羊座-BGP(通用)
+  - 🇭🇰 香港1-负载IEPL
+  - 🇭🇰 香港2-联通IEPL
+  - 🇭🇰 香港3-电信IEPL
+  - 🇭🇰 香港3-移动IEPL
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港家宽02-IEPL
   - 🇭🇰 香港A2|电信联通|2倍|V1
   - ❇️白羊座-AGP(通用)
   - ❇️白羊座-EGP(通用)
@@ -1885,6 +1956,7 @@ proxy-groups:
   - 🇭🇰 HK-08-NewMedia
   - 🇭🇰 HK-09-FXT
   - 🇭🇰 HK-10-Akari
+  - 🇭🇰 香港直连01（临时备用）
   - 🇭🇰香港-A(通用)
   url: https://www.gstatic.com/generate_204
   interval: 180
@@ -1895,9 +1967,14 @@ proxy-groups:
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
   proxies:
   - ❇️白羊座-BGP(通用)
+  - 🇭🇰 香港1-负载IEPL
+  - 🇭🇰 香港2-联通IEPL
+  - 🇭🇰 香港3-电信IEPL
+  - 🇭🇰 香港3-移动IEPL
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港家宽02-IEPL
   - 🇭🇰 香港A2|电信联通|2倍|V1
   - ❇️白羊座-AGP(通用)
   - ❇️白羊座-EGP(通用)
@@ -1910,6 +1987,7 @@ proxy-groups:
   - 🇭🇰 HK-08-NewMedia
   - 🇭🇰 HK-09-FXT
   - 🇭🇰 HK-10-Akari
+  - 🇭🇰 香港直连01（临时备用）
   - 🇭🇰香港-A(通用)
 - name: 香港
   type: select
@@ -1926,6 +2004,10 @@ proxy-groups:
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
   proxies:
+  - 🇸🇬 新加坡1-负载IEPL
+  - 🇸🇬 新加坡2-联通IEPL
+  - 🇸🇬 新加坡3-电信IEPL
+  - 🇸🇬 新加坡3-移动IEPL
   - 🇸🇬 新加坡A1|三网|3倍|V2
   - 🇸🇬 新加坡B1|移动|1.2倍|V2
   - 🇸🇬 SG-01-SG.GS
@@ -1934,6 +2016,7 @@ proxy-groups:
   - 🇸🇬 SG-04-JinX
   - 🇸🇬 SG-05-HostHatch
   - 🇸🇬 SG-07-Leaseweb
+  - 🇸🇬 新加坡直连01（临时备用）
   - 🇸🇬新加坡-A(通用)
   url: https://www.gstatic.com/generate_204
   interval: 180
@@ -1943,6 +2026,10 @@ proxy-groups:
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
   proxies:
+  - 🇸🇬 新加坡1-负载IEPL
+  - 🇸🇬 新加坡2-联通IEPL
+  - 🇸🇬 新加坡3-电信IEPL
+  - 🇸🇬 新加坡3-移动IEPL
   - 🇸🇬 新加坡A1|三网|3倍|V2
   - 🇸🇬 新加坡B1|移动|1.2倍|V2
   - 🇸🇬 SG-01-SG.GS
@@ -1951,6 +2038,7 @@ proxy-groups:
   - 🇸🇬 SG-04-JinX
   - 🇸🇬 SG-05-HostHatch
   - 🇸🇬 SG-07-Leaseweb
+  - 🇸🇬 新加坡直连01（临时备用）
   - 🇸🇬新加坡-A(通用)
 - name: 新加坡
   type: select
@@ -1967,6 +2055,18 @@ proxy-groups:
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
   proxies:
+  - 🇯🇵 日本1-负载IEPL
+  - 🇯🇵 日本2-联通IEPL
+  - 🇯🇵 日本3-电信IEPL
+  - 🇯🇵 日本3-移动IEPL
+  - 🇯🇵 日本家宽1-电信IEPL
+  - 🇯🇵 日本家宽1-移动IEPL
+  - 🇯🇵 日本家宽1-联通IEPL
+  - 🇯🇵 日本家宽1-负载IEPL
+  - 🇯🇵 日本家宽2-电信IEPL
+  - 🇯🇵 日本家宽2-移动IEPL
+  - 🇯🇵 日本家宽2-联通IEPL
+  - 🇯🇵 日本家宽2-负载IEPL
   - 🇯🇵 日本A3|三网|3倍|V2
   - 🇯🇵 日本A4|三网|3倍|V2
   - 🇯🇵 日本B1|联通移动|2倍|V2
@@ -1976,6 +2076,7 @@ proxy-groups:
   - 🇯🇵 JP-04-HostHatch
   - 🇯🇵 JP-05-DDPS
   - 🇯🇵 JP-10-Leasweb
+  - 🇯🇵 日本直连01（临时备用）
   - 🇯🇵日本-A(通用)
   url: https://www.gstatic.com/generate_204
   interval: 180
@@ -1985,6 +2086,18 @@ proxy-groups:
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
   proxies:
+  - 🇯🇵 日本1-负载IEPL
+  - 🇯🇵 日本2-联通IEPL
+  - 🇯🇵 日本3-电信IEPL
+  - 🇯🇵 日本3-移动IEPL
+  - 🇯🇵 日本家宽1-电信IEPL
+  - 🇯🇵 日本家宽1-移动IEPL
+  - 🇯🇵 日本家宽1-联通IEPL
+  - 🇯🇵 日本家宽1-负载IEPL
+  - 🇯🇵 日本家宽2-电信IEPL
+  - 🇯🇵 日本家宽2-移动IEPL
+  - 🇯🇵 日本家宽2-联通IEPL
+  - 🇯🇵 日本家宽2-负载IEPL
   - 🇯🇵 日本A3|三网|3倍|V2
   - 🇯🇵 日本A4|三网|3倍|V2
   - 🇯🇵 日本B1|联通移动|2倍|V2
@@ -1994,6 +2107,7 @@ proxy-groups:
   - 🇯🇵 JP-04-HostHatch
   - 🇯🇵 JP-05-DDPS
   - 🇯🇵 JP-10-Leasweb
+  - 🇯🇵 日本直连01（临时备用）
   - 🇯🇵日本-A(通用)
 - name: 日本
   type: select
@@ -2010,10 +2124,16 @@ proxy-groups:
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
   proxies:
+  - 🇨🇳 台湾1-负载IEPL
+  - 🇨🇳 台湾2-电信IEPL
+  - 🇨🇳 台湾2-移动IEPL
+  - 🇨🇳 台湾2-联通IEPL
+  - 🇨🇳 台湾家宽02-IEPL
   - 🇨🇳 TW-01-Hinet
   - 🇨🇳 TW-02-AKILE
   - 🇨🇳 TW-03-Akari
   - 🇨🇳 TW-04-MoeChuang
+  - 🇨🇳 台湾直连01（临时备用）
   - 🇹🇼台湾-A(通用)
   url: https://www.gstatic.com/generate_204
   interval: 180
@@ -2023,10 +2143,16 @@ proxy-groups:
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
   proxies:
+  - 🇨🇳 台湾1-负载IEPL
+  - 🇨🇳 台湾2-电信IEPL
+  - 🇨🇳 台湾2-移动IEPL
+  - 🇨🇳 台湾2-联通IEPL
+  - 🇨🇳 台湾家宽02-IEPL
   - 🇨🇳 TW-01-Hinet
   - 🇨🇳 TW-02-AKILE
   - 🇨🇳 TW-03-Akari
   - 🇨🇳 TW-04-MoeChuang
+  - 🇨🇳 台湾直连01（临时备用）
   - 🇹🇼台湾-A(通用)
 - name: 台湾
   type: select
@@ -2043,6 +2169,16 @@ proxy-groups:
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
   proxies:
+  - 🇺🇸 美国1-电信IEPL
+  - 🇺🇸 美国1-移动IEPL
+  - 🇺🇸 美国1-负载IEPL
+  - 🇺🇸 美国2-联通IEPL
+  - 🇺🇸 美国家宽02-IEPL
+  - 🇺🇸 美国家宽03-IEPL
+  - 🇺🇸 美国家宽1-负载IEPL
+  - 🇺🇸 美国家宽2-联通IEPL
+  - 🇺🇸 美国家宽3-电信IEPL
+  - 🇺🇸 美国家宽3-移动IEPL
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国E2|0.7倍|V1
   - 🇺🇸 美国C5|0.8倍|V1
@@ -2061,6 +2197,16 @@ proxy-groups:
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
   proxies:
+  - 🇺🇸 美国1-电信IEPL
+  - 🇺🇸 美国1-移动IEPL
+  - 🇺🇸 美国1-负载IEPL
+  - 🇺🇸 美国2-联通IEPL
+  - 🇺🇸 美国家宽02-IEPL
+  - 🇺🇸 美国家宽03-IEPL
+  - 🇺🇸 美国家宽1-负载IEPL
+  - 🇺🇸 美国家宽2-联通IEPL
+  - 🇺🇸 美国家宽3-电信IEPL
+  - 🇺🇸 美国家宽3-移动IEPL
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国E2|0.7倍|V1
   - 🇺🇸 美国C5|0.8倍|V1
@@ -2086,6 +2232,15 @@ proxy-groups:
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   proxies:
+  - 🇨🇦 加拿大-IEPL
+  - 🇩🇪 德国1-负载IEPL
+  - 🇩🇪 德国2-联通IEPL
+  - 🇩🇪 德国3-电信IEPL
+  - 🇩🇪 德国3-移动IEPL
+  - 🇩🇪 德国家宽-IEPL
+  - 🇫🇷 法国-IEPL
+  - 🇬🇧 英国-IEPL
+  - 🇬🇧 英国家宽-IEPL
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -2107,6 +2262,15 @@ proxy-groups:
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   proxies:
+  - 🇨🇦 加拿大-IEPL
+  - 🇩🇪 德国1-负载IEPL
+  - 🇩🇪 德国2-联通IEPL
+  - 🇩🇪 德国3-电信IEPL
+  - 🇩🇪 德国3-移动IEPL
+  - 🇩🇪 德国家宽-IEPL
+  - 🇫🇷 法国-IEPL
+  - 🇬🇧 英国-IEPL
+  - 🇬🇧 英国家宽-IEPL
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -2135,6 +2299,10 @@ proxy-groups:
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   proxies:
+  - 🇲🇾 马来西亚-IEPL
+  - 🇹🇭 泰国-IEPL
+  - 🇻🇳 越南-IEPL
+  - 🇻🇳 越南家宽-IEPL
   - 🇹🇭 泰国A1|移动|0.9倍|V2
   - 🇻🇳 越南A1|电信移动|1.1倍|V2
   - 🇲🇾马来-A(通用)
@@ -2146,6 +2314,10 @@ proxy-groups:
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   proxies:
+  - 🇲🇾 马来西亚-IEPL
+  - 🇹🇭 泰国-IEPL
+  - 🇻🇳 越南-IEPL
+  - 🇻🇳 越南家宽-IEPL
   - 🇹🇭 泰国A1|移动|0.9倍|V2
   - 🇻🇳 越南A1|电信移动|1.1倍|V2
   - 🇲🇾马来-A(通用)
@@ -2164,9 +2336,22 @@ proxy-groups:
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   proxies:
+  - 🇦🇪 迪拜-IEPL
+  - 🇦🇷 阿根廷-IEPL
+  - 🇦🇺 澳大利亚-IEPL
+  - 🇧🇷 巴西-IEPL
+  - 🇮🇩 印度尼西亚-IEPL
+  - 🇰🇷 韩国-IEPL
+  - 🇰🇷 韩国家宽-IEPL
+  - 🇲🇽 墨西哥-IEPL
+  - 🇷🇺 俄罗斯-IEPL
+  - 🇹🇷 土耳其-IEPL
+  - 🇿🇦 南非-IEPL
   - 🇷🇺 俄罗斯A1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
   - 🇰🇷韩国-A(通用)
+  - 💌 邮箱：Candytallycloud@gmail.com
+  - 🔗 节点异常请更新订阅！
   url: https://www.gstatic.com/generate_204
   interval: 180
   tolerance: 50
@@ -2175,9 +2360,22 @@ proxy-groups:
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   proxies:
+  - 🇦🇪 迪拜-IEPL
+  - 🇦🇷 阿根廷-IEPL
+  - 🇦🇺 澳大利亚-IEPL
+  - 🇧🇷 巴西-IEPL
+  - 🇮🇩 印度尼西亚-IEPL
+  - 🇰🇷 韩国-IEPL
+  - 🇰🇷 韩国家宽-IEPL
+  - 🇲🇽 墨西哥-IEPL
+  - 🇷🇺 俄罗斯-IEPL
+  - 🇹🇷 土耳其-IEPL
+  - 🇿🇦 南非-IEPL
   - 🇷🇺 俄罗斯A1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
   - 🇰🇷韩国-A(通用)
+  - 💌 邮箱：Candytallycloud@gmail.com
+  - 🔗 节点异常请更新订阅！
 - name: 其他
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png

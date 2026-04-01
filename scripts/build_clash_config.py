@@ -1027,21 +1027,20 @@ def build_proxy_manual_nodes(
     source_cap = safe_int(proxy_group.get("manual-source-cap"), 2)
     region_cap = safe_int(proxy_group.get("manual-region-cap"), 2)
     preferred_regions = proxy_group.get("preferred-regions")
-    filtered_node_infos = collect_group_candidates(node_infos, proxy_group)
 
     pools = {
         QUALITY_DEDICATED: sort_node_infos(
-            [node for node in filtered_node_infos if node.get("quality") == QUALITY_DEDICATED],
+            [node for node in node_infos if node.get("quality") == QUALITY_DEDICATED],
             preferred_regions=preferred_regions,
             quality_order=[QUALITY_DEDICATED],
         ),
         QUALITY_HIGH: sort_node_infos(
-            [node for node in filtered_node_infos if node.get("quality") == QUALITY_HIGH],
+            [node for node in node_infos if node.get("quality") == QUALITY_HIGH],
             preferred_regions=preferred_regions,
             quality_order=[QUALITY_HIGH],
         ),
         QUALITY_OTHER: sort_node_infos(
-            [node for node in filtered_node_infos if node.get("quality") == QUALITY_OTHER],
+            [node for node in node_infos if node.get("quality") == QUALITY_OTHER],
             preferred_regions=preferred_regions,
             quality_order=[QUALITY_OTHER],
         ),
@@ -1068,7 +1067,7 @@ def build_proxy_manual_nodes(
     if len(manual_nodes) < manual_count:
         extend_manual_nodes(
             manual_nodes,
-            sort_node_infos(filtered_node_infos, preferred_regions=preferred_regions),
+            sort_node_infos(node_infos, preferred_regions=preferred_regions),
             manual_count,
             picked_names=picked_names,
             source_counts=source_counts,
