@@ -1,4 +1,20 @@
 proxies:
+- name: 官网：keluosi.top
+  type: anytls
+  server: usg2-0co2xkid.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.com
+  skip-cert-verify: true
+- name: 套餐到期：2027-01-17
+  type: anytls
+  server: usg2-0co2xkid.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.com
+  skip-cert-verify: true
 - name: 🇺🇸 美国G2|三网|1.2倍|V1
   type: anytls
   server: usg2-0co2xkid.node.cross666.top
@@ -283,7 +299,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-e.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -302,7 +318,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-f.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -321,7 +337,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-g.aliapp.men
-  client-fingerprint: qq
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -340,7 +356,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-h.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -527,7 +543,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-e.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -546,7 +562,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-f.coscdn.men
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -565,7 +581,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-g.aliapp.men
-  client-fingerprint: qq
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -584,7 +600,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-h.aliapp.men
-  client-fingerprint: qq
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -622,7 +638,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-f.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -641,7 +657,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-g.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -660,7 +676,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-h.aliapp.men
-  client-fingerprint: safari
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -679,7 +695,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-e.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -698,7 +714,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-f.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -717,7 +733,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-g.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -745,6 +761,15 @@ proxies:
   ws-path: /newlogin/login.do
   ws-headers:
     Host: mms-static-bottom-h.aliapp.men
+- name: 套餐到期：2026-06-10
+  type: trojan
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
+  port: 26078
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
+  udp: true
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
 - name: 🇭🇰 HK-01-CTC
   type: trojan
   server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
@@ -1059,4 +1084,625 @@ proxies:
   udp: true
   skip-cert-verify: true
   sni: mcdn.bilivideo.com
+  network: tcp
+- name: 套餐到期：2026-10-01
+  server: v4.ipv4zhilian.com
+  port: 24027
+  sni: www.bing.com
+  up: 1000
+  down: 1000
+  skip-cert-verify: false
+  type: hysteria2
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+- name: 🇭🇰 香港直连01（临时备用）
+  server: v4.ipv4zhilian.com
+  port: 24027
+  sni: www.bing.com
+  up: 1000
+  down: 1000
+  skip-cert-verify: false
+  type: hysteria2
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+- name: 🇸🇬 新加坡直连01（临时备用）
+  server: v4.ipv4zhilian.com
+  port: 59916
+  sni: www.bing.com
+  up: 1000
+  down: 1000
+  skip-cert-verify: false
+  type: hysteria2
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+- name: 🇨🇳 台湾直连01（临时备用）
+  server: v4.ipv4zhilian.com
+  port: 37531
+  sni: www.bing.com
+  up: 1000
+  down: 1000
+  skip-cert-verify: false
+  type: hysteria2
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+- name: 🇯🇵 日本直连01（临时备用）
+  server: v4.ipv4zhilian.com
+  port: 15158
+  sni: www.bing.com
+  up: 1000
+  down: 1000
+  skip-cert-verify: false
+  type: hysteria2
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+- name: 🏘️ 官网：Candytally.club
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 40745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 💌 邮箱：Candytallycloud@gmail.com
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 40745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🔗 节点异常请更新订阅！
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 40745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🙂如更新失败请到官网重新导入(需重登账号)
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 40745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港1-负载IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 40745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港2-联通IEPL
+  type: trojan
+  server: lt-696968.candysafe736.xyz
+  port: 40745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港3-移动IEPL
+  type: trojan
+  server: yd-765865.candysafe736.xyz
+  port: 40745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港3-电信IEPL
+  type: trojan
+  server: dx-858986.candysafe736.xyz
+  port: 40745
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇭🇰 香港家宽02-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 32109
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾1-负载IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 20746
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾2-联通IEPL
+  type: trojan
+  server: lt-696968.candysafe736.xyz
+  port: 20746
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾2-移动IEPL
+  type: trojan
+  server: yd-765865.candysafe736.xyz
+  port: 20746
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾2-电信IEPL
+  type: trojan
+  server: dx-858986.candysafe736.xyz
+  port: 20746
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇳 台湾家宽02-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 24023
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇸🇬 新加坡1-负载IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 25507
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇸🇬 新加坡2-联通IEPL
+  type: trojan
+  server: lt-696968.candysafe736.xyz
+  port: 25507
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇸🇬 新加坡3-移动IEPL
+  type: trojan
+  server: yd-765865.candysafe736.xyz
+  port: 25507
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇸🇬 新加坡3-电信IEPL
+  type: trojan
+  server: dx-858986.candysafe736.xyz
+  port: 25507
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽1-负载IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 23199
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽1-移动IEPL
+  type: trojan
+  server: yd-765865.candysafe736.xyz
+  port: 23199
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽1-联通IEPL
+  type: trojan
+  server: lt-696968.candysafe736.xyz
+  port: 23199
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽1-电信IEPL
+  type: trojan
+  server: dx-858986.candysafe736.xyz
+  port: 23199
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽2-负载IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 23198
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽2-联通IEPL
+  type: trojan
+  server: lt-696968.candysafe736.xyz
+  port: 23198
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽2-移动IEPL
+  type: trojan
+  server: yd-765865.candysafe736.xyz
+  port: 23198
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本家宽2-电信IEPL
+  type: trojan
+  server: dx-858986.candysafe736.xyz
+  port: 23198
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本1-负载IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 23197
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本2-联通IEPL
+  type: trojan
+  server: lt-696968.candysafe736.xyz
+  port: 23197
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本3-移动IEPL
+  type: trojan
+  server: yd-765865.candysafe736.xyz
+  port: 23197
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇯🇵 日本3-电信IEPL
+  type: trojan
+  server: dx-858986.candysafe736.xyz
+  port: 23197
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国家宽1-负载IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 36538
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国家宽2-联通IEPL
+  type: trojan
+  server: lt-696968.candysafe736.xyz
+  port: 36538
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国家宽3-移动IEPL
+  type: trojan
+  server: yd-765865.candysafe736.xyz
+  port: 36538
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国家宽3-电信IEPL
+  type: trojan
+  server: dx-858986.candysafe736.xyz
+  port: 36538
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国家宽02-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 36472
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国家宽03-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 36472
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国1-负载IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 36474
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国2-联通IEPL
+  type: trojan
+  server: lt-696968.candysafe736.xyz
+  port: 36474
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国1-移动IEPL
+  type: trojan
+  server: yd-765865.candysafe736.xyz
+  port: 36474
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇺🇸 美国1-电信IEPL
+  type: trojan
+  server: dx-858986.candysafe736.xyz
+  port: 36474
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇩🇪 德国家宽-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 36475
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇩🇪 德国1-负载IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 24226
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇩🇪 德国2-联通IEPL
+  type: trojan
+  server: lt-696968.candysafe736.xyz
+  port: 24226
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇩🇪 德国3-移动IEPL
+  type: trojan
+  server: yd-765865.candysafe736.xyz
+  port: 24226
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇩🇪 德国3-电信IEPL
+  type: trojan
+  server: dx-858986.candysafe736.xyz
+  port: 24226
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇰🇷 韩国家宽-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 44607
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇰🇷 韩国-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 44608
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇹🇭 泰国-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 29743
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇦🇷 阿根廷-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 29744
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇹🇷 土耳其-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 24737
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇬🇧 英国-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 2716
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇬🇧 英国家宽-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 36295
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇫🇷 法国-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 36296
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇻🇳 越南家宽-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 41443
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇻🇳 越南-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 26805
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇷🇺 俄罗斯-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 36297
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇦🇪 迪拜-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 36298
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇲🇽 墨西哥-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 36299
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇦🇺 澳大利亚-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 36432
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇧🇷 巴西-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 61378
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇨🇦 加拿大-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 41398
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇲🇾 马来西亚-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 42052
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇮🇩 印度尼西亚-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 40434
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
+  network: tcp
+- name: 🇿🇦 南非-IEPL
+  type: trojan
+  server: zong-759866.candysafe736.xyz
+  port: 29500
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  skip-cert-verify: true
+  sni: v1-dy.ixigua.com
   network: tcp
