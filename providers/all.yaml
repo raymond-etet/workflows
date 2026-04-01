@@ -49,30 +49,30 @@ proxies:
   skip-cert-verify: true
   type: hysteria2
   password: efaed81f-e760-4d87-be6e-05136b25da66
+- name: 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  server: hkc3.node.cross666.top
+  port: 65535
+  sni: mirrors.xtom.hk
+  up: 100
+  down: 100
+  skip-cert-verify: true
+  type: hysteria2
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+- name: 🇭🇰 香港C2|三网|3.5倍|V2|家宽
+  server: hkc2.node.cross666.top
+  port: 65535
+  sni: mirrors.xtom.hk
+  up: 100
+  down: 100
+  skip-cert-verify: true
+  type: hysteria2
+  password: efaed81f-e760-4d87-be6e-05136b25da66
 - name: 🇭🇰 香港C5|三网|3.5倍|V2|家宽
   server: hkc5.node.cross666.top
   port: 65535
   sni: mirrors.xtom.hk
   up: 250
   down: 250
-  skip-cert-verify: true
-  type: hysteria2
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-- name: 🇭🇰 香港C4|三网|3.5倍|V2|家宽
-  server: hkc4.node.cross666.top
-  port: 65535
-  sni: mirrors.xtom.hk
-  up: 100
-  down: 100
-  skip-cert-verify: true
-  type: hysteria2
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-- name: 🇭🇰 香港C1|三网|3.5倍|V2|家宽
-  server: hkc1.node.cross666.top
-  port: 65535
-  sni: mirrors.xtom.hk
-  up: 100
-  down: 100
   skip-cert-verify: true
   type: hysteria2
   password: efaed81f-e760-4d87-be6e-05136b25da66
@@ -302,7 +302,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-f.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -340,7 +340,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-h.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -527,7 +527,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-e.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -584,7 +584,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-h.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -603,7 +603,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-e.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -622,7 +622,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-f.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -660,7 +660,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-h.aliapp.men
-  client-fingerprint: qq
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -679,7 +679,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-e.coscdn.men
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -717,7 +717,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-g.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
