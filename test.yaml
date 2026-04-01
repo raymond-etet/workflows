@@ -1,16 +1,16 @@
 subscriptions:
 - name: crosswall
   url: http://162.19.79.201/s/66b4d235dd25ee6c378dde2a4a1570c6
-  last_remaining_bytes: 322649391286
+  last_remaining_bytes: 320586269759
   last_total_bytes: 428122894614
-  last_used_bytes: 105473503328
+  last_used_bytes: 107536624855
   last_expire: 1800116928
   last_reset_days: 16
 - name: Nano
   url: https://64.23.199.158/iv/verify_mode.htm?token=e017cb1dc789505b3add5f3299fd9ea8
-  last_remaining_bytes: 313084047648
+  last_remaining_bytes: 304536451764
   last_total_bytes: 322122547200
-  last_used_bytes: 9038499552
+  last_used_bytes: 17586095436
   last_expire: 1777554767
 - name: viking
   url: https://pics9.sknil-gnikiv.com/wx5TqEUTwXks/v1/w7LQhnaSTnjD/VikingLinks?token=da5e9b0465c4e8546a626c2968c96cff.532y5cjqx4b.jpg
@@ -18,14 +18,14 @@ subscriptions:
   last_total_bytes: 268435456000
   last_used_bytes: 70367221694
   last_expire: 1781082311
-  last_reset_days: 10
+  last_reset_days: 9
 - name: tangguo
   url: https://114.132.219.239:9888/tgyunsub?token=6c1297854ef2c62c8e55d7609902c27a
-  last_remaining_bytes: 0
-  last_total_bytes: 107374182400
-  last_used_bytes: 107431794001
-  last_expire: 1776345679
-  last_reset_days: 16
+  last_remaining_bytes: 214748364800
+  last_total_bytes: 214748364800
+  last_used_bytes: 0
+  last_expire: 1790866390
+  last_reset_days: 30
 port: 7890
 socks-port: 7891
 redir-port: 7892
@@ -548,14 +548,96 @@ proxy-groups:
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
   fallback-groups:
-  - AI
-  - 新加坡
-  - 日本
-  - 美国
-  - 欧洲
-  - 香港
-  - 全节点
-  - Proxy
+  - OpenAI-新加坡
+  - OpenAI-日本
+  - OpenAI-美国
+  proxies: []
+- name: OpenAI-新加坡-自动
+  type: url-test
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+  include-subscriptions:
+  - tangguo
+  - viking
+  region-include:
+  - SG
+  proxies: []
+  url: https://chatgpt.com
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: OpenAI-新加坡-手动
+  type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+  include-subscriptions:
+  - tangguo
+  - viking
+  region-include:
+  - SG
+  proxies: []
+- name: OpenAI-新加坡
+  type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+  fallback-groups:
+  - OpenAI-新加坡-自动
+  - OpenAI-新加坡-手动
+  proxies: []
+- name: OpenAI-日本-自动
+  type: url-test
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+  include-subscriptions:
+  - tangguo
+  - viking
+  region-include:
+  - JP
+  proxies: []
+  url: https://chatgpt.com
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: OpenAI-日本-手动
+  type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+  include-subscriptions:
+  - tangguo
+  - viking
+  region-include:
+  - JP
+  proxies: []
+- name: OpenAI-日本
+  type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+  fallback-groups:
+  - OpenAI-日本-自动
+  - OpenAI-日本-手动
+  proxies: []
+- name: OpenAI-美国-自动
+  type: url-test
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+  include-subscriptions:
+  - tangguo
+  - viking
+  region-include:
+  - US
+  proxies: []
+  url: https://chatgpt.com
+  interval: 180
+  tolerance: 50
+  lazy: true
+- name: OpenAI-美国-手动
+  type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+  include-subscriptions:
+  - tangguo
+  - viking
+  region-include:
+  - US
+  proxies: []
+- name: OpenAI-美国
+  type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+  fallback-groups:
+  - OpenAI-美国-自动
+  - OpenAI-美国-手动
   proxies: []
 - name: Claude
   type: select
