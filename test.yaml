@@ -282,16 +282,14 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
     exclude-subscriptions:
       - Nano
+    include-patterns:
+      - "(新加坡|singapore|sgp|sin|(?<![a-z])sg(?![a-z]))"
+      - "(日本|japan|tokyo|osaka|(?<![a-z])jp(?![a-z]))"
+      - "(美国|美國|united\\s*states|america|usa|(?<![a-z])us(?![a-z]))"
+      - "(台湾|台灣|taiwan|(?<![a-z])tw(?![a-z]))"
+      - "(英国|英國|london|(?<![a-z])uk(?![a-z])|(?<![a-z])gb(?![a-z]))"
     region-exclude:
       - HK
-    preferred-regions:
-      - SG
-      - JP
-      - US
-      - EU
-      - TW
-      - SEA
-      - OTHER
     proxies: []
     url: http://38.34.18.10/generate_204
     expected-status: 204
