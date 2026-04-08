@@ -208,6 +208,7 @@ proxy-groups:
       - SEA
       - OTHER
     fallback-groups:
+      - jl香港
       - OpenAI-新加坡
       - OpenAI-日本
       - OpenAI-美国
@@ -298,6 +299,17 @@ proxy-groups:
       - 香港-自动
       - 香港-手动
       - 全节点
+    proxies: []
+
+  - name: jl香港
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+    fallback-groups:
+      - 香港
+    include-subscriptions:
+      - jingling
+    region-include:
+      - HK
     proxies: []
 
   - name: 新加坡-自动
