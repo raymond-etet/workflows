@@ -278,7 +278,7 @@ proxy-groups:
     lazy: true
 
   - name: "3834"
-    type: select
+    type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
     exclude-subscriptions:
       - Nano
@@ -295,6 +295,9 @@ proxy-groups:
     proxies: []
     url: http://38.34.18.10/generate_204
     expected-status: 204
+    interval: 180
+    tolerance: 50
+    lazy: true
 
   - name: 香港-自动
     type: url-test
