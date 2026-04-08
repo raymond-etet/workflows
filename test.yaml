@@ -189,6 +189,8 @@ proxy-groups:
   - name: Proxy
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
+    exclude-subscriptions:
+      - jingling
     manual-pick-count: 8
     manual-pick-mix:
       dedicated: 4
@@ -206,6 +208,7 @@ proxy-groups:
       - SEA
       - OTHER
     fallback-groups:
+      - OpenAI
       - AI
       - 币安
       - PikPak
@@ -243,6 +246,8 @@ proxy-groups:
   - name: 全节点
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
+    exclude-subscriptions:
+      - jingling
     quality-order:
       - dedicated
       - high
@@ -265,6 +270,8 @@ proxy-groups:
   - name: 香港-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+    exclude-subscriptions:
+      - jingling
     region-include:
       - HK
     proxies: []
@@ -276,6 +283,8 @@ proxy-groups:
   - name: 香港-手动
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+    exclude-subscriptions:
+      - jingling
     region-include:
       - HK
     proxies: []
@@ -292,6 +301,8 @@ proxy-groups:
   - name: 新加坡-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    exclude-subscriptions:
+      - jingling
     region-include:
       - SG
     proxies: []
@@ -303,6 +314,8 @@ proxy-groups:
   - name: 新加坡-手动
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    exclude-subscriptions:
+      - jingling
     region-include:
       - SG
     proxies: []
@@ -319,6 +332,8 @@ proxy-groups:
   - name: 日本-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+    exclude-subscriptions:
+      - jingling
     region-include:
       - JP
     proxies: []
@@ -330,6 +345,8 @@ proxy-groups:
   - name: 日本-手动
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+    exclude-subscriptions:
+      - jingling
     region-include:
       - JP
     proxies: []
@@ -346,6 +363,8 @@ proxy-groups:
   - name: 台湾-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+    exclude-subscriptions:
+      - jingling
     region-include:
       - TW
     proxies: []
@@ -357,6 +376,8 @@ proxy-groups:
   - name: 台湾-手动
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+    exclude-subscriptions:
+      - jingling
     region-include:
       - TW
     proxies: []
@@ -373,6 +394,8 @@ proxy-groups:
   - name: 美国-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+    exclude-subscriptions:
+      - jingling
     region-include:
       - US
     proxies: []
@@ -384,6 +407,8 @@ proxy-groups:
   - name: 美国-手动
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+    exclude-subscriptions:
+      - jingling
     region-include:
       - US
     proxies: []
@@ -400,6 +425,8 @@ proxy-groups:
   - name: 欧洲-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
+    exclude-subscriptions:
+      - jingling
     region-include:
       - EU
     proxies: []
@@ -411,6 +438,8 @@ proxy-groups:
   - name: 欧洲-手动
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
+    exclude-subscriptions:
+      - jingling
     region-include:
       - EU
     proxies: []
@@ -427,6 +456,8 @@ proxy-groups:
   - name: 东南亚-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
+    exclude-subscriptions:
+      - jingling
     region-include:
       - SEA
     proxies: []
@@ -438,6 +469,8 @@ proxy-groups:
   - name: 东南亚-手动
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
+    exclude-subscriptions:
+      - jingling
     region-include:
       - SEA
     proxies: []
@@ -454,6 +487,8 @@ proxy-groups:
   - name: 其他-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
+    exclude-subscriptions:
+      - jingling
     region-include:
       - OTHER
     preferred-regions:
@@ -467,6 +502,8 @@ proxy-groups:
   - name: 其他-手动
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
+    exclude-subscriptions:
+      - jingling
     region-include:
       - OTHER
     preferred-regions:

@@ -1227,6 +1227,12 @@ def build_proxy_manual_nodes(
     if manual_count <= 0:
         return []
 
+    # Respect the same include/exclude filters used by generated groups so
+    # special-purpose subscriptions can be kept out of Proxy's manual picks.
+    eligible_nodes = collect_group_candidates(node_infos, proxy_group)
+    if not eligible_nodes:
+        return []
+
     mix = proxy_group.get("manual-pick-mix") if isinstance(proxy_group.get("manual-pick-mix"), dict) else {}
     mix_counts = {
         QUALITY_DEDICATED: safe_int(mix.get(QUALITY_DEDICATED), 4),
@@ -1239,17 +1245,17 @@ def build_proxy_manual_nodes(
 
     pools = {
         QUALITY_DEDICATED: sort_node_infos(
-            [node for node in node_infos if node.get("quality") == QUALITY_DEDICATED],
+            [node for node in eligible_nodes if node.get("quality") == QUALITY_DEDICATED],
             preferred_regions=preferred_regions,
             quality_order=[QUALITY_DEDICATED],
         ),
         QUALITY_HIGH: sort_node_infos(
-            [node for node in node_infos if node.get("quality") == QUALITY_HIGH],
+            [node for node in eligible_nodes if node.get("quality") == QUALITY_HIGH],
             preferred_regions=preferred_regions,
             quality_order=[QUALITY_HIGH],
         ),
         QUALITY_OTHER: sort_node_infos(
-            [node for node in node_infos if node.get("quality") == QUALITY_OTHER],
+            [node for node in eligible_nodes if node.get("quality") == QUALITY_OTHER],
             preferred_regions=preferred_regions,
             quality_order=[QUALITY_OTHER],
         ),
@@ -1276,7 +1282,7 @@ def build_proxy_manual_nodes(
     if len(manual_nodes) < manual_count:
         extend_manual_nodes(
             manual_nodes,
-            sort_node_infos(node_infos, preferred_regions=preferred_regions),
+            sort_node_infos(eligible_nodes, preferred_regions=preferred_regions),
             manual_count,
             picked_names=picked_names,
             source_counts=source_counts,

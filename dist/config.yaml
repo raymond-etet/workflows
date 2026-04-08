@@ -362,7 +362,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-e.coscdn.men
-  client-fingerprint: edge
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -400,7 +400,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-g.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -419,7 +419,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-h.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -606,7 +606,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-e.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -644,7 +644,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-g.aliapp.men
-  client-fingerprint: qq
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -663,7 +663,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-h.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -701,7 +701,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-f.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -720,7 +720,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-g.aliapp.men
-  client-fingerprint: safari
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -739,7 +739,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-h.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -777,7 +777,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-f.coscdn.men
-  client-fingerprint: edge
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -815,7 +815,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-h.aliapp.men
-  client-fingerprint: safari
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -1231,7 +1231,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: firefox
+  client-fingerprint: qq
   sni: moe233-riolu-61a820a2-ab45-6be7-d0d7-aeed72816683.hnair.com
 - name: 🇭🇰 香港02
   type: anytls
@@ -1243,7 +1243,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: safari
+  client-fingerprint: firefox
   sni: moe233-riolu-fd0fcfe0-b92a-f4b5-fe04-53069f5afc1b.hnair.com
 - name: 🇭🇰 香港03
   type: anytls
@@ -1255,7 +1255,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: chrome
+  client-fingerprint: ios
   sni: moe233-riolu-61a820a2-ab45-6be7-d0d7-aeed72816683.hnair.com
 - name: 🇭🇰 香港04
   type: anytls
@@ -1267,7 +1267,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: qq
+  client-fingerprint: ios
   sni: moe233-riolu-fd0fcfe0-b92a-f4b5-fe04-53069f5afc1b.hnair.com
 - name: 🇯🇵 日本01
   type: anytls
@@ -1279,7 +1279,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: chrome
+  client-fingerprint: ios
   sni: moe233-riolu-ce068da0-f2ca-6b9b-c3cb-7dc079ae6f9e.hnair.com
 - name: 🇯🇵 日本02
   type: anytls
@@ -1303,7 +1303,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: edge
+  client-fingerprint: chrome
   sni: moe233-riolu-ce068da0-f2ca-6b9b-c3cb-7dc079ae6f9e.hnair.com
 - name: 🇯🇵 日本04
   type: anytls
@@ -1315,7 +1315,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: edge
+  client-fingerprint: chrome
   sni: moe233-riolu-8efefdb7-1701-a524-d925-844f02d32bf4.hnair.com
 - name: 🇸🇬 新加坡01
   type: anytls
@@ -1327,7 +1327,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: safari
+  client-fingerprint: firefox
   sni: moe233-riolu-655d3987-e9a4-935a-877e-a91ce6fe776e.hnair.com
 - name: 🇸🇬 新加坡02
   type: anytls
@@ -1339,7 +1339,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: firefox
+  client-fingerprint: qq
   sni: moe233-riolu-c4c745f3-e49f-e7ac-b9d6-9a0fbe8511f0.hnair.com
 - name: 🇸🇬 新加坡03
   type: anytls
@@ -1351,7 +1351,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: chrome
+  client-fingerprint: edge
   sni: moe233-riolu-0c545ee4-f931-9c24-26b7-eab6ea0370b3.hnair.com
 - name: 🇸🇬 新加坡04
   type: anytls
@@ -1399,7 +1399,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: ios
+  client-fingerprint: qq
   sni: moe233-riolu-b78e8350-2039-90f8-a73d-c5cdf8e0543a.hnair.com
 - name: 🇹🇼 台湾03
   type: anytls
@@ -1423,7 +1423,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: ios
+  client-fingerprint: chrome
   sni: moe233-riolu-b78e8350-2039-90f8-a73d-c5cdf8e0543a.hnair.com
 - name: 🇺🇸 美国01
   type: anytls
@@ -1435,7 +1435,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: edge
+  client-fingerprint: chrome
   sni: moe233-riolu-7f0c47de-1ed5-2da6-22ed-921e51992120.hnair.com
 - name: 🇺🇸 美国02
   type: anytls
@@ -1447,7 +1447,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   sni: moe233-riolu-b94777dd-13e5-228d-ccdf-ea937be0c8ab.hnair.com
 - name: 🇺🇸 美国03
   type: anytls
@@ -1471,7 +1471,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: firefox
+  client-fingerprint: safari
   sni: moe233-riolu-b94777dd-13e5-228d-ccdf-ea937be0c8ab.hnair.com
 - name: 🇺🇸 美国05
   type: anytls
@@ -1483,7 +1483,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: chrome
+  client-fingerprint: qq
   sni: moe233-riolu-9ceea1e7-8f6a-c055-33ae-2da3dcc9d3b5.hnair.com
 - name: 🇨🇦 加拿大01
   type: anytls
@@ -1519,7 +1519,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: chrome
+  client-fingerprint: safari
   sni: moe233-riolu-3a085f91-005a-c285-f2c7-b4565ef204f0.hnair.com
 - name: 🇹🇭 泰国01
   type: anytls
@@ -1531,7 +1531,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: edge
+  client-fingerprint: qq
   sni: moe233-riolu-72c79615-c4ec-2b5c-e73a-47737a3992b4.hnair.com
 - name: 🇹🇭 泰国 备用机01
   type: anytls
@@ -1543,7 +1543,7 @@ proxies:
   - http/1.1
   skip-cert-verify: false
   udp: true
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   sni: moe233-riolu-72c79615-c4ec-2b5c-e73a-47737a3992b4.qchwnd.moe
 - name: 🇬🇧 英国01
   type: anytls
@@ -1555,7 +1555,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: chrome
+  client-fingerprint: qq
   sni: moe233-riolu-fbe8c179-cb07-723f-bb5a-eb256a5f2b0e.hnair.com
 - name: 🇬🇧 英国02
   type: anytls
@@ -1567,7 +1567,7 @@ proxies:
   - http/1.1
   skip-cert-verify: false
   udp: true
-  client-fingerprint: ios
+  client-fingerprint: qq
   sni: moe233-riolu-fbe8c179-cb07-723f-bb5a-eb256a5f2b0e.qchwnd.moe
 - name: 🇫🇷 法国01
   type: anytls
@@ -1579,7 +1579,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: ios
+  client-fingerprint: edge
   sni: moe233-riolu-8372d27c-0ed6-d315-e782-1f55655ac9df.hnair.com
 - name: 🇫🇷 法国02
   type: anytls
@@ -1591,7 +1591,7 @@ proxies:
   - http/1.1
   skip-cert-verify: false
   udp: true
-  client-fingerprint: safari
+  client-fingerprint: chrome
   sni: moe233-riolu-8372d27c-0ed6-d315-e782-1f55655ac9df.qchwnd.moe
 - name: 🇩🇪 德国01
   type: anytls
@@ -1603,7 +1603,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: edge
+  client-fingerprint: ios
   sni: moe233-riolu-128479d7-732e-41e0-e6fc-ce95e60d375e.hnair.com
 - name: 🇩🇪 德国02
   type: anytls
@@ -1615,7 +1615,7 @@ proxies:
   - http/1.1
   skip-cert-verify: false
   udp: true
-  client-fingerprint: qq
+  client-fingerprint: safari
   sni: moe233-riolu-128479d7-732e-41e0-e6fc-ce95e60d375e.qchwnd.moe
 - name: 🇰🇷 韩国01
   type: anytls
@@ -1627,7 +1627,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: firefox
+  client-fingerprint: ios
   sni: moe233-riolu-5e3746c6-b3a3-8086-d853-bd323b99bae2.hnair.com
 - name: 🇰🇷 韩国02
   type: anytls
@@ -1661,6 +1661,7 @@ proxy-groups:
   manual-source-cap: 2
   manual-region-cap: 2
   fallback-groups:
+  - OpenAI
   - AI
   - 币安
   - PikPak
@@ -1683,6 +1684,7 @@ proxy-groups:
   - 🇸🇬 新加坡A1|三网|3倍|V2
   - 🇯🇵 日本A3|三网|3倍|V2
   - 🇸🇬 SG-01-SG.GS
+  - OpenAI
   - AI
   - 币安
   - PikPak
@@ -1745,10 +1747,6 @@ proxy-groups:
   - 🇭🇰 HK-09-FXT
   - 🇭🇰 HK-10-Akari
   - 🇭🇰 香港 - Hy2
-  - 🇭🇰 香港01
-  - 🇭🇰 香港02
-  - 🇭🇰 香港03
-  - 🇭🇰 香港04
   - 🇭🇰香港-A(通用)
   - 🇸🇬 新加坡B1|移动|1.2倍|V2
   - 🇸🇬 SG-01-SG.GS
@@ -1758,11 +1756,6 @@ proxy-groups:
   - 🇸🇬 SG-05-HostHatch
   - 🇸🇬 SG-07-Leaseweb
   - 🇸🇬 新加坡 - Hy2
-  - 🇸🇬 新加坡01
-  - 🇸🇬 新加坡02
-  - 🇸🇬 新加坡03
-  - 🇸🇬 新加坡04
-  - 🇸🇬 新加坡05
   - 🇸🇬新加坡-A(通用)
   - 🇯🇵 JP-01-Sakura
   - 🇯🇵 JP-02-JinX
@@ -1771,10 +1764,6 @@ proxy-groups:
   - 🇯🇵 JP-05-DDPS
   - 🇯🇵 JP-10-Leasweb
   - 🇯🇵 日本 - Hy2
-  - 🇯🇵 日本01
-  - 🇯🇵 日本02
-  - 🇯🇵 日本03
-  - 🇯🇵 日本04
   - 🇯🇵日本-A(通用)
   - 🇺🇸 美国G2|实验|0.1倍|V1
   - 🇺🇸 美国B2|联通|0.7倍|V2
@@ -1787,11 +1776,6 @@ proxy-groups:
   - 🇺🇸 US-04-Eons
   - 🇺🇸 US-05-Leassweb
   - 🇺🇸 美国 - Hy2
-  - 🇺🇸 美国01
-  - 🇺🇸 美国02
-  - 🇺🇸 美国03
-  - 🇺🇸 美国04
-  - 🇺🇸 美国05
   - 🇺🇸美国-A(通用)
   - 🇺🇸美国-C(通用)
   - 🇺🇸美国-X(通用)
@@ -1803,43 +1787,23 @@ proxy-groups:
   - 🇳🇱 荷兰B1|联通|0.7倍|V1
   - 🇳🇱 荷兰A1|联通|0.8倍|V1
   - 🇩🇪 德国B1|移动|1.1倍|V1
-  - 🇨🇦 加拿大 备用机01
-  - 🇨🇦 加拿大01
   - 🇩🇪 DE-01-Dataforest
   - 🇩🇪 DE-02-BAGE
   - 🇩🇪 DE-04-Leaseweb
-  - 🇩🇪 德国01
-  - 🇩🇪 德国02
   - 🇩🇪德国-A(通用)
   - 🇫🇮 FI-01-Cgi Global
-  - 🇫🇷 法国01
-  - 🇫🇷 法国02
   - 🇬🇧 UK-01-HostHatch
-  - 🇬🇧 英国01
-  - 🇬🇧 英国02
   - 🇨🇳 TW-01-Hinet
   - 🇨🇳 TW-02-AKILE
   - 🇨🇳 TW-03-Akari
   - 🇨🇳 TW-04-MoeChuang
   - 🇨🇳 台湾 - Hy2
-  - 🇹🇼 台湾01
-  - 🇹🇼 台湾02
-  - 🇹🇼 台湾03
-  - 🇹🇼 台湾04
   - 🇹🇼台湾-A(通用)
   - 🇹🇭 泰国A1|移动|0.9倍|V2
   - 🇻🇳 越南A1|电信移动|1.1倍|V2
-  - 🇮🇩 印尼01
   - 🇲🇾马来-A(通用)
-  - 🇹🇭 泰国 备用机01
-  - 🇹🇭 泰国01
   - 🇷🇺 俄罗斯A1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
-  - 支持AI:新日美台港
-  - 看不到节点的小火箭用户请卸载重装
-  - 超时请更新订阅
-  - 🇰🇷 韩国01
-  - 🇰🇷 韩国02
   - 🇰🇷韩国-A(通用)
   url: https://www.gstatic.com/generate_204
   interval: 180
@@ -1866,10 +1830,6 @@ proxy-groups:
   - 🇭🇰 HK-09-FXT
   - 🇭🇰 HK-10-Akari
   - 🇭🇰 香港 - Hy2
-  - 🇭🇰 香港01
-  - 🇭🇰 香港02
-  - 🇭🇰 香港03
-  - 🇭🇰 香港04
   - 🇭🇰香港-A(通用)
   url: https://www.gstatic.com/generate_204
   interval: 180
@@ -1896,10 +1856,6 @@ proxy-groups:
   - 🇭🇰 HK-09-FXT
   - 🇭🇰 HK-10-Akari
   - 🇭🇰 香港 - Hy2
-  - 🇭🇰 香港01
-  - 🇭🇰 香港02
-  - 🇭🇰 香港03
-  - 🇭🇰 香港04
   - 🇭🇰香港-A(通用)
 - name: 香港
   type: select
@@ -1925,11 +1881,6 @@ proxy-groups:
   - 🇸🇬 SG-05-HostHatch
   - 🇸🇬 SG-07-Leaseweb
   - 🇸🇬 新加坡 - Hy2
-  - 🇸🇬 新加坡01
-  - 🇸🇬 新加坡02
-  - 🇸🇬 新加坡03
-  - 🇸🇬 新加坡04
-  - 🇸🇬 新加坡05
   - 🇸🇬新加坡-A(通用)
   url: https://www.gstatic.com/generate_204
   interval: 180
@@ -1948,11 +1899,6 @@ proxy-groups:
   - 🇸🇬 SG-05-HostHatch
   - 🇸🇬 SG-07-Leaseweb
   - 🇸🇬 新加坡 - Hy2
-  - 🇸🇬 新加坡01
-  - 🇸🇬 新加坡02
-  - 🇸🇬 新加坡03
-  - 🇸🇬 新加坡04
-  - 🇸🇬 新加坡05
   - 🇸🇬新加坡-A(通用)
 - name: 新加坡
   type: select
@@ -1979,10 +1925,6 @@ proxy-groups:
   - 🇯🇵 JP-05-DDPS
   - 🇯🇵 JP-10-Leasweb
   - 🇯🇵 日本 - Hy2
-  - 🇯🇵 日本01
-  - 🇯🇵 日本02
-  - 🇯🇵 日本03
-  - 🇯🇵 日本04
   - 🇯🇵日本-A(通用)
   url: https://www.gstatic.com/generate_204
   interval: 180
@@ -2002,10 +1944,6 @@ proxy-groups:
   - 🇯🇵 JP-05-DDPS
   - 🇯🇵 JP-10-Leasweb
   - 🇯🇵 日本 - Hy2
-  - 🇯🇵 日本01
-  - 🇯🇵 日本02
-  - 🇯🇵 日本03
-  - 🇯🇵 日本04
   - 🇯🇵日本-A(通用)
 - name: 日本
   type: select
@@ -2027,10 +1965,6 @@ proxy-groups:
   - 🇨🇳 TW-03-Akari
   - 🇨🇳 TW-04-MoeChuang
   - 🇨🇳 台湾 - Hy2
-  - 🇹🇼 台湾01
-  - 🇹🇼 台湾02
-  - 🇹🇼 台湾03
-  - 🇹🇼 台湾04
   - 🇹🇼台湾-A(通用)
   url: https://www.gstatic.com/generate_204
   interval: 180
@@ -2045,10 +1979,6 @@ proxy-groups:
   - 🇨🇳 TW-03-Akari
   - 🇨🇳 TW-04-MoeChuang
   - 🇨🇳 台湾 - Hy2
-  - 🇹🇼 台湾01
-  - 🇹🇼 台湾02
-  - 🇹🇼 台湾03
-  - 🇹🇼 台湾04
   - 🇹🇼台湾-A(通用)
 - name: 台湾
   type: select
@@ -2076,11 +2006,6 @@ proxy-groups:
   - 🇺🇸 US-04-Eons
   - 🇺🇸 US-05-Leassweb
   - 🇺🇸 美国 - Hy2
-  - 🇺🇸 美国01
-  - 🇺🇸 美国02
-  - 🇺🇸 美国03
-  - 🇺🇸 美国04
-  - 🇺🇸 美国05
   - 🇺🇸美国-A(通用)
   - 🇺🇸美国-C(通用)
   - 🇺🇸美国-X(通用)
@@ -2103,11 +2028,6 @@ proxy-groups:
   - 🇺🇸 US-04-Eons
   - 🇺🇸 US-05-Leassweb
   - 🇺🇸 美国 - Hy2
-  - 🇺🇸 美国01
-  - 🇺🇸 美国02
-  - 🇺🇸 美国03
-  - 🇺🇸 美国04
-  - 🇺🇸 美国05
   - 🇺🇸美国-A(通用)
   - 🇺🇸美国-C(通用)
   - 🇺🇸美国-X(通用)
@@ -2134,20 +2054,12 @@ proxy-groups:
   - 🇳🇱 荷兰B1|联通|0.7倍|V1
   - 🇳🇱 荷兰A1|联通|0.8倍|V1
   - 🇩🇪 德国B1|移动|1.1倍|V1
-  - 🇨🇦 加拿大 备用机01
-  - 🇨🇦 加拿大01
   - 🇩🇪 DE-01-Dataforest
   - 🇩🇪 DE-02-BAGE
   - 🇩🇪 DE-04-Leaseweb
-  - 🇩🇪 德国01
-  - 🇩🇪 德国02
   - 🇩🇪德国-A(通用)
   - 🇫🇮 FI-01-Cgi Global
-  - 🇫🇷 法国01
-  - 🇫🇷 法国02
   - 🇬🇧 UK-01-HostHatch
-  - 🇬🇧 英国01
-  - 🇬🇧 英国02
   url: https://www.gstatic.com/generate_204
   interval: 180
   tolerance: 50
@@ -2164,20 +2076,12 @@ proxy-groups:
   - 🇳🇱 荷兰B1|联通|0.7倍|V1
   - 🇳🇱 荷兰A1|联通|0.8倍|V1
   - 🇩🇪 德国B1|移动|1.1倍|V1
-  - 🇨🇦 加拿大 备用机01
-  - 🇨🇦 加拿大01
   - 🇩🇪 DE-01-Dataforest
   - 🇩🇪 DE-02-BAGE
   - 🇩🇪 DE-04-Leaseweb
-  - 🇩🇪 德国01
-  - 🇩🇪 德国02
   - 🇩🇪德国-A(通用)
   - 🇫🇮 FI-01-Cgi Global
-  - 🇫🇷 法国01
-  - 🇫🇷 法国02
   - 🇬🇧 UK-01-HostHatch
-  - 🇬🇧 英国01
-  - 🇬🇧 英国02
 - name: 欧洲
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
@@ -2195,10 +2099,7 @@ proxy-groups:
   proxies:
   - 🇹🇭 泰国A1|移动|0.9倍|V2
   - 🇻🇳 越南A1|电信移动|1.1倍|V2
-  - 🇮🇩 印尼01
   - 🇲🇾马来-A(通用)
-  - 🇹🇭 泰国 备用机01
-  - 🇹🇭 泰国01
   url: https://www.gstatic.com/generate_204
   interval: 180
   tolerance: 50
@@ -2209,10 +2110,7 @@ proxy-groups:
   proxies:
   - 🇹🇭 泰国A1|移动|0.9倍|V2
   - 🇻🇳 越南A1|电信移动|1.1倍|V2
-  - 🇮🇩 印尼01
   - 🇲🇾马来-A(通用)
-  - 🇹🇭 泰国 备用机01
-  - 🇹🇭 泰国01
 - name: 东南亚
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
@@ -2230,11 +2128,6 @@ proxy-groups:
   proxies:
   - 🇷🇺 俄罗斯A1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
-  - 支持AI:新日美台港
-  - 看不到节点的小火箭用户请卸载重装
-  - 超时请更新订阅
-  - 🇰🇷 韩国01
-  - 🇰🇷 韩国02
   - 🇰🇷韩国-A(通用)
   url: https://www.gstatic.com/generate_204
   interval: 180
@@ -2246,11 +2139,6 @@ proxy-groups:
   proxies:
   - 🇷🇺 俄罗斯A1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
-  - 支持AI:新日美台港
-  - 看不到节点的小火箭用户请卸载重装
-  - 超时请更新订阅
-  - 🇰🇷 韩国01
-  - 🇰🇷 韩国02
   - 🇰🇷韩国-A(通用)
 - name: 其他
   type: select
