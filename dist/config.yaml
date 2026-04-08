@@ -1816,6 +1816,107 @@ proxy-groups:
   interval: 180
   tolerance: 50
   lazy: true
+- name: 3834
+  type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
+  proxies:
+  - 🇸🇬 新加坡A1|三网|3倍|V2
+  - 🇯🇵 日本A3|三网|3倍|V2
+  - 🇯🇵 日本A4|三网|3倍|V2
+  - 🇯🇵 日本B1|联通移动|2倍|V2
+  - 🇸🇬 新加坡B1|移动|1.2倍|V2
+  - 🇸🇬 SG-01-SG.GS
+  - 🇸🇬 SG-02-Datacamp
+  - 🇸🇬 SG-03-Eons
+  - 🇸🇬 SG-04-JinX
+  - 🇸🇬 SG-05-HostHatch
+  - 🇸🇬 SG-07-Leaseweb
+  - 🇸🇬 新加坡 - Hy2
+  - 🇸🇬 新加坡01
+  - 🇸🇬 新加坡02
+  - 🇸🇬 新加坡03
+  - 🇸🇬 新加坡04
+  - 🇸🇬 新加坡05
+  - 🇸🇬新加坡-A(通用)
+  - 🇯🇵 JP-01-Sakura
+  - 🇯🇵 JP-02-JinX
+  - 🇯🇵 JP-03-Akari
+  - 🇯🇵 JP-04-HostHatch
+  - 🇯🇵 JP-05-DDPS
+  - 🇯🇵 JP-10-Leasweb
+  - 🇯🇵 日本 - Hy2
+  - 🇯🇵 日本01
+  - 🇯🇵 日本02
+  - 🇯🇵 日本03
+  - 🇯🇵 日本04
+  - 🇯🇵日本-A(通用)
+  - 🇺🇸 美国G2|实验|0.1倍|V1
+  - 🇺🇸 美国B2|联通|0.7倍|V2
+  - 🇺🇸 美国E2|0.7倍|V1
+  - 🇺🇸 美国C5|0.8倍|V1
+  - 🇺🇸 美国F3|电信联通|1.1倍|V1
+  - 🇺🇸 US-01-HostHatch
+  - 🇺🇸 US-02-Jinx
+  - 🇺🇸 US-03-Alpha
+  - 🇺🇸 US-04-Eons
+  - 🇺🇸 US-05-Leassweb
+  - 🇺🇸 美国 - Hy2
+  - 🇺🇸 美国01
+  - 🇺🇸 美国02
+  - 🇺🇸 美国03
+  - 🇺🇸 美国04
+  - 🇺🇸 美国05
+  - 🇺🇸美国-A(通用)
+  - 🇺🇸美国-C(通用)
+  - 🇺🇸美国-X(通用)
+  - 🇨🇦 加拿大A1|0.7倍|V1
+  - 🇩🇪 德国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A1|联通|0.7倍|V1
+  - 🇫🇷 法国A2|联通|0.7倍|V1
+  - 🇬🇧 英国A2|联通移动|0.7倍|V1
+  - 🇳🇱 荷兰B1|联通|0.7倍|V1
+  - 🇳🇱 荷兰A1|联通|0.8倍|V1
+  - 🇩🇪 德国B1|移动|1.1倍|V1
+  - 🇨🇦 加拿大 备用机01
+  - 🇨🇦 加拿大01
+  - 🇩🇪 DE-01-Dataforest
+  - 🇩🇪 DE-02-BAGE
+  - 🇩🇪 DE-04-Leaseweb
+  - 🇩🇪 德国01
+  - 🇩🇪 德国02
+  - 🇩🇪德国-A(通用)
+  - 🇫🇮 FI-01-Cgi Global
+  - 🇫🇷 法国01
+  - 🇫🇷 法国02
+  - 🇬🇧 UK-01-HostHatch
+  - 🇬🇧 英国01
+  - 🇬🇧 英国02
+  - 🇨🇳 TW-01-Hinet
+  - 🇨🇳 TW-02-AKILE
+  - 🇨🇳 TW-03-Akari
+  - 🇨🇳 TW-04-MoeChuang
+  - 🇨🇳 台湾 - Hy2
+  - 🇹🇼 台湾01
+  - 🇹🇼 台湾02
+  - 🇹🇼 台湾03
+  - 🇹🇼 台湾04
+  - 🇹🇼台湾-A(通用)
+  - 🇹🇭 泰国A1|移动|0.9倍|V2
+  - 🇻🇳 越南A1|电信移动|1.1倍|V2
+  - 🇮🇩 印尼01
+  - 🇲🇾马来-A(通用)
+  - 🇹🇭 泰国 备用机01
+  - 🇹🇭 泰国01
+  - 🇷🇺 俄罗斯A1|联通|1倍|V1
+  - 🇹🇷 土耳其A1|三网|1.1倍|V2
+  - 支持AI:新日美台港
+  - 看不到节点的小火箭用户请卸载重装
+  - 超时请更新订阅
+  - 🇰🇷 韩国01
+  - 🇰🇷 韩国02
+  - 🇰🇷韩国-A(通用)
+  url: http://38.34.18.10/generate_204
+  expected-status: 204
 - name: 香港-自动
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png

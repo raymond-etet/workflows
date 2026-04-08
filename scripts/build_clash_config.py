@@ -1095,6 +1095,7 @@ def collect_group_candidates(
     include_subs = {item.lower() for item in clean_list(group.get("include-subscriptions"))}
     exclude_subs = {item.lower() for item in clean_list(group.get("exclude-subscriptions"))}
     region_include = {item.upper() for item in clean_list(group.get("region-include"))}
+    region_exclude = {item.upper() for item in clean_list(group.get("region-exclude"))}
     require_quality = str(group.get("require-quality") or "").strip().lower()
     exclude_patterns = compile_group_patterns(group.get("exclude-patterns"))
     exclude_patterns.extend(compile_group_patterns(group.get("exclude-filter")))
@@ -1111,6 +1112,8 @@ def collect_group_candidates(
         if require_quality and str(node.get("quality") or "") != require_quality:
             continue
         if region_include and str(node.get("region") or "OTHER").upper() not in region_include:
+            continue
+        if region_exclude and str(node.get("region") or "OTHER").upper() in region_exclude:
             continue
         if exclude_patterns and any(p.search(str(node.get("name") or "")) for p in exclude_patterns):
             continue
@@ -1719,6 +1722,7 @@ def build() -> dict:
         "preferred-regions",
         "quality-order",
         "region-include",
+        "region-exclude",
         "require-quality",
         "extra-keywords",
     }

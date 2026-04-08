@@ -277,6 +277,25 @@ proxy-groups:
     tolerance: 50
     lazy: true
 
+  - name: 3834
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
+    exclude-subscriptions:
+      - Nano
+    region-exclude:
+      - HK
+    preferred-regions:
+      - SG
+      - JP
+      - US
+      - EU
+      - TW
+      - SEA
+      - OTHER
+    proxies: []
+    url: http://38.34.18.10/generate_204
+    expected-status: 204
+
   - name: 香港-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
