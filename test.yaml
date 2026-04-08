@@ -16,6 +16,8 @@ subscriptions:
     url: https://pics9.sknil-gnikiv.com/wx5TqEUTwXks/v1/w7LQhnaSTnjD/VikingLinks?token=da5e9b0465c4e8546a626c2968c96cff.532y5cjqx4b.jpg
   - name: tangguo
     url: https://114.132.219.239:9888/tgyunsub?token=6c1297854ef2c62c8e55d7609902c27a
+  - name: jingling
+    url: https://subscription.riolu.link/RioLU/system/api/v1/client/subscribe?token=949e86f643ace6569945a12381b8068a
 port: 7890
 socks-port: 7891
 redir-port: 7892
@@ -187,8 +189,6 @@ proxy-groups:
   - name: Proxy
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
-    exclude-subscriptions:
-      - tangguo
     manual-pick-count: 8
     manual-pick-mix:
       dedicated: 4
@@ -243,8 +243,6 @@ proxy-groups:
   - name: 全节点
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
-    exclude-subscriptions:
-      - tangguo
     quality-order:
       - dedicated
       - high
@@ -267,8 +265,6 @@ proxy-groups:
   - name: 香港-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
-    exclude-subscriptions:
-      - tangguo
     region-include:
       - HK
     proxies: []
@@ -280,8 +276,6 @@ proxy-groups:
   - name: 香港-手动
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
-    exclude-subscriptions:
-      - tangguo
     region-include:
       - HK
     proxies: []
@@ -298,8 +292,6 @@ proxy-groups:
   - name: 新加坡-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
-    exclude-subscriptions:
-      - tangguo
     region-include:
       - SG
     proxies: []
@@ -311,8 +303,6 @@ proxy-groups:
   - name: 新加坡-手动
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
-    exclude-subscriptions:
-      - tangguo
     region-include:
       - SG
     proxies: []
@@ -329,8 +319,6 @@ proxy-groups:
   - name: 日本-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
-    exclude-subscriptions:
-      - tangguo
     region-include:
       - JP
     proxies: []
@@ -342,8 +330,6 @@ proxy-groups:
   - name: 日本-手动
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
-    exclude-subscriptions:
-      - tangguo
     region-include:
       - JP
     proxies: []
@@ -360,8 +346,6 @@ proxy-groups:
   - name: 台湾-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
-    exclude-subscriptions:
-      - tangguo
     region-include:
       - TW
     proxies: []
@@ -373,8 +357,6 @@ proxy-groups:
   - name: 台湾-手动
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
-    exclude-subscriptions:
-      - tangguo
     region-include:
       - TW
     proxies: []
@@ -391,8 +373,6 @@ proxy-groups:
   - name: 美国-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-    exclude-subscriptions:
-      - tangguo
     region-include:
       - US
     proxies: []
@@ -404,8 +384,6 @@ proxy-groups:
   - name: 美国-手动
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-    exclude-subscriptions:
-      - tangguo
     region-include:
       - US
     proxies: []
@@ -422,8 +400,6 @@ proxy-groups:
   - name: 欧洲-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
-    exclude-subscriptions:
-      - tangguo
     region-include:
       - EU
     proxies: []
@@ -435,8 +411,6 @@ proxy-groups:
   - name: 欧洲-手动
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
-    exclude-subscriptions:
-      - tangguo
     region-include:
       - EU
     proxies: []
@@ -453,8 +427,6 @@ proxy-groups:
   - name: 东南亚-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
-    exclude-subscriptions:
-      - tangguo
     region-include:
       - SEA
     proxies: []
@@ -466,8 +438,6 @@ proxy-groups:
   - name: 东南亚-手动
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
-    exclude-subscriptions:
-      - tangguo
     region-include:
       - SEA
     proxies: []
@@ -484,8 +454,6 @@ proxy-groups:
   - name: 其他-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
-    exclude-subscriptions:
-      - tangguo
     region-include:
       - OTHER
     preferred-regions:
@@ -499,8 +467,6 @@ proxy-groups:
   - name: 其他-手动
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
-    exclude-subscriptions:
-      - tangguo
     region-include:
       - OTHER
     preferred-regions:
@@ -621,7 +587,7 @@ proxy-groups:
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
     include-subscriptions:
-      - tangguo
+      - jingling
       - viking
     region-include:
       - SG
@@ -635,7 +601,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
     include-subscriptions:
-      - tangguo
+      - jingling
       - viking
     region-include:
       - SG
@@ -653,7 +619,7 @@ proxy-groups:
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
     include-subscriptions:
-      - tangguo
+      - jingling
       - viking
     region-include:
       - JP
@@ -667,7 +633,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
     include-subscriptions:
-      - tangguo
+      - jingling
       - viking
     region-include:
       - JP
@@ -685,7 +651,7 @@ proxy-groups:
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
     include-subscriptions:
-      - tangguo
+      - jingling
       - viking
     region-include:
       - US
@@ -699,7 +665,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
     include-subscriptions:
-      - tangguo
+      - jingling
       - viking
     region-include:
       - US
