@@ -615,6 +615,7 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
     fallback-groups:
+      - Proxy
       - OpenAI-新加坡
       - OpenAI-日本
       - OpenAI-美国
