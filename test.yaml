@@ -299,6 +299,8 @@ proxy-groups:
   - name: "1024"
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+    exclude-subscriptions:
+      - Nano
     region-include:
       - HK
     proxies: []
