@@ -2293,7 +2293,8 @@ proxy-groups:
   - 🇸🇬 新加坡03
   - 🇸🇬 新加坡04
   - 🇸🇬 新加坡05
-  url: https://chatgpt.com
+  url: https://chatgpt.com/.well-known/http-message-signatures-directory
+  expected-status: 200
   interval: 180
   tolerance: 50
   lazy: true
@@ -2323,7 +2324,8 @@ proxy-groups:
   - 🇯🇵 日本02
   - 🇯🇵 日本03
   - 🇯🇵 日本04
-  url: https://chatgpt.com
+  url: https://chatgpt.com/.well-known/http-message-signatures-directory
+  expected-status: 200
   interval: 180
   tolerance: 50
   lazy: true
@@ -2353,7 +2355,8 @@ proxy-groups:
   - 🇺🇸 美国03
   - 🇺🇸 美国04
   - 🇺🇸 美国05
-  url: https://chatgpt.com
+  url: https://chatgpt.com/.well-known/http-message-signatures-directory
+  expected-status: 200
   interval: 180
   tolerance: 50
   lazy: true
