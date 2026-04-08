@@ -588,7 +588,6 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
     include-subscriptions:
       - jingling
-      - viking
     region-include:
       - SG
     proxies: []
@@ -602,7 +601,6 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
     include-subscriptions:
       - jingling
-      - viking
     region-include:
       - SG
     proxies: []
@@ -620,7 +618,6 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
     include-subscriptions:
       - jingling
-      - viking
     region-include:
       - JP
     proxies: []
@@ -634,7 +631,6 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
     include-subscriptions:
       - jingling
-      - viking
     region-include:
       - JP
     proxies: []
@@ -652,7 +648,6 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
     include-subscriptions:
       - jingling
-      - viking
     region-include:
       - US
     proxies: []
@@ -666,7 +661,6 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
     include-subscriptions:
       - jingling
-      - viking
     region-include:
       - US
     proxies: []
