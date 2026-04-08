@@ -296,6 +296,18 @@ proxy-groups:
     tolerance: 50
     lazy: true
 
+  - name: "1024"
+    type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+    region-include:
+      - HK
+    proxies: []
+    url: https://speedtest.singapore.linode.com/
+    expected-status: 200
+    interval: 180
+    tolerance: 50
+    lazy: true
+
   - name: 香港-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png

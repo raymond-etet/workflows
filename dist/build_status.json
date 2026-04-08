@@ -1,11 +1,11 @@
 {
-  "finished_at_utc": "2026-04-08T17:19:38Z",
+  "finished_at_utc": "2026-04-08T17:36:50Z",
   "generated_config_path": "dist/config.yaml",
   "generated_provider_path": "providers/all.yaml",
   "proxy_count": 148,
   "prune_low_traffic": false,
   "removed_subscriptions": [],
-  "started_at_utc": "2026-04-08T17:19:26Z",
+  "started_at_utc": "2026-04-08T17:36:30Z",
   "subscription_min_remaining_gb": null,
   "subscription_report_path": "dist/subscriptions_report.md",
   "success": true
