@@ -1,37 +1,28 @@
 proxies:
 - name: 官网：keluosi.top
-  type: anytls
-  server: usg2-0co2xkid.node.cross666.top
-  port: 31333
+  type: hysteria2
+  server: usf3-huxk4jdn.node.cross666.top
+  port: 65535
   password: efaed81f-e760-4d87-be6e-05136b25da66
   udp: true
   sni: www.yahoo.com
   skip-cert-verify: true
 - name: 套餐到期：2027-01-17
-  type: anytls
-  server: usg2-0co2xkid.node.cross666.top
-  port: 31333
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
-  sni: www.yahoo.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国G2|三网|1.2倍|V1
-  type: anytls
-  server: usg2-0co2xkid.node.cross666.top
-  port: 31333
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
-  sni: www.yahoo.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国F1|电信联通|1.1倍|V1
-  server: usf.node.cross666.top
-  port: 65535
-  sni: www.yahoo.com
-  up: 500
-  down: 500
-  skip-cert-verify: true
   type: hysteria2
+  server: usf3-huxk4jdn.node.cross666.top
+  port: 65535
   password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国F3|电信联通|1.1倍|V1
+  type: hysteria2
+  server: usf3-huxk4jdn.node.cross666.top
+  port: 65535
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.com
+  skip-cert-verify: true
 - name: 🇺🇸 美国B2|联通|0.7倍|V2
   type: anytls
   server: usb1.node.cross666.top
@@ -56,42 +47,46 @@ proxies:
   udp: true
   sni: www.yahoo.com
   skip-cert-verify: true
+- name: 🇺🇸 美国G2|实验|0.1倍|V1
+  type: anytls
+  server: usg2-0co2xkid.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.com
+  skip-cert-verify: true
 - name: 🇭🇰 香港A2|电信联通|2倍|V1
+  type: hysteria2
   server: hka2-1govz7w0l7w0lgt5.node.cross666.top
   port: 65535
-  sni: mirrors.xtom.hk
-  up: 80
-  down: 80
-  skip-cert-verify: true
-  type: hysteria2
   password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: mirrors.xtom.hk
+  skip-cert-verify: true
 - name: 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  type: hysteria2
   server: hkc3.node.cross666.top
   port: 65535
-  sni: mirrors.xtom.hk
-  up: 100
-  down: 100
-  skip-cert-verify: true
-  type: hysteria2
   password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: mirrors.xtom.hk
+  skip-cert-verify: true
 - name: 🇭🇰 香港C2|三网|3.5倍|V2|家宽
+  type: hysteria2
   server: hkc2.node.cross666.top
   port: 65535
-  sni: mirrors.xtom.hk
-  up: 100
-  down: 100
-  skip-cert-verify: true
-  type: hysteria2
   password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: mirrors.xtom.hk
+  skip-cert-verify: true
 - name: 🇭🇰 香港C5|三网|3.5倍|V2|家宽
+  type: hysteria2
   server: hkc5.node.cross666.top
   port: 65535
-  sni: mirrors.xtom.hk
-  up: 250
-  down: 250
-  skip-cert-verify: true
-  type: hysteria2
   password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: mirrors.xtom.hk
+  skip-cert-verify: true
 - name: 🇯🇵 日本A4|三网|3倍|V2
   type: anytls
   server: jpfa4-okay9io5.node.cross666.top
@@ -117,14 +112,13 @@ proxies:
   sni: www.yahoo.co.jp
   skip-cert-verify: true
 - name: 🇸🇬 新加坡A1|三网|3倍|V2
+  type: anytls
   server: sga.node.cross666.top
-  port: 65535
-  sni: mirror.sg.gs
-  up: 80
-  down: 80
-  skip-cert-verify: true
-  type: hysteria2
+  port: 31333
   password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: mirror.sg.gs
+  skip-cert-verify: true
 - name: 🇸🇬 新加坡B1|移动|1.2倍|V2
   type: anytls
   server: sgb1.node.cross666.top
@@ -150,14 +144,13 @@ proxies:
   sni: mirror.dogado.de
   skip-cert-verify: true
 - name: 🇩🇪 德国B1|移动|1.1倍|V1
+  type: hysteria2
   server: deb1.node.cross666.top
   port: 65535
-  sni: mirror.dogado.de
-  up: 500
-  down: 500
-  skip-cert-verify: true
-  type: hysteria2
   password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: mirror.dogado.de
+  skip-cert-verify: true
 - name: 🇬🇧 英国A2|联通移动|0.7倍|V1
   type: anytls
   server: uka2.node.cross666.top
@@ -199,23 +192,21 @@ proxies:
   sni: mirror.serverion.com
   skip-cert-verify: true
 - name: 🇹🇭 泰国A1|移动|0.9倍|V2
+  type: hysteria2
   server: tha1.node.cross666.top
   port: 65535
-  sni: mirror1.ku.ac.th
-  up: 100
-  down: 100
-  skip-cert-verify: true
-  type: hysteria2
   password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: mirror1.ku.ac.th
+  skip-cert-verify: true
 - name: 🇻🇳 越南A1|电信移动|1.1倍|V2
+  type: hysteria2
   server: vna1.node.cross666.top
   port: 65535
-  sni: mirror.sg.gs
-  up: 100
-  down: 100
-  skip-cert-verify: true
-  type: hysteria2
   password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: mirror.sg.gs
+  skip-cert-verify: true
 - name: 🇷🇺 俄罗斯A1|联通|1倍|V1
   type: anytls
   server: rua1.node.cross666.top
@@ -225,17 +216,16 @@ proxies:
   sni: mirror.hyperdedic.ru
   skip-cert-verify: true
 - name: 🇹🇷 土耳其A1|三网|1.1倍|V2
+  type: hysteria2
   server: tra1.node.cross666.top
   port: 65535
-  sni: mirror.dogado.de
-  up: 100
-  down: 100
-  skip-cert-verify: true
-  type: hysteria2
   password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: mirror.dogado.de
+  skip-cert-verify: true
 - name: ❇️白羊座-AGP(通用)
   type: tuic
-  server: hkv6a.de180997-0810-4174-8f14-eb8d79d47a0c.a5e6e977.demo-chat-airport.com
+  server: hkv6a.8c7d12ac-b133-4847-9e45-4684e612d4b8.a5e6e977.edu-header-airport.com
   port: 52892
   uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
   password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
@@ -249,7 +239,7 @@ proxies:
   sni: www.bing.com
 - name: ❇️白羊座-BGP(通用)
   type: tuic
-  server: hkv6b.de180997-0810-4174-8f14-eb8d79d47a0c.7cc0aa7a.demo-chat-airport.com
+  server: hkv6b.4eb56bd3-45b8-49c5-a967-a1e497dceb67.7cc0aa7a.edu-header-airport.com
   port: 52892
   uuid: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
   password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
@@ -261,6 +251,24 @@ proxies:
   congestion-controller: bbr
   skip-cert-verify: true
   sni: www.bing.com
+- name: ❇️白羊座-CGP(通用)
+  server: 203.10.99.66
+  port: 56892
+  sni: v3-web-prime.douyinvod.com
+  up: 50
+  down: 50
+  skip-cert-verify: true
+  type: hysteria2
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+- name: ❇️白羊座-DGP(流量)
+  server: 2401:3bc0:800:36:ae1f:6bff:fe2d:cfca
+  port: 56892
+  sni: v3-web-prime.douyinvod.com
+  up: 50
+  down: 50
+  skip-cert-verify: true
+  type: hysteria2
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
 - name: ❇️白羊座-EGP(通用)
   type: tuic
   server: jpa.539bb8de-73bb-4398-8c9b-d145a8901e8f.b01401d1.demo-chat-airport.com
@@ -289,6 +297,51 @@ proxies:
   congestion-controller: bbr
   skip-cert-verify: true
   sni: www.bing.com
+- name: 🇺🇸美国-X(通用)
+  server: 69.165.69.123
+  port: 56770
+  sni: www.bing.com
+  up: 200
+  down: 200
+  skip-cert-verify: true
+  type: hysteria2
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+- name: 🇺🇸美国-A(通用)
+  server: usa.e974c2d6-0b71-4913-931a-4d38f58a71fc.bea0aeb5.demo-chat-airport.com
+  port: 56770
+  sni: www.bing.com
+  up: 200
+  down: 200
+  skip-cert-verify: true
+  type: hysteria2
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+- name: 🇺🇸美国-B(流量)
+  server: usb.e974c2d6-0b71-4913-931a-4d38f58a71fc.6786edb8.demo-chat-airport.com
+  port: 56770
+  sni: www.bing.com
+  up: 200
+  down: 200
+  skip-cert-verify: true
+  type: hysteria2
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+- name: 🇺🇸美国-C(通用)
+  server: usc.e974c2d6-0b71-4913-931a-4d38f58a71fc.d09b2cbc.demo-chat-airport.com
+  port: 56770
+  sni: www.bing.com
+  up: 200
+  down: 200
+  skip-cert-verify: true
+  type: hysteria2
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+- name: 🇺🇸美国-D(流量)
+  server: usd.e974c2d6-0b71-4913-931a-4d38f58a71fc.d5cb6ba2.demo-chat-airport.com
+  port: 56770
+  sni: www.bing.com
+  up: 200
+  down: 200
+  skip-cert-verify: true
+  type: hysteria2
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
 - name: 🇭🇰香江-E(流量)
   type: vless
   server: cos-cdn-d.alicdn.win
@@ -299,7 +352,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-e.coscdn.men
-  client-fingerprint: qq
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -337,7 +390,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-g.aliapp.men
-  client-fingerprint: qq
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -356,7 +409,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-h.aliapp.men
-  client-fingerprint: firefox
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -543,7 +596,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-e.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: safari
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -581,7 +634,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-g.aliapp.men
-  client-fingerprint: qq
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -600,7 +653,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-h.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -619,7 +672,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-e.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -638,7 +691,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-f.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -676,7 +729,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-h.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: qq
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -733,7 +786,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-g.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -752,7 +805,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-h.aliapp.men
-  client-fingerprint: qq
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -761,6 +814,24 @@ proxies:
   ws-path: /newlogin/login.do
   ws-headers:
     Host: mms-static-bottom-h.aliapp.men
+- name: 🇩🇪德国-A(通用)
+  server: 64.118.156.211
+  port: 62250
+  sni: www.bing.com
+  up: 30
+  down: 30
+  skip-cert-verify: true
+  type: hysteria2
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
+- name: 🇩🇪德国-B(流量)
+  server: agtav6.3b7b2d71-de6d-49f9-b2f3-8c94c20cc9b7.619c35de.demo-chat-airport.com
+  port: 62250
+  sni: www.bing.com
+  up: 30
+  down: 30
+  skip-cert-verify: true
+  type: hysteria2
+  password: fb855cb6-2b68-42c6-bd18-6e8c5e8bdc4f
 - name: 套餐到期：2026-06-10
   type: trojan
   server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
@@ -819,15 +890,6 @@ proxies:
   type: trojan
   server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26021
-  password: 97cc724d-96b7-41c2-86a2-0c0def263588
-  udp: true
-  skip-cert-verify: true
-  sni: mcdn.bilivideo.com
-  network: tcp
-- name: 🇭🇰 HK-08-NewMedia
-  type: trojan
-  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
-  port: 26020
   password: 97cc724d-96b7-41c2-86a2-0c0def263588
   udp: true
   skip-cert-verify: true
@@ -1085,624 +1147,495 @@ proxies:
   skip-cert-verify: true
   sni: mcdn.bilivideo.com
   network: tcp
-- name: 套餐到期：2026-10-01
-  server: v4.ipv4zhilian.com
-  port: 24027
-  sni: www.bing.com
-  up: 1000
-  down: 1000
-  skip-cert-verify: false
+- name: 🇭🇰 香港 - Hy2
   type: hysteria2
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-- name: 🇭🇰 香港直连01（临时备用）
-  server: v4.ipv4zhilian.com
+  server: as.hello-hx1547-ty.com
   port: 24027
-  sni: www.bing.com
-  up: 1000
-  down: 1000
-  skip-cert-verify: false
-  type: hysteria2
   password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-- name: 🇸🇬 新加坡直连01（临时备用）
-  server: v4.ipv4zhilian.com
+  udp: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: 🇸🇬 新加坡 - Hy2
+  type: hysteria2
+  server: as.hello-hx1547-ty.com
   port: 59916
-  sni: www.bing.com
-  up: 1000
-  down: 1000
-  skip-cert-verify: false
-  type: hysteria2
   password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-- name: 🇨🇳 台湾直连01（临时备用）
-  server: v4.ipv4zhilian.com
-  port: 37531
+  udp: true
   sni: www.bing.com
-  up: 1000
-  down: 1000
-  skip-cert-verify: false
+  skip-cert-verify: true
+- name: 🇯🇵 日本 - Hy2
   type: hysteria2
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-- name: 🇯🇵 日本直连01（临时备用）
-  server: v4.ipv4zhilian.com
+  server: as.hello-hx1547-ty.com
   port: 15158
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
   sni: www.bing.com
-  up: 1000
-  down: 1000
-  skip-cert-verify: false
+  skip-cert-verify: true
+- name: 🇨🇳 台湾 - Hy2
   type: hysteria2
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-- name: 🏘️ 官网：Candytally.club
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 40745
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 💌 邮箱：Candytallycloud@gmail.com
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 40745
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🔗 节点异常请更新订阅！
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 40745
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🙂如更新失败请到官网重新导入(需重登账号)
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 40745
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇭🇰 香港1-负载IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 40745
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇭🇰 香港2-联通IEPL
-  type: trojan
-  server: lt-696968.candysafe736.xyz
-  port: 40745
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇭🇰 香港3-移动IEPL
-  type: trojan
-  server: yd-765865.candysafe736.xyz
-  port: 40745
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇭🇰 香港3-电信IEPL
-  type: trojan
-  server: dx-858986.candysafe736.xyz
-  port: 40745
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇭🇰 香港家宽02-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 32109
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇨🇳 台湾1-负载IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 20746
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇨🇳 台湾2-联通IEPL
-  type: trojan
-  server: lt-696968.candysafe736.xyz
-  port: 20746
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇨🇳 台湾2-移动IEPL
-  type: trojan
-  server: yd-765865.candysafe736.xyz
-  port: 20746
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇨🇳 台湾2-电信IEPL
-  type: trojan
-  server: dx-858986.candysafe736.xyz
-  port: 20746
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇨🇳 台湾家宽02-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 24023
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇸🇬 新加坡1-负载IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 25507
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇸🇬 新加坡2-联通IEPL
-  type: trojan
-  server: lt-696968.candysafe736.xyz
-  port: 25507
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇸🇬 新加坡3-移动IEPL
-  type: trojan
-  server: yd-765865.candysafe736.xyz
-  port: 25507
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇸🇬 新加坡3-电信IEPL
-  type: trojan
-  server: dx-858986.candysafe736.xyz
-  port: 25507
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇯🇵 日本家宽1-负载IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 23199
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇯🇵 日本家宽1-移动IEPL
-  type: trojan
-  server: yd-765865.candysafe736.xyz
-  port: 23199
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇯🇵 日本家宽1-联通IEPL
-  type: trojan
-  server: lt-696968.candysafe736.xyz
-  port: 23199
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇯🇵 日本家宽1-电信IEPL
-  type: trojan
-  server: dx-858986.candysafe736.xyz
-  port: 23199
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇯🇵 日本家宽2-负载IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 23198
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇯🇵 日本家宽2-联通IEPL
-  type: trojan
-  server: lt-696968.candysafe736.xyz
-  port: 23198
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇯🇵 日本家宽2-移动IEPL
-  type: trojan
-  server: yd-765865.candysafe736.xyz
-  port: 23198
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇯🇵 日本家宽2-电信IEPL
-  type: trojan
-  server: dx-858986.candysafe736.xyz
-  port: 23198
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇯🇵 日本1-负载IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 23197
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇯🇵 日本2-联通IEPL
-  type: trojan
-  server: lt-696968.candysafe736.xyz
-  port: 23197
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇯🇵 日本3-移动IEPL
-  type: trojan
-  server: yd-765865.candysafe736.xyz
-  port: 23197
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇯🇵 日本3-电信IEPL
-  type: trojan
-  server: dx-858986.candysafe736.xyz
-  port: 23197
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇺🇸 美国家宽1-负载IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 36538
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇺🇸 美国家宽2-联通IEPL
-  type: trojan
-  server: lt-696968.candysafe736.xyz
-  port: 36538
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇺🇸 美国家宽3-移动IEPL
-  type: trojan
-  server: yd-765865.candysafe736.xyz
-  port: 36538
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇺🇸 美国家宽3-电信IEPL
-  type: trojan
-  server: dx-858986.candysafe736.xyz
-  port: 36538
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇺🇸 美国家宽02-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 36472
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇺🇸 美国家宽03-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 36472
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇺🇸 美国1-负载IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 36474
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇺🇸 美国2-联通IEPL
-  type: trojan
-  server: lt-696968.candysafe736.xyz
-  port: 36474
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇺🇸 美国1-移动IEPL
-  type: trojan
-  server: yd-765865.candysafe736.xyz
-  port: 36474
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇺🇸 美国1-电信IEPL
-  type: trojan
-  server: dx-858986.candysafe736.xyz
-  port: 36474
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇩🇪 德国家宽-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 36475
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇩🇪 德国1-负载IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 24226
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇩🇪 德国2-联通IEPL
-  type: trojan
-  server: lt-696968.candysafe736.xyz
-  port: 24226
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇩🇪 德国3-移动IEPL
-  type: trojan
-  server: yd-765865.candysafe736.xyz
-  port: 24226
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇩🇪 德国3-电信IEPL
-  type: trojan
-  server: dx-858986.candysafe736.xyz
-  port: 24226
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇰🇷 韩国家宽-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 44607
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇰🇷 韩国-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 44608
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇹🇭 泰国-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 29743
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇦🇷 阿根廷-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 29744
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇹🇷 土耳其-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 24737
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇬🇧 英国-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 2716
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇬🇧 英国家宽-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 36295
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇫🇷 法国-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 36296
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇻🇳 越南家宽-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 41443
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇻🇳 越南-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 26805
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇷🇺 俄罗斯-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 36297
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇦🇪 迪拜-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 36298
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇲🇽 墨西哥-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 36299
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇦🇺 澳大利亚-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 36432
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇧🇷 巴西-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 61378
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇨🇦 加拿大-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 41398
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇲🇾 马来西亚-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 42052
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇮🇩 印度尼西亚-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 40434
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp
-- name: 🇿🇦 南非-IEPL
-  type: trojan
-  server: zong-759866.candysafe736.xyz
-  port: 29500
-  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  server: as.hello-hx1547-ty.com
+  port: 37531
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国 - Hy2
+  type: hysteria2
+  server: as.hello-hx1547-ty.com
+  port: 48477
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
+  udp: true
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: 邮箱客服juzimao2333@gmail.com防失联
+  type: vmess
+  server: moe233.org
+  port: 8000
+  uuid: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 超时请更新订阅
+  type: vmess
+  server: moe233.org
+  port: 8000
+  uuid: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 支持AI:新日美台港
+  type: vmess
+  server: moe233.org
+  port: 8000
+  uuid: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alterId: 0
+  cipher: auto
+  udp: true
+- name: 🇭🇰 香港01
+  type: anytls
+  server: c62da64c-8152-0ace-d9a2-e44608321546.relay.riolu01.link
+  port: 23327
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: qq
+  sni: moe233-riolu-61a820a2-ab45-6be7-d0d7-aeed72816683.hnair.com
+- name: 🇭🇰 香港02
+  type: anytls
+  server: c62da64c-8152-0ace-d9a2-e44608321546.relay.riolu01.link
+  port: 23340
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: chrome
+  sni: moe233-riolu-fd0fcfe0-b92a-f4b5-fe04-53069f5afc1b.hnair.com
+- name: 🇭🇰 香港03
+  type: anytls
+  server: 36.158.228.48
+  port: 23327
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: edge
+  sni: moe233-riolu-61a820a2-ab45-6be7-d0d7-aeed72816683.hnair.com
+- name: 🇭🇰 香港04
+  type: anytls
+  server: 36.158.228.48
+  port: 23340
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: safari
+  sni: moe233-riolu-fd0fcfe0-b92a-f4b5-fe04-53069f5afc1b.hnair.com
+- name: 🇯🇵 日本01
+  type: anytls
+  server: c62da64c-8152-0ace-d9a2-e44608321546.relay.riolu01.link
+  port: 23326
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: firefox
+  sni: moe233-riolu-ce068da0-f2ca-6b9b-c3cb-7dc079ae6f9e.hnair.com
+- name: 🇯🇵 日本02
+  type: anytls
+  server: c62da64c-8152-0ace-d9a2-e44608321546.relay.riolu01.link
+  port: 23335
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: safari
+  sni: moe233-riolu-8efefdb7-1701-a524-d925-844f02d32bf4.hnair.com
+- name: 🇯🇵 日本03
+  type: anytls
+  server: 36.158.228.48
+  port: 23326
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: qq
+  sni: moe233-riolu-ce068da0-f2ca-6b9b-c3cb-7dc079ae6f9e.hnair.com
+- name: 🇯🇵 日本04
+  type: anytls
+  server: 36.158.228.48
+  port: 23335
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: edge
+  sni: moe233-riolu-8efefdb7-1701-a524-d925-844f02d32bf4.hnair.com
+- name: 🇸🇬 新加坡01
+  type: anytls
+  server: c62da64c-8152-0ace-d9a2-e44608321546.relay.riolu01.link
+  port: 23331
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: firefox
+  sni: moe233-riolu-655d3987-e9a4-935a-877e-a91ce6fe776e.hnair.com
+- name: 🇸🇬 新加坡02
+  type: anytls
+  server: c62da64c-8152-0ace-d9a2-e44608321546.relay.riolu01.link
+  port: 23320
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: ios
+  sni: moe233-riolu-c4c745f3-e49f-e7ac-b9d6-9a0fbe8511f0.hnair.com
+- name: 🇸🇬 新加坡03
+  type: anytls
+  server: c62da64c-8152-0ace-d9a2-e44608321546.relay.riolu01.link
+  port: 23325
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: qq
+  sni: moe233-riolu-0c545ee4-f931-9c24-26b7-eab6ea0370b3.hnair.com
+- name: 🇸🇬 新加坡04
+  type: anytls
+  server: 36.158.228.48
+  port: 23320
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: firefox
+  sni: moe233-riolu-c4c745f3-e49f-e7ac-b9d6-9a0fbe8511f0.hnair.com
+- name: 🇸🇬 新加坡05
+  type: anytls
+  server: 36.158.228.48
+  port: 23325
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: safari
+  sni: moe233-riolu-0c545ee4-f931-9c24-26b7-eab6ea0370b3.hnair.com
+- name: 🇹🇼 台湾01
+  type: anytls
+  server: c62da64c-8152-0ace-d9a2-e44608321546.relay.riolu01.link
+  port: 23322
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: safari
+  sni: moe233-riolu-e205aadd-7a10-0ed7-ed7e-d38ccbc15354.hnair.com
+- name: 🇹🇼 台湾02
+  type: anytls
+  server: c62da64c-8152-0ace-d9a2-e44608321546.relay.riolu01.link
+  port: 23336
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: firefox
+  sni: moe233-riolu-b78e8350-2039-90f8-a73d-c5cdf8e0543a.hnair.com
+- name: 🇹🇼 台湾03
+  type: anytls
+  server: 36.158.228.48
+  port: 23322
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: qq
+  sni: moe233-riolu-e205aadd-7a10-0ed7-ed7e-d38ccbc15354.hnair.com
+- name: 🇹🇼 台湾04
+  type: anytls
+  server: 36.158.228.48
+  port: 23336
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: chrome
+  sni: moe233-riolu-b78e8350-2039-90f8-a73d-c5cdf8e0543a.hnair.com
+- name: 🇺🇸 美国01
+  type: anytls
+  server: c62da64c-8152-0ace-d9a2-e44608321546.relay.riolu01.link
+  port: 23328
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: firefox
+  sni: moe233-riolu-7f0c47de-1ed5-2da6-22ed-921e51992120.hnair.com
+- name: 🇺🇸 美国02
+  type: anytls
+  server: c62da64c-8152-0ace-d9a2-e44608321546.relay.riolu01.link
+  port: 23321
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: edge
+  sni: moe233-riolu-b94777dd-13e5-228d-ccdf-ea937be0c8ab.hnair.com
+- name: 🇺🇸 美国03
+  type: anytls
+  server: c62da64c-8152-0ace-d9a2-e44608321546.relay.riolu01.link
+  port: 23323
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: firefox
+  sni: moe233-riolu-9ceea1e7-8f6a-c055-33ae-2da3dcc9d3b5.hnair.com
+- name: 🇺🇸 美国04
+  type: anytls
+  server: 36.158.228.48
+  port: 23321
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: ios
+  sni: moe233-riolu-b94777dd-13e5-228d-ccdf-ea937be0c8ab.hnair.com
+- name: 🇺🇸 美国05
+  type: anytls
+  server: 36.158.228.48
+  port: 23323
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: chrome
+  sni: moe233-riolu-9ceea1e7-8f6a-c055-33ae-2da3dcc9d3b5.hnair.com
+- name: 🇨🇦 加拿大01
+  type: anytls
+  server: c62da64c-8152-0ace-d9a2-e44608321546.relay.riolu01.link
+  port: 23337
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: chrome
+  sni: moe233-riolu-f713d121-6926-6cb4-6542-94db1b827091.hnair.com
+- name: 🇨🇦 加拿大 备用机01
+  type: anytls
+  server: us.edge.moe233.org
+  port: 443
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: false
+  udp: true
+  client-fingerprint: qq
+  sni: moe233-riolu-f713d121-6926-6cb4-6542-94db1b827091.qchwnd.moe
+- name: 🇮🇩 印尼01
+  type: anytls
+  server: c62da64c-8152-0ace-d9a2-e44608321546.relay.riolu01.link
+  port: 23338
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: safari
+  sni: moe233-riolu-3a085f91-005a-c285-f2c7-b4565ef204f0.hnair.com
+- name: 🇹🇭 泰国01
+  type: anytls
+  server: c62da64c-8152-0ace-d9a2-e44608321546.relay.riolu01.link
+  port: 23332
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: qq
+  sni: moe233-riolu-72c79615-c4ec-2b5c-e73a-47737a3992b4.hnair.com
+- name: 🇹🇭 泰国 备用机01
+  type: anytls
+  server: hk.edge.moe233.org
+  port: 443
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: false
+  udp: true
+  client-fingerprint: edge
+  sni: moe233-riolu-72c79615-c4ec-2b5c-e73a-47737a3992b4.qchwnd.moe
+- name: 🇬🇧 英国01
+  type: anytls
+  server: c62da64c-8152-0ace-d9a2-e44608321546.relay.riolu01.link
+  port: 23334
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: edge
+  sni: moe233-riolu-fbe8c179-cb07-723f-bb5a-eb256a5f2b0e.hnair.com
+- name: 🇬🇧 英国02
+  type: anytls
+  server: hk.edge.moe233.org
+  port: 443
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: false
+  udp: true
+  client-fingerprint: firefox
+  sni: moe233-riolu-fbe8c179-cb07-723f-bb5a-eb256a5f2b0e.qchwnd.moe
+- name: 🇫🇷 法国01
+  type: anytls
+  server: c62da64c-8152-0ace-d9a2-e44608321546.relay.riolu01.link
+  port: 23333
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: firefox
+  sni: moe233-riolu-8372d27c-0ed6-d315-e782-1f55655ac9df.hnair.com
+- name: 🇫🇷 法国02
+  type: anytls
+  server: hk.edge.moe233.org
+  port: 443
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: false
+  udp: true
+  client-fingerprint: chrome
+  sni: moe233-riolu-8372d27c-0ed6-d315-e782-1f55655ac9df.qchwnd.moe
+- name: 🇩🇪 德国01
+  type: anytls
+  server: c62da64c-8152-0ace-d9a2-e44608321546.relay.riolu01.link
+  port: 23329
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: chrome
+  sni: moe233-riolu-128479d7-732e-41e0-e6fc-ce95e60d375e.hnair.com
+- name: 🇩🇪 德国02
+  type: anytls
+  server: hk.edge.moe233.org
+  port: 443
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: false
+  udp: true
+  client-fingerprint: ios
+  sni: moe233-riolu-128479d7-732e-41e0-e6fc-ce95e60d375e.qchwnd.moe
+- name: 🇰🇷 韩国01
+  type: anytls
+  server: c62da64c-8152-0ace-d9a2-e44608321546.relay.riolu01.link
+  port: 23341
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: true
+  udp: true
+  client-fingerprint: ios
+  sni: moe233-riolu-5e3746c6-b3a3-8086-d853-bd323b99bae2.hnair.com
+- name: 🇰🇷 韩国02
+  type: anytls
+  server: jp.edge.moe233.org
+  port: 443
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: false
+  udp: true
+  client-fingerprint: firefox
+  sni: moe233-riolu-5e3746c6-b3a3-8086-d853-bd323b99bae2.qchwnd.moe
+- name: 看不到节点的小火箭用户请卸载重装
+  type: vmess
+  server: moe233.org
+  port: 8000
+  uuid: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alterId: 0
+  cipher: auto
   udp: true
-  skip-cert-verify: true
-  sni: v1-dy.ixigua.com
-  network: tcp

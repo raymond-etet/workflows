@@ -43,6 +43,22 @@ QUALITY_FALLBACK_ORDER = {
     QUALITY_OTHER: [QUALITY_HIGH, QUALITY_DEDICATED],
 }
 
+SUBSCRIPTION_USER_AGENTS = [
+    "sing-box 1.12.0",
+    "mihomo/1.19.16",
+    "ClashMeta",
+    "clash-verge",
+    "NekoBox/Android/1.4.1 (Prefer ClashMeta Format)",
+    "HiddifyNext",
+    "v2ray",
+    "FLClash",
+]
+
+SUBSCRIPTION_API_PATH_SUFFIXES = (
+    "/api/v1/client/subscribe",
+    "/api/client/subscribe",
+)
+
 DEDICATED_KEYWORDS_RE = re.compile(
     r"(iepl|iplc|专线|原生|住宅|家宽|gia|cn2|cmi|as9929|精品网|公网专线|bgp)",
     re.IGNORECASE,
@@ -468,15 +484,208 @@ def load_proxies_from_provider(path: Path):
     return []
 
 
+def parse_boolish(value: str) -> bool:
+    return str(value).strip().lower() in {"1", "true", "yes", "on"}
+
+
+def decode_proxy_name(value: str, fallback: str) -> str:
+    if not isinstance(value, str) or not value:
+        return fallback
+    decoded = urllib.parse.unquote(value).strip()
+    return decoded or fallback
+
+
+def parse_hysteria2_uri(parsed: urllib.parse.SplitResult) -> Optional[dict]:
+    if parsed.scheme not in {"hysteria2", "hy2"}:
+        return None
+    if not parsed.hostname or parsed.port is None:
+        return None
+
+    query = urllib.parse.parse_qs(parsed.query, keep_blank_values=True)
+    password = urllib.parse.unquote(parsed.username or "")
+    if not password:
+        return None
+
+    proxy = {
+        "name": decode_proxy_name(parsed.fragment, f"{parsed.hostname}:{parsed.port}"),
+        "type": "hysteria2",
+        "server": parsed.hostname,
+        "port": parsed.port,
+        "password": password,
+        "udp": True,
+    }
+
+    sni = next((v for v in query.get("sni", []) if v), "")
+    if sni:
+        proxy["sni"] = sni
+
+    if any(parse_boolish(v) for v in query.get("insecure", [])):
+        proxy["skip-cert-verify"] = True
+
+    alpn = [item.strip() for item in ",".join(query.get("alpn", [])).split(",") if item.strip()]
+    if alpn:
+        proxy["alpn"] = alpn
+
+    obfs = next((v for v in query.get("obfs", []) if v), "")
+    if obfs:
+        proxy["obfs"] = obfs
+
+    obfs_password = next(
+        (v for v in query.get("obfs-password", []) + query.get("obfsParam", []) if v),
+        "",
+    )
+    if obfs_password:
+        proxy["obfs-password"] = obfs_password
+
+    for src_key, dst_key in (
+        ("up", "up"),
+        ("upmbps", "up"),
+        ("down", "down"),
+        ("downmbps", "down"),
+        ("ports", "ports"),
+        ("mport", "ports"),
+        ("hop-interval", "hop-interval"),
+    ):
+        value = next((v for v in query.get(src_key, []) if v), "")
+        if value:
+            proxy[dst_key] = value
+
+    fingerprint = next((v for v in query.get("fp", []) + query.get("fingerprint", []) if v), "")
+    if fingerprint:
+        proxy["fingerprint"] = fingerprint
+
+    return proxy
+
+
+def parse_anytls_uri(parsed: urllib.parse.SplitResult) -> Optional[dict]:
+    if parsed.scheme != "anytls":
+        return None
+    if not parsed.hostname or parsed.port is None:
+        return None
+
+    query = urllib.parse.parse_qs(parsed.query, keep_blank_values=True)
+    password = urllib.parse.unquote(parsed.username or "")
+    if not password:
+        return None
+
+    proxy = {
+        "name": decode_proxy_name(parsed.fragment, f"{parsed.hostname}:{parsed.port}"),
+        "type": "anytls",
+        "server": parsed.hostname,
+        "port": parsed.port,
+        "password": password,
+        "udp": True,
+    }
+
+    sni = next((v for v in query.get("sni", []) if v), "")
+    if sni:
+        proxy["sni"] = sni
+
+    if any(parse_boolish(v) for v in query.get("insecure", [])):
+        proxy["skip-cert-verify"] = True
+
+    alpn = [item.strip() for item in ",".join(query.get("alpn", [])).split(",") if item.strip()]
+    if alpn:
+        proxy["alpn"] = alpn
+
+    client_fingerprint = next(
+        (v for v in query.get("fp", []) + query.get("client-fingerprint", []) if v),
+        "",
+    )
+    if client_fingerprint:
+        proxy["client-fingerprint"] = client_fingerprint
+
+    return proxy
+
+
+def parse_uri_subscription_text(text: str) -> Optional[dict]:
+    proxies: list[dict] = []
+    for raw_line in text.splitlines():
+        line = raw_line.strip()
+        if not line or "://" not in line:
+            continue
+        parsed = urllib.parse.urlsplit(line)
+        proxy = parse_hysteria2_uri(parsed) or parse_anytls_uri(parsed)
+        if proxy is not None:
+            proxies.append(proxy)
+
+    if proxies:
+        return {"proxies": proxies}
+    return None
+
+
 def parse_subscription_payload(text: str):
-    parsed = load_yaml(text)
+    raw_text = text.lstrip("\ufeff")
+    parsed = load_yaml(raw_text)
     if isinstance(parsed, dict):
         return parsed
-    try:
-        decoded = base64.b64decode(text.strip()).decode()
-    except Exception:
+    uri_payload = parse_uri_subscription_text(raw_text)
+    if isinstance(uri_payload, dict):
+        return uri_payload
+
+    stripped = raw_text.strip()
+    if not stripped:
         return None
-    return load_yaml(decoded)
+
+    # Some providers return URL-safe base64 and/or omit trailing padding.
+    b64_inputs = [stripped]
+    compact = re.sub(r"\s+", "", stripped)
+    if compact and compact != stripped:
+        b64_inputs.append(compact)
+
+    seen_payloads: set[str] = set()
+    for candidate in b64_inputs:
+        padded = candidate + ("=" * (-len(candidate) % 4))
+        for decoder in (base64.b64decode, base64.urlsafe_b64decode):
+            try:
+                decoded = decoder(padded.encode("utf-8")).decode(
+                    "utf-8", errors="replace"
+                )
+            except Exception:
+                continue
+            if decoded in seen_payloads:
+                continue
+            seen_payloads.add(decoded)
+            normalized_decoded = decoded.lstrip("\ufeff")
+            parsed = load_yaml(normalized_decoded)
+            if isinstance(parsed, dict):
+                return parsed
+            uri_payload = parse_uri_subscription_text(normalized_decoded)
+            if isinstance(uri_payload, dict):
+                return uri_payload
+    return None
+
+
+def build_subscription_path_candidates(parsed: urllib.parse.ParseResult) -> list[str]:
+    raw_path = parsed.path or "/"
+    candidates: list[str] = []
+
+    def add_path(path: str) -> None:
+        normalized = path or "/"
+        if not normalized.startswith("/"):
+            normalized = "/" + normalized
+        if normalized not in candidates:
+            candidates.append(normalized)
+
+    add_path(raw_path)
+
+    if raw_path.endswith("/verify_mode.htm"):
+        prefix = raw_path[: -len("/verify_mode.htm")]
+        for suffix in SUBSCRIPTION_API_PATH_SUFFIXES:
+            add_path(prefix + suffix)
+    else:
+        for suffix in SUBSCRIPTION_API_PATH_SUFFIXES:
+            if raw_path.endswith(suffix):
+                prefix = raw_path[: -len(suffix)]
+                for alt_suffix in SUBSCRIPTION_API_PATH_SUFFIXES:
+                    add_path(prefix + alt_suffix)
+
+    # Conservative root-level fallbacks for panels without nested prefixes.
+    if raw_path in {"", "/"} or "/api/" not in raw_path:
+        for suffix in SUBSCRIPTION_API_PATH_SUFFIXES:
+            add_path(suffix)
+
+    return candidates
 
 
 def normalize_subscriptions(raw_subscriptions) -> list[dict[str, object]]:
@@ -1027,21 +1236,20 @@ def build_proxy_manual_nodes(
     source_cap = safe_int(proxy_group.get("manual-source-cap"), 2)
     region_cap = safe_int(proxy_group.get("manual-region-cap"), 2)
     preferred_regions = proxy_group.get("preferred-regions")
-    filtered_node_infos = collect_group_candidates(node_infos, proxy_group)
 
     pools = {
         QUALITY_DEDICATED: sort_node_infos(
-            [node for node in filtered_node_infos if node.get("quality") == QUALITY_DEDICATED],
+            [node for node in node_infos if node.get("quality") == QUALITY_DEDICATED],
             preferred_regions=preferred_regions,
             quality_order=[QUALITY_DEDICATED],
         ),
         QUALITY_HIGH: sort_node_infos(
-            [node for node in filtered_node_infos if node.get("quality") == QUALITY_HIGH],
+            [node for node in node_infos if node.get("quality") == QUALITY_HIGH],
             preferred_regions=preferred_regions,
             quality_order=[QUALITY_HIGH],
         ),
         QUALITY_OTHER: sort_node_infos(
-            [node for node in filtered_node_infos if node.get("quality") == QUALITY_OTHER],
+            [node for node in node_infos if node.get("quality") == QUALITY_OTHER],
             preferred_regions=preferred_regions,
             quality_order=[QUALITY_OTHER],
         ),
@@ -1068,7 +1276,7 @@ def build_proxy_manual_nodes(
     if len(manual_nodes) < manual_count:
         extend_manual_nodes(
             manual_nodes,
-            sort_node_infos(filtered_node_infos, preferred_regions=preferred_regions),
+            sort_node_infos(node_infos, preferred_regions=preferred_regions),
             manual_count,
             picked_names=picked_names,
             source_counts=source_counts,
@@ -1090,25 +1298,17 @@ def fetch_proxies(subscriptions, *, min_remaining_bytes: Optional[int] = None):
     now = dt.datetime.now(tz=dt.timezone.utc)
 
     def candidates(raw_url: str):
-        yield raw_url
         parsed = urllib.parse.urlparse(raw_url)
-        qs = urllib.parse.parse_qs(parsed.query)
-        token = qs.get("token", [None])[0]
-
-        # base subscribe url
-        sub_base = f"{parsed.scheme}://{parsed.netloc}/api/v1/client/subscribe"
-
-        def build(params: dict):
-            return sub_base + "?" + urllib.parse.urlencode(params, doseq=True)
-
-        base_params = {}
-        if token:
-            base_params["token"] = token
-        if "types" in qs:
-            base_params["types"] = qs["types"]
+        qs = urllib.parse.parse_qs(parsed.query, keep_blank_values=True)
+        base_params = {key: list(values) for key, values in qs.items()}
+        existing_flag = next(
+            (value for value in qs.get("flag", []) if isinstance(value, str) and value),
+            None,
+        )
 
         flag_candidates = [
             None,
+            existing_flag,
             "clashmeta",
             "clash",
             "meta",
@@ -1116,34 +1316,41 @@ def fetch_proxies(subscriptions, *, min_remaining_bytes: Optional[int] = None):
             "v2ray",
             "v2rayn",
         ]
+        seen_urls: set[str] = set()
 
-        path_candidates = []
-        if parsed.path.endswith("verify_mode.htm"):
-            path_candidates.append(parsed._replace(path="/api/v1/client/subscribe"))
-            path_candidates.append(parsed._replace(path="/api/client/subscribe"))
-        path_candidates.append(parsed._replace(path="/api/v1/client/subscribe"))
+        def emit(url: str):
+            if url not in seen_urls:
+                seen_urls.add(url)
+                yield url
 
-        for p in path_candidates:
-            # same scheme
-            for flag in flag_candidates:
-                params = dict(base_params)
+        yield from emit(raw_url)
+
+        for path in build_subscription_path_candidates(parsed):
+            p = parsed._replace(path=path)
+            for flag in dict.fromkeys(flag_candidates):
+                params = {key: list(values) for key, values in base_params.items()}
                 if flag:
-                    params["flag"] = flag
-                yield p._replace(query=urllib.parse.urlencode(params, doseq=True)).geturl()
-            # fallback: force http scheme
+                    params["flag"] = [flag]
+                url = p._replace(query=urllib.parse.urlencode(params, doseq=True)).geturl()
+                yield from emit(url)
+
             if p.scheme == "https":
                 p_http = p._replace(scheme="http")
-                for flag in flag_candidates:
-                    params = dict(base_params)
+                for flag in dict.fromkeys(flag_candidates):
+                    params = {key: list(values) for key, values in base_params.items()}
                     if flag:
-                        params["flag"] = flag
-                    yield p_http._replace(query=urllib.parse.urlencode(params, doseq=True)).geturl()
+                        params["flag"] = [flag]
+                    url = p_http._replace(
+                        query=urllib.parse.urlencode(params, doseq=True)
+                    ).geturl()
+                    yield from emit(url)
 
-    def fetch_once(url: str):
+    def fetch_once(url: str, user_agent: str):
         req = urllib.request.Request(
             url,
             headers={
-                "User-Agent": "ClashMeta/1.18",
+                "User-Agent": user_agent,
+                "Accept": "*/*",
                 "Referer": url,
             },
         )
@@ -1156,14 +1363,24 @@ def fetch_proxies(subscriptions, *, min_remaining_bytes: Optional[int] = None):
         return parse_subscription_payload(body), headers
 
     def fetch_with_fallback(raw_url: str):
+        last_error: Optional[str] = None
         for cand in candidates(raw_url):
-            try:
-                data, headers = fetch_once(cand)
-                if data:
-                    return data, headers, cand
-            except Exception:
-                continue
-        raise ValueError(f"订阅解析失败: {redact_url(raw_url)}")
+            for user_agent in SUBSCRIPTION_USER_AGENTS:
+                try:
+                    data, headers = fetch_once(cand, user_agent)
+                    if (
+                        isinstance(data, dict)
+                        and isinstance(data.get("proxies"), list)
+                        and data.get("proxies")
+                    ):
+                        return data, headers, cand
+                    if isinstance(data, dict):
+                        last_error = "parsed-response-without-proxies"
+                except Exception as exc:
+                    last_error = f"{type(exc).__name__}: {exc}"
+                    continue
+        detail = f" ({last_error})" if last_error else ""
+        raise ValueError(f"订阅解析失败: {redact_url(raw_url)}{detail}")
 
     for sub in subscriptions:
         url = str(sub.get("url") or "")
