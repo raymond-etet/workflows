@@ -227,6 +227,8 @@ proxy-groups:
       - DIRECT
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: Final
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
@@ -238,6 +240,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: 国内
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
@@ -246,6 +250,8 @@ proxy-groups:
       - Proxy
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: 全节点
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
@@ -265,7 +271,8 @@ proxy-groups:
       - SEA
       - OTHER
     proxies: []
-    url: https://www.gstatic.com/generate_204
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
     interval: 180
     tolerance: 50
     lazy: true
@@ -278,7 +285,8 @@ proxy-groups:
     region-include:
       - HK
     proxies: []
-    url: https://www.gstatic.com/generate_204
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
     interval: 180
     tolerance: 50
     lazy: true
@@ -292,6 +300,8 @@ proxy-groups:
       - HK
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: 香港
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
@@ -301,6 +311,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: jl香港
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
@@ -312,6 +324,8 @@ proxy-groups:
       - HK
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: 新加坡-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
@@ -320,7 +334,8 @@ proxy-groups:
     region-include:
       - SG
     proxies: []
-    url: https://www.gstatic.com/generate_204
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
     interval: 180
     tolerance: 50
     lazy: true
@@ -334,6 +349,8 @@ proxy-groups:
       - SG
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: 新加坡
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
@@ -343,6 +360,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: 日本-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
@@ -351,7 +370,8 @@ proxy-groups:
     region-include:
       - JP
     proxies: []
-    url: https://www.gstatic.com/generate_204
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
     interval: 180
     tolerance: 50
     lazy: true
@@ -365,6 +385,8 @@ proxy-groups:
       - JP
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: 日本
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
@@ -374,6 +396,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: 台湾-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
@@ -382,7 +406,8 @@ proxy-groups:
     region-include:
       - TW
     proxies: []
-    url: https://www.gstatic.com/generate_204
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
     interval: 180
     tolerance: 50
     lazy: true
@@ -396,6 +421,8 @@ proxy-groups:
       - TW
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: 台湾
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
@@ -405,6 +432,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: 美国-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
@@ -413,7 +442,8 @@ proxy-groups:
     region-include:
       - US
     proxies: []
-    url: https://www.gstatic.com/generate_204
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
     interval: 180
     tolerance: 50
     lazy: true
@@ -427,6 +457,8 @@ proxy-groups:
       - US
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: 美国
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
@@ -436,6 +468,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: 欧洲-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
@@ -444,7 +478,8 @@ proxy-groups:
     region-include:
       - EU
     proxies: []
-    url: https://www.gstatic.com/generate_204
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
     interval: 180
     tolerance: 50
     lazy: true
@@ -458,6 +493,8 @@ proxy-groups:
       - EU
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: 欧洲
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
@@ -467,6 +504,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: 东南亚-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
@@ -475,7 +514,8 @@ proxy-groups:
     region-include:
       - SEA
     proxies: []
-    url: https://www.gstatic.com/generate_204
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
     interval: 180
     tolerance: 50
     lazy: true
@@ -489,6 +529,8 @@ proxy-groups:
       - SEA
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: 东南亚
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
@@ -498,6 +540,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: 其他-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
@@ -508,7 +552,8 @@ proxy-groups:
     preferred-regions:
       - OTHER
     proxies: []
-    url: https://www.gstatic.com/generate_204
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
     interval: 180
     tolerance: 50
     lazy: true
@@ -524,6 +569,8 @@ proxy-groups:
       - OTHER
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: 其他
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
@@ -533,6 +580,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: AI
     type: fallback
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
@@ -544,7 +593,8 @@ proxy-groups:
       - 香港
       - 全节点
     proxies: []
-    url: https://www.gstatic.com/generate_204
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
     interval: 180
     tolerance: 50
     lazy: true
@@ -562,6 +612,8 @@ proxy-groups:
       - DIRECT
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: 币安
     type: fallback
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/bian.png
@@ -573,7 +625,8 @@ proxy-groups:
       - 美国
       - 全节点
     proxies: []
-    url: https://www.gstatic.com/generate_204
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
     interval: 180
     tolerance: 50
     lazy: true
@@ -588,7 +641,8 @@ proxy-groups:
       - 香港
       - 全节点
     proxies: []
-    url: https://www.gstatic.com/generate_204
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
     interval: 180
     tolerance: 50
     lazy: true
@@ -604,7 +658,8 @@ proxy-groups:
       - 全节点
       - DIRECT
     proxies: []
-    url: https://www.gstatic.com/generate_204
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
     interval: 180
     tolerance: 50
     lazy: true
@@ -620,7 +675,8 @@ proxy-groups:
       - 全节点
       - DIRECT
     proxies: []
-    url: https://www.gstatic.com/generate_204
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
     interval: 180
     tolerance: 50
     lazy: true
@@ -635,6 +691,8 @@ proxy-groups:
       - OpenAI-美国
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: OpenAI-新加坡-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
@@ -658,6 +716,8 @@ proxy-groups:
       - SG
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: OpenAI-新加坡
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
@@ -666,6 +726,8 @@ proxy-groups:
       - OpenAI-新加坡-手动
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: OpenAI-日本-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
@@ -689,6 +751,8 @@ proxy-groups:
       - JP
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: OpenAI-日本
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
@@ -697,6 +761,8 @@ proxy-groups:
       - OpenAI-日本-手动
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: OpenAI-美国-自动
     type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
@@ -720,6 +786,8 @@ proxy-groups:
       - US
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: OpenAI-美国
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
@@ -728,6 +796,8 @@ proxy-groups:
       - OpenAI-美国-手动
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: Claude
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Claude.png
@@ -742,6 +812,8 @@ proxy-groups:
       - Proxy
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: Gemini
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Gemini.png
@@ -756,6 +828,8 @@ proxy-groups:
       - Proxy
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: Google
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
@@ -770,6 +844,8 @@ proxy-groups:
       - Proxy
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: GitHub
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
@@ -784,6 +860,8 @@ proxy-groups:
       - DIRECT
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: Telegram
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
@@ -797,6 +875,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: Discord
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Discord.png
@@ -809,6 +889,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: Twitter
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
@@ -822,6 +904,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: TikTok
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
@@ -834,6 +918,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: YouTube
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
@@ -847,6 +933,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: Netflix
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
@@ -860,6 +948,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: Disney+
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney+.png
@@ -873,6 +963,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: HBO
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HBO.png
@@ -886,6 +978,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: Bahamut
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bahamut.png
@@ -898,6 +992,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: BiliBili
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili.png
@@ -910,6 +1006,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: GlobalMedia
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/GlobalMedia.png
@@ -923,6 +1021,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: PayPal
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PayPal.png
@@ -934,6 +1034,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: Crypto
     type: select
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/bian.png
@@ -948,6 +1050,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: Apple
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
@@ -961,6 +1065,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: Steam
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png
@@ -974,6 +1080,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: Emby
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
@@ -987,6 +1095,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: "115"
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/115.png
@@ -995,6 +1105,8 @@ proxy-groups:
       - Proxy
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
   - name: RemoteDesktop
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/RemoteDesktop.png
@@ -1007,6 +1119,8 @@ proxy-groups:
       - 全节点
     proxies: []
 
+    url: https://chatgpt.com/.well-known/http-message-signatures-directory
+    expected-status: 200
 rule-providers:
   OpenAI:
     type: http
