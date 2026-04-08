@@ -1661,7 +1661,10 @@ proxy-groups:
   manual-source-cap: 2
   manual-region-cap: 2
   fallback-groups:
-  - OpenAI
+  - jl香港
+  - OpenAI-新加坡
+  - OpenAI-日本
+  - OpenAI-美国
   - AI
   - 币安
   - PikPak
@@ -1680,11 +1683,14 @@ proxy-groups:
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港A2|电信联通|2倍|V1
   - 🇸🇬 新加坡A1|三网|3倍|V2
   - 🇯🇵 日本A3|三网|3倍|V2
-  - 🇸🇬 SG-01-SG.GS
-  - OpenAI
+  - 🇯🇵 日本A4|三网|3倍|V2
+  - 🇸🇬 新加坡B1|移动|1.2倍|V2
+  - jl香港
+  - OpenAI-新加坡
+  - OpenAI-日本
+  - OpenAI-美国
   - AI
   - 币安
   - PikPak
@@ -1753,6 +1759,10 @@ proxy-groups:
   - 🇭🇰 HK-09-FXT
   - 🇭🇰 HK-10-Akari
   - 🇭🇰 香港 - Hy2
+  - 🇭🇰 香港01
+  - 🇭🇰 香港02
+  - 🇭🇰 香港03
+  - 🇭🇰 香港04
   - 🇭🇰香港-A(通用)
   - 🇸🇬 新加坡B1|移动|1.2倍|V2
   - 🇸🇬 SG-01-SG.GS
@@ -1762,6 +1772,11 @@ proxy-groups:
   - 🇸🇬 SG-05-HostHatch
   - 🇸🇬 SG-07-Leaseweb
   - 🇸🇬 新加坡 - Hy2
+  - 🇸🇬 新加坡01
+  - 🇸🇬 新加坡02
+  - 🇸🇬 新加坡03
+  - 🇸🇬 新加坡04
+  - 🇸🇬 新加坡05
   - 🇸🇬新加坡-A(通用)
   - 🇯🇵 JP-01-Sakura
   - 🇯🇵 JP-02-JinX
@@ -1770,6 +1785,10 @@ proxy-groups:
   - 🇯🇵 JP-05-DDPS
   - 🇯🇵 JP-10-Leasweb
   - 🇯🇵 日本 - Hy2
+  - 🇯🇵 日本01
+  - 🇯🇵 日本02
+  - 🇯🇵 日本03
+  - 🇯🇵 日本04
   - 🇯🇵日本-A(通用)
   - 🇺🇸 美国G2|实验|0.1倍|V1
   - 🇺🇸 美国B2|联通|0.7倍|V2
@@ -1782,6 +1801,11 @@ proxy-groups:
   - 🇺🇸 US-04-Eons
   - 🇺🇸 US-05-Leassweb
   - 🇺🇸 美国 - Hy2
+  - 🇺🇸 美国01
+  - 🇺🇸 美国02
+  - 🇺🇸 美国03
+  - 🇺🇸 美国04
+  - 🇺🇸 美国05
   - 🇺🇸美国-A(通用)
   - 🇺🇸美国-C(通用)
   - 🇺🇸美国-X(通用)
@@ -1793,30 +1817,50 @@ proxy-groups:
   - 🇳🇱 荷兰B1|联通|0.7倍|V1
   - 🇳🇱 荷兰A1|联通|0.8倍|V1
   - 🇩🇪 德国B1|移动|1.1倍|V1
+  - 🇨🇦 加拿大 备用机01
+  - 🇨🇦 加拿大01
   - 🇩🇪 DE-01-Dataforest
   - 🇩🇪 DE-02-BAGE
   - 🇩🇪 DE-04-Leaseweb
+  - 🇩🇪 德国01
+  - 🇩🇪 德国02
   - 🇩🇪德国-A(通用)
   - 🇫🇮 FI-01-Cgi Global
+  - 🇫🇷 法国01
+  - 🇫🇷 法国02
   - 🇬🇧 UK-01-HostHatch
+  - 🇬🇧 英国01
+  - 🇬🇧 英国02
   - 🇨🇳 TW-01-Hinet
   - 🇨🇳 TW-02-AKILE
   - 🇨🇳 TW-03-Akari
   - 🇨🇳 TW-04-MoeChuang
   - 🇨🇳 台湾 - Hy2
+  - 🇹🇼 台湾01
+  - 🇹🇼 台湾02
+  - 🇹🇼 台湾03
+  - 🇹🇼 台湾04
   - 🇹🇼台湾-A(通用)
   - 🇹🇭 泰国A1|移动|0.9倍|V2
   - 🇻🇳 越南A1|电信移动|1.1倍|V2
+  - 🇮🇩 印尼01
   - 🇲🇾马来-A(通用)
+  - 🇹🇭 泰国 备用机01
+  - 🇹🇭 泰国01
   - 🇷🇺 俄罗斯A1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
+  - 支持AI:新日美台港
+  - 看不到节点的小火箭用户请卸载重装
+  - 超时请更新订阅
+  - 🇰🇷 韩国01
+  - 🇰🇷 韩国02
   - 🇰🇷韩国-A(通用)
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
   interval: 180
   tolerance: 50
   lazy: true
-- name: "3834"
+- name: '3834'
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
   proxies:
@@ -1909,6 +1953,10 @@ proxy-groups:
   - 🇭🇰 HK-09-FXT
   - 🇭🇰 HK-10-Akari
   - 🇭🇰 香港 - Hy2
+  - 🇭🇰 香港01
+  - 🇭🇰 香港02
+  - 🇭🇰 香港03
+  - 🇭🇰 香港04
   - 🇭🇰香港-A(通用)
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
@@ -1936,6 +1984,10 @@ proxy-groups:
   - 🇭🇰 HK-09-FXT
   - 🇭🇰 HK-10-Akari
   - 🇭🇰 香港 - Hy2
+  - 🇭🇰 香港01
+  - 🇭🇰 香港02
+  - 🇭🇰 香港03
+  - 🇭🇰 香港04
   - 🇭🇰香港-A(通用)
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
@@ -1952,6 +2004,15 @@ proxy-groups:
   - 全节点
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
+- name: jl香港
+  type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+  fallback-groups:
+  - 香港
+  proxies:
+  - 香港
+  url: https://chatgpt.com/.well-known/http-message-signatures-directory
+  expected-status: 200
 - name: 新加坡-自动
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
@@ -1965,6 +2026,11 @@ proxy-groups:
   - 🇸🇬 SG-05-HostHatch
   - 🇸🇬 SG-07-Leaseweb
   - 🇸🇬 新加坡 - Hy2
+  - 🇸🇬 新加坡01
+  - 🇸🇬 新加坡02
+  - 🇸🇬 新加坡03
+  - 🇸🇬 新加坡04
+  - 🇸🇬 新加坡05
   - 🇸🇬新加坡-A(通用)
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
@@ -1984,6 +2050,11 @@ proxy-groups:
   - 🇸🇬 SG-05-HostHatch
   - 🇸🇬 SG-07-Leaseweb
   - 🇸🇬 新加坡 - Hy2
+  - 🇸🇬 新加坡01
+  - 🇸🇬 新加坡02
+  - 🇸🇬 新加坡03
+  - 🇸🇬 新加坡04
+  - 🇸🇬 新加坡05
   - 🇸🇬新加坡-A(通用)
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
@@ -2014,6 +2085,10 @@ proxy-groups:
   - 🇯🇵 JP-05-DDPS
   - 🇯🇵 JP-10-Leasweb
   - 🇯🇵 日本 - Hy2
+  - 🇯🇵 日本01
+  - 🇯🇵 日本02
+  - 🇯🇵 日本03
+  - 🇯🇵 日本04
   - 🇯🇵日本-A(通用)
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
@@ -2034,6 +2109,10 @@ proxy-groups:
   - 🇯🇵 JP-05-DDPS
   - 🇯🇵 JP-10-Leasweb
   - 🇯🇵 日本 - Hy2
+  - 🇯🇵 日本01
+  - 🇯🇵 日本02
+  - 🇯🇵 日本03
+  - 🇯🇵 日本04
   - 🇯🇵日本-A(通用)
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
@@ -2059,6 +2138,10 @@ proxy-groups:
   - 🇨🇳 TW-03-Akari
   - 🇨🇳 TW-04-MoeChuang
   - 🇨🇳 台湾 - Hy2
+  - 🇹🇼 台湾01
+  - 🇹🇼 台湾02
+  - 🇹🇼 台湾03
+  - 🇹🇼 台湾04
   - 🇹🇼台湾-A(通用)
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
@@ -2074,6 +2157,10 @@ proxy-groups:
   - 🇨🇳 TW-03-Akari
   - 🇨🇳 TW-04-MoeChuang
   - 🇨🇳 台湾 - Hy2
+  - 🇹🇼 台湾01
+  - 🇹🇼 台湾02
+  - 🇹🇼 台湾03
+  - 🇹🇼 台湾04
   - 🇹🇼台湾-A(通用)
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
@@ -2105,6 +2192,11 @@ proxy-groups:
   - 🇺🇸 US-04-Eons
   - 🇺🇸 US-05-Leassweb
   - 🇺🇸 美国 - Hy2
+  - 🇺🇸 美国01
+  - 🇺🇸 美国02
+  - 🇺🇸 美国03
+  - 🇺🇸 美国04
+  - 🇺🇸 美国05
   - 🇺🇸美国-A(通用)
   - 🇺🇸美国-C(通用)
   - 🇺🇸美国-X(通用)
@@ -2128,6 +2220,11 @@ proxy-groups:
   - 🇺🇸 US-04-Eons
   - 🇺🇸 US-05-Leassweb
   - 🇺🇸 美国 - Hy2
+  - 🇺🇸 美国01
+  - 🇺🇸 美国02
+  - 🇺🇸 美国03
+  - 🇺🇸 美国04
+  - 🇺🇸 美国05
   - 🇺🇸美国-A(通用)
   - 🇺🇸美国-C(通用)
   - 🇺🇸美国-X(通用)
@@ -2158,12 +2255,20 @@ proxy-groups:
   - 🇳🇱 荷兰B1|联通|0.7倍|V1
   - 🇳🇱 荷兰A1|联通|0.8倍|V1
   - 🇩🇪 德国B1|移动|1.1倍|V1
+  - 🇨🇦 加拿大 备用机01
+  - 🇨🇦 加拿大01
   - 🇩🇪 DE-01-Dataforest
   - 🇩🇪 DE-02-BAGE
   - 🇩🇪 DE-04-Leaseweb
+  - 🇩🇪 德国01
+  - 🇩🇪 德国02
   - 🇩🇪德国-A(通用)
   - 🇫🇮 FI-01-Cgi Global
+  - 🇫🇷 法国01
+  - 🇫🇷 法国02
   - 🇬🇧 UK-01-HostHatch
+  - 🇬🇧 英国01
+  - 🇬🇧 英国02
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
   interval: 180
@@ -2181,12 +2286,20 @@ proxy-groups:
   - 🇳🇱 荷兰B1|联通|0.7倍|V1
   - 🇳🇱 荷兰A1|联通|0.8倍|V1
   - 🇩🇪 德国B1|移动|1.1倍|V1
+  - 🇨🇦 加拿大 备用机01
+  - 🇨🇦 加拿大01
   - 🇩🇪 DE-01-Dataforest
   - 🇩🇪 DE-02-BAGE
   - 🇩🇪 DE-04-Leaseweb
+  - 🇩🇪 德国01
+  - 🇩🇪 德国02
   - 🇩🇪德国-A(通用)
   - 🇫🇮 FI-01-Cgi Global
+  - 🇫🇷 法国01
+  - 🇫🇷 法国02
   - 🇬🇧 UK-01-HostHatch
+  - 🇬🇧 英国01
+  - 🇬🇧 英国02
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
 - name: 欧洲
@@ -2208,7 +2321,10 @@ proxy-groups:
   proxies:
   - 🇹🇭 泰国A1|移动|0.9倍|V2
   - 🇻🇳 越南A1|电信移动|1.1倍|V2
+  - 🇮🇩 印尼01
   - 🇲🇾马来-A(通用)
+  - 🇹🇭 泰国 备用机01
+  - 🇹🇭 泰国01
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
   interval: 180
@@ -2220,7 +2336,10 @@ proxy-groups:
   proxies:
   - 🇹🇭 泰国A1|移动|0.9倍|V2
   - 🇻🇳 越南A1|电信移动|1.1倍|V2
+  - 🇮🇩 印尼01
   - 🇲🇾马来-A(通用)
+  - 🇹🇭 泰国 备用机01
+  - 🇹🇭 泰国01
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
 - name: 东南亚
@@ -2242,6 +2361,11 @@ proxy-groups:
   proxies:
   - 🇷🇺 俄罗斯A1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
+  - 支持AI:新日美台港
+  - 看不到节点的小火箭用户请卸载重装
+  - 超时请更新订阅
+  - 🇰🇷 韩国01
+  - 🇰🇷 韩国02
   - 🇰🇷韩国-A(通用)
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
@@ -2254,6 +2378,11 @@ proxy-groups:
   proxies:
   - 🇷🇺 俄罗斯A1|联通|1倍|V1
   - 🇹🇷 土耳其A1|三网|1.1倍|V2
+  - 支持AI:新日美台港
+  - 看不到节点的小火箭用户请卸载重装
+  - 超时请更新订阅
+  - 🇰🇷 韩国01
+  - 🇰🇷 韩国02
   - 🇰🇷韩国-A(通用)
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
@@ -2403,10 +2532,12 @@ proxy-groups:
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
   fallback-groups:
+  - Proxy
   - OpenAI-新加坡
   - OpenAI-日本
   - OpenAI-美国
   proxies:
+  - Proxy
   - OpenAI-新加坡
   - OpenAI-日本
   - OpenAI-美国
@@ -2415,12 +2546,7 @@ proxy-groups:
 - name: OpenAI-新加坡-自动
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
-  proxies:
-  - 🇸🇬 新加坡01
-  - 🇸🇬 新加坡02
-  - 🇸🇬 新加坡03
-  - 🇸🇬 新加坡04
-  - 🇸🇬 新加坡05
+  proxies: []
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
   interval: 180
@@ -2429,12 +2555,7 @@ proxy-groups:
 - name: OpenAI-新加坡-手动
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
-  proxies:
-  - 🇸🇬 新加坡01
-  - 🇸🇬 新加坡02
-  - 🇸🇬 新加坡03
-  - 🇸🇬 新加坡04
-  - 🇸🇬 新加坡05
+  proxies: []
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
 - name: OpenAI-新加坡
@@ -2451,11 +2572,7 @@ proxy-groups:
 - name: OpenAI-日本-自动
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
-  proxies:
-  - 🇯🇵 日本01
-  - 🇯🇵 日本02
-  - 🇯🇵 日本03
-  - 🇯🇵 日本04
+  proxies: []
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
   interval: 180
@@ -2464,11 +2581,7 @@ proxy-groups:
 - name: OpenAI-日本-手动
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
-  proxies:
-  - 🇯🇵 日本01
-  - 🇯🇵 日本02
-  - 🇯🇵 日本03
-  - 🇯🇵 日本04
+  proxies: []
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
 - name: OpenAI-日本
@@ -2485,12 +2598,7 @@ proxy-groups:
 - name: OpenAI-美国-自动
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-  proxies:
-  - 🇺🇸 美国01
-  - 🇺🇸 美国02
-  - 🇺🇸 美国03
-  - 🇺🇸 美国04
-  - 🇺🇸 美国05
+  proxies: []
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
   interval: 180
@@ -2499,12 +2607,7 @@ proxy-groups:
 - name: OpenAI-美国-手动
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-  proxies:
-  - 🇺🇸 美国01
-  - 🇺🇸 美国02
-  - 🇺🇸 美国03
-  - 🇺🇸 美国04
-  - 🇺🇸 美国05
+  proxies: []
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
 - name: OpenAI-美国
