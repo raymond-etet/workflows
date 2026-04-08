@@ -1816,7 +1816,7 @@ proxy-groups:
   interval: 180
   tolerance: 50
   lazy: true
-- name: 3834
+- name: "3834"
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
   proxies:
