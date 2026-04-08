@@ -208,7 +208,6 @@ proxy-groups:
       - SEA
       - OTHER
     fallback-groups:
-      - OpenAI
       - AI
       - 币安
       - PikPak
