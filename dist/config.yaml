@@ -373,7 +373,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-f.coscdn.men
-  client-fingerprint: edge
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -411,7 +411,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-rende-h.aliapp.men
-  client-fingerprint: safari
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -617,7 +617,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-f.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -636,7 +636,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-g.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -655,7 +655,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-gecko-h.aliapp.men
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -674,7 +674,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-e.coscdn.men
-  client-fingerprint: firefox
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -693,7 +693,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-f.coscdn.men
-  client-fingerprint: safari
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -731,7 +731,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-main-h.aliapp.men
-  client-fingerprint: safari
+  client-fingerprint: ios
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -750,7 +750,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-e.coscdn.men
-  client-fingerprint: ios
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -769,7 +769,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-f.coscdn.men
-  client-fingerprint: edge
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -788,7 +788,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-g.aliapp.men
-  client-fingerprint: ios
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -807,7 +807,7 @@ proxies:
   udp: true
   tls: true
   servername: mms-static-bottom-h.aliapp.men
-  client-fingerprint: qq
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /newlogin/login.do
@@ -1214,7 +1214,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: firefox
+  client-fingerprint: safari
   sni: moe233-riolu-61a820a2-ab45-6be7-d0d7-aeed72816683.hnair.com
 - name: 🇭🇰 香港02
   type: anytls
@@ -1226,7 +1226,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: safari
+  client-fingerprint: edge
   sni: moe233-riolu-fd0fcfe0-b92a-f4b5-fe04-53069f5afc1b.hnair.com
 - name: 🇭🇰 香港03
   type: anytls
@@ -1238,7 +1238,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: safari
+  client-fingerprint: firefox
   sni: moe233-riolu-61a820a2-ab45-6be7-d0d7-aeed72816683.hnair.com
 - name: 🇭🇰 香港04
   type: anytls
@@ -1250,7 +1250,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: edge
+  client-fingerprint: firefox
   sni: moe233-riolu-fd0fcfe0-b92a-f4b5-fe04-53069f5afc1b.hnair.com
 - name: 🇯🇵 日本01
   type: anytls
@@ -1274,7 +1274,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: edge
+  client-fingerprint: chrome
   sni: moe233-riolu-8efefdb7-1701-a524-d925-844f02d32bf4.hnair.com
 - name: 🇯🇵 日本03
   type: anytls
@@ -1286,7 +1286,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: qq
+  client-fingerprint: safari
   sni: moe233-riolu-ce068da0-f2ca-6b9b-c3cb-7dc079ae6f9e.hnair.com
 - name: 🇯🇵 日本04
   type: anytls
@@ -1298,7 +1298,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: chrome
+  client-fingerprint: edge
   sni: moe233-riolu-8efefdb7-1701-a524-d925-844f02d32bf4.hnair.com
 - name: 🇸🇬 新加坡01
   type: anytls
@@ -1310,7 +1310,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: qq
+  client-fingerprint: safari
   sni: moe233-riolu-655d3987-e9a4-935a-877e-a91ce6fe776e.hnair.com
 - name: 🇸🇬 新加坡02
   type: anytls
@@ -1322,7 +1322,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: edge
+  client-fingerprint: qq
   sni: moe233-riolu-c4c745f3-e49f-e7ac-b9d6-9a0fbe8511f0.hnair.com
 - name: 🇸🇬 新加坡03
   type: anytls
@@ -1346,7 +1346,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: qq
+  client-fingerprint: safari
   sni: moe233-riolu-c4c745f3-e49f-e7ac-b9d6-9a0fbe8511f0.hnair.com
 - name: 🇸🇬 新加坡05
   type: anytls
@@ -1358,7 +1358,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: edge
+  client-fingerprint: ios
   sni: moe233-riolu-0c545ee4-f931-9c24-26b7-eab6ea0370b3.hnair.com
 - name: 🇹🇼 台湾01
   type: anytls
@@ -1370,7 +1370,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: safari
+  client-fingerprint: qq
   sni: moe233-riolu-e205aadd-7a10-0ed7-ed7e-d38ccbc15354.hnair.com
 - name: 🇹🇼 台湾02
   type: anytls
@@ -1382,7 +1382,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: chrome
+  client-fingerprint: ios
   sni: moe233-riolu-b78e8350-2039-90f8-a73d-c5cdf8e0543a.hnair.com
 - name: 🇹🇼 台湾03
   type: anytls
@@ -1394,7 +1394,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: qq
+  client-fingerprint: firefox
   sni: moe233-riolu-e205aadd-7a10-0ed7-ed7e-d38ccbc15354.hnair.com
 - name: 🇹🇼 台湾04
   type: anytls
@@ -1406,7 +1406,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: edge
+  client-fingerprint: qq
   sni: moe233-riolu-b78e8350-2039-90f8-a73d-c5cdf8e0543a.hnair.com
 - name: 🇺🇸 美国01
   type: anytls
@@ -1418,7 +1418,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: qq
+  client-fingerprint: edge
   sni: moe233-riolu-7f0c47de-1ed5-2da6-22ed-921e51992120.hnair.com
 - name: 🇺🇸 美国02
   type: anytls
@@ -1430,7 +1430,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: ios
+  client-fingerprint: safari
   sni: moe233-riolu-b94777dd-13e5-228d-ccdf-ea937be0c8ab.hnair.com
 - name: 🇺🇸 美国03
   type: anytls
@@ -1442,7 +1442,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: safari
+  client-fingerprint: chrome
   sni: moe233-riolu-9ceea1e7-8f6a-c055-33ae-2da3dcc9d3b5.hnair.com
 - name: 🇺🇸 美国04
   type: anytls
@@ -1454,7 +1454,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: qq
+  client-fingerprint: firefox
   sni: moe233-riolu-b94777dd-13e5-228d-ccdf-ea937be0c8ab.hnair.com
 - name: 🇺🇸 美国05
   type: anytls
@@ -1466,7 +1466,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: qq
+  client-fingerprint: firefox
   sni: moe233-riolu-9ceea1e7-8f6a-c055-33ae-2da3dcc9d3b5.hnair.com
 - name: 🇨🇦 加拿大01
   type: anytls
@@ -1478,7 +1478,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: qq
+  client-fingerprint: ios
   sni: moe233-riolu-f713d121-6926-6cb4-6542-94db1b827091.hnair.com
 - name: 🇮🇩 印尼01
   type: anytls
@@ -1490,7 +1490,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: safari
+  client-fingerprint: edge
   sni: moe233-riolu-3a085f91-005a-c285-f2c7-b4565ef204f0.hnair.com
 - name: 🇹🇭 泰国01
   type: anytls
@@ -1502,7 +1502,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: chrome
+  client-fingerprint: safari
   sni: moe233-riolu-72c79615-c4ec-2b5c-e73a-47737a3992b4.hnair.com
 - name: 🇬🇧 英国01
   type: anytls
@@ -1514,7 +1514,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: ios
+  client-fingerprint: safari
   sni: moe233-riolu-fbe8c179-cb07-723f-bb5a-eb256a5f2b0e.hnair.com
 - name: 🇬🇧 英国02
   type: anytls
@@ -1526,7 +1526,7 @@ proxies:
   - http/1.1
   skip-cert-verify: false
   udp: true
-  client-fingerprint: safari
+  client-fingerprint: firefox
   sni: moe233-riolu-fbe8c179-cb07-723f-bb5a-eb256a5f2b0e.qchwnd.moe
 - name: 🇫🇷 法国01
   type: anytls
@@ -1562,7 +1562,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: firefox
+  client-fingerprint: ios
   sni: moe233-riolu-128479d7-732e-41e0-e6fc-ce95e60d375e.hnair.com
 - name: 🇩🇪 德国02
   type: anytls
@@ -1586,7 +1586,7 @@ proxies:
   - http/1.1
   skip-cert-verify: true
   udp: true
-  client-fingerprint: edge
+  client-fingerprint: qq
   sni: moe233-riolu-5e3746c6-b3a3-8086-d853-bd323b99bae2.hnair.com
 - name: 🇰🇷 韩国02
   type: anytls
@@ -2986,23 +2986,23 @@ proxy-groups:
   - 全节点
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
-- name: 📊crosswall 剩余 230.47GiB（距重置 5 天）
+- name: 📊crosswall 剩余 222.63GiB（距重置 4 天）
   type: select
   proxies:
   - DIRECT
-- name: 📊Nano 剩余 223.25GiB
+- name: 📊Nano 剩余 223.21GiB
   type: select
   proxies:
   - DIRECT
-- name: 📊viking 剩余 245.48GiB（距重置 29 天）
+- name: 📊viking 剩余 244.29GiB（距重置 28 天）
   type: select
   proxies:
   - DIRECT
-- name: 📊tangguo 剩余 172.84GiB
+- name: 📊tangguo 剩余 172.77GiB
   type: select
   proxies:
   - DIRECT
-- name: 📊jingling 剩余 72.60GiB
+- name: 📊jingling 剩余 26.83GiB
   type: select
   proxies:
   - DIRECT
