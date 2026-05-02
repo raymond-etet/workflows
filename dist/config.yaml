@@ -17,17 +17,9 @@ proxies:
   udp: true
   sni: www.yahoo.com
   skip-cert-verify: true
-- name: 🇺🇸 美国G2|实验|0.1倍|V1
-  type: anytls
-  server: usg2-0co2xkid.node.cross666.top
-  port: 31333
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
-  sni: www.yahoo.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国F1|电信联通|1.1倍|V1
+- name: 🇺🇸 美国F3|电信联通|1.1倍|V1
   type: hysteria2
-  server: usf1-fl9jo7ac.node.cross666.top
+  server: usf3-huxk4jdn.node.cross666.top
   port: 65535
   password: efaed81f-e760-4d87-be6e-05136b25da66
   udp: true
@@ -52,6 +44,14 @@ proxies:
 - name: 🇺🇸 美国E1|0.7倍|V1
   type: anytls
   server: use1.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国G1|实验|0.1倍|V1
+  type: anytls
+  server: usg1-c-chic51aa6lrlzvyf.node.cross666.top
   port: 31333
   password: efaed81f-e760-4d87-be6e-05136b25da66
   udp: true
@@ -153,9 +153,9 @@ proxies:
   udp: true
   sni: mirror.dogado.de
   skip-cert-verify: true
-- name: 🇩🇪 德国B1|移动|1.1倍|V1
+- name: 🇩🇪 德国B2|移动|1.1倍|V1
   type: hysteria2
-  server: deb1.node.cross666.top
+  server: deb2-nhn7rvyt.node.cross666.top
   port: 65535
   password: efaed81f-e760-4d87-be6e-05136b25da66
   udp: true
@@ -300,7 +300,7 @@ proxies:
   skip-cert-verify: true
   sni: mcdn.bilivideo.com
   network: tcp
-- name: 🇭🇰 HK-08-Hython
+- name: 🇭🇰 HK-08-Hytron
   type: trojan
   server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26020
@@ -525,690 +525,46 @@ proxies:
   skip-cert-verify: true
   sni: mcdn.bilivideo.com
   network: tcp
-- name: 🇭🇰 香港-01
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 37698
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
+- name: 🇭🇰 香港 - Hy2
+  type: hysteria2
+  server: ashy2.hello-hx1547-ty.com
+  port: 24027
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
   udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
+  sni: www.bing.com
   skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇭🇰 香港-02
-  type: vless
-  server: hk.hello-hx2723-ap.com
-  port: 37698
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
+- name: 🇸🇬 新加坡 - Hy2
+  type: hysteria2
+  server: ashy2.hello-hx1547-ty.com
+  port: 59916
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
   udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
+  sni: www.bing.com
   skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇨🇳 台湾-01
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 44569
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
+- name: 🇯🇵 日本 - Hy2
+  type: hysteria2
+  server: ashy2.hello-hx1547-ty.com
+  port: 15158
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
   udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
+  sni: www.bing.com
   skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇨🇳 台湾-02
-  type: vless
-  server: hk.hello-hx2723-ap.com
-  port: 44569
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
+- name: 🇨🇳 台湾 - Hy2
+  type: hysteria2
+  server: ashy2.hello-hx1547-ty.com
+  port: 37531
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
   udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
+  sni: www.bing.com
   skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇸🇬 新加坡-01
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 50446
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
+- name: 🇺🇸 美国 - Hy2
+  type: hysteria2
+  server: ashy2.hello-hx1547-ty.com
+  port: 48477
+  password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
   udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
+  sni: www.bing.com
   skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: noKGe2FFbTzz6LRuAtcREr5hSJuLiaLoSZvF-QOcXx4
-    short-id: 3e60d5ed3f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇸🇬 新加坡-02
-  type: vless
-  server: hk.hello-hx2723-ap.com
-  port: 50446
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇯🇵 日本-01
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 60323
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇯🇵 日本-02
-  type: vless
-  server: hk.hello-hx2723-ap.com
-  port: 60323
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇺🇸 美国-01
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 64717
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇺🇸 美国-02
-  type: vless
-  server: hk.hello-hx2723-ap.com
-  port: 64717
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇭🇰 香港原生住宅
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 23897
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇨🇳 台湾住宅原生
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 36137
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇯🇵 日本家宽-01
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 59464
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇯🇵 日本家宽-02
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 41806
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇺🇸 美国家宽-01
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 59141
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇺🇸 美国家宽-02
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 32171
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇺🇸 美国家庭-03
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 42501
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇩🇪 德国家宽
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 29342
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇩🇪 德国
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 12518
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇰🇷 韩国家宽
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 23548
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇰🇷 韩国
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 16527
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇹🇭 泰国
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 21442
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇦🇷 阿根廷
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 20758
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇹🇷 土耳其
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 28226
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇬🇧 英国
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 10791
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇬🇧 英国家宽
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 50761
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇫🇷 法国
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 39556
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇻🇳 越南家宽
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 40277
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇻🇳 越南
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 51338
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇷🇺 俄罗斯
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 27323
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇦🇪 迪拜
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 8399
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇲🇽 墨西哥
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 34999
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇦🇺 澳大利亚
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 17073
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇧🇷 巴西
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 9665
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇨🇦 加拿大
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 17639
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇲🇾 马来西亚
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 13835
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇮🇩 印度尼西亚
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 21370
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
-- name: 🇿🇦 南非
-  type: vless
-  server: as.hello-hx1547-ty.com
-  port: 58062
-  uuid: b03fe15a-56fd-45b5-8df0-e67d92cfa258
-  alterId: 0
-  cipher: auto
-  udp: true
-  flow: xtls-rprx-vision
-  encryption: none
-  tls: true
-  skip-cert-verify: true
-  servername: www.tue.nl
-  reality-opts:
-    public-key: 1Dzk9s7DYSUrr4jvsfleOQHLY0PDPBaSVa8B0F4dJVk
-    short-id: fe10d41f4acd1c8f
-  client-fingerprint: chrome
-  network: tcp
 - name: 支持AI:新美台港
   type: vmess
   server: moe233.org
@@ -1953,12 +1309,12 @@ proxy-groups:
   proxies:
   - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
-  - 🇯🇵 日本家宽-01
-  - 🇯🇵 日本家宽-02
+  - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
   - 🇭🇰 香港A2|电信联通|2倍|V1
   - 🇸🇬 新加坡A2|联通|3倍|V2
   - 🇸🇬 新加坡A3|联通|3倍|V2
-  - 🇺🇸 US-02-Jinx
+  - 🇯🇵 JP-01-Sakura
+  - 🇯🇵 JP-02-JinX
   - jl香港
   - OpenAI-新加坡
   - OpenAI-日本
@@ -2013,16 +1369,6 @@ proxy-groups:
   - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港原生住宅
-  - 🇯🇵 日本家宽-01
-  - 🇯🇵 日本家宽-02
-  - 🇺🇸 美国家宽-01
-  - 🇺🇸 美国家宽-02
-  - 🇩🇪 德国家宽
-  - 🇬🇧 英国家宽
-  - 🇨🇳 台湾住宅原生
-  - 🇻🇳 越南家宽
-  - 🇰🇷 韩国家宽
   - 🇭🇰 香港A2|电信联通|2倍|V1
   - 🇸🇬 新加坡A2|联通|3倍|V2
   - 🇸🇬 新加坡A3|联通|3倍|V2
@@ -2035,11 +1381,10 @@ proxy-groups:
   - 🇭🇰 HK-04-Eons
   - 🇭🇰 HK-05-HostHatch
   - 🇭🇰 HK-07-DMIT
-  - 🇭🇰 HK-08-Hython
+  - 🇭🇰 HK-08-Hytron
   - 🇭🇰 HK-09-FXT
   - 🇭🇰 HK-10-Akari
-  - 🇭🇰 香港-01
-  - 🇭🇰 香港-02
+  - 🇭🇰 香港 - Hy2
   - 🇸🇬 新加坡B1|移动|1.2倍|V2
   - 🇸🇬 SG-01-SG.GS
   - 🇸🇬 SG-02-Datacamp
@@ -2047,28 +1392,24 @@ proxy-groups:
   - 🇸🇬 SG-04-JinX
   - 🇸🇬 SG-05-HostHatch
   - 🇸🇬 SG-07-Leaseweb
-  - 🇸🇬 新加坡-01
-  - 🇸🇬 新加坡-02
+  - 🇸🇬 新加坡 - Hy2
   - 🇯🇵 JP-01-Sakura
   - 🇯🇵 JP-02-JinX
   - 🇯🇵 JP-03-Akari
   - 🇯🇵 JP-04-HostHatch
   - 🇯🇵 JP-10-Leasweb
-  - 🇯🇵 日本-01
-  - 🇯🇵 日本-02
-  - 🇺🇸 美国G2|实验|0.1倍|V1
+  - 🇯🇵 日本 - Hy2
+  - 🇺🇸 美国G1|实验|0.1倍|V1
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国E1|0.7倍|V1
   - 🇺🇸 美国C1|0.8倍|V1
-  - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国F3|电信联通|1.1倍|V1
   - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇺🇸 US-02-Jinx
   - 🇺🇸 US-03-Alpha
   - 🇺🇸 US-04-Eons
   - 🇺🇸 US-05-Leassweb
-  - 🇺🇸 美国-01
-  - 🇺🇸 美国-02
-  - 🇺🇸 美国家庭-03
+  - 🇺🇸 美国 - Hy2
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -2077,37 +1418,19 @@ proxy-groups:
   - 🇳🇱 荷兰B1|联通|0.7倍|V1
   - 🇳🇱 荷兰A1|联通|0.8倍|V1
   - 🇩🇪 德国B16️⃣|移动|1.1倍|V1
-  - 🇩🇪 德国B1|移动|1.1倍|V1
-  - 🇨🇦 加拿大
+  - 🇩🇪 德国B2|移动|1.1倍|V1
   - 🇩🇪 DE-01-Dataforest
   - 🇩🇪 DE-02-BAGE
   - 🇩🇪 DE-03-Leaseweb
-  - 🇩🇪 德国
-  - 🇫🇷 法国
   - 🇬🇧 UK-01-HostHatch
-  - 🇬🇧 英国
   - 🇨🇳 TW-01-Liberally
   - 🇨🇳 TW-02-AKILE
   - 🇨🇳 TW-03-Akari
-  - 🇨🇳 台湾-01
-  - 🇨🇳 台湾-02
+  - 🇨🇳 台湾 - Hy2
   - 🇻🇳 越南A1|电信移动|1.1倍|V2
-  - 🇲🇾 马来西亚
-  - 🇹🇭 泰国
-  - 🇻🇳 越南
   - 🇷🇺 俄罗斯A1|联通|1倍|V1
   - 'TG: @NanoAir_bot'
   - 无法访问请挂个代理再打开
-  - 🇦🇪 迪拜
-  - 🇦🇷 阿根廷
-  - 🇦🇺 澳大利亚
-  - 🇧🇷 巴西
-  - 🇮🇩 印度尼西亚
-  - 🇰🇷 韩国
-  - 🇲🇽 墨西哥
-  - 🇷🇺 俄罗斯
-  - 🇹🇷 土耳其
-  - 🇿🇦 南非
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
   interval: 180
@@ -2120,13 +1443,6 @@ proxy-groups:
   - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港原生住宅
-  - 🇯🇵 日本家宽-01
-  - 🇯🇵 日本家宽-02
-  - 🇺🇸 美国家宽-01
-  - 🇺🇸 美国家宽-02
-  - 🇬🇧 英国家宽
-  - 🇨🇳 台湾住宅原生
   - 🇭🇰 香港A2|电信联通|2倍|V1
   - 🇸🇬 新加坡A2|联通|3倍|V2
   - 🇸🇬 新加坡A3|联通|3倍|V2
@@ -2139,13 +1455,12 @@ proxy-groups:
   - 🇭🇰 HK-04-Eons
   - 🇭🇰 HK-05-HostHatch
   - 🇭🇰 HK-07-DMIT
-  - 🇭🇰 HK-08-Hython
+  - 🇭🇰 HK-08-Hytron
   - 🇭🇰 HK-09-FXT
   - 🇭🇰 HK-10-Akari
+  - 🇭🇰 香港 - Hy2
   - 🇭🇰 香港 备用机01
   - 🇭🇰 香港 备用机02
-  - 🇭🇰 香港-01
-  - 🇭🇰 香港-02
   - 🇭🇰 香港01
   - 🇭🇰 香港01 CloudFront
   - 🇭🇰 香港01 电信优化
@@ -2163,8 +1478,7 @@ proxy-groups:
   - 🇸🇬 SG-04-JinX
   - 🇸🇬 SG-05-HostHatch
   - 🇸🇬 SG-07-Leaseweb
-  - 🇸🇬 新加坡-01
-  - 🇸🇬 新加坡-02
+  - 🇸🇬 新加坡 - Hy2
   - 🇸🇬 新加坡01
   - 🇸🇬 新加坡02
   - 🇸🇬 新加坡03
@@ -2175,10 +1489,9 @@ proxy-groups:
   - 🇯🇵 JP-03-Akari
   - 🇯🇵 JP-04-HostHatch
   - 🇯🇵 JP-10-Leasweb
+  - 🇯🇵 日本 - Hy2
   - 🇯🇵 日本 备用机01
   - 🇯🇵 日本 备用机02
-  - 🇯🇵 日本-01
-  - 🇯🇵 日本-02
   - 🇯🇵 日本01
   - 🇯🇵 日本01 CloudFront
   - 🇯🇵 日本01 电信优化
@@ -2187,36 +1500,32 @@ proxy-groups:
   - 🇯🇵 日本02 电信优化
   - 🇯🇵 日本03
   - 🇯🇵 日本04
-  - 🇺🇸 美国G2|实验|0.1倍|V1
+  - 🇺🇸 美国G1|实验|0.1倍|V1
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国E1|0.7倍|V1
   - 🇺🇸 美国C1|0.8倍|V1
-  - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国F3|电信联通|1.1倍|V1
   - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇺🇸 US-02-Jinx
   - 🇺🇸 US-03-Alpha
   - 🇺🇸 US-04-Eons
   - 🇺🇸 US-05-Leassweb
+  - 🇺🇸 美国 - Hy2
   - 🇺🇸 美国 备用机01
   - 🇺🇸 美国 备用机02
-  - 🇺🇸 美国-01
-  - 🇺🇸 美国-02
   - 🇺🇸 美国01
   - 🇺🇸 美国02
   - 🇺🇸 美国03
   - 🇺🇸 美国04
   - 🇺🇸 美国05
-  - 🇺🇸 美国家庭-03
   - 🇬🇧 英国A2|联通移动|0.7倍|V1
   - 🇬🇧 UK-01-HostHatch
-  - 🇬🇧 英国
   - 🇬🇧 英国01
   - 🇬🇧 英国02
   - 🇨🇳 TW-01-Liberally
   - 🇨🇳 TW-02-AKILE
   - 🇨🇳 TW-03-Akari
-  - 🇨🇳 台湾-01
-  - 🇨🇳 台湾-02
+  - 🇨🇳 台湾 - Hy2
   - 🇹🇼 台湾01
   - 🇹🇼 台湾02
   - 🇹🇼 台湾03
@@ -2233,7 +1542,6 @@ proxy-groups:
   - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港原生住宅
   - 🇭🇰 香港A2|电信联通|2倍|V1
   - 🇭🇰 HK-01-CTC
   - 🇭🇰 HK-02-JinX
@@ -2241,13 +1549,12 @@ proxy-groups:
   - 🇭🇰 HK-04-Eons
   - 🇭🇰 HK-05-HostHatch
   - 🇭🇰 HK-07-DMIT
-  - 🇭🇰 HK-08-Hython
+  - 🇭🇰 HK-08-Hytron
   - 🇭🇰 HK-09-FXT
   - 🇭🇰 HK-10-Akari
+  - 🇭🇰 香港 - Hy2
   - 🇭🇰 香港 备用机01
   - 🇭🇰 香港 备用机02
-  - 🇭🇰 香港-01
-  - 🇭🇰 香港-02
   - 🇭🇰 香港01
   - 🇭🇰 香港01 CloudFront
   - 🇭🇰 香港01 电信优化
@@ -2270,7 +1577,6 @@ proxy-groups:
   - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港原生住宅
   - 🇭🇰 香港A2|电信联通|2倍|V1
   - 🇭🇰 HK-01-CTC
   - 🇭🇰 HK-02-JinX
@@ -2278,11 +1584,10 @@ proxy-groups:
   - 🇭🇰 HK-04-Eons
   - 🇭🇰 HK-05-HostHatch
   - 🇭🇰 HK-07-DMIT
-  - 🇭🇰 HK-08-Hython
+  - 🇭🇰 HK-08-Hytron
   - 🇭🇰 HK-09-FXT
   - 🇭🇰 HK-10-Akari
-  - 🇭🇰 香港-01
-  - 🇭🇰 香港-02
+  - 🇭🇰 香港 - Hy2
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
   interval: 180
@@ -2295,7 +1600,6 @@ proxy-groups:
   - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港原生住宅
   - 🇭🇰 香港A2|电信联通|2倍|V1
   - 🇭🇰 HK-01-CTC
   - 🇭🇰 HK-02-JinX
@@ -2303,11 +1607,10 @@ proxy-groups:
   - 🇭🇰 HK-04-Eons
   - 🇭🇰 HK-05-HostHatch
   - 🇭🇰 HK-07-DMIT
-  - 🇭🇰 HK-08-Hython
+  - 🇭🇰 HK-08-Hytron
   - 🇭🇰 HK-09-FXT
   - 🇭🇰 HK-10-Akari
-  - 🇭🇰 香港-01
-  - 🇭🇰 香港-02
+  - 🇭🇰 香港 - Hy2
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
 - name: 香港
@@ -2356,8 +1659,7 @@ proxy-groups:
   - 🇸🇬 SG-04-JinX
   - 🇸🇬 SG-05-HostHatch
   - 🇸🇬 SG-07-Leaseweb
-  - 🇸🇬 新加坡-01
-  - 🇸🇬 新加坡-02
+  - 🇸🇬 新加坡 - Hy2
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
   interval: 180
@@ -2376,8 +1678,7 @@ proxy-groups:
   - 🇸🇬 SG-04-JinX
   - 🇸🇬 SG-05-HostHatch
   - 🇸🇬 SG-07-Leaseweb
-  - 🇸🇬 新加坡-01
-  - 🇸🇬 新加坡-02
+  - 🇸🇬 新加坡 - Hy2
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
 - name: 新加坡
@@ -2397,8 +1698,6 @@ proxy-groups:
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
   proxies:
-  - 🇯🇵 日本家宽-01
-  - 🇯🇵 日本家宽-02
   - 🇯🇵 日本A1|三网|3倍|V2
   - 🇯🇵 日本A2|三网|3倍|V2
   - 🇯🇵 日本B1|联通移动|2倍|V2
@@ -2407,8 +1706,7 @@ proxy-groups:
   - 🇯🇵 JP-03-Akari
   - 🇯🇵 JP-04-HostHatch
   - 🇯🇵 JP-10-Leasweb
-  - 🇯🇵 日本-01
-  - 🇯🇵 日本-02
+  - 🇯🇵 日本 - Hy2
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
   interval: 180
@@ -2418,8 +1716,6 @@ proxy-groups:
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
   proxies:
-  - 🇯🇵 日本家宽-01
-  - 🇯🇵 日本家宽-02
   - 🇯🇵 日本A1|三网|3倍|V2
   - 🇯🇵 日本A2|三网|3倍|V2
   - 🇯🇵 日本B1|联通移动|2倍|V2
@@ -2428,8 +1724,7 @@ proxy-groups:
   - 🇯🇵 JP-03-Akari
   - 🇯🇵 JP-04-HostHatch
   - 🇯🇵 JP-10-Leasweb
-  - 🇯🇵 日本-01
-  - 🇯🇵 日本-02
+  - 🇯🇵 日本 - Hy2
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
 - name: 日本
@@ -2449,12 +1744,10 @@ proxy-groups:
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
   proxies:
-  - 🇨🇳 台湾住宅原生
   - 🇨🇳 TW-01-Liberally
   - 🇨🇳 TW-02-AKILE
   - 🇨🇳 TW-03-Akari
-  - 🇨🇳 台湾-01
-  - 🇨🇳 台湾-02
+  - 🇨🇳 台湾 - Hy2
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
   interval: 180
@@ -2464,12 +1757,10 @@ proxy-groups:
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
   proxies:
-  - 🇨🇳 台湾住宅原生
   - 🇨🇳 TW-01-Liberally
   - 🇨🇳 TW-02-AKILE
   - 🇨🇳 TW-03-Akari
-  - 🇨🇳 台湾-01
-  - 🇨🇳 台湾-02
+  - 🇨🇳 台湾 - Hy2
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
 - name: 台湾
@@ -2489,21 +1780,17 @@ proxy-groups:
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
   proxies:
-  - 🇺🇸 美国家宽-01
-  - 🇺🇸 美国家宽-02
-  - 🇺🇸 美国G2|实验|0.1倍|V1
+  - 🇺🇸 美国G1|实验|0.1倍|V1
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国E1|0.7倍|V1
   - 🇺🇸 美国C1|0.8倍|V1
-  - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国F3|电信联通|1.1倍|V1
   - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇺🇸 US-02-Jinx
   - 🇺🇸 US-03-Alpha
   - 🇺🇸 US-04-Eons
   - 🇺🇸 US-05-Leassweb
-  - 🇺🇸 美国-01
-  - 🇺🇸 美国-02
-  - 🇺🇸 美国家庭-03
+  - 🇺🇸 美国 - Hy2
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
   interval: 180
@@ -2513,21 +1800,17 @@ proxy-groups:
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
   proxies:
-  - 🇺🇸 美国家宽-01
-  - 🇺🇸 美国家宽-02
-  - 🇺🇸 美国G2|实验|0.1倍|V1
+  - 🇺🇸 美国G1|实验|0.1倍|V1
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国E1|0.7倍|V1
   - 🇺🇸 美国C1|0.8倍|V1
-  - 🇺🇸 美国F1|电信联通|1.1倍|V1
+  - 🇺🇸 美国F3|电信联通|1.1倍|V1
   - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇺🇸 US-02-Jinx
   - 🇺🇸 US-03-Alpha
   - 🇺🇸 US-04-Eons
   - 🇺🇸 US-05-Leassweb
-  - 🇺🇸 美国-01
-  - 🇺🇸 美国-02
-  - 🇺🇸 美国家庭-03
+  - 🇺🇸 美国 - Hy2
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
 - name: 美国
@@ -2547,8 +1830,6 @@ proxy-groups:
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   proxies:
-  - 🇩🇪 德国家宽
-  - 🇬🇧 英国家宽
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -2557,15 +1838,11 @@ proxy-groups:
   - 🇳🇱 荷兰B1|联通|0.7倍|V1
   - 🇳🇱 荷兰A1|联通|0.8倍|V1
   - 🇩🇪 德国B16️⃣|移动|1.1倍|V1
-  - 🇩🇪 德国B1|移动|1.1倍|V1
-  - 🇨🇦 加拿大
+  - 🇩🇪 德国B2|移动|1.1倍|V1
   - 🇩🇪 DE-01-Dataforest
   - 🇩🇪 DE-02-BAGE
   - 🇩🇪 DE-03-Leaseweb
-  - 🇩🇪 德国
-  - 🇫🇷 法国
   - 🇬🇧 UK-01-HostHatch
-  - 🇬🇧 英国
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
   interval: 180
@@ -2575,8 +1852,6 @@ proxy-groups:
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   proxies:
-  - 🇩🇪 德国家宽
-  - 🇬🇧 英国家宽
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
   - 🇫🇷 法国A1|联通|0.7倍|V1
@@ -2585,15 +1860,11 @@ proxy-groups:
   - 🇳🇱 荷兰B1|联通|0.7倍|V1
   - 🇳🇱 荷兰A1|联通|0.8倍|V1
   - 🇩🇪 德国B16️⃣|移动|1.1倍|V1
-  - 🇩🇪 德国B1|移动|1.1倍|V1
-  - 🇨🇦 加拿大
+  - 🇩🇪 德国B2|移动|1.1倍|V1
   - 🇩🇪 DE-01-Dataforest
   - 🇩🇪 DE-02-BAGE
   - 🇩🇪 DE-03-Leaseweb
-  - 🇩🇪 德国
-  - 🇫🇷 法国
   - 🇬🇧 UK-01-HostHatch
-  - 🇬🇧 英国
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
 - name: 欧洲
@@ -2613,11 +1884,7 @@ proxy-groups:
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   proxies:
-  - 🇻🇳 越南家宽
   - 🇻🇳 越南A1|电信移动|1.1倍|V2
-  - 🇲🇾 马来西亚
-  - 🇹🇭 泰国
-  - 🇻🇳 越南
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
   interval: 180
@@ -2627,11 +1894,7 @@ proxy-groups:
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   proxies:
-  - 🇻🇳 越南家宽
   - 🇻🇳 越南A1|电信移动|1.1倍|V2
-  - 🇲🇾 马来西亚
-  - 🇹🇭 泰国
-  - 🇻🇳 越南
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
 - name: 东南亚
@@ -2651,20 +1914,9 @@ proxy-groups:
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   proxies:
-  - 🇰🇷 韩国家宽
   - 🇷🇺 俄罗斯A1|联通|1倍|V1
   - 'TG: @NanoAir_bot'
   - 无法访问请挂个代理再打开
-  - 🇦🇪 迪拜
-  - 🇦🇷 阿根廷
-  - 🇦🇺 澳大利亚
-  - 🇧🇷 巴西
-  - 🇮🇩 印度尼西亚
-  - 🇰🇷 韩国
-  - 🇲🇽 墨西哥
-  - 🇷🇺 俄罗斯
-  - 🇹🇷 土耳其
-  - 🇿🇦 南非
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
   interval: 180
@@ -2674,20 +1926,9 @@ proxy-groups:
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Nations.png
   proxies:
-  - 🇰🇷 韩国家宽
   - 🇷🇺 俄罗斯A1|联通|1倍|V1
   - 'TG: @NanoAir_bot'
   - 无法访问请挂个代理再打开
-  - 🇦🇪 迪拜
-  - 🇦🇷 阿根廷
-  - 🇦🇺 澳大利亚
-  - 🇧🇷 巴西
-  - 🇮🇩 印度尼西亚
-  - 🇰🇷 韩国
-  - 🇲🇽 墨西哥
-  - 🇷🇺 俄罗斯
-  - 🇹🇷 土耳其
-  - 🇿🇦 南非
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
 - name: 其他
@@ -3417,7 +2658,7 @@ proxy-groups:
   - 全节点
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
-- name: 📊crosswall 剩余 340.91GiB（距重置 16 天）
+- name: 📊crosswall 剩余 339.76GiB（距重置 15 天）
   type: select
   proxies:
   - DIRECT
@@ -3425,11 +2666,11 @@ proxy-groups:
   type: select
   proxies:
   - DIRECT
-- name: 📊viking 剩余 196.72GiB（距重置 10 天）
+- name: 📊viking 剩余 196.55GiB（距重置 9 天）
   type: select
   proxies:
   - DIRECT
-- name: 📊tangguo 剩余 170.93GiB（距重置 1 天）
+- name: 📊tangguo 剩余 199.91GiB
   type: select
   proxies:
   - DIRECT
