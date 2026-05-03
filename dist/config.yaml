@@ -169,14 +169,6 @@ proxies:
   udp: true
   sni: mirror.freethought-internet.co.uk
   skip-cert-verify: true
-- name: 🇫🇷 法国A1|联通|0.7倍|V1
-  type: anytls
-  server: fr1.node.cross666.top
-  port: 31333
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
-  sni: ubuntu.mirrors.ovh.net
-  skip-cert-verify: true
 - name: 🇫🇷 法国A2|联通|0.7倍|V1
   type: anytls
   server: fra2.node.cross666.top
@@ -426,7 +418,7 @@ proxies:
   skip-cert-verify: true
   sni: mcdn.bilivideo.com
   network: tcp
-- name: 🇨🇳 TW-01-Liberally
+- name: 🇨🇳 TW-01-Lam
   type: trojan
   server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26037
@@ -527,7 +519,7 @@ proxies:
   network: tcp
 - name: 🇭🇰 香港 - Hy2
   type: hysteria2
-  server: ashy2.hello-hx1547-ty.com
+  server: zlhy2.tnjxaon.cn
   port: 24027
   password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
   udp: true
@@ -535,7 +527,7 @@ proxies:
   skip-cert-verify: true
 - name: 🇸🇬 新加坡 - Hy2
   type: hysteria2
-  server: ashy2.hello-hx1547-ty.com
+  server: zlhy2.tnjxaon.cn
   port: 59916
   password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
   udp: true
@@ -543,7 +535,7 @@ proxies:
   skip-cert-verify: true
 - name: 🇯🇵 日本 - Hy2
   type: hysteria2
-  server: ashy2.hello-hx1547-ty.com
+  server: zlhy2.tnjxaon.cn
   port: 15158
   password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
   udp: true
@@ -551,7 +543,7 @@ proxies:
   skip-cert-verify: true
 - name: 🇨🇳 台湾 - Hy2
   type: hysteria2
-  server: ashy2.hello-hx1547-ty.com
+  server: zlhy2.tnjxaon.cn
   port: 37531
   password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
   udp: true
@@ -559,7 +551,7 @@ proxies:
   skip-cert-verify: true
 - name: 🇺🇸 美国 - Hy2
   type: hysteria2
-  server: ashy2.hello-hx1547-ty.com
+  server: zlhy2.tnjxaon.cn
   port: 48477
   password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
   udp: true
@@ -649,10 +641,10 @@ proxies:
   ws-opts:
     path: /riolu/2?ed=4096
     headers:
-      Host: hkte4.regularcdnentry.org
+      Host: hkte2.regularcdnentry.org
   ws-path: /riolu/2?ed=4096
   ws-headers:
-    Host: hkte4.regularcdnentry.org
+    Host: hkte2.regularcdnentry.org
 - name: 🇭🇰 香港03  电信优化
   type: vmess
   server: cf-sin.cdn.qchwnd.moe
@@ -1412,7 +1404,6 @@ proxy-groups:
   - 🇺🇸 美国 - Hy2
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A1|联通|0.7倍|V1
   - 🇫🇷 法国A2|联通|0.7倍|V1
   - 🇬🇧 英国A2|联通移动|0.7倍|V1
   - 🇳🇱 荷兰B1|联通|0.7倍|V1
@@ -1423,7 +1414,7 @@ proxy-groups:
   - 🇩🇪 DE-02-BAGE
   - 🇩🇪 DE-03-Leaseweb
   - 🇬🇧 UK-01-HostHatch
-  - 🇨🇳 TW-01-Liberally
+  - 🇨🇳 TW-01-Lam
   - 🇨🇳 TW-02-AKILE
   - 🇨🇳 TW-03-Akari
   - 🇨🇳 台湾 - Hy2
@@ -1522,7 +1513,7 @@ proxy-groups:
   - 🇬🇧 UK-01-HostHatch
   - 🇬🇧 英国01
   - 🇬🇧 英国02
-  - 🇨🇳 TW-01-Liberally
+  - 🇨🇳 TW-01-Lam
   - 🇨🇳 TW-02-AKILE
   - 🇨🇳 TW-03-Akari
   - 🇨🇳 台湾 - Hy2
@@ -1744,7 +1735,7 @@ proxy-groups:
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
   proxies:
-  - 🇨🇳 TW-01-Liberally
+  - 🇨🇳 TW-01-Lam
   - 🇨🇳 TW-02-AKILE
   - 🇨🇳 TW-03-Akari
   - 🇨🇳 台湾 - Hy2
@@ -1757,7 +1748,7 @@ proxy-groups:
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
   proxies:
-  - 🇨🇳 TW-01-Liberally
+  - 🇨🇳 TW-01-Lam
   - 🇨🇳 TW-02-AKILE
   - 🇨🇳 TW-03-Akari
   - 🇨🇳 台湾 - Hy2
@@ -1832,7 +1823,6 @@ proxy-groups:
   proxies:
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A1|联通|0.7倍|V1
   - 🇫🇷 法国A2|联通|0.7倍|V1
   - 🇬🇧 英国A2|联通移动|0.7倍|V1
   - 🇳🇱 荷兰B1|联通|0.7倍|V1
@@ -1854,7 +1844,6 @@ proxy-groups:
   proxies:
   - 🇨🇦 加拿大A1|0.7倍|V1
   - 🇩🇪 德国A1|联通|0.7倍|V1
-  - 🇫🇷 法国A1|联通|0.7倍|V1
   - 🇫🇷 法国A2|联通|0.7倍|V1
   - 🇬🇧 英国A2|联通移动|0.7倍|V1
   - 🇳🇱 荷兰B1|联通|0.7倍|V1
@@ -2658,7 +2647,7 @@ proxy-groups:
   - 全节点
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
-- name: 📊crosswall 剩余 339.76GiB（距重置 15 天）
+- name: 📊crosswall 剩余 338.42GiB（距重置 14 天）
   type: select
   proxies:
   - DIRECT
@@ -2666,11 +2655,11 @@ proxy-groups:
   type: select
   proxies:
   - DIRECT
-- name: 📊viking 剩余 196.55GiB（距重置 9 天）
+- name: 📊viking 剩余 196.36GiB（距重置 8 天）
   type: select
   proxies:
   - DIRECT
-- name: 📊tangguo 剩余 199.91GiB
+- name: 📊tangguo 剩余 199.86GiB
   type: select
   proxies:
   - DIRECT

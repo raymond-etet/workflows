@@ -159,14 +159,6 @@ proxies:
   udp: true
   sni: mirror.freethought-internet.co.uk
   skip-cert-verify: true
-- name: 🇫🇷 法国A1|联通|0.7倍|V1
-  type: anytls
-  server: fr1.node.cross666.top
-  port: 31333
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
-  sni: ubuntu.mirrors.ovh.net
-  skip-cert-verify: true
 - name: 🇫🇷 法国A2|联通|0.7倍|V1
   type: anytls
   server: fra2.node.cross666.top
@@ -416,7 +408,7 @@ proxies:
   skip-cert-verify: true
   sni: mcdn.bilivideo.com
   network: tcp
-- name: 🇨🇳 TW-01-Liberally
+- name: 🇨🇳 TW-01-Lam
   type: trojan
   server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
   port: 26037
@@ -517,7 +509,7 @@ proxies:
   network: tcp
 - name: 🇭🇰 香港 - Hy2
   type: hysteria2
-  server: ashy2.hello-hx1547-ty.com
+  server: zlhy2.tnjxaon.cn
   port: 24027
   password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
   udp: true
@@ -525,7 +517,7 @@ proxies:
   skip-cert-verify: true
 - name: 🇸🇬 新加坡 - Hy2
   type: hysteria2
-  server: ashy2.hello-hx1547-ty.com
+  server: zlhy2.tnjxaon.cn
   port: 59916
   password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
   udp: true
@@ -533,7 +525,7 @@ proxies:
   skip-cert-verify: true
 - name: 🇯🇵 日本 - Hy2
   type: hysteria2
-  server: ashy2.hello-hx1547-ty.com
+  server: zlhy2.tnjxaon.cn
   port: 15158
   password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
   udp: true
@@ -541,7 +533,7 @@ proxies:
   skip-cert-verify: true
 - name: 🇨🇳 台湾 - Hy2
   type: hysteria2
-  server: ashy2.hello-hx1547-ty.com
+  server: zlhy2.tnjxaon.cn
   port: 37531
   password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
   udp: true
@@ -549,7 +541,7 @@ proxies:
   skip-cert-verify: true
 - name: 🇺🇸 美国 - Hy2
   type: hysteria2
-  server: ashy2.hello-hx1547-ty.com
+  server: zlhy2.tnjxaon.cn
   port: 48477
   password: b03fe15a-56fd-45b5-8df0-e67d92cfa258
   udp: true
@@ -639,10 +631,10 @@ proxies:
   ws-opts:
     path: /riolu/2?ed=4096
     headers:
-      Host: hkte4.regularcdnentry.org
+      Host: hkte2.regularcdnentry.org
   ws-path: /riolu/2?ed=4096
   ws-headers:
-    Host: hkte4.regularcdnentry.org
+    Host: hkte2.regularcdnentry.org
 - name: 🇭🇰 香港03  电信优化
   type: vmess
   server: cf-sin.cdn.qchwnd.moe
