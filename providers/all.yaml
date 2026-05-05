@@ -7,6 +7,14 @@ proxies:
   udp: true
   sni: www.yahoo.com
   skip-cert-verify: true
+- name: 🇺🇸 美国G1|实验|1倍|V1
+  type: anytls
+  server: usg1-c-chic51aa6lrlzvyf.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.com
+  skip-cert-verify: true
 - name: 🇺🇸 美国F3|电信联通|1.1倍|V1
   type: hysteria2
   server: usf3-huxk4jdn.node.cross666.top
@@ -34,14 +42,6 @@ proxies:
 - name: 🇺🇸 美国E1|0.7倍|V1
   type: anytls
   server: use1.node.cross666.top
-  port: 31333
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
-  sni: www.yahoo.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国G1|实验|0.1倍|V1
-  type: anytls
-  server: usg1-c-chic51aa6lrlzvyf.node.cross666.top
   port: 31333
   password: efaed81f-e760-4d87-be6e-05136b25da66
   udp: true

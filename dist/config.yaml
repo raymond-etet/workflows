@@ -17,6 +17,14 @@ proxies:
   udp: true
   sni: www.yahoo.com
   skip-cert-verify: true
+- name: 🇺🇸 美国G1|实验|1倍|V1
+  type: anytls
+  server: usg1-c-chic51aa6lrlzvyf.node.cross666.top
+  port: 31333
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: www.yahoo.com
+  skip-cert-verify: true
 - name: 🇺🇸 美国F3|电信联通|1.1倍|V1
   type: hysteria2
   server: usf3-huxk4jdn.node.cross666.top
@@ -44,14 +52,6 @@ proxies:
 - name: 🇺🇸 美国E1|0.7倍|V1
   type: anytls
   server: use1.node.cross666.top
-  port: 31333
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
-  sni: www.yahoo.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国G1|实验|0.1倍|V1
-  type: anytls
-  server: usg1-c-chic51aa6lrlzvyf.node.cross666.top
   port: 31333
   password: efaed81f-e760-4d87-be6e-05136b25da66
   udp: true
@@ -1391,10 +1391,10 @@ proxy-groups:
   - 🇯🇵 JP-04-HostHatch
   - 🇯🇵 JP-10-Leasweb
   - 🇯🇵 日本 - Hy2
-  - 🇺🇸 美国G1|实验|0.1倍|V1
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国E1|0.7倍|V1
   - 🇺🇸 美国C1|0.8倍|V1
+  - 🇺🇸 美国G1|实验|1倍|V1
   - 🇺🇸 美国F3|电信联通|1.1倍|V1
   - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇺🇸 US-02-Jinx
@@ -1491,10 +1491,10 @@ proxy-groups:
   - 🇯🇵 日本02 电信优化
   - 🇯🇵 日本03
   - 🇯🇵 日本04
-  - 🇺🇸 美国G1|实验|0.1倍|V1
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国E1|0.7倍|V1
   - 🇺🇸 美国C1|0.8倍|V1
+  - 🇺🇸 美国G1|实验|1倍|V1
   - 🇺🇸 美国F3|电信联通|1.1倍|V1
   - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇺🇸 US-02-Jinx
@@ -1771,10 +1771,10 @@ proxy-groups:
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
   proxies:
-  - 🇺🇸 美国G1|实验|0.1倍|V1
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国E1|0.7倍|V1
   - 🇺🇸 美国C1|0.8倍|V1
+  - 🇺🇸 美国G1|实验|1倍|V1
   - 🇺🇸 美国F3|电信联通|1.1倍|V1
   - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇺🇸 US-02-Jinx
@@ -1791,10 +1791,10 @@ proxy-groups:
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
   proxies:
-  - 🇺🇸 美国G1|实验|0.1倍|V1
   - 🇺🇸 美国B2|联通|0.7倍|V2
   - 🇺🇸 美国E1|0.7倍|V1
   - 🇺🇸 美国C1|0.8倍|V1
+  - 🇺🇸 美国G1|实验|1倍|V1
   - 🇺🇸 美国F3|电信联通|1.1倍|V1
   - 🇺🇸 美国H1|实验|1.1倍|V1
   - 🇺🇸 US-02-Jinx
@@ -2647,7 +2647,7 @@ proxy-groups:
   - 全节点
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
-- name: 📊crosswall 剩余 338.42GiB（距重置 14 天）
+- name: 📊crosswall 剩余 337.47GiB（距重置 12 天）
   type: select
   proxies:
   - DIRECT
@@ -2655,11 +2655,11 @@ proxy-groups:
   type: select
   proxies:
   - DIRECT
-- name: 📊viking 剩余 196.36GiB（距重置 8 天）
+- name: 📊viking 剩余 195.74GiB（距重置 5 天）
   type: select
   proxies:
   - DIRECT
-- name: 📊tangguo 剩余 199.86GiB
+- name: 📊tangguo 剩余 199.82GiB
   type: select
   proxies:
   - DIRECT
