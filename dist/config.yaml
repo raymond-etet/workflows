@@ -65,14 +65,6 @@ proxies:
   udp: true
   sni: mirrors.xtom.hk
   skip-cert-verify: true
-- name: 🇭🇰 香港C2|三网|3.5倍|V2|家宽
-  type: hysteria2
-  server: hkc2.node.cross666.top
-  port: 65535
-  password: efaed81f-e760-4d87-be6e-05136b25da66
-  udp: true
-  sni: mirrors.xtom.hk
-  skip-cert-verify: true
 - name: 🇭🇰 香港C5|三网|3.5倍|V2|家宽
   type: hysteria2
   server: hkc5.node.cross666.top
@@ -81,9 +73,17 @@ proxies:
   udp: true
   sni: mirrors.xtom.hk
   skip-cert-verify: true
-- name: 🇭🇰 香港C1|三网|3.5倍|V2|家宽
+- name: 🇭🇰 香港C4|三网|3.5倍|V2|家宽
   type: hysteria2
-  server: hkc1.node.cross666.top
+  server: hkc4-5szb6iij.node.cross666.top
+  port: 65535
+  password: efaed81f-e760-4d87-be6e-05136b25da66
+  udp: true
+  sni: mirrors.xtom.hk
+  skip-cert-verify: true
+- name: 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  type: hysteria2
+  server: hkc3.node.cross666.top
   port: 65535
   password: efaed81f-e760-4d87-be6e-05136b25da66
   udp: true
@@ -373,6 +373,15 @@ proxies:
   skip-cert-verify: true
   sni: mcdn.bilivideo.com
   network: tcp
+- name: 🇸🇬 SG-08-GCP
+  type: trojan
+  server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
+  port: 27001
+  password: 97cc724d-96b7-41c2-86a2-0c0def263588
+  udp: true
+  skip-cert-verify: true
+  sni: mcdn.bilivideo.com
+  network: tcp
 - name: 🇯🇵 JP-01-Sakura
   type: trojan
   server: hbrldnymqqpmh.4bjkgb.vkhaidao.com
@@ -568,18 +577,7 @@ proxies:
 - name: 🇭🇰 香港01
   type: anytls
   server: 44c9706d-874e-f8b7-05c0-aaaa04a800c7.relay.moe233.org
-  port: 23388
-  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
-  alpn:
-  - h2
-  - http/1.1
-  skip-cert-verify: false
-  udp: true
-  sni: moe233-riolu-61a820a2-ab45-6be7-d0d7-aeed72816683.qchwnd.moe
-- name: 🇭🇰 香港02
-  type: anytls
-  server: 44c9706d-874e-f8b7-05c0-aaaa04a800c7.relay.moe233.org
-  port: 23388
+  port: 443
   password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
   alpn:
   - h2
@@ -587,6 +585,17 @@ proxies:
   skip-cert-verify: false
   udp: true
   sni: moe233-riolu-fd0fcfe0-b92a-f4b5-fe04-53069f5afc1b.qchwnd.moe
+- name: 🇭🇰 香港02
+  type: anytls
+  server: 44c9706d-874e-f8b7-05c0-aaaa04a800c7.relay.moe233.org
+  port: 443
+  password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
+  alpn:
+  - h2
+  - http/1.1
+  skip-cert-verify: false
+  udp: true
+  sni: moe233-riolu-61a820a2-ab45-6be7-d0d7-aeed72816683.qchwnd.moe
 - name: 🇭🇰 香港03
   type: anytls
   server: 0ec6449b-5460-846b-146b-76070b8d948f.relay.moe233.org
@@ -597,7 +606,7 @@ proxies:
   - http/1.1
   skip-cert-verify: false
   udp: true
-  sni: moe233-riolu-61a820a2-ab45-6be7-d0d7-aeed72816683.qchwnd.moe
+  sni: moe233-riolu-fd0fcfe0-b92a-f4b5-fe04-53069f5afc1b.qchwnd.moe
 - name: 🇭🇰 香港04
   type: anytls
   server: 0ec6449b-5460-846b-146b-76070b8d948f.relay.moe233.org
@@ -608,7 +617,7 @@ proxies:
   - http/1.1
   skip-cert-verify: false
   udp: true
-  sni: moe233-riolu-fd0fcfe0-b92a-f4b5-fe04-53069f5afc1b.qchwnd.moe
+  sni: moe233-riolu-61a820a2-ab45-6be7-d0d7-aeed72816683.qchwnd.moe
 - name: 🇭🇰 香港01 电信优化
   type: vmess
   server: cf-nrt.cdn.qchwnd.moe
@@ -647,7 +656,7 @@ proxies:
     Host: hkte2.regularcdnentry.org
 - name: 🇭🇰 香港03  电信优化
   type: vmess
-  server: cf-sin.cdn.qchwnd.moe
+  server: cf-nrt.cdn.qchwnd.moe
   port: 443
   uuid: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
   alterId: 0
@@ -823,7 +832,7 @@ proxies:
 - name: 🇸🇬 新加坡04
   type: anytls
   server: 44c9706d-874e-f8b7-05c0-aaaa04a800c7.relay.moe233.org
-  port: 23388
+  port: 443
   password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
   alpn:
   - h2
@@ -834,7 +843,7 @@ proxies:
 - name: 🇸🇬 新加坡05
   type: anytls
   server: 44c9706d-874e-f8b7-05c0-aaaa04a800c7.relay.moe233.org
-  port: 23388
+  port: 443
   password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
   alpn:
   - h2
@@ -845,7 +854,7 @@ proxies:
 - name: 🇹🇼 台湾01
   type: anytls
   server: 44c9706d-874e-f8b7-05c0-aaaa04a800c7.relay.moe233.org
-  port: 23388
+  port: 443
   password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
   alpn:
   - h2
@@ -856,7 +865,7 @@ proxies:
 - name: 🇹🇼 台湾02
   type: anytls
   server: 44c9706d-874e-f8b7-05c0-aaaa04a800c7.relay.moe233.org
-  port: 23388
+  port: 443
   password: 82adad3a-9558-4ac5-a0f7-7fa6f02383bc
   alpn:
   - h2
@@ -1299,8 +1308,8 @@ proxy-groups:
   - 其他
   - DIRECT
   proxies:
-  - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C4|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
   - 🇭🇰 香港A2|电信联通|2倍|V1
   - 🇸🇬 新加坡A2|联通|3倍|V2
@@ -1358,8 +1367,8 @@ proxy-groups:
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
   proxies:
-  - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C4|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
   - 🇭🇰 香港A2|电信联通|2倍|V1
   - 🇸🇬 新加坡A2|联通|3倍|V2
@@ -1384,6 +1393,7 @@ proxy-groups:
   - 🇸🇬 SG-04-JinX
   - 🇸🇬 SG-05-HostHatch
   - 🇸🇬 SG-07-Leaseweb
+  - 🇸🇬 SG-08-GCP
   - 🇸🇬 新加坡 - Hy2
   - 🇯🇵 JP-01-Sakura
   - 🇯🇵 JP-02-JinX
@@ -1431,8 +1441,8 @@ proxy-groups:
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
   proxies:
-  - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C4|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
   - 🇭🇰 香港A2|电信联通|2倍|V1
   - 🇸🇬 新加坡A2|联通|3倍|V2
@@ -1469,6 +1479,7 @@ proxy-groups:
   - 🇸🇬 SG-04-JinX
   - 🇸🇬 SG-05-HostHatch
   - 🇸🇬 SG-07-Leaseweb
+  - 🇸🇬 SG-08-GCP
   - 🇸🇬 新加坡 - Hy2
   - 🇸🇬 新加坡01
   - 🇸🇬 新加坡02
@@ -1530,8 +1541,8 @@ proxy-groups:
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
   proxies:
-  - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C4|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
   - 🇭🇰 香港A2|电信联通|2倍|V1
   - 🇭🇰 HK-01-CTC
@@ -1565,8 +1576,8 @@ proxy-groups:
   type: url-test
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
   proxies:
-  - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C4|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
   - 🇭🇰 香港A2|电信联通|2倍|V1
   - 🇭🇰 HK-01-CTC
@@ -1588,8 +1599,8 @@ proxy-groups:
   type: select
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
   proxies:
-  - 🇭🇰 香港C1|三网|3.5倍|V2|家宽
-  - 🇭🇰 香港C2|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C3|三网|3.5倍|V2|家宽
+  - 🇭🇰 香港C4|三网|3.5倍|V2|家宽
   - 🇭🇰 香港C5|三网|3.5倍|V2|家宽
   - 🇭🇰 香港A2|电信联通|2倍|V1
   - 🇭🇰 HK-01-CTC
@@ -1650,6 +1661,7 @@ proxy-groups:
   - 🇸🇬 SG-04-JinX
   - 🇸🇬 SG-05-HostHatch
   - 🇸🇬 SG-07-Leaseweb
+  - 🇸🇬 SG-08-GCP
   - 🇸🇬 新加坡 - Hy2
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
@@ -1669,6 +1681,7 @@ proxy-groups:
   - 🇸🇬 SG-04-JinX
   - 🇸🇬 SG-05-HostHatch
   - 🇸🇬 SG-07-Leaseweb
+  - 🇸🇬 SG-08-GCP
   - 🇸🇬 新加坡 - Hy2
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
@@ -2647,7 +2660,7 @@ proxy-groups:
   - 全节点
   url: https://chatgpt.com/.well-known/http-message-signatures-directory
   expected-status: 200
-- name: 📊crosswall 剩余 336.62GiB（距重置 11 天）
+- name: 📊crosswall 剩余 307.21GiB（距重置 10 天）
   type: select
   proxies:
   - DIRECT
@@ -2655,11 +2668,11 @@ proxy-groups:
   type: select
   proxies:
   - DIRECT
-- name: 📊viking 剩余 195.44GiB（距重置 4 天）
+- name: 📊viking 剩余 195.23GiB（距重置 3 天）
   type: select
   proxies:
   - DIRECT
-- name: 📊tangguo 剩余 199.80GiB
+- name: 📊tangguo 剩余 199.77GiB
   type: select
   proxies:
   - DIRECT
